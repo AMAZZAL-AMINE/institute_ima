@@ -229,4 +229,16 @@ body {
     font-weight: bold;
     color: #F8B142;
 }
+
+.ima-mession-home .ima-mession-text .ima-mess-button a {
+    background-color: #313690;
+    padding: 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.ima-mession-home .ima-mession-text .ima-mess-button a .bi {
+    margin-left: 15px;
+}
 /* end home styling */
