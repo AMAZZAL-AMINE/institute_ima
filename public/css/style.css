@@ -10,6 +10,9 @@
 body {
     background-color: rgb(255, 255, 255);
 }
+#app {
+    margin-top: 100px;
+}
 /* Navbar */
 .ima_navbar {
     display: flex;
@@ -18,6 +21,10 @@ body {
     background-color: white !important;
     border-bottom: 1px solid rgba(121, 121, 121, 0.52) !important;
     padding: 10px;
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 100%;
 }
 
 /* nav logo */
@@ -230,6 +237,10 @@ body {
     color: #F8B142;
 }
 
+.ima-mession-home .ima-mession-text .ima-mess-desc p {
+    color: #575757;
+}
+
 .ima-mession-home .ima-mession-text .ima-mess-button a {
     background-color: #313690;
     padding: 10px;
@@ -240,5 +251,41 @@ body {
 }
 .ima-mession-home .ima-mession-text .ima-mess-button a .bi {
     margin-left: 15px;
+}
+
+@media only screen and (max-width: 995px) {
+    .ima-mession-home .ima-mession-image img {
+        width: 100%;
+    }
+    .intitut-descrition-top-home {
+        padding: 20px;
+    }
+    .intitut-descrition-top-home .img-top-home img {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 875px) {
+    .intitut-descrition-top-home .img-top-home img {
+        width: 300pz;
+    }
+ 
+}
+
+@media only screen and (max-width: 519px) {
+    .intitut-descrition-top-home {
+        flex-wrap: wrap-reverse;
+        text-align: center;
+    }
+    .intitut-descrition-top-home .img-top-home img {
+        width: 100%;
+    }
+    .ima-mession-home {
+        flex-wrap: wrap;
+    }
+    .ima-mession-home .ima-mession-image img {
+        width: 100%;
+    }
 }
 /* end home styling */
