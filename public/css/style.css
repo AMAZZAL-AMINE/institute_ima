@@ -323,7 +323,10 @@ body {
     background: linear-gradient(261deg, #42468D -470.4%, rgba(248, 177, 66, 0) 137%);
     border-radius: 2px;
     padding: 35px;
-
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 .actualisezhome .actualiserstextimg .actutext {
     text-align: center;
