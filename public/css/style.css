@@ -323,10 +323,10 @@ body {
     background: linear-gradient(261deg, #42468D -470.4%, rgba(248, 177, 66, 0) 137%);
     border-radius: 2px;
     padding: 35px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
 }
 .actualisezhome .actualiserstextimg .actutext {
     text-align: center;
@@ -350,4 +350,10 @@ body {
 }
 .actualisezhome .actualiserstextimg .actualimg img {
     width: 300px;
+}
+
+@media only screen and (max-width: 770px) {
+    .actualisezhome .actualiserstextimg .actualimg img {
+        display: none;
+    }
 }

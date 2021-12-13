@@ -45,7 +45,7 @@
 
     <div class="videowhodescrib">
         <div class="titlevideo">
-            <h2><i class="bi bi-play-btn-fill"></i>  Nous Vedeo Who Describe Us</h2>
+            <h2><i class="bi bi-play-btn-fill"></i> Vidéo de mouvement graphique</h2>
         </div>
         <div class="videonow">
             <iframe width="790" height="444" src="https://www.youtube.com/embed/bQ-OcsgCU2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
