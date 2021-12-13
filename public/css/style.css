@@ -147,3 +147,86 @@ body {
 
 /* end Nave Bar */
 
+/* hoen styling */
+
+.intitut-descrition-top-home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #FFF5F5;
+    border-radius: 5px;
+    padding: 9px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.intitut-descrition-top-home .text-top-home {
+    max-width: 500px;
+}
+
+.intitut-descrition-top-home .text-top-home .hedtit h1 {
+    color: #0A0882;
+    font-weight: bold;
+}
+
+.intitut-descrition-top-home .text-top-home .buttongotoabout a {
+    background-color: #F8B142;
+    padding: 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+.intitut-descrition-top-home .text-top-home .buttongotoabout a  .bi {
+    margin-left: 15px;
+}
+
+.intitut-descrition-top-home .text-top-home .heddesc p {
+    color: #575757;
+     
+}   
+
+.intitut-descrition-top-home .img-top-home img {
+    width: 300px;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+     user-select:none;
+     pointer-events:none
+}
+
+.ima-mession-home {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    padding: 9px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    margin-top: 60px;
+}
+
+.ima-mession-home .ima-mession-image img {
+    width: 450px;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -o-user-select:none;
+     user-select:none;
+     pointer-events:none
+}
+
+.ima-mession-home .ima-mession-text {
+    text-align: center;
+}
+.ima-mession-home .ima-mession-text .ima-mess-title h1 {
+    font-weight: bold;
+    color: #F8B142;
+}
+/* end home styling */

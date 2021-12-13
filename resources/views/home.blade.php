@@ -2,20 +2,43 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+    <div class="intitut-descrition-top-home">
+        <div class="text-top-home">
+            <div class="hedtit"><h1>INSTITUTE IMA AGADIR</h1></div>
+            <div class="heddesc">
+                <p>
+                    INSTITUT IMA STF de L'education et de formation professionnelle de renommée est fondé en 2016 par des lauréats de l’université
+                </p>
+            </div>
+            <div class="buttongotoabout">
+                <a href="">Propos De Nous <i class="bi bi-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="img-top-home">
+            <img src="/images/plateima.png" alt="ima work">
+        </div>
+    </div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
+    <div class="ima-mession-home">
+        <div class="ima-mession-image">
+            <img src="/images/mission.png" alt="">
+        </div>
+        <div class="ima-mession-text">
+            <div class="ima-mess-title">
+                <h1>Sa mission ?</h1>
+            </div>
+            <div class="ima-mess-desc">
+                <p>
+                    L’institut s’est vu confier, la responsabilité d’assurer des 
+                    formations de qualité aux jeunes étudiants de 
+                    la ville d’Agadir et les préparer à la fois pour 
+                    réussir leurs examens et à la fois pour assurer 
+                    leurs avenirs et booster leurs carrières académiques 
+                    et professionnelles.
+                </p>
+            </div>
+            <div class="ima-mess-button">
+                <a href="#">Lire la suite <i class="bi bi-arrow-right"></i></a>
             </div>
         </div>
     </div>
