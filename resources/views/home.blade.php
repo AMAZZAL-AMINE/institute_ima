@@ -42,5 +42,44 @@
             </div>
         </div>
     </div>
+
+    <div class="videowhodescrib">
+        <div class="titlevideo">
+            <h2><i class="bi bi-play-btn-fill"></i>  Nous Vedeo Who Describe Us</h2>
+        </div>
+        <div class="videonow">
+            <iframe width="790" height="444" src="https://www.youtube.com/embed/bQ-OcsgCU2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="actualisezhome">
+        <div class="actualizertitle">
+            <h2><i class="bi bi-flower3"></i> INSTITUTE IMA BLOG</h2>
+        </div>
+        <div class="actualiserstextimg">
+            <div class="actutext">
+                <div class="actitle">
+                    <h2>ACTUALITÉS INSTITUTE IMA </h2>
+                </div>
+                <div class="actdesc">
+                    <p>
+                        Nous vous proposons une actualité très riche tout 
+                        au long de l’année : des news, des billets d’experts 
+                        sur nos blogs, des enquêtes annuelles, des événements 
+                        pour nos communautés et des dossiers spéciaux pour 
+                        décrypter la réforme de la formation ou pour approfondir 
+                        des tendances métier.
+                    </p>
+                </div>
+                <div class="actbtn">
+                    <a href="">ActualitéS</a>
+                </div>
+            </div>
+            <div class="actualimg">
+                    <img src="/images/logo.png" >
+            </div>
+        </div>
+    </div>
+    
 </div>
 @endsection

@@ -288,4 +288,63 @@ body {
         width: 100%;
     }
 }
-/* end home styling */
+
+.videowhodescrib {
+    margin-top: 65px;
+
+}
+.videowhodescrib .titlevideo h2 {
+    font-weight: bold;
+    color: #0A0882;
+}
+.videowhodescrib .videonow iframe {
+    width: 100%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border: 1px solid orange;
+    margin-top: 15px;
+}
+
+.actualisezhome {
+    margin-top: 65px;
+}
+.actualisezhome .actualizertitle h2 {
+    font-weight: bold;
+    color: #0A0882;
+}
+.actualisezhome .actualiserstextimg {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+    background: linear-gradient(261deg, #42468D -470.4%, rgba(248, 177, 66, 0) 137%);
+    border-radius: 2px;
+    padding: 35px;
+
+}
+.actualisezhome .actualiserstextimg .actutext {
+    text-align: center;
+    max-width: 500px;
+}
+.actualisezhome .actualiserstextimg .actutext .actbtn a {
+    padding: 10px;
+    background: #514A84;
+    border-radius: 30.5px;      
+    text-decoration: none;
+    color: white;
+     padding-left: 30px;
+     padding-right: 30px;
+}
+.actualisezhome .actualiserstextimg .actutext h2 {
+    color: #0A0882;
+    font-weight: bold;
+}
+.actualisezhome .actualiserstextimg .actutext p {
+    color: #A99595;
+}
+.actualisezhome .actualiserstextimg .actualimg img {
+    width: 300px;
+}
