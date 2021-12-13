@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
@@ -26,9 +26,10 @@
         <div class="ima_navbar">
             <div class="navLogo"><a href="/"><img src="/images/logo.png" alt="Ima Logo"></a></div>
             <div class="navList">
+                <div class="closenavbar"><i class="bi bi-x"></i></div>
                 <ul>
-                    <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Qui Nous SOmmes</a></li>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="#">Qui Nous Sommes</a></li>
                     <li><a href="#">Lise Des Formation</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Blog</a></li>
@@ -37,14 +38,17 @@
                         @else
                         <li><a href="#">Login</a></li>
                     @endif
-                    <li class="buttonSinscrire"><a href="#">Inscription</a></li>
+                    <li class="buttonSinscrire"><a href="#"><i class="bi bi-card-heading"></i> Inscription</a></li>
                 </ul>
             </div>
+            <div class="navshowresposivelist"> <i class="bi bi-list"></i> </div>
         </div>
 
         <main class="py-4">
             @yield('content')
         </main>
     </div>
+
+    <script src="{{ asset('/js/script.js') }}"></script>
 </body>
 </html>

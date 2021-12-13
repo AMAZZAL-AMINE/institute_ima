@@ -3,4 +3,147 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans Display', sans-serif;
+    list-style: none;
+   
 }
+
+body {
+    background-color: rgb(255, 255, 255);
+}
+/* Navbar */
+.ima_navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white !important;
+    border-bottom: 1px solid rgba(121, 121, 121, 0.52) !important;
+    padding: 10px;
+}
+
+/* nav logo */
+.ima_navbar .navLogo img {
+    width: 60px;
+}
+
+/* nav list links */
+.ima_navbar .navList ul li {
+    float: left;
+    list-style: none;
+    margin-left: 15px;
+}
+
+.ima_navbar .navList ul li a {
+    color: #313690;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+}
+.ima_navbar .navList ul li a:hover {
+    color: orange;
+}
+.ima_navbar .navList .buttonSinscrire {
+    background: rgb(255,255,255);
+    background: linear-gradient(25deg, rgba(255,255,255,1) 0%, rgba(248,177,65,1) 100%); 
+    border-radius: 50px;
+    padding: 5px;
+    margin-top: -5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+.ima_navbar .navList .buttonSinscrire a:hover {
+    color: #ffffff;
+}
+
+.ima_navbar .navshowresposivelist {
+    background: #0A0882;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    padding: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 19px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    display: none;
+}
+.ima_navbar .navshowresposivelist:hover {
+    background: #ec9200;
+}
+
+.closenavbar {
+    position: absolute;
+    text-align: right;
+    font-size: 40px;
+    top: 0;
+    right: 0;
+    background: #0A0882;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    padding: 5px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 19px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin: 15px;
+    display: none;
+
+}
+.closenavbar:hover{
+    background-color: #9868f1;
+    transition: all 0.2s;
+}
+/* resposive nav bar  */
+@media only screen and (max-width: 818px) {
+    .ima_navbar .navshowresposivelist {
+        display: block;
+    }
+    .ima_navbar .navList {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        background-color: rgb(36, 12, 168);
+        z-index: 999;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 1000px;
+        transition: all 0.5s;
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -o-transition: all 0.5s;
+    
+    }
+    .closenavbar {
+        display: block; 
+    }
+    .ima_navbar .navList ul li a {
+        color: white;
+    }
+    .ima_navbar .navList ul li {
+        float: none;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .ima_navbar .navList .buttonSinscrire a {
+        color: #313690;
+    }
+}
+
+/* end Nave Bar */
+
