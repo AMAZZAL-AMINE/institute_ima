@@ -642,3 +642,38 @@ body {
         padding: 25px;
     }
 }
+
+
+.formationinlistwithdetails  {
+    margin-top: 50px;
+    display: flex;
+    
+}
+.formationinlistwithdetails .formationtitleee {
+    background-color: #0A0882;
+    padding: 25px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+
+}
+.formationinlistwithdetails .allformationlefftt {
+    flex: 1;
+    margin-right: 25px;
+}
+
+.formationinlistwithdetails .fomationdetailssss {
+    flex: 4;
+}
+.formationinlistwithdetails .allformationlefftt ul a {
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    background-color: orange;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    border-bottom: 1px solid black;
+    
+}

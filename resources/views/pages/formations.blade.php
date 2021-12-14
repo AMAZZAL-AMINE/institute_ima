@@ -14,6 +14,47 @@
                <img class="carousel-cell" src="/sliders/3.jpg" alt="">
                <img class="carousel-cell" src="/sliders/4.jpg" alt="">
                <img class="carousel-cell" src="/sliders/5.jpg" alt="">
-          </div>
+        </div>
+
+        <div class="formationinlistwithdetails">
+            <div class="allformationlefftt">
+                <ul>
+                    <div class="formationtitleee">
+                         <b>Toutes les  Formations</b>
+                    </div>
+                    <a href="">
+                        <div>Formation Num One</div>
+                        <div><i class="bi bi-arrow-right"></i></div>
+                    </a>
+                    <a href="">
+                        <div>Formation Num One</div>
+                        <div><i class="bi bi-arrow-right"></i></div>
+                    </a>
+                    <a href="">
+                        <div>Formation Num One</div>
+                        <div><i class="bi bi-arrow-right"></i></div>
+                    </a>
+                    <a href="">
+                        <div>Formation Num One</div>
+                        <div><i class="bi bi-arrow-right"></i></div>
+                    </a>
+                    <a href="">
+                        <div>Formation Num One</div>
+                        <div><i class="bi bi-arrow-right"></i></div>
+                    </a>
+                    <a href="">
+                        <div>Formation Num One</div>
+                        <div><i class="bi bi-arrow-right"></i></div>
+                    </a>
+                    <a href="">
+                        <div>Formation Num One</div>
+                        <div><i class="bi bi-arrow-right"></i></div>
+                    </a>
+                </ul>
+            </div>
+            <div class="fomationdetailssss">
+                hello zorld
+            </div>
+        </div>
     </div>
 @endsection
