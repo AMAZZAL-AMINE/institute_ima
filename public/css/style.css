@@ -543,7 +543,7 @@ body {
     margin: 20px;
     margin-top: -100px;
     position: relative;
-    z-index: 100; 
+    
 }
 .aboutcountstudent .countdesc p {
     font-size: 20px;
@@ -562,3 +562,36 @@ body {
         padding: 10px;
     }
 }
+
+.imagesliderabout {
+    margin-top: 90px;
+}
+
+.imagesliderabout .imagesliderstitle h2{
+    text-align: center;
+    font-weight: bold;
+    color: #0A0882;
+
+}
+
+
+
+.carousel-cell {
+    width: 66%;
+    height: 200px;
+    margin-right: 10px;
+    background: #8C8;
+    border-radius: 5px;
+    counter-increment: carousel-cell;
+  }
+  
+  /* cell number */
+  .carousel-cell:before {
+    display: block;
+    text-align: center;
+    content: counter(carousel-cell);
+    line-height: 200px;
+    font-size: 80px;
+    color: white;
+  }
+  

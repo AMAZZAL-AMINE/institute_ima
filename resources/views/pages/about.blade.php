@@ -73,6 +73,18 @@
                 </p>
             </div>
         </div>
+
+        <div class="imagesliderabout">
+            <div class="imagesliderstitle">
+                <h2><i class="bi bi-window-stack"></i> Quelques photos de nos diplômés </h2>
+            </div>
+            <div class="imgcarsolabout">
+                <div class="carousel" data-flickity='{ "wrapAround": true }'>
+                    <div class="carousel-cell"></div>
+              </div>
+              
+            </div>
+        </div>
     </div>
 
 @endsection
