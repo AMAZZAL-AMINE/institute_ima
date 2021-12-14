@@ -582,6 +582,7 @@ body {
     width: 100%;
     object-fit: contain;
     max-height: 500px;
+    min-height: 500px;
     margin-right: 10px;
     background: orange;
     border-radius: 5px;
@@ -601,7 +602,7 @@ body {
     .carousel-cell {
         height: 100vh;
         object-fit: contain;
-      }
+    }
 }
 
 .ifonetotrgister {
@@ -691,5 +692,26 @@ body {
 
 .formationinlistwithdetails .allformationlefftt ul a:hover {
     background-color: rgb(241, 201, 127);
+}
+ 
+.formationinlistwithdetails .fomationdetailssss {
+    background-color: rgba(189, 189, 189, 0.349);
+    padding: 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+ 
+ 
 
+@media only screen and (max-width: 998px) {
+    .formationinlistwithdetails {
+        display: block;
+    }   
+    .formationinlistwithdetails .allformationlefftt {
+        margin-top: 20px;
+        margin-left: -15px;
+    }
 }
