@@ -91,6 +91,19 @@
               
             </div>
         </div>
+
+        <div class="ifonetotrgister">
+            <div class="registitle">
+                <h2>Qu'est ce que tu attends ?</h2>
+            </div>
+            <div class="regisdesc">
+                <p>
+                    Avez-vous une passion pour l'apprentissage et 
+                    la construction d'un bon avenir? Qu'attendez-vous, 
+                    inscrivez-vous maintenant facilement
+                </p>
+            </div>
+        </div>
     </div>
 
 @endsection
