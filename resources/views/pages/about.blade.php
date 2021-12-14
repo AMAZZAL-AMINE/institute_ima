@@ -99,9 +99,12 @@
             <div class="regisdesc">
                 <p>
                     Avez-vous une passion pour l'apprentissage et 
-                    la construction d'un bon avenir? Qu'attendez-vous, 
+                    la construction d'un bon avenir? <br> Qu'attendez-vous, 
                     inscrivez-vous maintenant facilement
                 </p>
+            </div>
+            <div class="registerbutin">
+                <a href=""><i class="bi bi-textarea-t"></i> Enregistrez-vous maintenant</a>
             </div>
         </div>
     </div>

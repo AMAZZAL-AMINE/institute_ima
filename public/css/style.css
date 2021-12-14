@@ -604,3 +604,31 @@ body {
         object-fit: contain;
       }
 }
+
+.ifonetotrgister {
+    margin-top: 90px;
+    text-align: center;
+    padding: 50px;
+    margin-bottom: 90px;
+}
+.ifonetotrgister .registitle h2 {
+    font-weight: bold;
+    color: #0A0882;
+}
+
+.ifonetotrgister  .regisdesc p {
+    font-size: 25px !important;
+    font-weight: 200;
+}
+.ifonetotrgister .registerbutin a {
+    text-decoration: none;
+    background-color: #0A0882;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
