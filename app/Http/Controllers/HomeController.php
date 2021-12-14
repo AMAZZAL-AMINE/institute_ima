@@ -31,4 +31,8 @@ class HomeController extends Controller
         return view('pages.about');
     }
 
+    //list des formations
+    public function listFormations() {
+        return view('pages.formations');
+    }
 }

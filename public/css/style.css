@@ -588,7 +588,7 @@ body {
     border-radius: 5px;
     counter-increment: carousel-cell;
   }
-  .imagesliderabout .flickity-page-dots {
+.flickity-page-dots {
     position: absolute;
     width: 100%; 
     bottom: 0;
@@ -631,4 +631,14 @@ body {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
+}
+
+@media only screen and (max-width: 772px) {
+    .ifonetotrgister  .regisdesc p{
+        font-size: 17px !important;
+        font-weight: 200;
+    }
+    .ifonetotrgister {
+        padding: 25px;
+    }
 }

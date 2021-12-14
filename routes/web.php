@@ -23,3 +23,5 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 //about page
 Route::get("/A-propos-De-Nous", [HomeController::class, 'aboutUs'])->name('about.us');
+//formations page
+Route::get("/List-Des-Formations", [HomeController::class, 'listFormations'])->name('list.formations');

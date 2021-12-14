@@ -30,7 +30,7 @@
                 <ul>
                     <li><a  class="@yield('isactiveone')" href="/">Accueil</a></li>
                     <li><a class="@yield('isactivetwo')" href="{{ route('about.us') }}">Qui Nous Sommes</a></li>
-                    <li><a class="@yield('isactivetree')" href="#">Lise Des Formation</a></li>
+                    <li><a class="@yield('isactivetree')" href="{{ route('list.formations') }}">Lise Des Formation</a></li>
                     <li><a class="@yield('isactivephor')" href="#">Contact</a></li>
                     <li><a class="@yield('isactivefive')" href="#">Blog</a></li>
                     @if(Auth::Check())
