@@ -18,4 +18,8 @@ use App\Http\Controllers\HomeController;
 
 Auth::routes();
 
+//home page
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+//about page
+Route::get("/A-propos-De-Nous", [HomeController::class, 'aboutUs'])->name('about.us');

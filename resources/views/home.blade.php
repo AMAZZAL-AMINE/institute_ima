@@ -72,7 +72,7 @@
                     </p>
                 </div>
                 <div class="actbtn">
-                    <a href="">ActualitéS</a>
+                    <a href="">Actualités</a>
                 </div>
             </div>
             <div class="actualimg">

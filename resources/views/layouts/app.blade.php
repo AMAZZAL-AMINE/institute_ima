@@ -29,7 +29,7 @@
                 <div class="closenavbar"><i class="bi bi-x"></i></div>
                 <ul>
                     <li><a href="/">Accueil</a></li>
-                    <li><a href="#">Qui Nous Sommes</a></li>
+                    <li><a href="{{ route('about.us') }}">Qui Nous Sommes</a></li>
                     <li><a href="#">Lise Des Formation</a></li>
                     <li><a href="#">Contact</a></li>
                     <li><a href="#">Blog</a></li>
@@ -110,13 +110,13 @@
         <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
           <!-- Links -->
           <h6 class="text-uppercase fw-bold mb-4 text-white">
-            Products
+            Pages
           </h6>
           <p>
-            <a href="#!" class="text-white">Angular</a>
+            <a href="/" class="text-white">Home</a>
           </p>
           <p>
-            <a href="#!" class=" text-white">React</a>
+            <a href="{{ route('about.us') }}" class=" text-white">A propos De Nous</a>
           </p>
           <p>
             <a href="#!" class=" text-white">Vue</a>
