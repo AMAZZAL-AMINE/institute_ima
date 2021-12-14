@@ -53,7 +53,7 @@
                 </ul>
             </div>
             <div class="fomationdetailssss">
-                hello zorld
+                
             </div>
         </div>
     </div>
