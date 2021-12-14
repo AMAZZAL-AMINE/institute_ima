@@ -80,7 +80,13 @@
             </div>
             <div class="imgcarsolabout">
                 <div class="carousel" data-flickity='{ "wrapAround": true }'>
-                    <div class="carousel-cell"></div>
+                   <img class="carousel-cell" src="/sliders/1.jpg" alt="">
+                   <img class="carousel-cell" src="/sliders/2.jpg" alt="">
+                   <img class="carousel-cell" src="/sliders/3.jpg" alt="">
+                   <img class="carousel-cell" src="/sliders/4.jpg" alt="">
+                   <img class="carousel-cell" src="/sliders/5.jpg" alt="">
+                   <img class="carousel-cell" src="/sliders/6.jpg" alt="">
+                   <img class="carousel-cell" src="/sliders/7.jpg" alt="">
               </div>
               
             </div>
