@@ -35,4 +35,9 @@ class HomeController extends Controller
     public function listFormations() {
         return view('pages.formations');
     }
+
+    //contact us 
+    public function contactUs() {
+        return view("pages.contact");
+    }
 }
