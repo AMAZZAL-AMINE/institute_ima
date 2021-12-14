@@ -68,7 +68,9 @@
                 </div>
             </div>
             <div class="countdesc">
-
+                <p>
+                    Ces objectifs nécessitent un enthousiasme, une actualisation permanente des connaissances et un dévouement que nos professeurs et directeurs ne cessent de développer pour le plus grand bien des futures générations.
+                </p>
             </div>
         </div>
     </div>
