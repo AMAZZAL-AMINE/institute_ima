@@ -1,6 +1,11 @@
 @extends('layouts.app')
-
+@section('isactivetwo', 'active')
 @section('content')
+<style>
+    .ima_navbar .navList .active {
+        color: orange;
+    }
+</style>
     <div class="container">
         <div class="paneltopabout">
             <div class="panelabouttext">
@@ -30,5 +35,42 @@
                 </p>
             </div>
         </div>
+
+        <div class="aboutcountstudent">
+            <div class="allcountstud">
+                <div class="countcart">
+                    <div class="justformargintop"></div>
+                    <b>100 %</b>
+                    <h4>
+                        Formation continue
+                    </h4>
+                </div>
+                <div class="countcart">
+                    <div class="justformargintop"></div>
+                    <b>1000 +</b>
+                    <h4>
+                        Stage en entreprise
+                    </h4>
+                </div>
+                <div class="countcart">
+                    <div class="justformargintop"></div>
+                    <b>300 +</b>
+                    <h4>
+                        Cours en e-learning
+                    </h4>
+                </div>
+                <div class="countcart">
+                    <div class="justformargintop"></div>
+                    <b>5000 +</b>
+                    <h4>
+                        convention de stage
+                    </h4>
+                </div>
+            </div>
+            <div class="countdesc">
+
+            </div>
+        </div>
     </div>
+
 @endsection

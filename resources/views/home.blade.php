@@ -1,6 +1,12 @@
 @extends('layouts.app')
+@section('isactiveone', 'active')
 
 @section('content')
+<style>
+    .ima_navbar .navList .active {
+        color: orange;
+    }
+</style>
 <div class="container">
     <div class="intitut-descrition-top-home">
         <div class="text-top-home">

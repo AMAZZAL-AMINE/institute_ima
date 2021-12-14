@@ -37,7 +37,16 @@ body {
     float: left;
     list-style: none;
     margin-left: 15px;
+    transition: transform .5s;
+    -webkit-transition: transform .5s;
+    -moz-transition: transform .5s;
+    -ms-transition: transform .5s;
+    -o-transition: transform .5s;
 }
+.ima_navbar .navList ul li:hover {
+    margin-top: -1px;
+}
+ 
 
 .ima_navbar .navList ul li a {
     color: #313690;
@@ -451,4 +460,65 @@ body {
     .aboutmession .messiondesc {
         font-size: 15px;
     }
+}
+.aboutcountstudent {
+    margin-top: 80px;
+}
+.aboutcountstudent .allcountstud {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3A3E95;
+    padding: 100px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.aboutcountstudent .allcountstud .countcart {
+    text-align: center;
+    flex: 1;
+    background-color: #fff;
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 13px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    max-width: 180px;
+    cursor: pointer;
+    transition: transform .2s;
+    -webkit-transition: transform .2s;
+    -moz-transition: transform .2s;
+    -ms-transition: transform .2s;
+    -o-transition: transform .2s;
+}
+.aboutcountstudent .allcountstud .countcart b {
+    color: orange;
+    font-weight: bold;
+    font-size: 20px;
+    
+   
+}
+
+.aboutcountstudent .justformargintop {
+    margin-top: 30px;
+}
+.aboutcountstudent .allcountstud .countcart h4 {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #3A3E95;
+
+}
+.aboutcountstudent .allcountstud .countcart:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    transform: scale(1.3);
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
 }

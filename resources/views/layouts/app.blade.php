@@ -28,11 +28,11 @@
             <div class="navList">
                 <div class="closenavbar"><i class="bi bi-x"></i></div>
                 <ul>
-                    <li><a href="/">Accueil</a></li>
-                    <li><a href="{{ route('about.us') }}">Qui Nous Sommes</a></li>
-                    <li><a href="#">Lise Des Formation</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
+                    <li><a  class="@yield('isactiveone')" href="/">Accueil</a></li>
+                    <li><a class="@yield('isactivetwo')" href="{{ route('about.us') }}">Qui Nous Sommes</a></li>
+                    <li><a class="@yield('isactivetree')" href="#">Lise Des Formation</a></li>
+                    <li><a class="@yield('isactivephor')" href="#">Contact</a></li>
+                    <li><a class="@yield('isactivefive')" href="#">Blog</a></li>
                     @if(Auth::Check())
                         <li><a href="#">Profile</a></li>
                         @else
