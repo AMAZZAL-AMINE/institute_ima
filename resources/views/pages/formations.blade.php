@@ -9,7 +9,7 @@
     <div class="container">
         <div class="imgcarsolabout">
             <div class="carousel" data-flickity='{ "wrapAround": true }'>
-               <img class="carousel-cell" src="/sliders/1.jpg" alt="">
+  
                <img class="carousel-cell" src="/sliders/2.jpg" alt="">
                <img class="carousel-cell" src="/sliders/3.jpg" alt="">
                <img class="carousel-cell" src="/sliders/4.jpg" alt="">
