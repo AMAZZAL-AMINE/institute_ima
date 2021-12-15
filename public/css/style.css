@@ -805,4 +805,42 @@ body {
     }
 }
 
+
+.contactinfo {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    background: rgb(255,255,255);
+    background: linear-gradient(25deg, rgba(255,255,255,1) 0%, rgba(248,177,65,1) 100%);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.contactinfo .contactdatas {
+    line-height: 35px;
+}
+
+.contactinfo .contactopeningatto {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@media only screen and (max-width: 771px) {
+    .contactinfo {
+        display: block;
+    }
+    .contactinfo .contactopeningatto {
+        margin-top: 40px;
+    }
+}
 /* end contact page */
