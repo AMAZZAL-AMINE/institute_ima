@@ -40,4 +40,9 @@ class HomeController extends Controller
     public function contactUs() {
         return view("pages.contact");
     }
+
+    //blog page 
+    public function blog() {
+        return view("pages.blog");
+    }
 }

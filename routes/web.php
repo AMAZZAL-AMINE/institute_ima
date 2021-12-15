@@ -27,3 +27,5 @@ Route::get("/A-propos-De-Nous", [HomeController::class, 'aboutUs'])->name('about
 Route::get("/List-Des-Formations", [HomeController::class, 'listFormations'])->name('list.formations');
 //contact page
 Route::get("/Contact-Nous", [HomeController::class, 'contactUs'])->name('contact.us');
+//blog page
+Route::get("/Ima-Blog", [HomeController::class, 'blog'])->name('blog');
