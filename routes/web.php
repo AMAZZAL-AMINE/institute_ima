@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\InstriptionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,5 @@ Route::get("/List-Des-Formations", [HomeController::class, 'listFormations'])->n
 Route::get("/Contact-Nous", [HomeController::class, 'contactUs'])->name('contact.us');
 //blog page
 Route::get("/Ima-Blog", [HomeController::class, 'blog'])->name('blog');
+//inscription page
+Route::get("/Student-Inscription", [InstriptionController::class, 'studentInscription'])->name("student.inscription");

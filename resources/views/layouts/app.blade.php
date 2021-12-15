@@ -38,7 +38,7 @@
                         @else
                         <li><a class="@yield('isactiveseven')" href="{{ route("login") }}">Login</a></li>
                     @endif
-                    <li class="buttonSinscrire"><a href="#"><i class="bi bi-card-heading"></i> Inscription</a></li>
+                    <li class="buttonSinscrire"><a href="{{ route("student.inscription") }}"><i class="bi bi-card-heading"></i> Inscription</a></li>
                 </ul>
             </div>
             <div class="navshowresposivelist"> <i class="bi bi-list"></i> </div>
