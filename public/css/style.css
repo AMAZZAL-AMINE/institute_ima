@@ -1088,3 +1088,86 @@ body {
     }
 }
 /* end login page */
+
+/* register page */
+.registeruseraccont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+.registeruseraccont .registerleftimg img {
+    width: 480px;
+    border-radius: 5px 0 0 5px;
+    -webkit-border-radius: 5px 0 0 5px;
+    -moz-border-radius: 5px 0 0 5px;
+    -ms-border-radius: 5px 0 0 5px;
+    -o-border-radius: 5px 0 0 5px;
+}
+.registeruseraccont .registerformssss {
+    background: #FFFFFF;
+    box-shadow: 6px 8px 37px -15px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 0 5px 5px 0;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    -ms-border-radius: 0 5px 5px 0;
+    -o-border-radius: 0 5px 5px 0;
+}
+.registeruseraccont .registerformssss form .useregisinp input {
+    border: none;
+    outline: none;
+    background: #f8eeee;
+    border-radius: 33px;
+    padding: 12px;
+    margin-bottom: 25px;
+    padding-left: 29px;
+    -webkit-border-radius: 33px;
+    -moz-border-radius: 33px;
+    -ms-border-radius: 33px;
+    -o-border-radius: 33px;
+    font-weight: bold;
+    width: 100%;
+}
+.registeruseraccont .registerformssss form .registerbtntnt {
+    background: linear-gradient(102.02deg, #0012B8 12.06%, rgba(155, 155, 155, 0) 210.69%);
+    border-radius: 33px;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+    .registeruseraccont .registerleftimg img {
+        width: 100%;
+    }
+    .registeruseraccont .registerformssss {
+        width: 100%;
+    }
+    .registeruseraccont .registerformssss form .useregisinp input {
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .registeruseraccont {
+        display: block;
+    }
+    .registeruseraccont .registerformssss {
+       margin-top: -150px;
+       position: relative;
+       border-radius: 5px;
+       -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+       -ms-border-radius: 5px;
+       -o-border-radius: 5px;
+       background-color: rgba(255, 255, 255, 0.589);
+       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+       backdrop-filter: blur(10px);
+ 
+    }
+}
+/* end register page */
