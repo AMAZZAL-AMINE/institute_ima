@@ -1170,3 +1170,25 @@ body {
     }
 }
 /* end register page */
+
+/* inscription page */
+.inscriptiontoptitle {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/bginsc.png);
+    color: white;
+    margin-top: -50px;
+    padding: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
+    
+
+}
+.inscriptiontoptitle h1 {
+    font-weight: bold;
+}
+/* end inscriotion page */

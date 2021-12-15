@@ -1,7 +1,14 @@
 @extends("layouts.app")
 
 @section('content')
-    <div class="container">
-        <h1>Inscription Page</h1>
+<div class="inscriptiontoptitle">
+    <h1>Inscription</h1>
+</div>
+<div class="container">
+    <div class="inscriptionformsall">
+        <form action="">
+            
+        </form>
     </div>
+</div>
 @endsection
