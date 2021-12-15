@@ -34,9 +34,9 @@
                     <li><a class="@yield('isactivephor')" href="{{ route("contact.us") }}">Contact</a></li>
                     <li><a class="@yield('isactivefive')" href="{{ route("blog") }}">Blog</a></li>
                     @if(Auth::Check())
-                        <li><a href="#">Profile</a></li>
+                        <li><a class="@yield('isactivesix')" href="#">Profile</a></li>
                         @else
-                        <li><a href="#">Login</a></li>
+                        <li><a class="@yield('isactiveseven')" href="{{ route("login") }}">Login</a></li>
                     @endif
                     <li class="buttonSinscrire"><a href="#"><i class="bi bi-card-heading"></i> Inscription</a></li>
                 </ul>

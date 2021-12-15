@@ -957,3 +957,134 @@ body {
     width: 100%;
 }
 /* end blog page */
+
+/* login page */
+
+.loginheader {
+    text-align: center;
+    background: linear-gradient(111.82deg, #FEC973 19.22%, rgba(255, 255, 255, 0) 174.99%);
+    padding: 100px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.loginheader .loginheadertitle h1 {
+    font-size: 60px;
+    font-weight: bold;
+    color: #0A0882;
+}
+ 
+@media only screen and (max-width: 529px) {
+    .loginheader  {
+       display: none;
+    }
+
+}
+
+.loginformforstudent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.loginformforstudent .loginformimg img {
+    width: 300px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.loginformforstudent .loginformrealform {
+    background-color: rgba(255, 255, 255, 0.698);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    margin-top: 140px;
+    margin-left: -120px;
+
+}
+.loginformforstudent .loginformrealform form .loginuser input {
+    border: none;
+    outline: none;
+    background: #f8eeee;
+    border-radius: 33px;
+    padding: 12px;
+    margin-bottom: 15px;
+    padding-left: 29px;
+    -webkit-border-radius: 33px;
+    -moz-border-radius: 33px;
+    -ms-border-radius: 33px;
+    -o-border-radius: 33px;
+    font-weight: bold;
+    
+}
+.loginformforstudent .loginformrealform form button {
+    background: linear-gradient(102.02deg, #0012B8 12.06%, rgba(155, 155, 155, 0) 210.69%);
+    border-radius: 33px;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.loginformforstudent .loginformrealform form .ifnewstudnt {
+    font-size: 12px;
+    max-width: 150px;
+}
+.loginformforstudent .loginformrealform  .registecomnovo {
+    background: linear-gradient(111.82deg, #FEC973 19.22%, rgba(255, 255, 255, 0) 174.99%);
+    border-radius: 33px;
+    border: none;
+    width: 100%;
+    padding: 12px;
+
+    margin-top: 10px;
+    -webkit-border-radius: 33px;
+    -moz-border-radius: 33px;
+    -ms-border-radius: 33px;
+    -o-border-radius: 33px;
+    text-align: center;
+    
+}
+.loginformforstudent .loginformrealform  .registecomnovo a {
+    color: #0A0882;
+    font-weight: bold;
+    text-decoration: none;
+}
+.loginformforstudent .loginformrealform  form .orregister {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginformforstudent .loginformrealform  form .orregister .lineagainghh {
+    width: 100px;
+    height: 1px;
+    background-color: #b3b4b8;
+}
+
+@media only screen and (max-width: 486px) {
+    .loginformforstudent .loginformimg img {
+        display: none;
+    }
+    .loginformforstudent .loginformrealform {
+        margin-left: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+/* end login page */
