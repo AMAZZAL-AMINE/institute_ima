@@ -7,6 +7,36 @@
     }
 </style>
     <div class="container">
-       <h1>Hello From Conyacy Page</h1>
+        <div class="contacttitle">
+            <h1>Contact Nous</h1>
+        </div>
+        <div class="contactmapandformes">
+
+            <div class="contcatforms">
+                <form action="" method="post">
+                    @csrf
+                    <div class="nputdata">
+                        <input type="text" name="username" placeholder="Nom & Prénom">
+                    </div>
+                    <div class="nputdata">
+                        <input type="text" name="email" placeholder="Email">
+                    </div>
+                    <div class="nputdata">
+                        <input type="number" name="phone" placeholder="Telephone">
+                    </div>
+                    <div class="nputdata">
+                        <input type="text" name="subject" placeholder="Subject">
+                    </div>
+                    <div class="nputdata">
+                        <textarea name="message" id="message" placeholder="Message"></textarea>
+                    </div>
+
+                    <button type="submit">Envoyer</button>
+                </form>
+            </div>
+            <div class="contactmapes">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3441.1592181987435!2d-9.547844805701438!3d30.403224236160835!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4eb13d16ba344019!2sInstitut%20IMA!5e0!3m2!1sar!2sma!4v1639559633612!5m2!1sar!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
     </div>
 @endsection
