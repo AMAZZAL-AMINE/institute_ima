@@ -914,4 +914,46 @@ body {
         font-size: 20px;
     }
 }
+
+.allcartdsblog {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.allcartdsblog  a {
+    text-decoration: none;
+}
+.allcartdsblog .cardblog {
+    max-width: 150px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+     
+}
+.allcartdsblog .cardblog span {
+    color: #575757;
+    font-weight: 400;
+    font-size: 12px;
+}
+.allcartdsblog .cardblog  {
+    color: black;
+    font-size: 12px;
+    line-height: 18px;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+}
+.allcartdsblog .cardblog:hover {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-top: -5px;
+}
+.allcartdsblog .cardblog  p {
+    font-size: 10px;
+}
+.allcartdsblog .cardblog .blogcardimg img {
+    width: 100%;
+}
 /* end blog page */
