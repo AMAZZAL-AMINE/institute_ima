@@ -1191,4 +1191,125 @@ body {
 .inscriptiontoptitle h1 {
     font-weight: bold;
 }
+
+.inscriptionformsall {
+  
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.inscriptionformsall form .inscriusername {
+    display: flex; 
+    margin-bottom: 13px;
+}
+.inscriptionformsall form .inscriusername .fname {
+    flex: 2;
+}
+.inscriptionformsall form .inscriusername .lname {
+    flex: 2;
+    margin-left: 5px;
+}
+.inscriptionformsall form .inscriusername input {
+    width: 300px;
+    padding: 9px;
+    padding-left: 15px;
+    outline: none;
+    background-color: #e9e9ec;
+    border: none;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.inscriptionformsall form .inscrimgphoto input {
+    width: 100%;
+    padding: 9px;
+    padding-left: 15px;
+    outline: none;
+    background-color: #e9e9ec;
+    border: none;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    
+}
+.inscriptionformsall form .inputtitle {
+    color: #0012B8;
+    font-weight: bold;
+    font-size: 14px;
+}
+.inscriptionformsall form .inscrimgphoto {
+    margin-bottom: 13px;
+}
+.inscriptionformsall form .ninsnational {
+    margin-bottom: 13px;
+}
+.inscriptionformsall form .ninsnational input {
+    width: 100%;
+    padding: 9px;
+    padding-left: 15px;
+    outline: none;
+    background-color: #e9e9ec;
+    border: none;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.inscriptionformsall form .ninsctelephone {
+    margin-bottom: 13px;
+}
+.inscriptionformsall form .ninsctelephone input {
+    width: 100%;
+    padding: 9px;
+    padding-left: 15px;
+    outline: none;
+    background-color: #e9e9ec;
+    border: none;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.inscriptionformsall form .dinscberth {
+    margin-bottom: 13px;
+}
+
+.inscriptionformsall form .dinscberth input {
+    width: 100%;
+    padding: 9px;
+    padding-left: 15px;
+    outline: none;
+    background-color: #e9e9ec;
+    border: none;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.inscriptionformsall form .ninscschole {
+    margin-bottom: 13px;
+}
+.inscriptionformsall form .ninscschole select {
+    width: 100%;
+    padding: 9px;
+    padding-left: 15px;
+    outline: none;
+    background-color: #e9e9ec;
+    border: none;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
 /* end inscriotion page */

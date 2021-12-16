@@ -17,7 +17,7 @@
                 </div>
             </div>
             <div class="inscrimgphoto">
-                <div>Ta Photo</div>
+                <div class="inputtitle">Select Une Photo</div>
                 <input type="file" name="img">
             </div>
             <div class="ninsnational">
@@ -27,11 +27,11 @@
                 <input type="number" name="phone" placeholder="N° De Téléphone" value="{{ old("phone") }}">
             </div>
             <div class="dinscberth">
-                <div>Date de naissance</div>
+                <div class="inputtitle">Date de naissance</div>
                 <input type="date" name="dberth" value="{{ old("dberth") }}">
             </div>
             <div class="ninscschole">
-                <div><span>Date de naissance</span></div>
+                <div class="inputtitle">Niveau Scolaire</div>
                 <select name="nschole">
                     <option value="">...</option>
                     <option value="sans niveau">sans niveau</option>
@@ -43,7 +43,7 @@
                 </select>
             </div>
             <div class="ninscschole">
-                <div><span>Select Formation:</span></div>
+                <div class="inputtitle">Select Formation:</div>
                 <select name="formation">
                     <option value="">...</option>
                     <option value="sans niveau">AIDE PHARMACIE مساعد صيدلي</option>
@@ -83,6 +83,7 @@
 
                 </select>
             </div>
+            <button type="submit">S'inscrire</button>
         </form>
     </div>
 </div>
