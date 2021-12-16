@@ -1312,4 +1312,35 @@ body {
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
 }
+.inscriptionformsall form button {
+    background: linear-gradient(263.2deg, rgba(0, 15, 153, 0.921875) -123.35%, rgba(248, 248, 248, 0) 256.97%);
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    font-weight: bold;
+    color: white;
+}
+
+@media only screen and (max-width: 620px) {
+    .inscriptionformsall form .inscriusername {
+        display: block;  
+    }
+    .inscriptionformsall form .inscriusername .fname {
+        margin-bottom: 13px;
+    }
+    .inscriptionformsall form .inscriusername .lname {
+        flex: 2;
+        margin-left: 0;
+    }
+    .inscriptionformsall form .inscriusername input {
+        width: 100%;
+        padding: 9px;
+
+}
 /* end inscriotion page */
