@@ -43,8 +43,8 @@
                 </select>
             </div>
             <div class="ninscschole">
-                <div><span>Filière:</span></div>
-                <select name="nschole">
+                <div><span>Select Formation:</span></div>
+                <select name="formation">
                     <option value="">...</option>
                     <option value="sans niveau">AIDE PHARMACIE مساعد صيدلي</option>
                     <option value="Primaire">ASSISTANTE SOCIALE مساعد اجتماعي</option>
