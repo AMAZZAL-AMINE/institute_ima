@@ -41,7 +41,7 @@ class AdminController extends Controller
         }
 
         $student = new Student;
-        $student->create(
+        auth()->students()->create(
             array(
                 "fname" => $data["fname"],
                 "lname" => $data["lname"],

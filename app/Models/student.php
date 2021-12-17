@@ -9,9 +9,19 @@ class Student extends Model
 {
     use HasFactory;
 
+    //protected the data
+    protected $fillable = array(
+        "fname","lname",
+        "image","cin",
+        "phone","berthday",
+        "nvschole","firstPayed","formation_id",
+        "user_id"
+    );
+ 
+
     //relationship to user table model
     public function users() {
-        return $this->belongsTo(User::class, "user_id");
+        return $this->hasMany(User::class, "user_id");
     }
 
     //relation to fomations tanle model
