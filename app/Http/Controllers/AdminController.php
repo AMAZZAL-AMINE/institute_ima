@@ -20,4 +20,8 @@ class AdminController extends Controller
     public function requestUserPage() {
         return view("admin.requestusers");
     }
+    //store data users in database table students ==> request
+    public function storeDataInStudent() {
+        
+    }
 }
