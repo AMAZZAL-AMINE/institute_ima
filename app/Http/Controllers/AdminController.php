@@ -36,7 +36,7 @@ class AdminController extends Controller
             )
         );
         if($request->hasFile("img")) {
-            $filePath  = $request->file("img")->store("public", "studentimgs");
+            $filePath  = request('img')->store('studentimgs', 'public');
         }
 
         auth()->students()->create(
