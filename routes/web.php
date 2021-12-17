@@ -42,5 +42,7 @@ Route::get("/Student-Inscription", [InstriptionController::class, 'studentInscri
 Route::get("/Admin/Dashboard", [AdminController::class, 'adminDashboard'])->name("admin.dashboard");
 //request all users page
 Route::get("/Admin/Users-Request", [AdminController::class, 'requestUserPage'])->name("admin.requestusers");
+//insert data to database ahsing post
+Route::post("/Admin/Users-Request-insert", [AdminController::class, 'storeDataInStudent'])->name("admin.insertdatauser");
 
 // ==========================END ROUTE ADMIN  ==============================

@@ -6,7 +6,7 @@
 </div>
 <div class="container">
     <div class="inscriptionformsall">
-        <form action="" method="post" encrypted="">
+        <form action="{{ route('admin.insertdatauser') }}" method="post" enctype="multipart/form-data">
             @csrf
             <div class="inscriusername">
                 <div class="fname">
