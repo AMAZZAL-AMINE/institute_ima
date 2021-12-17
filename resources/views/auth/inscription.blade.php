@@ -85,6 +85,9 @@
             </div>
             <button type="submit">S'inscrire</button>
         </form>
+        @if (auth()->user()->has()->students())
+            <h1>Done You Already Registered /:</h1>
+        @endif
     </div>
 </div>
 @endsection

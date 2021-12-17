@@ -40,8 +40,7 @@ class AdminController extends Controller
             $filePath  = request('img')->store('studentimgs', 'public');
         }
 
-        $student = new Student;
-        auth()->students()->create(
+        auth()->user()->students()->create(
             array(
                 "fname" => $data["fname"],
                 "lname" => $data["lname"],
@@ -53,6 +52,12 @@ class AdminController extends Controller
                 "firstPayed" => null,
                 "formation_id" => $data["formation"],
                 "user_id" => auth()->user()->id,
+            )
+        );
+
+        return back()->with(
+            array(
+                "message" => "Done, Your data Has Been Send To Echole, We Will Call Your Soon, Be Ready"
             )
         );
 

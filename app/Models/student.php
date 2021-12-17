@@ -21,7 +21,7 @@ class Student extends Model
 
     //relationship to user table model
     public function users() {
-        return $this->hasMany(User::class, "user_id");
+        return $this->belongsTo(User::class, "user_id");
     }
 
     //relation to fomations tanle model
