@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\InstriptionController;
 
 /*
@@ -32,3 +33,12 @@ Route::get("/Contact-Nous", [HomeController::class, 'contactUs'])->name('contact
 Route::get("/Ima-Blog", [HomeController::class, 'blog'])->name('blog');
 //inscription page
 Route::get("/Student-Inscription", [InstriptionController::class, 'studentInscription'])->name("student.inscription");
+
+
+
+
+// ==========================ALL THIS ROUTE HERE IS FOR ADMIN  ==============================
+// admin dashboard
+Route::get("/Admin/Dashboard", [AdminController::class, 'adminDashboard'])->name("admin.dashboard");
+
+// ==========================END ROUTE ADMIN  ==============================
