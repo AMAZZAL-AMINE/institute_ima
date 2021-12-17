@@ -68,7 +68,7 @@
 
             <h6 class="collapse-header">Custom :</h6>
             <a class="collapse-item" href="#">Add Formations</a>
-            <a class="collapse-item" href="#">Invitation Users</a>
+            <a class="collapse-item" href="{{ route("admin.requestusers") }}">Invitation Users</a>
           </div>
         </div>
       </li>
