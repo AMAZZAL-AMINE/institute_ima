@@ -25,8 +25,13 @@ class AdminController extends Controller
         //insert data to database table students
         $data = $request->validate(
             array(
-                "" => "required",
-                "" => "",
+                "fname" => "required",
+                "lname" => "required",
+                "img" => ["required","image"],
+                "cin" => "required",
+                "phone" => "required",
+                "dberth" => ["required", "date"],
+
             )
         );
 

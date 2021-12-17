@@ -20,7 +20,7 @@ class CreateStudentsTable extends Migration
             $table->string("image");
             $table->string("cin");
             $table->string("phone");
-            $table->dateTime("berthday");
+            $table->date("berthday");
             $table->string("nvschole");
             $table->string("firstPayed")->nullable();
             $table->bigInteger("formation_id")->unsigned(); //create relation ship between  formation table and this one
