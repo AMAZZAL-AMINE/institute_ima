@@ -10,7 +10,13 @@ class Student extends Model
     use HasFactory;
 
     //relationship to user table model
-    public function user() {
-        return $this->belongsTo(User::class);
+    public function users() {
+        return $this->belongsTo(User::class, "user_id");
     }
+
+    //relation to fomations tanle model
+    public function fomations() {
+        return $this->belongsTo(Fomations::class, "fomation_id");
+    }
+
 }

@@ -11,6 +11,6 @@ class PayedMonth extends Model
 
     //rltionship to table users  model
     public function users() {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, "user_id");
     }
 }
