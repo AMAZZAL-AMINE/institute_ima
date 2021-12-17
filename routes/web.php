@@ -40,5 +40,7 @@ Route::get("/Student-Inscription", [InstriptionController::class, 'studentInscri
 // ==========================ALL THIS ROUTE HERE IS FOR ADMIN  ==============================
 // admin dashboard
 Route::get("/Admin/Dashboard", [AdminController::class, 'adminDashboard'])->name("admin.dashboard");
+//request all users page
+Route::get("/Admin/Users-Request", [AdminController::class, 'requestUserPage'])->name("admin.requestusers");
 
 // ==========================END ROUTE ADMIN  ==============================

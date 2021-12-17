@@ -15,4 +15,9 @@ class AdminController extends Controller
     public function adminDashboard() {
         return view("admin.dashboard");
     }
+
+    //return to page get all request user
+    public function requestUserPage() {
+        return view("admin.requestusers");
+    }
 }
