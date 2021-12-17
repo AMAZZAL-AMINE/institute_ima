@@ -31,7 +31,26 @@ class AdminController extends Controller
                 "cin" => "required",
                 "phone" => "required",
                 "dberth" => ["required", "date"],
+                "nschole" => "required",
+                "formation" => "required",
+            )
+        );
+        if($request->hasFile("img")) {
+            $filePath  = $request->file("img")->store("public", "studentimgs");
+        }
 
+        auth()->students()->create(
+            array(
+                "fname" => $data["fname"],
+                "lname" => $data["lname"],
+                "image" => $filePath,
+                "cin" => $data["cin"],
+                "phone" => $data["phone"],
+                "berthday" => $data["dberth"],
+                "nvschole" => $data["nschole"],
+                "firstPayed" => null,
+                "formation_id" => $data["formation"],
+                "user_id" => auth()->user()->id,
             )
         );
 
