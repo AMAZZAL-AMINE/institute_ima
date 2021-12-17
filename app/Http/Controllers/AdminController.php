@@ -21,7 +21,14 @@ class AdminController extends Controller
         return view("admin.requestusers");
     }
     //store data users in database table students ==> request
-    public function storeDataInStudent() {
-        
+    public function storeDataInStudent(Request $request) {
+        //insert data to database table students
+        $data = $request->validate(
+            array(
+                "" => "required",
+                "" => "",
+            )
+        );
+
     }
 }
