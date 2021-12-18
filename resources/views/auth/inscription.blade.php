@@ -98,7 +98,7 @@
             @else
             <div class="messageauipatrlee">
                 <h1>
-                    Inscription en cours d'examen
+                    Inscription en cours d'examen...
                 </h1>
                 <p>
                     Vos données sont en attente d'examen. Une fois 

@@ -16,7 +16,7 @@
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
-                        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <table class="table table-bordered  table-hover" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
                                     <th>Student Id</th>
@@ -63,7 +63,7 @@
                                     <td>{{ $student->phone }}</td>
                                     <td>{{ $student->berthday }}</td>
                                     <td>{{ $student->nvschole }}</td>
-                                    <td>{{ $student->formations->name }}</td>
+                                    <td>{{ $student->formations->name ?? 'none' }}</td>
                                     <td>{{ $student->created_at->format('Y-m-d') }}</td>
                                     <td><a class="btn btn-success" href=""><i class="fa fa-check" aria-hidden="true"></i></a></td>
                                     <td><a class="btn btn-primary" href=""> <i class="fa fa-eye" aria-hidden="true"></i> </a></td>
