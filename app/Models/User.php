@@ -44,7 +44,7 @@ class User extends Authenticatable
 
     //relation to table student
     public function students() {
-        return $this->hasMany(Student::class);
+        return $this->hasOne(Student::class);
     }
 
     //relationship to payedmounth table model

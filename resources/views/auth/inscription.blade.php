@@ -93,6 +93,9 @@
                     Merci pour votre inscription. Vos données personnelles ont été envoyées avec succès. Soyez prêt. Nous vous contacterons bientôt. Nous nous rencontrerons bientôt
                 </div>
         @endif
+        @if(auth()->user()->students->firstPayed)
+            You Account Has Been Activited
+            @else
             <div class="messageauipatrlee">
                 <h1>
                     Inscription en cours d'examen
@@ -102,7 +105,10 @@
                     les données confirmées, vous serez contacté. Soyez prêt à vous voir bientôt
                 </p>
             </div>
+        @endif
+
     @endif
 
+   
 </div>
 @endsection

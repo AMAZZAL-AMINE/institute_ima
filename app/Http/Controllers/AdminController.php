@@ -8,21 +8,27 @@ use Illuminate\Http\Request;
 class AdminController extends Controller
 {
     //requered login admin
-    public function __construct() {
+    public function __construct()
+    {
         return $this->middleware("auth");
     }
 
-    //admin dahsboard 
-    public function adminDashboard() {
+    //admin dahsboard
+    public function adminDashboard()
+    {
         return view("admin.dashboard");
     }
 
     //return to page get all request user
-    public function requestUserPage() {
-        return view("admin.requestusers");
+    public function requestUserPage()
+    {
+        //return to page all invitation users in admin panl
+        $students =  Student::where('firstPayed', null)->get();
+        return view("admin.requestusers", compact('students'));
     }
     //store data users in database table students ==> request
-    public function storeDataInStudent(Request $request) {
+    public function storeDataInStudent(Request $request)
+    {
         //insert data to database table students
         $data = $request->validate(
             array(
@@ -36,7 +42,7 @@ class AdminController extends Controller
                 "formation" => "required",
             )
         );
-        if($request->hasFile("img")) {
+        if ($request->hasFile("img")) {
             $filePath  = request('img')->store('studentimgs', 'public');
         }
 
@@ -60,6 +66,7 @@ class AdminController extends Controller
                 "message" => "Done, Your data Has Been Send To Echole, We Will Call Your Soon, Be Ready"
             )
         );
-
     }
 }
+  
+ 

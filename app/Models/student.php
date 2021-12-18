@@ -25,8 +25,8 @@ class Student extends Model
     }
 
     //relation to fomations tanle model
-    public function fomations() {
-        return $this->belongsTo(Fomations::class, "fomation_id");
+    public function formations() {
+        return $this->belongsTo(Formation::class, "formation_id");
     }
 
 }
