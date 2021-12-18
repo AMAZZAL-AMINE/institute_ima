@@ -5,6 +5,8 @@
     <h1>Inscription</h1>
 </div>
 <div class="container">
+
+    @if(auth()->user()->students()->count() === 0)
     <div class="inscriptionformsall">
         <form action="{{ route('admin.insertdatauser') }}" method="post" enctype="multipart/form-data">
             @csrf
@@ -80,12 +82,27 @@
                     <option value="29">Produits Cosmétiques - صناعة مستحضرات التجميل</option>
                     <option value="30">تكوين سيارة الإسعاف</option>
                     <option value="31">COIFFURE HOMME – الحلاقة للرجال</option>
-
                 </select>
             </div>
             <button type="submit">S'inscrire</button>
         </form>
-
     </div>
+        @else
+        @if (session()->has('message'))
+                <div class="alert alert-primary" role="alert">
+                    Merci pour votre inscription. Vos données personnelles ont été envoyées avec succès. Soyez prêt. Nous vous contacterons bientôt. Nous nous rencontrerons bientôt
+                </div>
+        @endif
+            <div class="messageauipatrlee">
+                <h1>
+                    Inscription en cours d'examen
+                </h1>
+                <p>
+                    Vos données sont en attente d'examen. Une fois 
+                    les données confirmées, vous serez contacté. Soyez prêt à vous voir bientôt
+                </p>
+            </div>
+    @endif
+
 </div>
 @endsection
