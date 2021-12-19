@@ -35,7 +35,7 @@
                         <hr>
                         <div class="container-fluid input-group d-flex align-items-center mb-3">
                             <div> <span>Formation : </span> </div> 
-                            <div><b class="text-primary">&nbsp;&nbsp;&nbsp; {{ $stud->formations->name }} </b></div>
+                            <div><b class="text-primary">&nbsp;&nbsp;&nbsp; {{ $stud->formations->name ?? "None" }} </b></div>
                         </div>
                         <hr>
                         <div class="container-fluid  mb-3">
