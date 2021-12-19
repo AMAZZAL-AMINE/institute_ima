@@ -44,5 +44,7 @@ Route::get("/Admin/Dashboard", [AdminController::class, 'adminDashboard'])->name
 Route::get("/Admin/Users-Request", [AdminController::class, 'requestUserPage'])->name("admin.requestusers");
 //insert data to database ahsing post
 Route::post("/Admin/Users-Request-insert", [AdminController::class, 'storeDataInStudent'])->name("admin.insertdatauser");
+//accepted user to be a student
+Route::get("/Admin/Students/{cin}", [AdminController::class, 'acceptStudnet'])->name("admin.acceptstudent");
 
 // ==========================END ROUTE ADMIN  ==============================

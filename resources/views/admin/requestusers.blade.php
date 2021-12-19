@@ -64,7 +64,7 @@
                                     <td>{{ $student->nvschole }}</td>
                                     <td>{{ $student->formations->name ?? 'none' }}</td>
                                     <td>{{ $student->created_at->format('Y-m-d') }}</td>
-                                    <td><a class="btn btn-success" href=""><i class="fa fa-check" aria-hidden="true"></i></a></td>
+                                    <td><a class="btn btn-success" href="{{ route("admin.acceptstudent",$student->cin) }}"><i class="fa fa-check" aria-hidden="true"></i></a></td>
                                     <td><a class="btn btn-primary" href=""> <i class="fa fa-eye" aria-hidden="true"></i> </a></td>
                                     <td><form action="" method="post">
                                         <button class="btn btn-danger" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>

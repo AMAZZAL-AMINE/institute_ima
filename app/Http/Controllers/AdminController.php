@@ -67,6 +67,12 @@ class AdminController extends Controller
             )
         );
     }
+
+    //accepted user to be student
+    public function acceptStudnet($cin) {
+        $student = Student::where("cin", $cin)->get();
+        return view("admin.pages.acceptstudent", compact("student"));
+    }
 }
   
  
