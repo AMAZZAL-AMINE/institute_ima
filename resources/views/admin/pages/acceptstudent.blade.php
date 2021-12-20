@@ -49,6 +49,18 @@
                                     </div>
 
                                     <div class="form-group input-group d-flex align-items-center">
+                                        <div> <span>Prix ​​d'inscription :</span> </div>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <select class="form-control"  name="month">
+                                            <option class="bg-gradient-success " value="">...</option>
+                                            @foreach ($months as $month)
+                                                 <option value="{{ $month->id }}">{{ $month->month_num }}</option>
+                                            @endforeach
+                                            
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group input-group d-flex align-items-center">
                                         <div> <span>Prix  le premier mois :</span> </div>
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                        <input class="form-control" type="number"  name="prix_firstmonth" placeholder="Prix (DH)">

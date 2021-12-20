@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Month;
 use App\Models\Student;
+use App\Models\PayedMonth;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -71,7 +73,8 @@ class AdminController extends Controller
     //accepted user to be student
     public function acceptStudnet($cin) {
         $student = Student::where("cin", $cin)->get();
-        return view("admin.pages.acceptstudent", compact("student"));
+        $months = Month::all();
+        return view("admin.pages.acceptstudent", compact("student","months"));
     }
 
     //update the student prace and acctive his accounting
@@ -80,6 +83,7 @@ class AdminController extends Controller
             array(
                 "prix_iscription" => "required",
                 "prix_firstmonth" => "required",
+                "month" => "required",
             )
         );
         $student = Student::find($id);
@@ -88,7 +92,15 @@ class AdminController extends Controller
                 "firstPayed" => $data['prix_iscription'],
             )
         );
-        
+        $month = new PayedMonth;
+        $month->create(
+            array(
+                "user_id" => $student->id,
+                "month_num" => $data['month'],
+                "prix" => $data["prix_firstmonth"],
+            ),
+        );
+
         
     }
 }

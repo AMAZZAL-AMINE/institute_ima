@@ -17,6 +17,7 @@ class CreatePayedMonthsTable extends Migration
             $table->id();
             $table->bigInteger("user_id")->unsigned();
             $table->bigInteger("month_id")->unsigned();
+            $table->decimal("prix");
             $table->timestamps();
         });
     }
