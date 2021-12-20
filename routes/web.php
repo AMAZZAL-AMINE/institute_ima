@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Month;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -48,3 +49,15 @@ Route::post("/Admin/Users-Request-insert", [AdminController::class, 'storeDataIn
 Route::get("/Admin/Students/{cin}", [AdminController::class, 'acceptStudnet'])->name("admin.acceptstudent");
 
 // ==========================END ROUTE ADMIN  ==============================
+
+//creat months
+Route::get("/m", function() {
+    $month = new Month;
+    $month->create(
+        array(
+            "month_num" => "12eme Mois",
+            
+        )
+    );
+    echo "done";
+});

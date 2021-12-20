@@ -75,19 +75,21 @@ class AdminController extends Controller
     }
 
     //update the student prace and acctive his accounting
-    public function studentActiveAccount(Request $request) {
+    public function studentActiveAccount(Request $request, $id) {
         $data = $request->validate(
             array(
                 "prix_iscription" => "required",
                 "prix_firstmonth" => "required",
             )
         );
-        $student = new Student;
+        $student = Student::find($id);
         $student->update(
             array(
-                ""
+                "firstPayed" => $data['prix_iscription'],
             )
         );
+        
+        
     }
 }
   
