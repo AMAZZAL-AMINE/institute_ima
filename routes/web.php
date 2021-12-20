@@ -47,7 +47,8 @@ Route::get("/Admin/Users-Request", [AdminController::class, 'requestUserPage'])-
 Route::post("/Admin/Users-Request-insert", [AdminController::class, 'storeDataInStudent'])->name("admin.insertdatauser");
 //accepted user to be a student
 Route::get("/Admin/Students/{cin}", [AdminController::class, 'acceptStudnet'])->name("admin.acceptstudent");
-
+//get furst pay of student
+Route::put("/Admin/Students/{id}", [AdminController::class, "studentActiveAccount"])->name("studnet.active");
 // ==========================END ROUTE ADMIN  ==============================
 
 //creat months

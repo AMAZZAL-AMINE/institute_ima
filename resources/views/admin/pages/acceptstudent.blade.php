@@ -39,7 +39,7 @@
                         </div>
                         <hr>
                         <div class="container-fluid  mb-3">
-                                <form action="" method="post">
+                                <form action="{{ route("studnet.active",$stud->id) }}" method="post">
                                     @csrf
                                     @method("PUT")
                                     <div class="form-group input-group d-flex align-items-center">

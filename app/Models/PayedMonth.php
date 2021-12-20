@@ -9,6 +9,10 @@ class PayedMonth extends Model
 {
     use HasFactory;
 
+    protected $guarded = array(
+        "user_id","prix"
+    );
+
     //rltionship to table users  model
     public function users() {
         return $this->belongsTo(User::class, "user_id");

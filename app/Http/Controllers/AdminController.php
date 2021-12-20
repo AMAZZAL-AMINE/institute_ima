@@ -93,6 +93,7 @@ class AdminController extends Controller
             )
         );
         $month = new PayedMonth;
+        $student = Student::find($id);
         $month->create(
             array(
                 "user_id" => $student->id,
@@ -101,6 +102,11 @@ class AdminController extends Controller
             ),
         );
 
+        return back()->with(
+            array(
+                "message" =>"Student Has Been Add To Echole"
+            )
+        );
         
     }
 }
