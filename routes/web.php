@@ -56,7 +56,6 @@ Route::get("/m", function() {
     $month->create(
         array(
             "month_num" => "12eme Mois",
-            
         )
     );
     echo "done";

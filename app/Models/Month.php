@@ -12,4 +12,9 @@ class Month extends Model
     protected $fillable = array(
         "month_num"
     );
+
+    //make relationship with table monthpay
+    public function payedmonths() {
+        return $this->hasMany(PayedMonth::class);
+    }
 }

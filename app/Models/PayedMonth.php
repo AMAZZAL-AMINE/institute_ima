@@ -13,4 +13,9 @@ class PayedMonth extends Model
     public function users() {
         return $this->belongsTo(User::class, "user_id");
     }
+
+    //relationship with table months 
+    public function months() {
+        return $this->belongsTo(Month::class, "")
+    }
 }
