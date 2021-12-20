@@ -51,7 +51,7 @@
                                     <div class="form-group input-group d-flex align-items-center">
                                         <div> <span>Prix  le premier mois :</span> </div>
                                         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                       <input class="form-control" type="number"  name="prix_iscription" placeholder="Prix (DH)">
+                                       <input class="form-control" type="number"  name="prix_firstmonth" placeholder="Prix (DH)">
                                     </div>
                                     <button type="submit" class="btn btn-primary">Save And Next To Page Print</button>
                                 </form>

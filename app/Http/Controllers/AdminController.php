@@ -73,6 +73,22 @@ class AdminController extends Controller
         $student = Student::where("cin", $cin)->get();
         return view("admin.pages.acceptstudent", compact("student"));
     }
+
+    //update the student prace and acctive his accounting
+    public function studentActiveAccount(Request $request) {
+        $data = $request->validate(
+            array(
+                "prix_iscription" => "required",
+                "prix_firstmonth" => "required",
+            )
+        );
+        $student = new Student;
+        $student->update(
+            array(
+                ""
+            )
+        );
+    }
 }
   
  
