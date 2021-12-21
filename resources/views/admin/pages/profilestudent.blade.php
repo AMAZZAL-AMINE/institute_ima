@@ -6,6 +6,5 @@
         @foreach ($mounths as $month)
             <p>{{ $month->name }}</p>
         @endforeach
-
     </div>
 @endsection
