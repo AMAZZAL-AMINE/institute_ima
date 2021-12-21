@@ -4,7 +4,9 @@
     <div class="container ">
         @if (session()->has('message'))
             <h1>Done, Click The Button To Prit Invoice</h1>
-            <a href="" class="btn btn-success"> <i class="fa fa-print" aria-hidden="true"></i>Print The Invoice</a>
+            @foreach ($student as $std)
+                <a href="{{ route("admin.printinvoice",$std->id) }}" class="btn btn-success"> <i class="fa fa-print" aria-hidden="true"></i>Print The Invoice</a>
+            @endforeach
         @else
         @foreach ($student as $stud)
         <div class="card">
