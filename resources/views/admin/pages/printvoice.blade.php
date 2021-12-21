@@ -63,11 +63,11 @@
                             <tbody>
                                 <tr>
                                     <td class="col-md-9">Prix ​​d'inscription</td>
-                                    <td class="col-md-3"> 100.00 DH </td>
+                                    <td class="col-md-3"> {{ $student->firstPayed }} DH </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-9">Prix ​​pour le premier mois</td>
-                                    <td class="col-md-3">1000.00 DH </td>
+                                    <td class="col-md-3">{{ $invoice->prix }} DH</td>  </td>
                                 </tr>
                                 <thead>
                                     <tr>
@@ -96,7 +96,7 @@
                                         <h4><strong>Total:</strong></h4>
                                     </td>
                                     <td class="text-left">
-                                        <h4><strong> 1100,00 DH</strong></h4>
+                                        <h4><strong> {{ $student->firstPayed  + $invoice->prix }} DH</strong></h4>
                                     </td>
                                 </tr>
                             </tbody>
@@ -104,7 +104,7 @@
                     </div>
                     <div>
                         <div class="col-md-12">
-                            <p><b>Date :</b> 6 June 2019</p> <br />
+                            <p><b>Date Print De FACTURE :</b> <?php echo date("Y-m-d"); ?> </p> </p> <br />
                             
                         </div>
                     </div>

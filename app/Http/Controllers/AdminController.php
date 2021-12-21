@@ -113,7 +113,7 @@ class AdminController extends Controller
 
     //print invoice page
     public function studentPrintInvoice($id) {
-        $invoice = PayedMonth::where("student_id", $id)->get();
+        $invoice = PayedMonth::where("student_id", $id)->first();
         $student = Student::where("id", $id)->first();
         return view("admin.pages.printvoice", compact('invoice', 'student'));
     }
