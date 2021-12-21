@@ -57,6 +57,8 @@ Route::get("/Admin/Student/Print/{id}", [AdminController::class, "studentPrintIn
 Route::get("/Admin/All-Student", [AdminController::class, "allStudentAccepted"])->name("student.whoaccepted");
 //page student _details
 Route::get("/Admin/Student/{id}", [AdminController::class, "studentProfile"])->name("student.profile");
+//deleting student
+Route::delete("/Admin/Student/Delete/{id}", [AdminController::class, "studentDeleting"])->name("student.delete");
 
  
 // ==========================END ROUTE ADMIN  ==============================

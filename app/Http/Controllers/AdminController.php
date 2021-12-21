@@ -110,6 +110,16 @@ class AdminController extends Controller
         );
         
     }
+    //deleteinh user
+    public function studentDeleting($id) {
+        $student = Student::find($id);
+        $student->delete();
+        return back()->with(
+            array(
+                "message" => "Student Has been Deleted Successfuly"
+            )
+        );
+    }
 
     //print invoice page
     public function studentPrintInvoice($id) {

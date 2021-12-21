@@ -12,6 +12,18 @@
                 <div class="card-header py-3">
                     <h6 class="m-0 font-weight-bold text-primary">Les demandes des étudiants</h6>
                 </div>
+                @if(session()->has('message'))
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <strong>{{ session("message") }}</strong> 
+                    </div>
+                    
+                    <script>
+                      $(".alert").alert();
+                    </script>
+                @endif
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table table-bordered  table-hover" id="dataTable" width="100%" cellspacing="0">
@@ -56,7 +68,9 @@
                                     <td>{{ $student->created_at->format('Y-m-d') }}</td>
                                     <td><a class="btn btn-success" href="{{ route("admin.acceptstudent",$student->cin) }}"><i class="fa fa-check" aria-hidden="true"></i></a></td>
                                     <td><a class="btn btn-primary" href=""> <i class="fa fa-eye" aria-hidden="true"></i> </a></td>
-                                    <td><form action="" method="post">
+                                    <td><form action="{{ route("student.delete",$student->id) }}" method="post">
+                                        @csrf
+                                        @method("DELETE")
                                         <button class="btn btn-danger" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                     </form></td>
                                 </tr>
