@@ -2,9 +2,16 @@
 
 @section("content")
     <div class="container">
-        <h1>{{ $student->fname }} {{ $student->lname }}</h1>
-        @foreach ($mounths as $month)
-            <p>{{ $month->name }}</p>
-        @endforeach
+        <div class="topheaderprofile">
+             <div class="addbackgroungdark"></div>
+             <div class="studentprofileimg">
+                    <img src="{{ asset("/storage/".$student->image) }}" alt="">
+             </div>
+        </div>
+        <div class="userdetailbody">
+            <div class="">
+
+            </div>
+        </div>
     </div>
 @endsection
