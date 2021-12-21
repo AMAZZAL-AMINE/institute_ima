@@ -10,7 +10,7 @@
         </div>
         <div class="userdetailbody">
             <div class="">
-
+                
             </div>
         </div>
     </div>
