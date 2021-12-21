@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\InstriptionController;
+use App\Models\PayedMonth;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,6 +66,10 @@ Route::get("/m", function() {
 
 //testing user payment methhod
 Route::get("/h/{id}", function($id) {
-    $student = Student::find($id);
-    return $student->;
+    $month = PayedMonth::where("student_id", $id)->get();
+    foreach($month as $stud) {
+        echo $stud->students->fname."<br>";
+
+    }
+
 });

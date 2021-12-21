@@ -54,7 +54,7 @@
                                         <select class="form-control"  name="month">
                                             <option class="bg-gradient-success " value="">...</option>
                                             @foreach ($months as $month)
-                                                 <option value="{{ $month->id }}">{{ $month->month_num }}</option>
+                                                 <option value="{{ $month->month_num }}">{{ $month->month_num }}</option>
                                             @endforeach
                                             
                                         </select>

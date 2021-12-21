@@ -92,7 +92,7 @@ class AdminController extends Controller
         $month->create(
             array(
                 "student_id" => $student->id,
-                "month_id" => $data['month'],
+                "name" => $data['month'],
                 "prix" => $data["prix_firstmonth"],
             ),
         );

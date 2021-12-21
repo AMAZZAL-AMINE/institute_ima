@@ -10,7 +10,7 @@ class PayedMonth extends Model
     use HasFactory;
 
     protected $fillable   = [
-        "student_id","prix","month_id"
+        "student_id","prix","name",
     ];
 
     //rltionship to table users  model
@@ -18,8 +18,5 @@ class PayedMonth extends Model
         return $this->belongsTo(Student::class, "student_id");
     }
 
-    //relationship with table months 
-    public function months() {
-        return $this->belongsTo(Month::class, "month_id");
-    }
+
 }

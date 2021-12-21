@@ -5,11 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Month extends Model
+class testModel extends Model
 {
     use HasFactory;
-
-    protected $fillable = array(
-        "month_num","user_id"
-    );
 }
