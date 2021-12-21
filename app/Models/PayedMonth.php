@@ -9,13 +9,13 @@ class PayedMonth extends Model
 {
     use HasFactory;
 
-    protected $guarded = array(
-        "user_id","prix"
-    );
+    protected $fillable   = [
+        "student_id","prix","month_id"
+    ];
 
     //rltionship to table users  model
-    public function users() {
-        return $this->belongsTo(User::class, "user_id");
+    public function students() {
+        return $this->belongsTo(Student::class, "student_id");
     }
 
     //relationship with table months 

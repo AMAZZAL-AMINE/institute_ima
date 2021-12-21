@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\Month;
+use App\Models\Student;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -51,7 +52,7 @@ Route::get("/Admin/Students/{cin}", [AdminController::class, 'acceptStudnet'])->
 Route::put("/Admin/Students/{id}", [AdminController::class, "studentActiveAccount"])->name("studnet.active");
 // ==========================END ROUTE ADMIN  ==============================
 
-//creat months
+// creat months
 Route::get("/m", function() {
     $month = new Month;
     $month->create(
@@ -60,4 +61,10 @@ Route::get("/m", function() {
         )
     );
     echo "done";
+});
+
+//testing user payment methhod
+Route::get("/h/{id}", function($id) {
+    $student = Student::find($id);
+    return $student->;
 });

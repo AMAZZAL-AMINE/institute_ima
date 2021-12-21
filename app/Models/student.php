@@ -29,4 +29,8 @@ class Student extends Model
         return $this->belongsTo(Formation::class, "formation_id");
     }
 
+    //relationship to payedmounth table model
+    public function payedmounth() {
+        return $this->hasMany(PayedMonth::class);
+    }
 }

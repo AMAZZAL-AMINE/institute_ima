@@ -87,19 +87,20 @@ class AdminController extends Controller
             )
         );
         $student = Student::find($id);
+        $month = new PayedMonth;
+ 
+        $month->create(
+            array(
+                "student_id" => $student->id,
+                "month_id" => $data['month'],
+                "prix" => $data["prix_firstmonth"],
+            ),
+        );
+
         $student->update(
             array(
                 "firstPayed" => $data['prix_iscription'],
             )
-        );
-        $month = new PayedMonth;
-        $student = Student::find($id);
-        $month->create(
-            array(
-                "user_id" => $student->id,
-                "month_num" => $data['month'],
-                "prix" => $data["prix_firstmonth"],
-            ),
         );
 
         return back()->with(

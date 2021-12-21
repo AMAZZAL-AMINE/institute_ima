@@ -10,7 +10,7 @@ class Month extends Model
     use HasFactory;
 
     protected $fillable = array(
-        "month_num",
+        "month_num","user_id"
     );
 
     //make relationship with table monthpay
