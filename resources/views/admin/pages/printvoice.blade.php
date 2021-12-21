@@ -81,15 +81,15 @@
                                 </thead>
                                 <tr>
                                     <td class="col-md-9">Nom de l'étudiant</td>
-                                    <td class="col-md-3"> Amine Amazzal </td>
+                                    <td class="col-md-3"> {{ $student->fname }} {{ $student->lname }} </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-9">Formation</td>
-                                    <td class="col-md-3"> Hello World</td>
+                                    <td class="col-md-3"> {{ $student->formations->name ?? "No Formation Right now" }} </td>
                                 </tr>
                                 <tr>
                                     <td class="col-md-9">date de l'inscription</td>
-                                    <td class="col-md-3"> 10/12/2021</td>
+                                    <td class="col-md-3"> {{ $student->created_at->format('Y-m-d') }}</td> </td>
                                 </tr>
                                 <tr style="color: #F81D2D;">
                                     <td class="text-right">
