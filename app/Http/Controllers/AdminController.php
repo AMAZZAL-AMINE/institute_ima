@@ -123,6 +123,13 @@ class AdminController extends Controller
         $students = Student::whereNotNull('firstPayed')->get();
         return view("admin.pages.allstudentacetpted", compact("students"));
     }
+
+    //student profile functiona
+    public function studentProfile($id) {
+        $student = Student::findOrFail($id);
+        $mounths = PayedMonth::where("student_id", $id)->get();
+        return view("admin.pages.profilestudent", compact("student","mounths"));
+    }
 }
   
  

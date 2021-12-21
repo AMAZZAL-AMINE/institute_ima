@@ -50,7 +50,7 @@
                                     <td>{{ $student->phone }}</td>
                                     <td>{{ $student->formations->name ?? 'none' }}</td>
                                     <td>{{ $student->created_at->format('Y-m-d') }}</td>
-                                    <td><a class="btn btn-primary" href=""><i class="fa fa-eye" aria-hidden="true"></i> Details</a></td>
+                                    <td><a class="btn btn-primary" href="{{ route("student.profile",$student->id) }}"><i class="fa fa-eye" aria-hidden="true"></i> Details</a></td>
                                 </tr>
                                 @endforeach
 

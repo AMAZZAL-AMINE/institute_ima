@@ -55,6 +55,8 @@ Route::put("/Admin/Students/{id}", [AdminController::class, "studentActiveAccoun
 Route::get("/Admin/Student/Print/{id}", [AdminController::class, "studentPrintInvoice"])->name("admin.printinvoice");
 //page where we get all student who get the  invoice
 Route::get("/Admin/All-Student", [AdminController::class, "allStudentAccepted"])->name("student.whoaccepted");
+//page student _details
+Route::get("/Admin/Student/{id}", [AdminController::class, "studentProfile"])->name("student.profile");
 
  
 // ==========================END ROUTE ADMIN  ==============================
