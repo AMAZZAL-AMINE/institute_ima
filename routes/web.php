@@ -51,6 +51,9 @@ Route::post("/Admin/Users-Request-insert", [AdminController::class, 'storeDataIn
 Route::get("/Admin/Students/{cin}", [AdminController::class, 'acceptStudnet'])->name("admin.acceptstudent");
 //get furst pay of student
 Route::put("/Admin/Students/{id}", [AdminController::class, "studentActiveAccount"])->name("studnet.active");
+//print user invoice
+Route::get("/Admin/Student/Print/{id}", [AdminController::class, "studentPrintInvoice"])->name("admin.printinvoice");
+ 
 // ==========================END ROUTE ADMIN  ==============================
 
 // creat months
@@ -67,8 +70,16 @@ Route::get("/m", function() {
 //testing user payment methhod
 Route::get("/h/{id}", function($id) {
     $month = PayedMonth::where("student_id", $id)->get();
+    $student = Student::where("id", $id)->get();
+    foreach ($student as $stude) {
+        echo $stude->fname."<br>";
+    }
+    if( $student->count() === 0 ) {
+        echo "<h1>Not Found</h1>";
+    }
     foreach($month as $stud) {
-        echo $stud->students->fname."<br>";
+        
+        echo $stud->name."<br>";
 
     }
 

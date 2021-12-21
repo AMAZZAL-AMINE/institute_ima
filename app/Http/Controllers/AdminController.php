@@ -110,6 +110,11 @@ class AdminController extends Controller
         );
         
     }
+
+    //print invoice page
+    public function studentPrintInvoice() {
+        return view("admin.pages.printvoice");
+    }
 }
   
  
