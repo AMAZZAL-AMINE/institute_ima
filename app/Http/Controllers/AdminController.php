@@ -126,7 +126,7 @@ class AdminController extends Controller
         $invoice = PayedMonth::where("student_id", $id)->first();
         $student = Student::where("id", $id)->first();
         return view("admin.pages.printvoice", compact('invoice', 'student'));
-    }
+    } 
     
     //get all student wgo get hes invoisement
     public function allStudentAccepted() {
