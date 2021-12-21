@@ -1,7 +1,6 @@
 @extends("layouts.admin")
 
 @section("content")
-    @if($student->firstPayed === null)
     <style>
         .body-main {
         background: #ffffff;
@@ -128,17 +127,5 @@
         window.print();
         document.body.innerHTML = originalContents;
    }
-   
-   
    </script>
-   @else
-   <div class="containe">
-       <div class="text-center" style="margin-top: 300px">
-            <b>
-                Désoly, Cet étudiant a Déja Payé Le Premier Mois 
-            </b> <br>
-            <a href="" class="btn btn-success">Visit Le Profile De Cet étudiant</a>
-       </div>
-   </div>
-    @endif
 @endsection

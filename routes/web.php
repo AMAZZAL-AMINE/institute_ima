@@ -53,6 +53,9 @@ Route::get("/Admin/Students/{cin}", [AdminController::class, 'acceptStudnet'])->
 Route::put("/Admin/Students/{id}", [AdminController::class, "studentActiveAccount"])->name("studnet.active");
 //print user invoice
 Route::get("/Admin/Student/Print/{id}", [AdminController::class, "studentPrintInvoice"])->name("admin.printinvoice");
+//page where we get all student who get the  invoice
+Route::get("/Admin/All-Student", [AdminController::class, "allStudentAccepted"])->name("student.whoaccepted");
+
  
 // ==========================END ROUTE ADMIN  ==============================
 

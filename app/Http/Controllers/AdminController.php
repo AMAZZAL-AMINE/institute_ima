@@ -117,6 +117,12 @@ class AdminController extends Controller
         $student = Student::where("id", $id)->first();
         return view("admin.pages.printvoice", compact('invoice', 'student'));
     }
+    
+    //get all student wgo get hes invoisement
+    public function allStudentAccepted() {
+        $students = Student::whereNotNull('firstPayed')->get();
+        return view("admin.pages.allstudentacetpted", compact("students"));
+    }
 }
   
  
