@@ -4,16 +4,16 @@
 <style>
      .body-main {
      background: #ffffff;
-    
-     
      margin-top: 30px;
      margin-bottom: 30px;
      padding: 40px 30px !important;
      position: relative;
      box-shadow: 0 1px 21px #e9e9e9be;
      font-size: 10px;
-   margin:  auto;
+     margin:  auto;
+     width: 100;
  }
+ 
 
  .main thead {
      background: #1E1F23;
@@ -27,8 +27,9 @@
  h1 {
      text-align: center
  }
+ 
 </style>
-<div class="container" id="printableArea">
+<div class="" id="printableArea">
     <div class="" >
         <div class="row">
             <div class="col-md-9 col-md-offset-3 body-main">
@@ -45,7 +46,7 @@
                     <div class="row">
                         <div class="col-md-12 text-center">
                             <h2>FACTURE D'ACHAT</h2>
-                            <h5>04854654101</h5>
+                            <h5>N- #{{  $invoice->id  }}</h5>
                         </div>
                     </div> <br />
                     <div>
@@ -105,7 +106,6 @@
                     <div>
                         <div class="col-md-12">
                             <p><b>Date Print De FACTURE :</b> <?php echo date("Y-m-d"); ?> </p> </p> <br />
-                            
                         </div>
                     </div>
                 </div>
@@ -123,12 +123,11 @@
 function printDiv(divName) {
      var printContents = document.getElementById(divName).innerHTML;
      var originalContents = document.body.innerHTML;
-
      document.body.innerHTML = printContents;
-
      window.print();
-
      document.body.innerHTML = originalContents;
 }
+
+
 </script>
 @endsection
