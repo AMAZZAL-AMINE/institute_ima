@@ -60,15 +60,19 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Manage Students</h6>
+            <h6 class="collapse-header">Manager Students :</h6>
             <a class="collapse-item" href="{{ route("student.whoaccepted") }}">All Ima Students</a>
-            <a class="collapse-item" href="#">All Formations</a>
-
-                <hr>
-
-            <h6 class="collapse-header">Custom :</h6>
-            <a class="collapse-item" href="#">Add Formations</a>
             <a class="collapse-item" href="{{ route("admin.requestusers") }}">Invitation Users</a>
+
+            <hr>
+
+            <h6 class="collapse-header">Manage Formation</h6>
+            <a class="collapse-item" href="#">All Formations</a>
+            <a class="collapse-item" href="#">Add Formations</a>
+
+
+
+
           </div>
         </div>
       </li>
