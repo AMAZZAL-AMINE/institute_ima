@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Month;
 use App\Models\Student;
+use App\Models\Formation;
 use App\Models\PayedMonth;
 use Illuminate\Http\Request;
 
@@ -145,6 +146,32 @@ class AdminController extends Controller
     //add formatioin page
     public function addFormation() {
         return view("admin.pages.addFormation");
+    }
+
+    //store formatio in database 
+    public function storeFormation(Request $request) {
+        $data = $request->validate(
+            array(
+                "name" => "required",
+                "slug" => "required",
+                "desc" => "required",
+            ),
+        );
+
+        $formation = new Formation;
+        $formation->create(
+            array(
+                "name" => $data['name'],
+                "slug" => $data['slug'],
+                "description" => $data["desc"]
+            ),
+        );
+
+        return back()->with(
+            array(
+                "message" => "Formation A Created Successfuly"
+            )
+        );
     }
     /**
      * ti do list for on 23/12/2021 => inshallah

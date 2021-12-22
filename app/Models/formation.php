@@ -9,6 +9,10 @@ class Formation extends Model
 {
     use HasFactory;
 
+    protected $fillable = array(
+        "name", "slug", "description"
+    );
+
     //relation ship to student table model
     public function students() {
         return $this->hasMany(Student::class);

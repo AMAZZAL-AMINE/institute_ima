@@ -61,7 +61,8 @@ Route::get("/Admin/Student/{id}", [AdminController::class, "studentProfile"])->n
 Route::delete("/Admin/Student/Delete/{id}", [AdminController::class, "studentDeleting"])->name("student.delete");
 //add formation page 
 Route::get("/Admin/Add-formation", [AdminController::class, "addFormation"])->name("formation.add");
- 
+//store formation data
+Route::post("/Admin/Add-Formation/Store", [AdminController::class, "storeFormation"])->name("formation.store");
 // ==========================END ROUTE ADMIN  ==============================
 
 // creat months

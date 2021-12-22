@@ -18,7 +18,7 @@
 
   <!-- Custom styles for this template-->
   <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
-
+  <script src="https://cdn.tiny.cloud/1/9rq7cimopkydfehbhz2x55dgf9o393x2anaodq6f4iywesvu/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 </head>
 
 <body id="page-top">
@@ -276,7 +276,7 @@
   <!-- Page level custom scripts -->
   <script src="{{ asset('js/demo/chart-area-demo.js') }}"></script>
   <script src="{{ asset('js/demo/chart-pie-demo.js') }}"></script>
- 
+
   @yield('scripts')
 </body>
 
