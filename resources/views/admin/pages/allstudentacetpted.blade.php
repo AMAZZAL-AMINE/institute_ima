@@ -15,28 +15,28 @@
                 <div class="card-body">
                     <div class="table-responsive">
                         <table class="table  table-hover " id="dataTable" width="100%" cellspacing="0">
-                            <thead>
+                            <thead class="bg-warning">
                                 <tr>
-                                    <th>Id</th>
-                                    <th>Nom</th>
-                                    <th>Prénom</th>
-                                    <th>Cin</th>
-                                    <th>Phone</th>
-                                    <th>Formation</th>
-                                    <th>D.D’inscription</th>
-                                    <th>Profile</th>
+                                    <th class="text-primary">Id</th>
+                                    <th class="text-primary">Nom</th>
+                                    <th class="text-primary">Prénom</th>
+                                    <th class="text-primary">Cin</th>
+                                    <th class="text-primary">Phone</th>
+                                    <th class="text-primary">Formation</th>
+                                    <th class="text-primary">D.D’inscription</th>
+                                    <th class="text-primary">Profile</th>
                                 </tr>
                             </thead>
-                            <tfoot>
+                            <tfoot class="bg-warning">
                                 <tr>
-                                    <th>Id</th>
-                                    <th>Nom</th>
-                                    <th>Prénom</th>
-                                    <th>Cin</th>
-                                    <th>Phone</th>
-                                    <th>Formation</th>
-                                    <th>D.D’inscription</th>
-                                    <th>Profile</th>
+                                <th class="text-primary">Id</th>
+                                    <th class="text-primary">Nom</th>
+                                    <th class="text-primary">Prénom</th>
+                                    <th class="text-primary">Cin</th>
+                                    <th class="text-primary">Phone</th>
+                                    <th class="text-primary">Formation</th>
+                                    <th class="text-primary">D.D’inscription</th>
+                                    <th class="text-primary">Profile</th>
        
                                 </tr>
                             </tfoot>
