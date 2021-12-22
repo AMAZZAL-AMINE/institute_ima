@@ -97,6 +97,9 @@
                     @endforeach
                 </tbody>
               </table>
+              <div class="text-center">
+                <a class="btn btn-success"  href=""><i class="fa fa-plus" aria-hidden="true"></i> Add A Nouther Payed Mounth</a>
+              </div>
         </div>
     </div>
 @endsection
