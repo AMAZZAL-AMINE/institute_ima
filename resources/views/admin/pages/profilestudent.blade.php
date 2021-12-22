@@ -34,10 +34,7 @@
                         <b>
                             <?php echo $student->formations->name ?? "<span class='text-danger'>No Formation Selcted</span>" ?>
                         </b></div>
-                        <div class="gottolineefghejg"></div> <div class="sometextnemext"><span>Formation :  </span> 
-                            <b>
-                                <?php echo $student->formations->name ?? "<span class='text-danger'>No Formation Selcted</span>" ?>
-                            </b></div>
+                        
                     </div>
                 </div> 
                 <div class="inespan"></div>
@@ -71,6 +68,35 @@
                     </div>
                 </div> 
             </div>
+        </div>
+
+        <hr class="mt-5">
+        {{-- stydent all iInfo About Payemnts --}}
+        <div class="tabmespayments">
+            <div class="titletableskdhfg">All About Payment Of This Student</div>
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Month</th>
+                    <th scope="col">Prix</th>
+                    <th scope="col">Date De Payment</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Prix De Inscription</td>
+                        <td>{{ $student->firstPayed }} DH</td>
+                        <td>{{ $student->updated_at->format("Y-m-d") }}</td>
+                    </tr>
+                    @foreach ($mounths as $stud)
+                    <tr>
+                        <td>{{ $stud->name }}</td>
+                        <td>{{  $stud->prix  }} DH</td>
+                        <td>{{ $stud->created_at->format('Y-m-d') }}</td>
+                    </tr>
+                    @endforeach
+                </tbody>
+              </table>
         </div>
     </div>
 @endsection
