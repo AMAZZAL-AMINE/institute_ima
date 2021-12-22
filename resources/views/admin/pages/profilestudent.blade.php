@@ -15,14 +15,49 @@
              </div>
         </div>
         <hr>
-        <div class="userdetailbody">
-            <div class="gropone">
-                <div class="leftone">1</div>
-                <div class="contetn">
-                    <span>Nom Et Prénom :  </span> <b>Amine Amazzal</b>
+        <div class="allbodiessbobys">
+            <div class="userdetailbody">
+                <div class="gropone">
+                    <div class="leftone">1</div>
+                    <div class="contetn">
+                       <div class="gottolineefghejg"></div> 
+                        <div class="sometextnemext"><span>Nom Et Prénom :  </span> 
+                            <b>{{ strtoupper($student->fname) }} {{  strtoupper($student->lname) }}</b>
+                        </div>
+                    </div>
                 </div>
+                <div class="inespan"></div>
+                <div class="gropone">
+                    <div class="leftone">1</div>
+                    <div class="contetn">
+                       <div class="gottolineefghejg"></div> <div class="sometextnemext"><span>Formation :  </span> 
+                        <b>
+                            <?php echo $student->formations->name ?? "<span class='text-danger'>No Formation Selcted</span>" ?>
+                        </b></div>
+                    </div>
+                </div> 
+                <div class="inespan"></div>
+                <div class="gropone">
+                    <div class="leftone">1</div>
+                    <div class="contetn">
+                       <div class="gottolineefghejg"></div> <div class="sometextnemext"><span>Phone Number :  </span> <b>{{ $student->phone }}</b></div>
+                    </div>
+                </div>
+                <div class="inespan"></div>
+                <div class="gropone">
+                    <div class="leftone">1</div>
+                    <div class="contetn">
+                       <div class="gottolineefghejg"></div> <div class="sometextnemext"><span>Cart National :  </span> <b>{{ $student->cin }}</b></div>
+                    </div>
+                </div>   
+                <div class="inespan"></div>
+                <div class="gropone">
+                    <div class="leftone">1</div>
+                    <div class="contetn">
+                       <div class="gottolineefghejg"></div> <div class="sometextnemext"><span>Registerd At :  </span> <b>{{ $student->created_at->format('Y-m-d') }}</b></div>
+                    </div>
+                </div> 
             </div>
-            <div class="inespan"></div>
         </div>
     </div>
 @endsection
