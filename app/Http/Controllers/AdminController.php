@@ -173,6 +173,12 @@ class AdminController extends Controller
             )
         );
     }
+
+    //get all formations 
+    public function allFormations() {
+        $formations = Formation::all();
+        return view("admin.pages.allformation", compact("formations"));
+    }
     /**
      * ti do list for on 23/12/2021 => inshallah
      * create add formation

@@ -63,6 +63,8 @@ Route::delete("/Admin/Student/Delete/{id}", [AdminController::class, "studentDel
 Route::get("/Admin/Add-formation", [AdminController::class, "addFormation"])->name("formation.add");
 //store formation data
 Route::post("/Admin/Add-Formation/Store", [AdminController::class, "storeFormation"])->name("formation.store");
+//showing all formations
+Route::get("/Admin/All-Formations", [AdminController::class, "allFormations"])->name("admin.allformations");
 // ==========================END ROUTE ADMIN  ==============================
 
 // creat months
