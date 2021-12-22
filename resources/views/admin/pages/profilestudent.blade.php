@@ -98,7 +98,7 @@
                 </tbody>
               </table>
               <div class="text-center">
-                <a class="btn btn-primary"  href=""><i class="fa fa-plus" aria-hidden="true"></i> Add A Nouther Payed Mounth</a>
+                <a class="btn btn-primary"  href=""><i class="fa fa-plus" aria-hidden="true"></i> Add Anouther Payed Mounth</a>
               </div>
         </div>
     </div>
