@@ -34,6 +34,10 @@
                         <b>
                             <?php echo $student->formations->name ?? "<span class='text-danger'>No Formation Selcted</span>" ?>
                         </b></div>
+                        <div class="gottolineefghejg"></div> <div class="sometextnemext"><span>Formation :  </span> 
+                            <b>
+                                <?php echo $student->formations->name ?? "<span class='text-danger'>No Formation Selcted</span>" ?>
+                            </b></div>
                     </div>
                 </div> 
                 <div class="inespan"></div>

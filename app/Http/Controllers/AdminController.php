@@ -140,5 +140,13 @@ class AdminController extends Controller
         $mounths = PayedMonth::where("student_id", $id)->get();
         return view("admin.pages.profilestudent", compact("student","mounths"));
     }
+
+    /**
+     * ti do list for on 23/12/2021 => inshallah
+     * create add formation
+     * create get all forlation
+     * create update formation 
+     * creat update styudent info
+     */
 }
   
