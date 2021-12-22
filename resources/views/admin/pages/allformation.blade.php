@@ -2,6 +2,70 @@
 
 @section("content")
     <div class="container">
-        <h1>This Is All Formation page</h1>
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Tou Les Formations</h6>
+            </div>
+            @if(session()->has('message'))
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <strong>{{ session("message") }}</strong> 
+                </div>
+                
+                <script>
+                  $(".alert").alert();
+                </script>
+            @endif
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered  table-hover" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nom</th>
+                                <th>Slug</th>
+                                <th>Created On</th>
+                                <th>Edit</th>
+                                <th>Show</th>
+                                <th>Delet</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nom</th>
+                                <th>Slug</th>
+                                <th>Created On</th>
+                                <th>Edit</th>
+                                <th>Show</th>
+                                <th>Delet</th>
+
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            @foreach ($formations as $formation)
+                            <tr>
+                                <td>{{ $formation->id }}</td>
+                                <td>{{ $formation->name }}</td>
+                                <td>{{ $formation->slug }}</td>
+                                <td>{{ $formation->created_at->format('Y-m-d') }}</td>
+                                <td><a class="btn btn-success" href="#"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
+                                <td><a class="btn btn-primary" href=""> <i class="fa fa-eye" aria-hidden="true"></i> </a></td>
+                                <td><form action="#" method="post">
+                                    @csrf
+                                    @method("DELETE")
+                                    <button class="btn btn-danger" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                                </form></td>
+                            </tr>
+                            @endforeach
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
     </div>
 @endsection

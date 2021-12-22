@@ -69,10 +69,6 @@
             <h6 class="collapse-header">Manage Formation</h6>
             <a class="collapse-item" href="{{ route("admin.allformations") }}">All Formations</a>
             <a class="collapse-item" href="{{ route("formation.add") }}">Add Formations</a>
-
-
-
-
           </div>
         </div>
       </li>
