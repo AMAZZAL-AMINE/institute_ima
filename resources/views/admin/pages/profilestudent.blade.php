@@ -50,10 +50,17 @@
                     <div class="contetn">
                        <div class="gottolineefghejg"></div> <div class="sometextnemext"><span>Cart National :  </span> <b>{{ $student->cin }}</b></div>
                     </div>
-                </div>   
+                </div>  
                 <div class="inespan"></div>
                 <div class="gropone">
                     <div class="leftone">5</div>
+                    <div class="contetn">
+                       <div class="gottolineefghejg"></div> <div class="sometextnemext"><span>Niveau School:  </span> <b>{{ $student->nvschole }}</b></div>
+                    </div>
+                </div>  
+                <div class="inespan"></div>
+                <div class="gropone">
+                    <div class="leftone">6</div>
                     <div class="contetn">
                        <div class="gottolineefghejg"></div> <div class="sometextnemext"><span>Registerd At :  </span> <b>{{ $student->created_at->format('Y-m-d') }}</b></div>
                        <div style="margin-left: 0.5px;" class="gottolineefghejg "></div> <div class="sometextnemext"><span>Berthday :  </span> <b>{{ $student->berthday }}</b></div>
