@@ -179,6 +179,12 @@ class AdminController extends Controller
         $formations = Formation::all();
         return view("admin.pages.allformation", compact("formations"));
     }
+     
+    public function allpayments() {
+        $students = Student::all();
+        $payments = PayedMonth::all();
+        return view("admin.pages.allpayments", compact("payments","students"));
+    }
     /**
      * ti do list for on 23/12/2021 => inshallah
      * create add formation

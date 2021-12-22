@@ -24,48 +24,31 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Nom</th>
-                                <th>Slug</th>
-                                <th>Created On</th>
-                                <th>Edit</th>
-                                <th>Show</th>
-                                <th>Delet</th>
+                                <th>Prix</th>
+                                <th>Date</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
                                 <th>Id</th>
-                                <th>Nom</th>
-                                <th>Slug</th>
-                                <th>Created On</th>
-                                <th>Edit</th>
-                                <th>Show</th>
-                                <th>Delet</th>
-
+                                <th>Prix</th>
+                                <th>Date</th>
                             </tr>
                         </tfoot>
                         <tbody>
-                            @foreach ($formations as $formation)
+                            @foreach ($payments as $payment)
                             <tr>
-                                <td>{{ $formation->id }}</td>
-                                <td>{{ $formation->name }}</td>
-                                <td>{{ $formation->slug }}</td>
-                                <td>{{ $formation->created_at->format('Y-m-d') }}</td>
-                                <td><a class="btn btn-success" href="#"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
-                                <td><a class="btn btn-primary" href=""> <i class="fa fa-eye" aria-hidden="true"></i> </a></td>
-                                <td><form action="#" method="post">
-                                    @csrf
-                                    @method("DELETE")
-                                    <button class="btn btn-danger" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                                </form></td>
+                                <td>{{ $payment->id }}</td>
+                                <td>{{ $payment->prix }} DH</td>
+                                <td>{{ $payment->created_at->format('Y-m-d') }}</td>
                             </tr>
                             @endforeach
-
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
+        <button class="btn btn-primary"><i class="fa fa-print" aria-hidden="true"></i> Print The Table</button>
     </div>
 
 @endsection

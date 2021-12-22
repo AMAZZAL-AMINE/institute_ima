@@ -65,6 +65,8 @@ Route::get("/Admin/Add-formation", [AdminController::class, "addFormation"])->na
 Route::post("/Admin/Add-Formation/Store", [AdminController::class, "storeFormation"])->name("formation.store");
 //showing all formations
 Route::get("/Admin/All-Formations", [AdminController::class, "allFormations"])->name("admin.allformations");
+//all payments for user
+Route::get("/Admin/All-Payments", [AdminController::class, "allpayments"])->name("admin.allpayments");
 // ==========================END ROUTE ADMIN  ==============================
 
 // creat months
