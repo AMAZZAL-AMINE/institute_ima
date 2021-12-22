@@ -43,6 +43,7 @@
                        <div class="gottolineefghejg"></div> <div class="sometextnemext"><span>Phone Number :  </span> <b>{{ $student->phone }}</b></div>
                     </div>
                 </div>
+                
                 <div class="inespan"></div>
                 <div class="gropone">
                     <div class="leftone">4</div>
