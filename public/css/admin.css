@@ -28,7 +28,9 @@
         display: flex !important;
         align-items: center !important;
     }
-
+.userdetailbody {
+    margin-top: 30px;
+}
     .userdetailbody .gropone .leftone {
         background: #665E70;
         color: white;
@@ -44,4 +46,12 @@
         text-align: center;
         align-items: center;
         justify-content: center;
-}
+    }
+
+    .userdetailbody .gropone .contetn {
+        margin-left: 50px;
+        margin-top: 5px;
+    }
+    .userdetailbody .gropone .contetn b {
+        margin-left: 10px;
+    }

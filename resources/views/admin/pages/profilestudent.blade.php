@@ -19,7 +19,7 @@
             <div class="gropone">
                 <div class="leftone">1</div>
                 <div class="contetn">
-                    <p>Nom Et Prénom : <b>Amine Amazzal</b> </p>
+                    <span>Nom Et Prénom :  </span> <b>Amine Amazzal</b>
                 </div>
             </div>
             <div class="inespan"></div>
