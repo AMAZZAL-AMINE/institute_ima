@@ -1,33 +1,6 @@
 @extends("layouts.admin")
 
 @section("content")
-<style>
-    .topheaderprofile .addbackgroungdark {
-        background-color: #665E70;
-        width: 100%;
-        padding: 130px;
-        border-radius: 6px;
-    }
-    .topheaderprofile .studentprofileimg {
-        display: flex;
-    }
-    .topheaderprofile .studentprofileimg .text  {
-        line-height: 1px;
-        margin-left: 40px;
-    }
-    .topheaderprofile .studentprofileimg .text h1 {
-        color: black;
-        font-weight: bold;
-    }
-    .topheaderprofile .studentprofileimg img {
-        width: 250px !important;
-        height: 250px !important;
-        border-radius: 50% !important;
-        margin-top: -100px;
-        margin-left: 40px;
-        object-fit: cover;
-    }
-</style>
     <div class="container">
         <div class="topheaderprofile">
              <div class="addbackgroungdark"></div>
@@ -41,10 +14,15 @@
                     </div>
              </div>
         </div>
+        <hr>
         <div class="userdetailbody">
-            <div class="">
-                 
+            <div class="gropone">
+                <div class="leftone">1</div>
+                <div class="contetn">
+                    <p>Nom Et Prénom : <b>Amine Amazzal</b> </p>
+                </div>
             </div>
+            <div class="inespan"></div>
         </div>
     </div>
 @endsection

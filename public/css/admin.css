@@ -1,0 +1,47 @@
+
+    .topheaderprofile .addbackgroungdark {
+        background-color: #665E70;
+        width: 100%;
+        padding: 130px;
+        border-radius: 6px;
+    }
+    .topheaderprofile .studentprofileimg {
+        display: flex;
+    }
+    .topheaderprofile .studentprofileimg .text  {
+        line-height: 1px;
+        margin-left: 40px;
+    }
+    .topheaderprofile .studentprofileimg .text h1 {
+        color: black;
+        font-weight: bold;
+    }
+    .topheaderprofile .studentprofileimg img {
+        width: 250px !important;
+        height: 250px !important;
+        border-radius: 50% !important;
+        margin-top: -100px;
+        margin-left: 40px;
+        object-fit: cover;
+    }
+    .userdetailbody .gropone {
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .userdetailbody .gropone .leftone {
+        background: #665E70;
+        color: white;
+        font-weight: bold !important;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+}
