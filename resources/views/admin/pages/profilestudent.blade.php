@@ -28,7 +28,7 @@
                 </div>
                 <div class="inespan"></div>
                 <div class="gropone">
-                    <div class="leftone">1</div>
+                    <div class="leftone">2</div>
                     <div class="contetn">
                        <div class="gottolineefghejg"></div> <div class="sometextnemext"><span>Formation :  </span> 
                         <b>
@@ -38,23 +38,24 @@
                 </div> 
                 <div class="inespan"></div>
                 <div class="gropone">
-                    <div class="leftone">1</div>
+                    <div class="leftone">3</div>
                     <div class="contetn">
                        <div class="gottolineefghejg"></div> <div class="sometextnemext"><span>Phone Number :  </span> <b>{{ $student->phone }}</b></div>
                     </div>
                 </div>
                 <div class="inespan"></div>
                 <div class="gropone">
-                    <div class="leftone">1</div>
+                    <div class="leftone">4</div>
                     <div class="contetn">
                        <div class="gottolineefghejg"></div> <div class="sometextnemext"><span>Cart National :  </span> <b>{{ $student->cin }}</b></div>
                     </div>
                 </div>   
                 <div class="inespan"></div>
                 <div class="gropone">
-                    <div class="leftone">1</div>
+                    <div class="leftone">5</div>
                     <div class="contetn">
                        <div class="gottolineefghejg"></div> <div class="sometextnemext"><span>Registerd At :  </span> <b>{{ $student->created_at->format('Y-m-d') }}</b></div>
+                       <div style="margin-left: 0.5px;" class="gottolineefghejg "></div> <div class="sometextnemext"><span>Berthday :  </span> <b>{{ $student->berthday }}</b></div>
                     </div>
                 </div> 
             </div>
