@@ -141,6 +141,11 @@ class AdminController extends Controller
         return view("admin.pages.profilestudent", compact("student","mounths"));
     }
 
+
+    //add formatioin page
+    public function addFormation() {
+        return view("admin.pages.addFormation");
+    }
     /**
      * ti do list for on 23/12/2021 => inshallah
      * create add formation

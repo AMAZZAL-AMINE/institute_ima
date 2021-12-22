@@ -68,7 +68,7 @@
 
             <h6 class="collapse-header">Manage Formation</h6>
             <a class="collapse-item" href="#">All Formations</a>
-            <a class="collapse-item" href="#">Add Formations</a>
+            <a class="collapse-item" href="{{ route("formation.add") }}">Add Formations</a>
 
 
 
