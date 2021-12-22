@@ -59,11 +59,11 @@
     .userdetailbody .gropone .contetn .sometextnemext {
         background-color: rgb(255, 255, 255);
         padding: 8px;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
+        border-radius: 3px;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
         border: 2px solid blue;
 }
     .userdetailbody .gropone .contetn b {
