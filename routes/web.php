@@ -87,6 +87,61 @@ Route::get("/m", function() {
     $month = new Month;
     $month->create(
         array(
+            "month_num" => "Premier Mois",
+        )
+    );
+    $month->create(
+        array(
+            "month_num" => "2eme Mois",
+        )
+    );
+    $month->create(
+        array(
+            "month_num" => "3eme Mois",
+        )
+    );
+    $month->create(
+        array(
+            "month_num" => "4eme Mois",
+        )
+    );
+    $month->create(
+        array(
+            "month_num" => "5eme Mois",
+        )
+    );
+    $month->create(
+        array(
+            "month_num" => "6eme Mois",
+        )
+    );
+    $month->create(
+        array(
+            "month_num" => "7eme Mois",
+        )
+    );
+    $month->create(
+        array(
+            "month_num" => "8eme Mois",
+        )
+    );
+    $month->create(
+        array(
+            "month_num" => "9eme Mois",
+        )
+    );
+    $month->create(
+        array(
+            "month_num" => "10eme Mois",
+        )
+    );
+    $month->create(
+        array(
+            "month_num" => "11eme Mois",
+        )
+    );
+    $month->create(
+        array(
             "month_num" => "12eme Mois",
         )
     );

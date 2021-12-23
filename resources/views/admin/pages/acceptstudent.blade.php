@@ -49,6 +49,26 @@
                     <form action="{{ route("studnet.active",$stud->id) }}" method="post">
                         @csrf
                         @method("PUT")
+                        <div class="form-group">
+                            <label for="my-select">Chose Center</label>
+                            <select  class="form-control" name="isiphicorima">
+                                <option value="">...</option>
+                                <option value="ima">Institute-Ima</option>
+                                <option value="iphec">Institute-Iphec</option>
+                            </select>
+                            @error('center')
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                  <strong>{{ $message }}</strong> 
+                                </div>
+                                
+                                <script>
+                                  $(".alert").alert();
+                                </script>
+                            @enderror
+                        </div>
                         <div class="form-group input-group d-flex align-items-center">
                             <div> <span>Prix ​​d'inscription :</span> </div>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -72,26 +92,7 @@
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                            <input class="form-control" type="number"  name="prix_firstmonth" placeholder="Prix (DH)">
                         </div>
-                        <div class="form-group">
-                            <label for="my-select">Chose Center</label>
-                            <select id="my-select" class="form-control" name="center">
-                                <option value="">...</option>
-                                <option value="Ima">Institute-Ima</option>
-                                <option value="Iphec">Institute-Iphec</option>
-                            </select>
-                            @error('center')
-                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                  <strong>{{ $message }}</strong> 
-                                </div>
-                                
-                                <script>
-                                  $(".alert").alert();
-                                </script>
-                            @enderror
-                        </div>
+
                         <button type="submit" class="btn btn-primary">Save And Next To Page Print</button>
                     </form>
             </div>
@@ -108,8 +109,8 @@
              <a href="" class="btn btn-success">Visit Le Profile De Cet étudiant</a>
         </div>
     </div
-         @endif
-         @endforeach
+        @endif
+        @endforeach
         @endif
     </div>
 @endsection

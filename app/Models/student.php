@@ -33,4 +33,9 @@ class Student extends Model
     public function payedmounth() {
         return $this->hasMany(PayedMonth::class);
     }
+
+    //relation ship to what is unstitute
+    public function instituts() {
+        return $this->hasMany(IsImaOrIphec::class);
+    }
 }

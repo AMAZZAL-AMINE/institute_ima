@@ -23,7 +23,6 @@ class CreateStudentsTable extends Migration
             $table->date("berthday");
             $table->string("nvschole");
             $table->decimal("firstPayed")->nullable();
-            $table->string("center")->nullable();
             $table->bigInteger("formation_id")->unsigned(); //create relation ship between  formation table and this one
             $table->bigInteger("user_id")->unsigned(); //create relation ship between user table and this one
             $table->timestamps();

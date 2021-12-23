@@ -6,6 +6,7 @@ use App\Models\Month;
 use App\Models\Student;
 use App\Models\Formation;
 use App\Models\PayedMonth;
+use App\Models\IsImaOrIphec;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -79,6 +80,7 @@ class AdminController extends Controller
 
     //update the student prace and acctive his accounting
     public function studentActiveAccount(Request $request, $id) {
+     
         $data = $request->validate(
             array(
                 "prix_iscription" => "required",
@@ -94,23 +96,23 @@ class AdminController extends Controller
                 "student_id" => $student->id,
                 "name" => $data['month'],
                 "prix" => $data["prix_firstmonth"],
-                "center" => "required",
             ),
         );
 
         $student->update(
             array(
-                "firstPayed" => $data['prix_iscription'],
-                "center" => $data["center"],
+                // "isimaoriphec" => $request->isiphicorima,
+                "firstPayed" => $data['prix_iscription'],   
             )
         );
+
+        $chosecenter = New IsImaOrIphec;
 
         return back()->with(
             array(
                 "message" =>"Student Has Been Add To Echole"
             )
         );
-        
     }
     //deleteinh user
     public function studentDeleting($id) {
@@ -268,6 +270,7 @@ class AdminController extends Controller
                 "berthday" => $data["dberth"],
                 "nvschole" => $data["nschole"],
                 "firstPayed" => null,
+                "center" => null,
                 "formation_id" => $data["formation"],
                 "user_id" => auth()->user()->id,
             )
