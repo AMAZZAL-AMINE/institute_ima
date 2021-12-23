@@ -79,6 +79,18 @@
                                 <option value="Ima">Institute-Ima</option>
                                 <option value="Iphec">Institute-Iphec</option>
                             </select>
+                            @error('center')
+                                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                  <strong>{{ $message }}</strong> 
+                                </div>
+                                
+                                <script>
+                                  $(".alert").alert();
+                                </script>
+                            @enderror
                         </div>
                         <button type="submit" class="btn btn-primary">Save And Next To Page Print</button>
                     </form>

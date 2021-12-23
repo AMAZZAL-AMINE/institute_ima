@@ -94,12 +94,14 @@ class AdminController extends Controller
                 "student_id" => $student->id,
                 "name" => $data['month'],
                 "prix" => $data["prix_firstmonth"],
+                "center" => "required",
             ),
         );
 
         $student->update(
             array(
                 "firstPayed" => $data['prix_iscription'],
+                "center" => $data["center"],
             )
         );
 
