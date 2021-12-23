@@ -66,6 +66,9 @@
                 </div>
             </div>
         </div>
+        <div class="text-center">
+            <a class="btn btn-success" href="{{ route("formation.add") }}"><i class="fa fa-plus-circle" aria-hidden="true"></i> Add New Formation</a>
+        </div>
     </div>
 
 @endsection

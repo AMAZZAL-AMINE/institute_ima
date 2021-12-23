@@ -82,18 +82,23 @@ Route::get("/m", function() {
 
 //testing user payment methhod
 Route::get("/h/{id}", function($id) {
-    $month = PayedMonth::where("student_id", $id)->get();
-    $student = Student::where("id", $id)->get();
-    foreach ($student as $stude) {
-        echo $stude->fname."<br>";
-    }
-    if( $student->count() === 0 ) {
-        echo "<h1>Not Found</h1>";
-    }
-    foreach($month as $stud) {
+    // $month = PayedMonth::where("student_id", $id)->get();
+    // $student = Student::where("id", $id)->get();
+    // foreach ($student as $stude) {
+    //     echo $stude->fname."<br>";
+    // }
+    // if( $student->count() === 0 ) {
+    //     echo "<h1>Not Found</h1>";
+    // }
+    // foreach($month as $stud) {
         
-        echo $stud->name."<br>";
+    //     echo $stud->name."<br>";
 
+    // }
+    $month = PayedMonth::where("student_id", $id)->get();
+    foreach($month as $stud) {
+        echo $stud->students->fname;
+        
     }
 
 });

@@ -187,8 +187,6 @@ class AdminController extends Controller
     }
     /**
      * ti do list for on 23/12/2021 => inshallah
-     * create add formation
-     * create get all forlation
      * create update formation 
      * creat update styudent info
      */

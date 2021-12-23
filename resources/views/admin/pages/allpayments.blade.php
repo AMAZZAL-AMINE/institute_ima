@@ -48,11 +48,22 @@
                 </div>
             </div>
         </div>
-        <button class="btn btn-primary"><i class="fa fa-print" aria-hidden="true"></i> Print The Table</button>
+        <button class="btn btn-primary" onclick="printTable();"><span class="glyphicon glyphicon-print"></span> Print</button>
     </div>
 
 @endsection
 @section('scripts')
+<script>
+    function printTable() {
+	var el=document.getElementById("dataTable");
+	el.setAttribute('border', '1px');
+	el.setAttribute('cellpadding', '5');
+	newPrint=window.open("");
+	newPrint.document.write(el.outerHTML);
+	newPrint.print();
+	newPrint.close();
+}
+</script>
 <script src="{{ asset("/vendor/datatables/jquery.dataTables.min.js") }}"></script>
 <script src="{{ asset("/vendor/datatables/dataTables.bootstrap4.min.js") }}"></script>
 
