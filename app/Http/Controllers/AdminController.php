@@ -222,6 +222,18 @@ class AdminController extends Controller
         );
 
     }
+
+    //delete formation
+    public function deleteFormation($id) {
+        $formation = Formation::find($id);
+        $formation->delete();
+        return back()->with(
+            array(
+                "message" => "Done, Formation Has Been Deleted With Success!",
+            )
+        );
+
+    }
     /**
      * ti do list for on 23/12/2021 => inshallah
      * create update formation 

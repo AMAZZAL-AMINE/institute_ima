@@ -73,7 +73,7 @@
             </div>
             
             <button class="btn btn-primary">
-               <i class="fa fa-plus" aria-hidden="true"></i> Add Formation
+               <i class="fas fa-cloud-upload-alt    "></i> Update Formation
             </button>
         </form>
     </div>

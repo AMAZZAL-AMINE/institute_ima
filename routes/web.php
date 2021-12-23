@@ -74,6 +74,8 @@ Route::get("/Admin/Formation-Students/{slug}", [AdminController::class, "student
 Route::get("/Admin/Formation/Edit/{id}", [AdminController::class, "pageEditdFormation"])->name("admin.pageeditforma");
 //put the update of romation in daTABASE
 Route::put("/Admin/Formation/Update/{id}", [AdminController::class, "updateFormationAndStore"])->name("admin.update.formation");
+//delete formtion 
+Route::delete("/Admin/Formation-Delete/{id}", [AdminController::class, "deleteFormation"])->name("formation.delete");
 // ==========================END ROUTE ADMIN  ==============================
 
 // creat months
