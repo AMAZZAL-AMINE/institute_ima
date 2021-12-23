@@ -37,7 +37,6 @@ class AdminController extends Controller
             array(
                 "fname" => "required",
                 "lname" => "required",
-                "img" => ["required","image"],
                 "cin" => "required",
                 "phone" => "required",
                 "dberth" => ["required", "date"],
