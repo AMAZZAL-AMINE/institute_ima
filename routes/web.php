@@ -30,7 +30,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 //about page
 Route::get("/A-propos-De-Nous", [HomeController::class, 'aboutUs'])->name('about.us');
 //formations page
-Route::get("/List-Des-Formations", [HomeController::class, 'listFormations'])->name('list.formations');
+Route::get("/List-Des-Formations/{slug}", [HomeController::class, 'listFormations'])->name('list.formations');
 //contact page
 Route::get("/Contact-Nous", [HomeController::class, 'contactUs'])->name('contact.us');
 //blog page

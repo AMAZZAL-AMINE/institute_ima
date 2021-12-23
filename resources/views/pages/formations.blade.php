@@ -20,14 +20,9 @@
         <div class="formationinlistwithdetails">
             
             <div class="fomationdetailssss">
-                <h1>Hello This Is Formation One</h1>
+                <h1>{{ $formation->name }}</h1>
                 <p>
-                    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-                    numquam blanditiis harum quisquam eius sed odit fugiat iusto fuga praesentium
-                    optio, eaque rerum! Provident similique accusantium nemo autem. Veritatis
-                    obcaecati tenetur iure eius earum ut molestias architecto voluptate aliquam
-                    nihil, eveniet aliquid culpa officia aut! Impedit sit sunt quaerat, odit,
-                    tenetur error, harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
+                    <?php echo $formation->description; ?>
                 </p>
             </div>
             <div class="allformationlefftt">
@@ -36,34 +31,12 @@
                          <b>Toutes les  Formations</b>
                           
                     </div>
-                    <a href="">
-                        <div>Formation Num One</div>
-                        <div><i class="bi bi-arrow-right"></i></div>
-                    </a>
-                    <a href="">
-                        <div>Formation Num One</div>
-                        <div><i class="bi bi-arrow-right"></i></div>
-                    </a>
-                    <a href="">
-                        <div>Formation Num One</div>
-                        <div><i class="bi bi-arrow-right"></i></div>
-                    </a>
-                    <a href="">
-                        <div>Formation Num One</div>
-                        <div><i class="bi bi-arrow-right"></i></div>
-                    </a>
-                    <a href="">
-                        <div>Formation Num One</div>
-                        <div><i class="bi bi-arrow-right"></i></div>
-                    </a>
-                    <a href="">
-                        <div>Formation Num One</div>
-                        <div><i class="bi bi-arrow-right"></i></div>
-                    </a>
-                    <a href="">
-                        <div>Formation Num One</div>
-                        <div><i class="bi bi-arrow-right"></i></div>
-                    </a>
+                    @foreach ($fomationname as $fname)
+                        <a href="{{ route("list.formations",$fname->slug) }}">
+                            <div>{{ $fname->name }}</div>
+                            <div><i class="bi bi-arrow-right"></i></div>
+                        </a>
+                    @endforeach
                 </ul>
             </div>
         </div>

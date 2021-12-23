@@ -33,9 +33,10 @@ class HomeController extends Controller
     }
 
     //list des formations
-    public function listFormations() {
-        $formations = Formation::all();
-        return view('pages.formations', compact("formations"));
+    public function listFormations($slug) {
+        $formation = Formation::where("slug", $slug)->first();
+        $fomationname = Formation::all();
+        return view('pages.formations', compact("formation","fomationname"));
     }
 
     //contact us 
