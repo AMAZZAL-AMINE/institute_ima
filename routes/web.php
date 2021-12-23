@@ -2,12 +2,13 @@
 
 use App\Models\Month;
 use App\Models\Student;
+use App\Models\Formation;
+use App\Models\PayedMonth;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\InstriptionController;
-use App\Models\PayedMonth;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,6 +68,12 @@ Route::post("/Admin/Add-Formation/Store", [AdminController::class, "storeFormati
 Route::get("/Admin/All-Formations", [AdminController::class, "allFormations"])->name("admin.allformations");
 //all payments for user
 Route::get("/Admin/All-Payments", [AdminController::class, "allpayments"])->name("admin.allpayments");
+//get all srtudent who have a same formations 
+Route::get("/Admin/Formation-Students/{slug}", [AdminController::class, "studentdFormation"])->name("student.formation");
+//page update formation 
+Route::get("/Admin/Formation/Edit/{id}", [AdminController::class, "pageEditdFormation"])->name("admin.pageeditforma");
+//put the update of romation in daTABASE
+Route::put("/Admin/Formation/Update/{id}", [AdminController::class, "updateFormationAndStore"])->name("admin.update.formation");
 // ==========================END ROUTE ADMIN  ==============================
 
 // creat months
@@ -101,4 +108,12 @@ Route::get("/h/{id}", function($id) {
         
     }
 
+});
+
+//formation studnets
+Route::get("/f/{id}", function($id) {
+    $formation = Formation::find($id);
+    foreach ($formation->students as $std) {
+       echo $std->fname."<br>";
+    }
 });

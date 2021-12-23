@@ -180,10 +180,47 @@ class AdminController extends Controller
         return view("admin.pages.allformation", compact("formations"));
     }
      
+
     public function allpayments() {
         $students = Student::all();
         $payments = PayedMonth::all();
         return view("admin.pages.allpayments", compact("payments","students"));
+    }
+
+    //get all studnet who have a same formation 
+    public function studentdFormation($id) {
+       $formation = Formation::find($id);
+        return view("admin.pages.studentswithsingleformation", compact("formation"));
+    }
+
+    //page edit formation 
+    public function pageEditdFormation($id) {
+        $formation = Formation::find($id);
+        return view("admin.pages.updateformation", compact("formation"));
+    }
+    //stoe update of formation in database
+    public function updateFormationAndStore($id, Request $request) {
+        $formation = Formation::find($id);
+        $data = $request->validate(array(
+            "name" => "required",
+            "slug" => "required",
+            "desc" => "required",
+        ));
+
+        $formation->update(
+            array(
+                "name" => $data['name'] ?? $formation->name,
+                "slug" => $data['slug'] ?? $formation->slug,
+                "description" => $data["desc"] ?? $formation->description,
+            )
+        );
+
+        return back()->with(
+            array(
+                "message" => "Done, Formation Has Been Updated Success!",
+            )
+        );
+
     }
     /**
      * ti do list for on 23/12/2021 => inshallah

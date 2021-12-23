@@ -63,7 +63,10 @@
             <h6 class="collapse-header">Manager Students :</h6>
             <a class="collapse-item" href="{{ route("student.whoaccepted") }}">All Ima Students</a>
             <a class="collapse-item" href="{{ route("admin.requestusers") }}">Invitation Users</a>
-
+            <a class="collapse-item" href="{{ route("admin.requestusers") }}">Invitation Users</a>
+            <hr>
+            <h6 class="collapse-header">Inscription Students :</h6>
+            <a class="collapse-item" href="">Inscription New Students</a>
             <hr>
 
             <h6 class="collapse-header">Manage Formation</h6>

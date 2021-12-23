@@ -51,8 +51,8 @@
                                 <td>{{ $formation->name }}</td>
                                 <td>{{ $formation->slug }}</td>
                                 <td>{{ $formation->created_at->format('Y-m-d') }}</td>
-                                <td><a class="btn btn-success" href="#"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
-                                <td><a class="btn btn-primary" href=""> <i class="fa fa-eye" aria-hidden="true"></i> </a></td>
+                                <td><a class="btn btn-success" href="{{ route("admin.pageeditforma",$formation->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
+                                <td><a class="btn btn-primary" href="{{ route("student.formation",$formation->id) }}"> <i class="fa fa-eye" aria-hidden="true"></i> </a></td>
                                 <td><form action="#" method="post">
                                     @csrf
                                     @method("DELETE")
@@ -60,7 +60,6 @@
                                 </form></td>
                             </tr>
                             @endforeach
-
                         </tbody>
                     </table>
                 </div>
