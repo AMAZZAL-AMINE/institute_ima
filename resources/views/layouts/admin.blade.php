@@ -65,8 +65,9 @@
             <a class="collapse-item" href="{{ route("admin.requestusers") }}">Invitation Users</a>
             <a class="collapse-item" href="{{ route("admin.requestusers") }}">Invitation Users</a>
             <hr>
-            <h6 class="collapse-header">Inscription Students :</h6>
+            <h6 class="collapse-header">Inscription & Paye Factur:</h6>
             <a class="collapse-item" href="">Inscription New Students</a>
+            <a class="collapse-item" href="">Create New Factur </a>
             <hr>
 
             <h6 class="collapse-header">Manage Formation</h6>

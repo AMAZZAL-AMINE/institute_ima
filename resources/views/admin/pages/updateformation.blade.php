@@ -10,7 +10,6 @@
               </button>
               <strong>{{ session("message") }}</strong> 
             </div>
-            
             <script>
               $(".alert").alert();
             </script>

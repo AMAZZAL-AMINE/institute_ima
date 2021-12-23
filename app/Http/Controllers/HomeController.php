@@ -38,7 +38,6 @@ class HomeController extends Controller
         $fomationname = Formation::all();
         return view('pages.formations', compact("formation","fomationname"));
     }
-
     //contact us 
     public function contactUs() {
         return view("pages.contact");
