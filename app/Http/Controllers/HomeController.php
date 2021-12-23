@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Formation;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -33,7 +34,8 @@ class HomeController extends Controller
 
     //list des formations
     public function listFormations() {
-        return view('pages.formations');
+        $formations = Formation::all();
+        return view('pages.formations', compact("formations"));
     }
 
     //contact us 
