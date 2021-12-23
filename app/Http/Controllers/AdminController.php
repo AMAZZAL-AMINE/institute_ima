@@ -242,7 +242,6 @@ class AdminController extends Controller
     public function inscrireUserByAdminStore(Request $request) {
         $data = $request->validate(
             array(
-                array(
                     "fname" => "required",
                     "lname" => "required",
                     "cin" => "required",
@@ -250,7 +249,6 @@ class AdminController extends Controller
                     "dberth" => ["required", "date"],
                     "nschole" => "required",
                     "formation" => "required",
-                )
             ),
         );
 
@@ -273,7 +271,11 @@ class AdminController extends Controller
             )
         );
 
-        return redirect()->route("admin.requestusers");
+        return redirect()->route("admin.requestusers")->with(
+            array(
+                "message" => "Done, Stident A Created Suuccessfuly"
+            )
+        );
     }
     /**
      * ti do list for on 23/12/2021 => inshallah
