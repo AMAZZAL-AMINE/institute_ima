@@ -86,6 +86,7 @@ class AdminController extends Controller
                 "prix_iscription" => "required",
                 "prix_firstmonth" => "required",
                 "month" => "required",
+                "isiphicorima" => "required",
             )
         );
         $student = Student::find($id);
@@ -107,6 +108,12 @@ class AdminController extends Controller
         );
 
         $chosecenter = New IsImaOrIphec;
+        $chosecenter->create(
+            array(
+                "student_id" => $student->id,
+                "institute" => $data['isiphicorima'],
+            )
+        );
 
         return back()->with(
             array(
