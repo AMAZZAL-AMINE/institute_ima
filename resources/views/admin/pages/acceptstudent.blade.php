@@ -72,6 +72,14 @@
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                            <input class="form-control" type="number"  name="prix_firstmonth" placeholder="Prix (DH)">
                         </div>
+                        <div class="form-group">
+                            <label for="my-select">Chose Center</label>
+                            <select id="my-select" class="form-control" name="center">
+                                <option value="">...</option>
+                                <option value="Ima">Institute-Ima</option>
+                                <option value="Iphec">Institute-Iphec</option>
+                            </select>
+                        </div>
                         <button type="submit" class="btn btn-primary">Save And Next To Page Print</button>
                     </form>
             </div>
