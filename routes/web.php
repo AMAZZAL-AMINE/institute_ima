@@ -76,6 +76,10 @@ Route::get("/Admin/Formation/Edit/{id}", [AdminController::class, "pageEditdForm
 Route::put("/Admin/Formation/Update/{id}", [AdminController::class, "updateFormationAndStore"])->name("admin.update.formation");
 //delete formtion 
 Route::delete("/Admin/Formation-Delete/{id}", [AdminController::class, "deleteFormation"])->name("formation.delete");
+//inscrire student by admin 
+Route::get("/Admin/Inscrire-Student", [AdminController::class, "inscrireUserByAdmin"])->name("admin.inscrirestudent");
+//store data of user in database students
+Route::post("/Admin/Inscrire-Student", [AdminController::class, "inscrireUserByAdminStore"])->name("admin.inscrire.new.student");
 // ==========================END ROUTE ADMIN  ==============================
 
 // creat months

@@ -233,6 +233,48 @@ class AdminController extends Controller
         );
 
     }
+
+    //inscrire user by adminpage
+    public function inscrireUserByAdmin() {
+        return view("admin.pages.isncrirenewstudent");
+    }
+    //inscrire user store data
+    public function inscrireUserByAdminStore(Request $request) {
+        $data = $request->validate(
+            array(
+                array(
+                    "fname" => "required",
+                    "lname" => "required",
+                    "cin" => "required",
+                    "phone" => "required",
+                    "dberth" => ["required", "date"],
+                    "nschole" => "required",
+                    "formation" => "required",
+                )
+            ),
+        );
+
+        if ($request->hasFile("img")) {
+            $filePath  = request('img')->store('studentimgs', 'public');
+        }
+
+        auth()->user()->students()->create(
+            array(
+                "fname" => $data["fname"],
+                "lname" => $data["lname"],
+                "image" => $filePath,
+                "cin" => $data["cin"],
+                "phone" => $data["phone"],
+                "berthday" => $data["dberth"],
+                "nvschole" => $data["nschole"],
+                "firstPayed" => null,
+                "formation_id" => $data["formation"],
+                "user_id" => auth()->user()->id,
+            )
+        );
+
+        return redirect()->route("admin.requestusers");
+    }
     /**
      * ti do list for on 23/12/2021 => inshallah
      * create update formation 

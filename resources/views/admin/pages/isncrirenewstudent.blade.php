@@ -2,7 +2,8 @@
 
 @section("content")
     <div class="container">
-         <form method="post" action="" enctype="multipart/form-data">
+         <form method="post" action="{{ route("admin.inscrire.new.student") }}" enctype="multipart/form-data">
+            @csrf
              <div class="form-group">
                  <label for="my-input">Nom</label>
                  <input id="fname" class="form-control" type="text" name="fname">
@@ -54,8 +55,8 @@
 
             <div class="form-group">
                 <label for="my-input">Image</label>
-                <input id="image" class="form-control" type="file" name="image">
-                @error('image')
+                <input id="img" class="form-control" type="file" name="img">
+                @error('img')
                     <div class="alert alert-warning alert-dismissible fade show" role="alert">
                       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -103,20 +104,20 @@
             </div>
 
             <div class="form-group">
-                <div class="inputtitle">Niveau Scolaire</div>
-                <select name="nschole">
+                <label for="my-select">Niveau Scolaire</label>
+                <select name="nschole" class="form-control">
                     <option value="">...</option>
                     <option value="sans niveau">sans niveau</option>
                     <option value="Primaire">Primaire</option>
                     <option value="Secondaire du premier cycle"> secondaire du premier cycle</option>
                     <option value="Secondaire">secondaire</option>
                     <option value="Université">Université</option>
-
                 </select>
             </div>
+
             <div class="ninscschole">
                 <div class="inputtitle">Select Formation:</div>
-                <select name="formation">
+                <select class="form-select" name="formation">
                     <option value="">...</option>
                     <option value="1">AIDE PHARMACIE مساعد صيدلي</option>
                     <option value="2">ASSISTANTE SOCIALE مساعد اجتماعي</option>
