@@ -33,7 +33,7 @@
                     </div>
                     @foreach ($fomationname as $fname)
                         <a href="{{ route("list.formations",$fname->slug) }}">
-                            <div>{{ $fname->name }}</div>
+                            <div style="text-align: center;">{{ $fname->name }}</div>
                             <div><i class="bi bi-arrow-right"></i></div>
                         </a>
                     @endforeach

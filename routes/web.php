@@ -81,6 +81,9 @@ Route::delete("/Admin/Formation-Delete/{id}", [AdminController::class, "deleteFo
 Route::get("/Admin/Inscrire-Student", [AdminController::class, "inscrireUserByAdmin"])->name("admin.inscrirestudent");
 //store data of user in database students
 Route::post("/Admin/Inscrire-Student", [AdminController::class, "inscrireUserByAdminStore"])->name("admin.inscrire.new.student");
+//page search for students to pay new month
+Route::get("/Admin/Search-Student", [AdminController::class, "searchStudentToPay"])->name("admin.search.student");
+//page for get result of search;
 // ==========================END ROUTE ADMIN  ==============================
 
 // creat months

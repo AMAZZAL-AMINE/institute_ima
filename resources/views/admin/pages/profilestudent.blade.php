@@ -3,7 +3,7 @@
 @section("content")
     <div class="container">
         <div class="topheaderprofile">
-             <div class="addbackgroungdark"></div>
+             <div class="addbackgroungdark" style="text-align: center; font-size: 25px;color: white;">{{ strtoupper($institute->institute) }}</div>
              <div class="studentprofileimg">
                     <div class="img">
                         <img src="{{ asset("/storage/".$student->image) }}" alt="">

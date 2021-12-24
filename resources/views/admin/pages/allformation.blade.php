@@ -54,7 +54,7 @@
                                 <td><a class="btn btn-success" href="{{ route("admin.pageeditforma",$formation->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
                                 <td><a class="btn btn-primary" href="{{ route("student.formation",$formation->id) }}"> <i class="fa fa-eye" aria-hidden="true"></i> </a></td>
                                 <td><form action="{{ route("formation.delete",$formation->id) }}" method="post">
-                                    @csrfv
+                                    @csrf
                                     @method("DELETE")
                                     <button class="btn btn-danger" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
                                 </form></td>

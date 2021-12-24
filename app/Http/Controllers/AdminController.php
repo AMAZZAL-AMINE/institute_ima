@@ -149,7 +149,8 @@ class AdminController extends Controller
     public function studentProfile($id) {
         $student = Student::findOrFail($id);
         $mounths = PayedMonth::where("student_id", $id)->get();
-        return view("admin.pages.profilestudent", compact("student","mounths"));
+        $institute = IsImaOrIphec::where("student_id", $id)->first();
+        return view("admin.pages.profilestudent", compact("student","mounths","institute"));
     }
 
 
@@ -288,6 +289,11 @@ class AdminController extends Controller
                 "message" => "Done, Stident A Created Suuccessfuly"
             )
         );
+    }
+
+    //function for searech student to pay
+    public function searchStudentToPay() {
+        return view("admin.pages.searchstudnttopayfac");
     }
     /**
      * ti do list for on 23/12/2021 => inshallah

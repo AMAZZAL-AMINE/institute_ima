@@ -39,7 +39,7 @@
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route("admin.dashboard") }}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span></a>
       </li>
@@ -66,7 +66,7 @@
             <hr>
             <h6 class="collapse-header">Inscription & Paye Factur:</h6>
             <a class="collapse-item" href="{{ route("admin.inscrirestudent") }}">Inscription New Students</a>
-            <a class="collapse-item" href="">Create New Factur </a>
+            <a class="collapse-item" href="{{ route("admin.search.student") }}">Create New Factur </a>
             <hr>
 
             <h6 class="collapse-header">Manage Formation</h6>
