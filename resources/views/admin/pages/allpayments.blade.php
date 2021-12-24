@@ -4,7 +4,7 @@
     <div class="container">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Tou Les Formations</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Tou Les Payments</h6>
             </div>
             @if(session()->has('message'))
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -47,7 +47,7 @@
                     </table>
                 </div>
             </div>
-            <h1>Totam : {{ $payments->sum('prix'); }}</h1>
+            {{-- <h1>Totam : {{ $payments->sum('prix'); }}</h1> --}}
         </div>
         <button class="btn btn-primary" onclick="printTable();"><span class="glyphicon glyphicon-print"></span> Print</button>
     </div>
