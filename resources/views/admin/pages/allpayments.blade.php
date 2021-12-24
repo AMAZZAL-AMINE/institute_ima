@@ -47,6 +47,7 @@
                     </table>
                 </div>
             </div>
+            <h1>Totam : {{ $payments->sum('prix'); }}</h1>
         </div>
         <button class="btn btn-primary" onclick="printTable();"><span class="glyphicon glyphicon-print"></span> Print</button>
     </div>
