@@ -297,9 +297,16 @@ class AdminController extends Controller
     }
 
     //return to admin search result of student
-    public function searchStudentResult() {
-        return view("admin.pages.searchStudentResult");
+    public function searchStudentResult(Request $request) {
+        $search = $request->input("search");
+        $students = Student::query()
+                    ->where("cin", "LIKE", "%{$search}%")
+                    ->orWhere('phone', 'LIKE', "%{$search}%")
+                    ->get();
+        return view("admin.pages.searchStudentResult", compact('students'));
     }
+
+    
     /**
      * ti do list for on 23/12/2021 => inshallah
      * create update formation 
