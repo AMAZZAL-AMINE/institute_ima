@@ -295,6 +295,11 @@ class AdminController extends Controller
     public function searchStudentToPay() {
         return view("admin.pages.searchstudnttopayfac");
     }
+
+    //return to admin search result of student
+    public function searchStudentResult() {
+        return view("admin.pages.searchStudentResult");
+    }
     /**
      * ti do list for on 23/12/2021 => inshallah
      * create update formation 
