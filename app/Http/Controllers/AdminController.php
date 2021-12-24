@@ -350,9 +350,10 @@ class AdminController extends Controller
     //print facture 
     public function facturePrint($id) {
         $student = Student::findOrFail($id);
-        $months = PayedMonth::where("student_id", $id)->orderBy('id', 'DESC')->first();
+        $month = PayedMonth::where("student_id", $id)->orderBy('id', 'DESC')->first();
+
         $institute = IsImaOrIphec::where("student_id", $id)->first();
-        return view("admin.pages.printfacturesecent", compact("student", "months", "institute"));
+        return view("admin.pages.printfacturesecent", compact("student", "month", "institute"));
     }
 
     /**
