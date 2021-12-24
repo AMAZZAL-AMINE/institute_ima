@@ -5,7 +5,7 @@
         <h1 class="text-center mt-5">Search For Students</h1>
     <form method="get" action="{{ route("admin.search.student.result") }}" class="form-inline d-flex justify-content-center md-form form-sm active-purple-2 mt-2">
         @csrf
-        <input name="search" class="form-control form-control-sm mr-3 w-75 " type="text" placeholder="Enter Le Cin De Student"
+        <input name="search" class="form-control form-control-sm mr-3 w-75 " type="search" placeholder="Enter Le Cin De Student"
             aria-label="Search">
         <button class="btn btn-primary " type=""><i class="fas fa-search" aria-hidden="true"></i></button>
     </form>

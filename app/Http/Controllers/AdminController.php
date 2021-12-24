@@ -303,7 +303,7 @@ class AdminController extends Controller
                     ->where("cin", "LIKE", "%{$search}%")
                     ->orWhere('phone', 'LIKE', "%{$search}%")
                     ->get();
-        return view("admin.pages.searchStudentResult", compact('students'));
+        return view("admin.pages.searchStudentResult", compact('students',"search"));
     }
 
     
