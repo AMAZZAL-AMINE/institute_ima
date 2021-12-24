@@ -347,6 +347,13 @@ class AdminController extends Controller
         $student = Student::findOrFail($id);
         return view("admin.pages.getisecendinvoice", compact("student"));
     } 
+    //print facture 
+    public function facturePrint($id) {
+        $student = Student::findOrFail($id);
+        $months = PayedMonth::where("student_id", $id)->orderBy('id', 'DESC')->first();
+        $institute = IsImaOrIphec::where("student_id", $id)->first();
+        return view("admin.pages.printfacturesecent", compact("student", "months", "institute"));
+    }
 
     /**
      * ti do list for on 23/12/2021 => inshallah

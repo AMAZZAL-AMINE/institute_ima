@@ -91,6 +91,8 @@ Route::get("/Admin/Payment-New-Month/{id}", [AdminController::class, "payMonthSt
 Route::post("/Admin/Payment-New-Month/{id}", [AdminController::class, "paymentStoreNewMonth"])->name("payment-store.data.new.month");
 //go to print yhe facture
 Route::get("/Admin/Fcature-Ready/{id}", [AdminController::class, "functutreReady"])->name("admin.facture.ready");
+//print facture for oyher months
+Route::get("/Admin/Print-Facture/{id}", [AdminController::class, "facturePrint"])->name("admin.facture.print");
 // ==========================END ROUTE ADMIN  ==============================
 
 // creat months
