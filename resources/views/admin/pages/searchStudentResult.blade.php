@@ -21,7 +21,7 @@
                         <div><b>Cin: {{ $student->cin }}</b></div>
                     </div>
                     <div class="buttontoselect -100">
-                        <a  href="">Select </a>
+                        <a  href="{{ route("admin.payment.newmonth",$student->id) }}">Select </a>
                     </div>
                 </div>
             </div>

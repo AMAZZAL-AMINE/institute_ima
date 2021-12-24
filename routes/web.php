@@ -85,6 +85,8 @@ Route::post("/Admin/Inscrire-Student", [AdminController::class, "inscrireUserByA
 Route::get("/Admin/Search-Student", [AdminController::class, "searchStudentToPay"])->name("admin.search.student");
 //page for get result of search;
 Route::get("/Admin/Search-Result", [AdminController::class, "searchStudentResult"])->name("admin.search.student.result");
+//factur for add new payment month 
+Route::get("/Admin/Payment-New-Month/{id}", [AdminController::class, "payMonthStdent"])->name("admin.payment.newmonth");
 // ==========================END ROUTE ADMIN  ==============================
 
 // creat months

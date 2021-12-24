@@ -306,6 +306,15 @@ class AdminController extends Controller
         return view("admin.pages.searchStudentResult", compact('students',"search"));
     }
 
+    //function for pay new month
+    public function payMonthStdent($id) {
+        $student = Student::find($id);
+        $months = PayedMonth::where("student_id", $id)->get();
+        $institute = IsImaOrIphec::where("student_id", $id)->first();
+        return view("admin.pages.newpayfacturmonth", compact('student','months','institute'));
+        
+    }
+
     
     /**
      * ti do list for on 23/12/2021 => inshallah
