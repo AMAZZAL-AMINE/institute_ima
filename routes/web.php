@@ -87,6 +87,10 @@ Route::get("/Admin/Search-Student", [AdminController::class, "searchStudentToPay
 Route::get("/Admin/Search-Result", [AdminController::class, "searchStudentResult"])->name("admin.search.student.result");
 //factur for add new payment month 
 Route::get("/Admin/Payment-New-Month/{id}", [AdminController::class, "payMonthStdent"])->name("admin.payment.newmonth");
+//insert data of payment of student to accepte the new month in databse
+Route::post("/Admin/Payment-New-Month/{id}", [AdminController::class, "paymentStoreNewMonth"])->name("payment-store.data.new.month");
+//go to print yhe facture
+Route::get("/Admin/Fcature-Ready/{id}", [AdminController::class, "functutreReady"])->name("admin.facture.ready");
 // ==========================END ROUTE ADMIN  ==============================
 
 // creat months

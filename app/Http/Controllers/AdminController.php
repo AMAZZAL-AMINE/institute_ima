@@ -309,13 +309,41 @@ class AdminController extends Controller
     //function for pay new month
     public function payMonthStdent($id) {
         $student = Student::findOrFail($id);
+        $allmonth = Month::all();
         $months = PayedMonth::where("student_id", $id)->get();
         $institute = IsImaOrIphec::where("student_id", $id)->first();
-        return view("admin.pages.newpayfacturmonth", compact('student','months','institute'));
+        return view("admin.pages.newpayfacturmonth", compact('student','months','institute','allmonth'));
         
     }
 
-    
+    //insert all data of payment of user to database
+    public function paymentStoreNewMonth($id, Request $request) {
+        $data = $request->validate(
+            array(
+                "month_name" => "required",
+                "prix" => "required",
+            ),
+        );
+        $student = Student::findOrFail($id);
+        $month = new PayedMonth;
+        $month->create(
+            array(
+                "student_id" => $student->id,
+                "name" => $data['month_name'],
+                "prix" => $data['prix'],
+            )
+        );
+
+        return redirect()->route('admin.facture.ready',$student->id);
+
+    }
+
+    //if facture ready to print when click the button
+    public function functutreReady($id) {
+        $student = Student::findOrFail($id);
+        return view("admin.pages.getisecendinvoice", compact("student"));
+    } 
+
     /**
      * ti do list for on 23/12/2021 => inshallah
      * create update formation 

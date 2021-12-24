@@ -25,13 +25,40 @@
                 @csrf
                 <div class="form-group">
                     <label for="my-select">Choisissez le mois de paiement</label>
-                    <select id="my-select" class="form-control" name="">
+                    <select id="my-select" class="form-control" name="month_name">
                         <option value="">Choisissez le mois</option>
+                        @foreach ($allmonth as $month)
+                            <option value="{{ $month->month_num }}">{{ $month->month_num }}</option>
+                        @endforeach
                     </select>
+                    @error('month_name')
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                          <strong>{{ $message }}</strong> 
+                        </div>
+                        
+                        <script>
+                          $(".alert").alert();
+                        </script>
+                    @enderror
                 </div>
                 <div class="form-group">
                     <label for="my-input">Choisissez le prix à payer</label>
                     <input id="my-input" class="form-control" type="text" name="prix" placeholder="Prix (DH)">
+                    @error('prix')
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <strong>{{ $message }}</strong> 
+                    </div>
+                    
+                    <script>
+                      $(".alert").alert();
+                    </script>
+                @enderror
                 </div>
                 <button type="submit" class="btn btn-primary mt-5">Save Le Payment And Go To Print</button>
             </form>
