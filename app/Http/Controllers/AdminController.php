@@ -308,7 +308,7 @@ class AdminController extends Controller
 
     //function for pay new month
     public function payMonthStdent($id) {
-        $student = Student::find($id);
+        $student = Student::findOrFail($id);
         $months = PayedMonth::where("student_id", $id)->get();
         $institute = IsImaOrIphec::where("student_id", $id)->first();
         return view("admin.pages.newpayfacturmonth", compact('student','months','institute'));
