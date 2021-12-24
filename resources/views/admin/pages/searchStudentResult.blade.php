@@ -28,10 +28,27 @@
            
           @endforeach
           @else
-          <p>Sorry We Dot Found This</p>
+            <div class="text-center">
+                <img src="/images/empty.png" alt="IMAGE EMPTY DATA">
+                <p>
+                    Aucune donnée n’a été saisie pour tenter de rechercher à 
+                    <br>nouveau à l’aide du numéro de téléphone thalmid ou 
+                    <br>du numéro de carte nationale
+                </p>
+                <a class="btn btn-primary" href="{{ route("admin.search.student") }}">Search Again</a>
+            </div>
           @endif
          @else
-         <p>Sorry We Dot Found This</p>
+         <div class="text-center">
+            <img src="/images/notfound.webp" alt="IMAGE Not Found DATA">
+            <p>
+                 Ces trois-là n’ont pas été retrouvés.
+                <br>tenter de rechercher à  nouveau à l’aide du numéro de téléphone thalmid ou 
+                <br>du numéro de carte nationale
+            </p>
+            <a class="btn btn-primary" href="{{ route("admin.search.student") }}">Search Again</a>
+        </div>
+     
            @endif
         </div>
     </div>
