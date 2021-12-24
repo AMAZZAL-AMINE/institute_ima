@@ -334,7 +334,11 @@ class AdminController extends Controller
             )
         );
 
-        return redirect()->route('admin.facture.ready',$student->id);
+        return redirect()->route('admin.facture.ready',$student->id)->with(
+            array(
+                "message" => "Done"
+            )
+        );
 
     }
 
