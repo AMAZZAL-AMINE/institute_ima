@@ -63,7 +63,6 @@
             <h6 class="collapse-header">Manager Students :</h6>
             <a class="collapse-item" href="{{ route("student.whoaccepted") }}">All Ima Students</a>
             <a class="collapse-item" href="{{ route("admin.requestusers") }}">Invitation Users</a>
-            <a class="collapse-item" href="{{ route("admin.requestusers") }}">Invitation Users</a>
             <hr>
             <h6 class="collapse-header">Inscription & Paye Factur:</h6>
             <a class="collapse-item" href="{{ route("admin.inscrirestudent") }}">Inscription New Students</a>

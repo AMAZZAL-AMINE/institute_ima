@@ -4,6 +4,7 @@ use App\Models\Month;
 use App\Models\Student;
 use App\Models\Formation;
 use App\Models\PayedMonth;
+use App\Models\IsImaOrIphec;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -177,4 +178,11 @@ Route::get("/f/{id}", function($id) {
     foreach ($formation->students as $std) {
        echo $std->fname."<br>";
     }
+});
+
+//find student institute
+Route::get("/s/{id}", function($id) {
+    $student = IsImaOrIphec::find($id);
+    // $inst = IsImaOrIphec::where("student_id", $id)->first();
+    echo $student->students->fname;
 });
