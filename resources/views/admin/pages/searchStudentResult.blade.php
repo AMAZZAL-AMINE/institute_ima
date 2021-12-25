@@ -20,7 +20,10 @@
                         <div><b>Tel: {{ $student->phone }}</b></div>
                         <div><b>Cin: {{ $student->cin }}</b></div>
                     </div>
-                    <div class="buttontoselect -100">
+                    <div>
+                        <small>Formation : {{ $student->formations->name }}</small>
+                    </div>
+                    <div class="buttontoselect mt-5 text-center">
                         <a  href="{{ route("admin.payment.newmonth",$student->id) }}">Select </a>
                     </div>
                 </div>
