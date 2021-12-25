@@ -184,3 +184,14 @@
     padding-right: 130px;
     cursor: pointer;
 }
+
+/* facture de payment de secend student */
+.invoice_factur .navlogos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.invoice_factur .navlogos img {
+    width: 100px;
+}
