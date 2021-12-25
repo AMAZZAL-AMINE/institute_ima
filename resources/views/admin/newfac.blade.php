@@ -13,7 +13,7 @@
             </div>
             <div class="topcontentdesc">
                 <h2>Le Facture De Paiement</h2>
-                <p>Le Facture N #325</p>
+                <p>Le Facture N #</p>
                 <p><?php echo date("Y-m-d"); ?></p>
             </div>
 
