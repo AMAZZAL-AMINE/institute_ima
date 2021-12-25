@@ -13,7 +13,29 @@
             </div>
             <div class="topcontentdesc">
                 <h2>Le Facture De Paiement</h2>
-                <p></p>
+                <p>Le Facture N #325</p>
+                <p><?php echo date("Y-m-d"); ?></p>
+            </div>
+
+            <div class="tabledepayment">
+                <table class="table table-light">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Nom & Prénom</th>
+                            <th>Le Mois</th>
+                            <th>Le Prix</th>
+                            <th>La Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Amine Amazzal</td>
+                            <td>Premier Mois</td>
+                            <td>500 DH</td>
+                            <td>25/12/2021</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>

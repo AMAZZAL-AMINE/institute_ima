@@ -186,6 +186,10 @@
 }
 
 /* facture de payment de secend student */
+.invoice_factur {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1005%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(255%2c 255%2c 255%2c 1)'%3e%3c/rect%3e%3cpath d='M175.09 609.49C354.84 605.14 509.64 352.46 846.74 352.35 1183.84 352.24 1346.87 491.61 1518.39 492.35' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M493.58 657.65C588.35 650.06 553.07 468.73 818.36 459.8 1083.65 450.87 1296.17 238.92 1467.92 235.8' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M381.71 634.66C537.2 571.55 547.81 110.08 777.61 92.62 1007.4 75.16 975.56 162.62 1173.5 162.62 1371.45 162.62 1468.89 92.89 1569.4 92.62' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M787.02 659.11C915.15 632.45 972.45 301.59 1168.29 300.38 1364.13 299.17 1444.33 475.19 1549.56 479.58' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3cpath d='M399.13 577.03C575.28 561.11 692.66 195.92 994.74 195.2 1296.81 194.48 1434.86 372.47 1590.34 374.4' stroke='rgba(51%2c121%2c194%2c0.58)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1005'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+    padding: 40px;
+}
 .invoice_factur .navlogos {
     display: flex;
     justify-content: space-between;
@@ -194,4 +198,24 @@
 }
 .invoice_factur .navlogos img {
     width: 100px;
+}
+
+.invoice_factur .topcontentdesc {
+    text-align: center;
+    margin-top: 50px;
+    line-height: 10px;
+}
+
+.invoice_factur .topcontentdesc h2 {
+    color: blue;
+    font-weight: bold;
+}
+
+.invoice_factur .topcontentdesc p {
+    font-size: 22px;
+    color: #161615;
+}
+.invoice_factur .tabledepayment {
+    margin-top: 90px;
+    text-align: center;
 }
