@@ -72,8 +72,8 @@ class AdminController extends Controller
     }
 
     //accepted user to be student
-    public function acceptStudnet($cin) {
-        $student = Student::where("cin", $cin)->get();
+    public function acceptStudnet($id) {
+        $student = Student::find($id);
         $months = Month::all();
         return view("admin.pages.acceptstudent", compact("student","months"));
     }
