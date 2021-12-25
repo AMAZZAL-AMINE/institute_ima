@@ -30,95 +30,66 @@
     
    </style>
    <div class="" id="printableArea">
-       <div class="" >
-           <div class="row">
-               <div class="col-md-9 col-md-offset-3 body-main">
-                   <div class="col-md-12">
-                       <div class="row">
-                           <div class="col-md-4"> <img class="img" alt="Invoce Template" src="/images/logo.png" /> </div>
-                           <div class="col-md-8 text-right">
-                               <h4 style="color: #4400ff;"><strong>Institute Ima</strong></h4>
-                               <p>Avenue Abdellah Guenoun Agadir 80000 Maroc</p>
-                               <p>08:30 – 21:00</p>
-                               <p>institutimastf@gmail.com</p>
-                           </div>
-                       </div> <br />
-                       <div class="row">
-                           <div class="col-md-12 text-center">
-                               <h2>FACTURE D'ACHAT</h2>
-                               <h5>N- #{{  $invoice->id  }}</h5>
-                           </div>
-                       </div> <br />
-                       <div>
-                           <table class="table">
-                               <thead>
-                                   <tr>
-                                       <th>
-                                           <h5>Description</h5>
-                                       </th>
-                                       <th>
-                                           <h5>Amount</h5>
-                                       </th>
-                                   </tr>
-                               </thead>
-                               <tbody>
-                                   <tr>
-                                       <td class="col-md-9">Prix ​​d'inscription</td>
-                                       <td class="col-md-3"> {{ $student->firstPayed }} DH </td>
-                                   </tr>
-                                   <tr>
-                                       <td class="col-md-9">Prix ​​pour le premier mois</td>
-                                       <td class="col-md-3">{{ $invoice->prix }} DH</td>  </td>
-                                   </tr>
-                                   <thead>
-                                       <tr>
-                                           <th>
-                                               <h5>Name</h5>
-                                           </th>
-                                           <th>
-                                               <h5>Descrition</h5>
-                                           </th>
-                                       </tr>
-                                   </thead>
-                                   <tr>
-                                       <td class="col-md-9">Nom de l'étudiant</td>
-                                       <td class="col-md-3"> {{ $student->fname }} {{ $student->lname }} </td>
-                                   </tr>
-                                   <tr>
-                                       <td class="col-md-9">Formation</td>
-                                       <td class="col-md-3"> {{ $student->formations->name ?? "No Formation Right now" }} </td>
-                                   </tr>
-                                   <tr>
-                                       <td class="col-md-9">date de l'inscription</td>
-                                       <td class="col-md-3"> {{ $student->created_at->format('Y-m-d') }}</td> </td>
-                                   </tr>
-                                   <tr style="color: #F81D2D;">
-                                       <td class="text-right">
-                                           <h4><strong>Total:</strong></h4>
-                                       </td>
-                                       <td class="text-left">
-                                           <h4><strong> {{ $student->firstPayed  + $invoice->prix }} DH</strong></h4>
-                                       </td>
-                                   </tr>
-                               </tbody>
-                           </table>
-                       </div>
-                       <div>
-                           <div class="col-md-12">
-                               <p><b>Date Print De FACTURE :</b> <?php echo date("Y-m-d"); ?> </p> </p> <br />
-                           </div>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div>
+
+
+        <div class="invoice_factur">
+            <div class="navlogos">
+                <div class="imalogo">
+                    <img src="/images/logo.png" alt="">
+                </div>
+                <div class="ipheclogo">
+                    <img src="/images/iphec.png" alt="">
+                </div>
+            </div>
+            <div class="topcontentdesc">
+                <h2>Le Facture De Paiement</h2>
+                <p>Le Facture N #{{ $invoice->id }}</p>
+                <p><?php echo date("Y-m-d"); ?></p>
+            </div>
+
+            <div class="tabledepayment">
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Nom</th>
+                            <th>Formation</th>
+                            <th>Le Mois</th>
+                            <th>Le Prix</th>
+                            <th>Prix ​​d'inscription</th>
+                            <th>Total</th>
+                            <th>La Date De Paiement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="bg-white">
+                            <td>{{ $student->fname }} {{ $student->lname }} </td>
+                            <td>{{ $student->formations->name ?? "No" }} </td>
+                            <td>{{ $invoice->name }}</td>
+                            <td>{{ $invoice->prix }} DH</td>
+                            <td>{{ $student->firstPayed }} DH</td>
+                            <td>{{ $student->firstPayed  + $invoice->prix }} DH</td>
+                            <td>{{ $student->created_at->format('Y-m-d') }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="invoicefooter">
+                <div><h2>Copyright<?php echo date("Y") ?><i class="fa fa-copyright"></i> Institute-Ima.ma</h2></div>
+                <div><b><i class="fab fa-whatsapp"></i> : +212 626-400022 | <i class="fas fa-phone-alt"></i> : 05282-39873</b></div>
+                <div><b>Institute-Ima@gmail.com</b></div>
+            </div>
+        </div> 
        
    </div>
+
    <div class="container">
       <center>
        <button style="margin-top:50px; margin-bottom:50px; " class="btn btn-primary" onclick="printDiv('printableArea')"><i class="fa fa-print" aria-hidden="true" style="    font-size: 17px;"> Print This Invoice</i></button>
       </center>
    </div>
+
+
    <script>
    function printDiv(divName) {
         var printContents = document.getElementById(divName).innerHTML;
