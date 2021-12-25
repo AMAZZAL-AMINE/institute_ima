@@ -18,13 +18,13 @@
             </div>
 
             <div class="tabledepayment">
-                <table class="table table-light">
+                <table class="table table-bordered">
                     <thead class="thead-light">
                         <tr>
                             <th>Nom & Prénom</th>
                             <th>Le Mois</th>
                             <th>Le Prix</th>
-                            <th>La Date</th>
+                            <th>La Date De Paiement</th>
                         </tr>
                     </thead>
                     <tbody>
