@@ -97,9 +97,9 @@ class AdminController extends Controller
             array(
                 "student_id" => $student->id,
                 "cin" => $student->cin,
-                "name" => $student->fname."".$student->lname,
-                "Prix Dinscription" => "yes",
-                "Premier Mois" => "yes",
+                "name" => $student->fname." ".$student->lname,
+                "PrixDinscription" => "yes",
+                "fisrtMois" => "yes",
             )
         );
  
@@ -349,77 +349,77 @@ class AdminController extends Controller
         if($data["month_name"] == "2eme Mois") {
             $studentAllPay->update(
                 array(
-                    "2eme Mois" => "yes",
+                    "twoemeMois" => "yes",
                 )
             );
         }
         if($data["month_name"] == "3eme Mois") {
             $studentAllPay->update(
                 array(
-                    "3eme Mois" => "yes",
+                    "treeMois" => "yes",
                 )
             );
         }
         if($data["month_name"] == "4eme Mois") {
             $studentAllPay->update(
                 array(
-                    "4eme Mois" => "yes",
+                    "phorMois" => "yes",
                 )
             );
         }
         if($data["month_name"] == "5eme Mois") {
             $studentAllPay->update(
                 array(
-                    "5eme Mois" => "yes",
+                    "fiveMois" => "yes",
                 )
             );
         }
         if($data["month_name"] == "6eme Mois") {
             $studentAllPay->update(
                 array(
-                    "6eme Mois" => "yes",
+                    "sixMois" => "yes",
                 )
             );
         }
         if($data["month_name"] == "7eme Mois") {
             $studentAllPay->update(
                 array(
-                    "7eme Mois" => "yes",
+                    "sivenMois" => "yes",
                 )
             );
         }
         if($data["month_name"] == "8eme Mois") {
             $studentAllPay->update(
                 array(
-                    "8eme Mois" => "yes",
+                    "eightMois" => "yes",
                 )
             );
         }
         if($data["month_name"] == "9eme Mois") {
             $studentAllPay->update(
                 array(
-                    "9eme Mois" => "yes",
+                    "nineMois" => "yes",
                 )
             );
         }
         if($data["month_name"] == "10eme Mois") {
             $studentAllPay->update(
                 array(
-                    "10eme Mois" => "yes",
+                    "teenMois" => "yes",
                 )
             );
         }
         if($data["month_name"] == "11eme Mois") {
             $studentAllPay->update(
                 array(
-                    "11eme Mois" => "yes",
+                    "elevMois" => "yes",
                 )
             );
         }
         if($data["month_name"] == "12eme Mois") {
             $studentAllPay->update(
                 array(
-                    "12eme Mois" => "yes",
+                    "twilvMois" => "yes",
                 )
             );
         }
@@ -447,7 +447,8 @@ class AdminController extends Controller
 
     //get all payments of students in one table
     public function allPaymentsStudents() {
-        return view("admin.pages.studentspayments");
+        $payments = AllStudentPayments::all();
+        return view("admin.pages.studentspayments", compact("payments"));
     }
 
     /**

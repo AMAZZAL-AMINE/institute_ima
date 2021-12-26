@@ -1,10 +1,10 @@
 @extends("layouts.admin")
 
 @section("content")
-    <div class="container">
+    <div class="">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Tou Les Payments</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Les mois payés par les étudiants</h6>
             </div>
             @if(session()->has('message'))
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -23,24 +23,135 @@
                     <table class="table table-bordered  table-hover" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Id</th>
-                                <th>Prix</th>
-                                <th>Date</th>
+                                <th class="bg-light">Nom</th>
+                                <th class="bg-light">Cin</th>
+                               
+                                <th>Premier Mois</th>
+                                <th>2eme Mois</th>
+                                <th>3eme Mois</th>
+                                <th>4eme Mois</th>
+                                <th>5eme Mois</th>
+                                <th>6eme Mois</th>
+                                <th>7eme Mois</th>
+                                <th>8eme Mois</th>
+                                <th>9eme Mois</th>
+                                <th>10eme Mois</th>
+                                <th>11eme Mois</th>
+                                <th>12eme Mois</th>
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>Id</th>
-                                <th>Prix</th>
-                                <th>Date</th>
+                                <th class="bg-light">Nom</th>
+                                <th class="bg-light">Cin</th>
+                              
+                                <th>Premier Mois</th>
+                                <th>2eme Mois</th>
+                                <th>3eme Mois</th>
+                                <th>4eme Mois</th>
+                                <th>5eme Mois</th>
+                                <th>6eme Mois</th>
+                                <th>7eme Mois</th>
+                                <th>8eme Mois</th>
+                                <th>9eme Mois</th>
+                                <th>10eme Mois</th>
+                                <th>11eme Mois</th>
+                                <th>12eme Mois</th>
                             </tr>
                         </tfoot>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Hello</td>
-                                <td>12/32/3221</td>
-                            </tr>
+                        <tbody class="text-center">
+                            @foreach($payments as $pay)
+                                <tr>
+                                    <td  class="bg-light">{{ $pay->name }}</td>
+                                    <td  class="bg-light">{{ $pay->cin }}</td>
+                                    <td>
+                                        @if($pay->fisrtMois != null)
+                                        <span style="font-size: 30px; color: lightgreen"> <i class="fa fa-check" aria-hidden="true"></i></span>
+                                            @else
+                                            <span style="font-size: 30px; color: red"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($pay->twoemeMois != null)
+                                        <span style="font-size: 30px; color: lightgreen"> <i class="fa fa-check" aria-hidden="true"></i></span>
+                                            @else
+                                            <span style="font-size: 30px; color: red"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($pay->treeMois != null)
+                                        <span style="font-size: 30px; color: lightgreen"> <i class="fa fa-check" aria-hidden="true"></i></span>
+                                            @else
+                                            <span style="font-size: 30px; color: red"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($pay->phorMois != null)
+                                        <span style="font-size: 30px; color: lightgreen"> <i class="fa fa-check" aria-hidden="true"></i></span>
+                                            @else
+                                            <span style="font-size: 30px; color: red"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($pay->fiveMois != null)
+                                        <span style="font-size: 30px; color: lightgreen"> <i class="fa fa-check" aria-hidden="true"></i></span>
+                                            @else
+                                            <span style="font-size: 30px; color: red"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($pay->sixMois != null)
+                                        <span style="font-size: 30px; color: lightgreen"> <i class="fa fa-check" aria-hidden="true"></i></span>
+                                            @else
+                                            <span style="font-size: 30px; color: red"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($pay->sivenMois != null)
+                                        <span style="font-size: 30px; color: lightgreen"> <i class="fa fa-check" aria-hidden="true"></i></span>
+                                            @else
+                                            <span style="font-size: 30px; color: red"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($pay->eightMois != null)
+                                        <span style="font-size: 30px; color: lightgreen"> <i class="fa fa-check" aria-hidden="true"></i></span>
+                                            @else
+                                            <span style="font-size: 30px; color: red"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($pay->nineMois != null)
+                                        <span style="font-size: 30px; color: lightgreen"> <i class="fa fa-check" aria-hidden="true"></i></span>
+                                            @else
+                                            <span style="font-size: 30px; color: red"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($pay->teenMois != null)
+                                        <span style="font-size: 30px; color: lightgreen"> <i class="fa fa-check" aria-hidden="true"></i></span>
+                                            @else
+                                            <span style="font-size: 30px; color: red"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($pay->elevMois != null)
+                                        <span style="font-size: 30px; color: lightgreen"> <i class="fa fa-check" aria-hidden="true"></i></span>
+                                            @else
+                                            <span style="font-size: 30px; color: red"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+                                        @endif
+                                    </td>
+                                    <td>
+                                        @if($pay->twilvMois != null)
+                                        <span style="font-size: 30px; color: lightgreen"> <i class="fa fa-check" aria-hidden="true"></i></span>
+                                            @else
+                                            <span style="font-size: 30px; color: red"> <i class="fa fa-times" aria-hidden="true"></i> </span>
+                                        @endif
+                                    </td>
+
+                                    
+                                </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
