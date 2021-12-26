@@ -50,8 +50,8 @@
                             <label for="my-select">Chose Center</label>
                             <select  class="form-control" name="isiphicorima">
                                 <option value="">...</option>
-                                <option value="1">Institute-Ima</option>
-                                <option value="2">Institute-Iphec</option>
+                                <option value=">Institute-Ima">Institute-Ima</option>
+                                <option value="Institute-Iphec">Institute-Iphec</option>
                             </select>
                             @error('isiphicorima')
                                 <div class="alert alert-danger alert-dismissible fade show" role="alert">
