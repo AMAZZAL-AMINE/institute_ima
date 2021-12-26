@@ -21,7 +21,7 @@
                         <div><b>Cin: {{ $student->cin }}</b></div>
                     </div>
                     <div>
-                        <small>Formation : {{ $student->formations->name }}</small>
+                        <small>Formation : {{ $student->formations->name ?? "No" }}</small>
                     </div>
                     <div class="buttontoselect mt-5 text-center">
                         <a  href="{{ route("admin.payment.newmonth",$student->id) }}">Select </a>

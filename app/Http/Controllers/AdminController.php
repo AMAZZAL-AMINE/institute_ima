@@ -8,6 +8,7 @@ use App\Models\Formation;
 use App\Models\PayedMonth;
 use App\Models\IsImaOrIphec;
 use Illuminate\Http\Request;
+use App\Models\AllStudentPayments;
 
 class AdminController extends Controller
 {
@@ -78,7 +79,7 @@ class AdminController extends Controller
         return view("admin.pages.acceptstudent", compact("student","months"));
     }
 
-    //update the student prace and acctive his accounting
+    //update the student price and acctive his accounting
     public function studentActiveAccount(Request $request, $id) {
      
         $data = $request->validate(
@@ -91,6 +92,16 @@ class AdminController extends Controller
         );
         $student = Student::find($id);
         $month = new PayedMonth;
+        $studentAllPay = new AllStudentPayments;
+        $studentAllPay->create(
+            array(
+                "student_id" => $student->id,
+                "cin" => $student->cin,
+                "name" => $student->fname."".$student->lname,
+                "Prix Dinscription" => "yes",
+                "Premier Mois" => "yes",
+            )
+        );
  
         $month->create(
             array(
@@ -334,6 +345,84 @@ class AdminController extends Controller
             )
         );
 
+        $studentAllPay = AllStudentPayments::where("student_id", $student->id);
+        if($data["month_name"] == "2eme Mois") {
+            $studentAllPay->update(
+                array(
+                    "2eme Mois" => "yes",
+                )
+            );
+        }
+        if($data["month_name"] == "3eme Mois") {
+            $studentAllPay->update(
+                array(
+                    "3eme Mois" => "yes",
+                )
+            );
+        }
+        if($data["month_name"] == "4eme Mois") {
+            $studentAllPay->update(
+                array(
+                    "4eme Mois" => "yes",
+                )
+            );
+        }
+        if($data["month_name"] == "5eme Mois") {
+            $studentAllPay->update(
+                array(
+                    "5eme Mois" => "yes",
+                )
+            );
+        }
+        if($data["month_name"] == "6eme Mois") {
+            $studentAllPay->update(
+                array(
+                    "6eme Mois" => "yes",
+                )
+            );
+        }
+        if($data["month_name"] == "7eme Mois") {
+            $studentAllPay->update(
+                array(
+                    "7eme Mois" => "yes",
+                )
+            );
+        }
+        if($data["month_name"] == "8eme Mois") {
+            $studentAllPay->update(
+                array(
+                    "8eme Mois" => "yes",
+                )
+            );
+        }
+        if($data["month_name"] == "9eme Mois") {
+            $studentAllPay->update(
+                array(
+                    "9eme Mois" => "yes",
+                )
+            );
+        }
+        if($data["month_name"] == "10eme Mois") {
+            $studentAllPay->update(
+                array(
+                    "10eme Mois" => "yes",
+                )
+            );
+        }
+        if($data["month_name"] == "11eme Mois") {
+            $studentAllPay->update(
+                array(
+                    "11eme Mois" => "yes",
+                )
+            );
+        }
+        if($data["month_name"] == "12eme Mois") {
+            $studentAllPay->update(
+                array(
+                    "12eme Mois" => "yes",
+                )
+            );
+        }
         return redirect()->route('admin.facture.ready',$student->id)->with(
             array(
                 "message" => "Done"
@@ -354,6 +443,11 @@ class AdminController extends Controller
 
         $institute = IsImaOrIphec::where("student_id", $id)->first();
         return view("admin.pages.printfacturesecent", compact("student", "month", "institute"));
+    }
+
+    //get all payments of students in one table
+    public function allPaymentsStudents() {
+        return view("admin.pages.studentspayments");
     }
 
     /**

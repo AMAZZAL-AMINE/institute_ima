@@ -93,6 +93,8 @@ Route::post("/Admin/Payment-New-Month/{id}", [AdminController::class, "paymentSt
 Route::get("/Admin/Fcature-Ready/{id}", [AdminController::class, "functutreReady"])->name("admin.facture.ready");
 //print facture for oyher months
 Route::get("/Admin/Print-Facture/{id}", [AdminController::class, "facturePrint"])->name("admin.facture.print");
+//get students all months payments
+Route::get("/Admin/All-Payments-Students", [AdminController::class, "allPaymentsStudents"])->name("admin.all.payments.students");
 //invoice testing to ge listElement
 Route::get("/Admin/invoice", function() {
     return view("admin.newfac");
