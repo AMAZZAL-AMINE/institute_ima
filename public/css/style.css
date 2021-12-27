@@ -1354,3 +1354,97 @@ body {
     margin-top: 100px;
     margin-bottom: 100px;
 }
+
+/* profile students */
+.bgtop {
+    width: 100%;
+    padding: 130px;
+    background: rgb(255,149,0);
+    background: linear-gradient(4deg, rgba(255,149,0,1) 0%, rgb(240, 176, 176) 100%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    text-align: center;
+    font-weight:bold;
+    color: white;
+    font-size: 20px;
+}
+
+.profileimg {
+    display: flex;
+    justify-content: center;  
+}
+
+.profileimg img {
+    border: 1px solid blue;
+    width: 200px;
+    object-fit: cover;
+    height: 200px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+    margin-top: -100px;
+}
+.studentsname {
+    display: flex;
+    justify-content: center;
+   
+}
+.studentsname h1 {
+    font-weight: 700;
+    color: blue;
+     
+}
+.joinedat {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    line-height: 1px;
+}
+
+.formsupdatingdatastudents {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url("/images/std.webp");
+    padding: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    background-clip: padding-box;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.formsupdatingdatastudents .infpstudentsss {
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    width: 500px;
+}
+
+.formsupdatingdatastudents .infpstudentsss  .stdtitle span{
+  
+    color: #000dff;
+    text-transform: uppercase;
+   text-align: right;
+    
+}
+ 
+.formsupdatingdatastudents .infpstudentsss  .stdtitle {
+    display: flex;
+    justify-content: space-between;
+}

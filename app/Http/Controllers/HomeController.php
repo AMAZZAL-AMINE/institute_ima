@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Student;
 use App\Models\Formation;
 use Illuminate\Http\Request;
 
@@ -47,4 +48,11 @@ class HomeController extends Controller
     public function blog() {
         return view("pages.blog");
     }
+
+    //profile students
+    public function studentProfile($id) {
+        $student = Student::find($id);
+        return view("pages.profile", compact('student'));
+    }
+    
 }
