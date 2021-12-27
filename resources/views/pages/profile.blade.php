@@ -51,6 +51,10 @@
                             <div>Prix Dinscription: </div>
                             <span> {{ $student->firstPayed }} DH</span>
                         </div>
+                        <hr>
+                       <div class="mt-4 text-center">
+                         <a href="" class="btn btn-primary"><i class="bi bi-pen"></i> Edit Profile</a>
+                       </div>
                     </div>
                 </div>
             </div>
