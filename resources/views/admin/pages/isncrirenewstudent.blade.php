@@ -2,7 +2,7 @@
 
 @section("content")
     <div class="container">
-        <h1>Sinscrire New Student</h1>
+        <h1>Inscrire un nouvel étudiant</h1>
          <form class="bg-white rounded p-5" method="post" action="{{ route("admin.inscrire.new.student") }}" enctype="multipart/form-data">
             @csrf
              <div class="form-group">

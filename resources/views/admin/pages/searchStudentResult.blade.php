@@ -4,7 +4,7 @@
     <div class="container">
         @if($students->isNotEmpty())
         @if(!empty($search))
-        <h1>Search  Result Of <span class="text-danger">{{ $search }}</span> </h1>
+        <h1>Résultat de la recherche : <span class="text-danger">{{ $search }}</span> </h1>
         @endif
         @endif
         <div class="contentofresultstudent">
@@ -34,8 +34,8 @@
             <div class="text-center">
                 <img src="/images/empty.png" alt="IMAGE EMPTY DATA">
                 <p>
-                    Aucune donnée n’a été saisie pour tenter de rechercher à 
-                    <br>nouveau à l’aide du numéro de téléphone thalmid ou 
+                    Aucune donnée n’a été saisie pour tenter de rechercher à
+                    <br>nouveau à l’aide du numéro de téléphone  ou
                     <br>du numéro de carte nationale
                 </p>
                 <a class="btn btn-primary" href="{{ route("admin.search.student") }}">Search Again</a>
@@ -45,8 +45,8 @@
          <div class="text-center">
             <img src="/images/notfound.webp" alt="IMAGE Not Found DATA">
             <p>
-                 Ces trois-là n’ont pas été retrouvés.
-                <br>tenter de rechercher à  nouveau à l’aide du numéro de téléphone thalmid ou 
+                Cet étudiant n'a pas été retrouvés.
+                <br>tenter de rechercher à  nouveau à l’aide du numéro de téléphone  ou 
                 <br>du numéro de carte nationale
             </p>
             <a class="btn btn-primary" href="{{ route("admin.search.student") }}">Search Again</a>

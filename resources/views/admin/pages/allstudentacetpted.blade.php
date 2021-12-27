@@ -1,3 +1,4 @@
+
 @extends("layouts.admin")
 
 @section("content")
@@ -11,7 +12,11 @@
             <div class="card shadow mb-4">
               
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Touts Les étudiants</h6>
+                    <?php 
+                         use App\Models\Student;
+                        $students = Student::whereNotNull("firstPayed")->get();
+                    ?>
+                    <h6 class="m-0 font-weight-bold text-primary">Touts Les étudiants ({{ $students->count() }})</h6>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">

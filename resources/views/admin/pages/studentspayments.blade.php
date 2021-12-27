@@ -23,8 +23,8 @@
                     <table  class="table table-bordered  table-hover" id="dataTable" cellspacing="0" >
                         <thead>
                             <tr>
-                                <th class="bg-light">Nom</th>
-                                <th class="bg-light">Cin</th>
+                                <th >Nom</th>
+                                <th >Cin</th>
                                
                                 <th>Premier Mois</th>
                                 <th>2eme Mois</th>
@@ -42,8 +42,8 @@
                         </thead>
                         <tfoot>
                             <tr>
-                                <th class="bg-light">Nom</th>
-                                <th class="bg-light">Cin</th>
+                                <th >Nom</th>
+                                <th >Cin</th>
                               
                                 <th>Premier Mois</th>
                                 <th>2eme Mois</th>
@@ -62,8 +62,8 @@
                         <tbody class="text-center">
                             @foreach($payments as $pay)
                                 <tr>
-                                    <td  class="bg-light">{{ $pay->name }}</td>
-                                    <td  class="bg-light">{{ $pay->cin }}</td>
+                                    <td  class="">{{ $pay->name }}</td>
+                                    <td  class="">{{ $pay->cin }}</td>
                                     <td>
                                         @if($pay->fisrtMois != null)
                                         <span style="font-size: 30px; color: lightgreen"> <i class="fa fa-check" aria-hidden="true"></i></span>

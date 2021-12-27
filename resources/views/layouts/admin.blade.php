@@ -1,4 +1,4 @@
- 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +10,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Ima ADMIN</title>
+  <title>INSTITUTE IMA-ADMIN</title>
   <link rel="stylesheet"  href="{{ asset("/css/admin.css") }}">
   <!-- Custom fonts for this template-->
   <link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -56,22 +56,22 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Students & Formations</span>
+          <span>Formation et étudiants</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Manager Students :</h6>
-            <a class="collapse-item" href="{{ route("student.whoaccepted") }}">All Ima Students</a>
-            <a class="collapse-item" href="{{ route("admin.requestusers") }}">Invitation Users</a>
+            <h6 class="collapse-header">Gestion des étudiants :</h6>
+            <a class="collapse-item" href="{{ route("student.whoaccepted") }}">Tous les étudiants</a>
+            <a class="collapse-item" href="{{ route("admin.requestusers") }}">Demandes d'inscription </a>
             <hr>
-            <h6 class="collapse-header">Inscription & Paye Factur:</h6>
-            <a class="collapse-item" href="{{ route("admin.inscrirestudent") }}">Inscription New Students</a>
-            <a class="collapse-item" href="{{ route("admin.search.student") }}">Create New Factur </a>
+            <h6 class="collapse-header">inscriptions & facturation:</h6>
+            <a class="collapse-item" href="{{ route("admin.inscrirestudent") }}">Inscrire un nouvel étudiant</a>
+            <a class="collapse-item" href="{{ route("admin.search.student") }}">Payer une nouvelle facture </a>
             <hr>
 
-            <h6 class="collapse-header">Manage Formation</h6>
-            <a class="collapse-item" href="{{ route("admin.allformations") }}">All Formations</a>
-            <a class="collapse-item" href="{{ route("formation.add") }}">Add Formations</a>
+            <h6 class="collapse-header">Gestion des Formation</h6>
+            <a class="collapse-item" href="{{ route("admin.allformations") }}">Toutes les Formations</a>
+            <a class="collapse-item" href="{{ route("formation.add") }}">Ajouter une  Formations</a>
           </div>
         </div>
       </li>
@@ -84,9 +84,10 @@
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Payments:</h6>
-            <a class="collapse-item" href="{{ route("admin.allpayments") }}">All Payments</a>
-            <a class="collapse-item" href="{{ route("admin.all.payments.students") }}">All Payment Months</a>
+            <h6 class="collapse-header">Gestion des paiements:</h6>
+            <a class="collapse-item" href="{{ route("admin.allpayments") }}">Tous les paiements</a>
+            <hr>
+            <a class="collapse-item" href="{{ route("admin.all.payments.students") }}">Gérer les mois payés<br> et non payés</a>
           </div>
         </div>
       </li>
@@ -154,7 +155,7 @@
           </button>
 
           <!-- Topbar Search -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+          <!-- <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
             <div class="input-group">
               <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
               <div class="input-group-append">
@@ -163,11 +164,11 @@
                 </button>
               </div>
             </div>
-          </form>
-
+          </form> -->
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
 
+         
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
             <li class="nav-item dropdown no-arrow d-sm-none">
               <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -187,6 +188,8 @@
                 </form>
               </div>
             </li>
+           
+
 
 
             <div class="topbar-divider d-none d-sm-block"></div>
@@ -196,6 +199,7 @@
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <img class="img-profile rounded-circle" src="{{ asset('/storage/'.auth()->user()->image) }}">  
               <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ auth()->user()->name }}</span>
+              
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">

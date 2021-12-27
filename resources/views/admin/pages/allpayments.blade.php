@@ -4,7 +4,7 @@
     <div class="container">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Tou Les Payments</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Tous les prix payés</h6>
             </div>
             @if(session()->has('message'))
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
