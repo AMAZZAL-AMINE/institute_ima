@@ -2,23 +2,23 @@
 
 @section("content")
     <div class="container">
-        <h1>Les Donnée De Payment De Le Tétdient</h1>
+        <h1>Informations de paiement</h1>
         <div class="bg-white rounded border p-5 mt-5">
             <div class="d-flex align-items-center">
-                <h2>Nom & Prénom : </h2> <h2 class="text-primary ml-3"> {{ $student->fname }} {{ $student->lname }}</h2>
+                <h5>Nom & Prénom : </h5> <h5 class="text-primary ml-3"> {{ $student->fname }} {{ $student->lname }}</h5>
             </div>
             <hr>
             <div class="d-flex align-items-center">
-                <h2>Cart Nationale : </h2> <h2 class="text-primary ml-3"> {{ $student->cin }} {{ $student->lname }}</h2>
+                <h5>Cart Nationale : </h5> <h5 class="text-primary ml-3"> {{ $student->cin }} {{ $student->lname }}</h5>
             </div>
             <hr>
             <div class="d-flex align-items-center">
-                <h2>Mois payés  : </h2> 
-                <h2 class="text-primary ml-3"> 
+                <h5>Mois payés  : </h5> 
+                <h5 class="text-primary ml-3"> 
                     @foreach ($months as $month)
                         <span style="font-size: 25px">{{ $month->name }}</span>,
                     @endforeach 
-            </h2>
+            </h5>
             </div>
             <hr>
             <form action="" method="post">
