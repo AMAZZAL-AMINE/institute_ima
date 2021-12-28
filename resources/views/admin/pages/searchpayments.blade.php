@@ -8,13 +8,13 @@
             <form action="" method="get">
                 <div class="allinputs">
                     <div class="selectformation">
-                        <span>Select Le Formation</span>
+                        <div>Select Le Formation</div>
                         <select name="formation" >
                             <option value="">Select Formation</option>
                         </select>
                     </div>
                     <div class="selectmonth">
-                        <span>Select Le Mois</span>
+                        <div>Select Le Mois</div>
                         <select name="month" >
                             <option value="">Select Le Mois</option>
                         </select>
