@@ -7,7 +7,8 @@
         </div>
 
         <div class="searchfrmationusingmonth">
-            <form action="" method="get">
+            <form action="{{ route("formation.search.pay.result") }}" method="get">
+                @csrf
                 <div class="allinputs">
                     <div class="selectformation">
                         <div>Select Le Formation</div>
@@ -22,7 +23,11 @@
                     <div class="selectmonth">
                         <div>Select Le Mois</div>
                         <select name="month" >
-                            <option value="">Select Le Mois</option>
+                            <?php
+                                for($i = 1; $i< 13; $i++) {
+                                    echo "<option value=\"$i\">$i</option>";
+                                }    
+                            ?>
                         </select>
                     </div>
                 </div>

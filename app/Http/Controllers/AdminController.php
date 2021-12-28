@@ -464,6 +464,13 @@ class AdminController extends Controller
         return view("admin.pages.searchpayments", compact("formations"));
     }
 
+    //find the result of searchi,g the formation and the month using the months number
+    public function searchFormationPaymerntsResult(Request $request) {
+        $formation = $request->formation;
+        $month = $request->month;
+        dd($month);
+    }
+
     /**
      * ti do list for on 23/12/2021 => inshallah
      * create update formation 
