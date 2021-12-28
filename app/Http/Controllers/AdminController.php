@@ -468,7 +468,8 @@ class AdminController extends Controller
     public function searchFormationPaymerntsResult(Request $request) {
         $formation = $request->formation;
         $month = $request->month;
-        dd($month);
+        $payedmonths =  PayedMonth::where('formation', $formation)->whereMonth('created_at','=', $month)->get();
+        return view("admin.pages.resultsearchtotalformation", compact('payedmonths'));
     }
 
     /**

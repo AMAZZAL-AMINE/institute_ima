@@ -2,6 +2,6 @@
 
 @section("content")
     <div class="container">
-         this is page result
+         {{ $payedmonths }}
     </div>
 @endsection
