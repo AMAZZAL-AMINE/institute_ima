@@ -59,9 +59,7 @@
                         <td>{{ $std->formation }}</td>
                         <td>{{ $std->prix }} DH</td>
                         <td>{{ $std->created_at->format('Y-m') }}</td>
-                    </tr>
-                    
-                   
+                    </tr> 
                 @endforeach
                 <tr class="bg-primary text-white">
                     <th  scope="row">Total</th>
