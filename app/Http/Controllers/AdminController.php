@@ -259,7 +259,8 @@ class AdminController extends Controller
 
     //inscrire user by adminpage
     public function inscrireUserByAdmin() {
-        return view("admin.pages.isncrirenewstudent");
+        $formations = Formation::all();
+        return view("admin.pages.isncrirenewstudent", compact('formations'));
     }
     //inscrire user store data
     public function inscrireUserByAdminStore(Request $request) {

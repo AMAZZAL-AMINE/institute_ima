@@ -108,11 +108,10 @@
                 <label for="my-select">Select Formation</label>
                 <select  class="form-control" name="formation">
                     <option value="">...</option>
-                    <option value="1">AIDE PHARMACIE مساعد صيدلي</option>
-                    <option value="2">ASSISTANTE SOCIALE مساعد اجتماعي</option>
-                    <option value="3"> ASSISTANTE MÉDICALE السكرتارية الطبية</option>
-                    <option value="4">CENTRE D’APPEL تكوين في مراكز الاتصال</option>
-                    <option value="5">COMPTABILITÉ ET GESTION المحاسبة و التسيير</option>
+                    @foreach ($formations as $formation)
+                      <option value="{{ $formation->id }}">{{ $formation->name }}</option>
+                    @endforeach
+                   
                 </select>
             </div>
             <button class="btn btn-primary" type="submit">S'inscrire Le Student</button>
