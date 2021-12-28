@@ -251,7 +251,9 @@
     border: 1px solid blue;
 
 }
-
+.kjgjgjdgjkdgqioghqkjgbqdkjg {
+    text-align: center;
+}
 .searchfrmationusingmonth form .selectmonth select {
     padding: 15px;
     outline: none;
@@ -262,5 +264,15 @@
 
 .searchfrmationusingmonth form button {
     border: none;
-    width: 500px;
+    width: 515px;
+    margin-top: 50px;
+    padding: 15px;
+    background-color: rgba(0, 0, 255, 0.65);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }

@@ -460,7 +460,8 @@ class AdminController extends Controller
 
     //search for formation to get the total price using the months
     public function searchFormationPaymernts() {
-        return view("admin.pages.searchpayments");
+        $formations = Formation::all();
+        return view("admin.pages.searchpayments", compact("formations"));
     }
 
     /**

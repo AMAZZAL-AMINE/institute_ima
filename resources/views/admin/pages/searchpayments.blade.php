@@ -2,7 +2,9 @@
 
 @section("content")
     <div class="container">
-        <h1>This is Page Of Search Students</h1>
+        <div class="kjgjgjdgjkdgqioghqkjgbqdkjg">
+            <h1>This is Page Of Search Students</h1>
+        </div>
 
         <div class="searchfrmationusingmonth">
             <form action="" method="get">
@@ -10,7 +12,11 @@
                     <div class="selectformation">
                         <div>Select Le Formation</div>
                         <select name="formation" >
-                            <option value="">Select Formation</option>
+                            <option value="">...</option>
+                            @foreach ($formations as $formation)
+                                <option value="{{ $formation->name }}">{{ $formation->name }}</option>
+                            @endforeach
+                           
                         </select>
                     </div>
                     <div class="selectmonth">
