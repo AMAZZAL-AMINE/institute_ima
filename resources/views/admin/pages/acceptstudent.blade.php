@@ -42,6 +42,13 @@
                 <div><b class="text-primary">&nbsp;&nbsp;&nbsp; {{ $student->formations->name ?? "None" }} </b></div>
             </div>
             <hr>
+            <div class="container-fluid input-group d-block align-items-center mb-3">
+                <div> <span>Image De Cart Nationale : </span> </div> 
+                <div>
+                    <img style="width: 400px;<" src="{{ asset("/storage/".$student->cin_img) }}" alt="">
+                </div>
+            </div>
+            <hr>
             <div class="container-fluid  mb-3">
                     <form action="{{ route("studnet.active",$student->id) }}" method="post">
                         @csrf

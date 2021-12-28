@@ -15,7 +15,8 @@ class Student extends Model
         "image","cin",
         "phone","berthday",
         "nvschole","firstPayed","formation_id",
-        "user_id"
+        "user_id",
+        "cin_img",
     );
  
 
