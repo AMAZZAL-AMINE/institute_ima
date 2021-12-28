@@ -13,9 +13,19 @@
             <div class="inscriusername">
                 <div class="fname">
                     <input type="text" name="fname" placeholder="Nom" value="{{ old('fname') }}">
+                    @error("fname")
+                        <div class="alert alert-danger" role="alert">
+                            {{ $message }}
+                        </div>
+                    @enderror
                 </div>
                 <div class="lname">
                     <input type="text" name="lname" placeholder="Prénom" value="{{ old('lname') }}">
+                    @error("lname")
+                    <div class="alert alert-danger" role="alert">
+                        {{ $message }}
+                    </div>
+                @enderror
                 </div>
             </div>
             <div class="inscrimgphoto">
@@ -24,13 +34,37 @@
             </div>
             <div class="ninsnational">
                 <input type="text" name="cin" placeholder="N° national d'identité" value="{{ old("cin") }}">
+                @error("cin")
+                <div class="alert alert-danger" role="alert">
+                    {{ $message }}
+                </div>
+                @enderror
+            </div>
+            <div class="inscrimgphoto">
+                <div class="inputtitle">Select  Photo De CIN</div>
+                <input type="file" name="cin_img">
+                @error("cin_img")
+                <div class="alert alert-danger" role="alert">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
             <div class="ninsctelephone">
                 <input type="number" name="phone" placeholder="N° De Téléphone" value="{{ old("phone") }}">
+                @error("phone")
+                <div class="alert alert-danger" role="alert">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
             <div class="dinscberth">
                 <div class="inputtitle">Date de naissance</div>
                 <input type="date" name="dberth" value="{{ old("dberth") }}">
+                @error("dberth")
+                <div class="alert alert-danger" role="alert">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
             <div class="ninscschole">
                 <div class="inputtitle">Niveau Scolaire</div>
@@ -43,46 +77,26 @@
                     <option value="Université">Université</option>
 
                 </select>
+                @error("nschole")
+                <div class="alert alert-danger" role="alert">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
             <div class="ninscschole">
                 <div class="inputtitle">Select Formation:</div>
                 <select name="formation">
                     <option value="">...</option>
-                    <option value="1">AIDE PHARMACIE مساعد صيدلي</option>
-                    <option value="2">ASSISTANTE SOCIALE مساعد اجتماعي</option>
-                    <option value="3"> ASSISTANTE MÉDICALE السكرتارية الطبية</option>
-                    <option value="4">CENTRE D’APPEL تكوين في مراكز الاتصال</option>
-                    <option value="5">COMPTABILITÉ ET GESTION المحاسبة و التسيير</option>
-                    <option value="6">CUISINE الطبخ</option>
-                    <option value="7">DÉVELOPPEMENT WEB البرمجة المعلوماتية</option>
-                    <option value="8">DIAGNOSTIQUE AUTOMOBILE تشخيص الإلكتروني للسيارات</option>
-                    <option value="9">EDUCATION PHYSIQUE اساتذة التربية البدنية</option>
-                    <option value="10">ÉDUCATRICE DE LA PETITE ENFANCE مربية الأطفال</option>
-                    <option value="11">ELECTRICITÉ BÂTIMENT الكهرباء المعمارية و الصناعية</option>
-                    <option value="12">FITNESS مدربي اللياقة البدنية و كمال الأجسام</option>
-                    <option value="13">INFOGRAPHIE الطباعة المعلوماتية</option>
-                    <option value="14">INFORMATIQUE المعلوميات المكتبية</option>
-                    <option value="15">LES LANGUES اللغات</option>
-                    <option value="16">MENUISERIE ALUMINIUM نجارة الألمنيوم</option>
-                    <option value="17">PÂTISSERIE الحلويات العصرية</option>
-                    <option value="18">PÉDAGOGIE الاساتذة للتعليم الخصوصي</option>
-                    <option value="19">PREMIERS SECOURS الإسعافات الأولية</option>
-                    <option value="12">PROGRAMMATION AUTOMOBILE برمجة عقول السيارات</option>
-                    <option value="21">RÉCEPTION HÔTELIÈRE تكوين استقبال الفندق</option>
-                    <option value="22">RÉPARATION TÉLÉPHONIQUE إصلاح الهواتف النقالة</option>
-                    <option value="23">SOUDURE تكوين في اللحام</option>
-                    <option value="24">STYLISME & MODÉLISME الخياطة و الفصالة</option>
-                    <option value="25">TÉLÉSURVEILLANCE تركيب كاميرات المراقبة و اجهزة الانذار</option>
-                    <option value="26">Secrétariat administratif - السكرتارية الإدارية</option>
-                    <option value="27">Logistique - النقل و اللوجستيك</option>
-                    <option value="28">Qualité - مراقبة الجودة</option>
-                    <option value="29">Service Restauration (Serveur / Serveuse) - خدمة تموين (نادل / نادلة)</option>
-                    <option value="30">Tâpisserie - صناعة الافرشة العصرية</option>
-                    <option value="31">Clark chariot élévateur c3 الرافعات الشوكية</option>
-                    <option value="32">Produits Cosmétiques - صناعة مستحضرات التجميل</option>
-                    <option value="33">تكوين سيارة الإسعاف</option>
-                    <option value="34">COIFFURE HOMME – الحلاقة للرجال</option>
+                    @foreach ($formations as $formation)
+                     <option value="{{ $formation->id }}">{{ $formation->name }}</option>
+                    @endforeach
+                   
                 </select>
+                @error("formation")
+                <div class="alert alert-danger" role="alert">
+                    {{ $message }}
+                </div>
+                @enderror
             </div>
             <button type="submit">S'inscrire</button>
         </form>
