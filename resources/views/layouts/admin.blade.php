@@ -87,6 +87,8 @@
             <h6 class="collapse-header">Gestion des paiements:</h6>
             <a class="collapse-item" href="{{ route("admin.allpayments") }}">Tous les paiements</a>
             <hr>
+            <a class="collapse-item" href="{{ route("admin.search.foration.pay.total") }}">Recherche Par Mois</a>
+            <hr>
             <a class="collapse-item" href="{{ route("admin.all.payments.students") }}">Gérer les mois payés<br> et non payés</a>
           </div>
         </div>
