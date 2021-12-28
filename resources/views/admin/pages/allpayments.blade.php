@@ -47,8 +47,11 @@
                     </table>
                 </div>
             </div>
+            <a class="btn btn-success w-100 p-3" href="{{ route("admin.search.foration.pay.total") }}"><i class="fa fa-search" aria-hidden="true">
+                </i> Recherche Par Mois
+            </a>
         </div>
-        {{-- <h1>Totam : {{ $payments->sum('prix'); }}</h1> --}}
+        {{-- <h1>Total : {{ $payments->sum('prix'); }}</h1> --}}
 
         <button class="btn btn-primary" onclick="printTable();"><span class="glyphicon glyphicon-print"></span> Print</button>
     </div>
