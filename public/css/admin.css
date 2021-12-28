@@ -229,3 +229,33 @@
     color: #161615;
     font-size: 20px;
 }
+
+.searchfrmationusingmonth {
+    margin-top: 100px;
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+}
+
+.searchfrmationusingmonth form .allinputs  {
+    display: flex;
+    align-items: center;
+}
+
+.searchfrmationusingmonth form .selectformation select {
+    padding: 15px;
+    outline: none;
+    width: 400px;
+    margin-right: 15px;
+    border: 1px solid blue;
+
+}
+
+.searchfrmationusingmonth form .selectmonth select {
+    padding: 15px;
+    outline: none;
+    width: 100px;
+    margin-right: 15px;
+    border: 1px solid blue;
+
+}
