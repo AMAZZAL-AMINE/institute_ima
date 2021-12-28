@@ -30,7 +30,7 @@
             
            
         @endforeach
-        <tr class="bg-warning">
+        <tr class="bg-warning text-white">
             <th  scope="row">Total</th>
             <td></td>
             <td></td>
