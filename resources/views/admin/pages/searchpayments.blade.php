@@ -30,6 +30,10 @@
                             ?>
                         </select>
                     </div>
+                    <div class="selectmonth">
+                        <div>L'année</div>
+                        <input type="number" name="year" value="<?php echo date('Y'); ?>">
+                    </div>
                 </div>
                 <button type="submit"><i class="fa fa-search"></i> Search</button>
             </form>
