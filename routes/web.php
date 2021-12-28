@@ -97,7 +97,7 @@ Route::get("/Admin/Print-Facture/{id}", [AdminController::class, "facturePrint"]
 //get students all months payments
 Route::get("/Admin/All-Payments-Students", [AdminController::class, "allPaymentsStudents"])->name("admin.all.payments.students");
 //get total of payments of single formation
-Route::get("/Admin/Formation-Search", [AdminController::class, "searchFormationPaymernts"])->name("");
+Route::get("/Admin/Formation-Search", [AdminController::class, "searchFormationPaymernts"])->name("admin.search.foration.pay.total");
 //invoice testing to ge listElement
 Route::get("/Admin/invoice", function() {
     return view("admin.newfac");

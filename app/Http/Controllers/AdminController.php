@@ -458,6 +458,11 @@ class AdminController extends Controller
         return view("admin.pages.studentspayments", compact("payments"));
     }
 
+    //search for formation to get the total price using the months
+    public function searchFormationPaymernts() {
+        return view("admin.pages.searchpayments");
+    }
+
     /**
      * ti do list for on 23/12/2021 => inshallah
      * create update formation 
