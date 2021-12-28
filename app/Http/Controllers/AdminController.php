@@ -44,7 +44,7 @@ class AdminController extends Controller
                 "dberth" => ["required", "date"],
                 "nschole" => "required",
                 "formation" => "required",
-                "cin_img" => "required",
+                "cin_img" => ["required","image"],
             )
         );
         if ($request->hasFile("img")) {
@@ -281,11 +281,15 @@ class AdminController extends Controller
                     "dberth" => ["required", "date"],
                     "nschole" => "required",
                     "formation" => "required",
+                    "cin_img" => ["required","image"],
             ),
         );
 
         if ($request->hasFile("img")) {
             $filePath  = request('img')->store('studentimgs', 'public');
+        }
+        if ($request->hasFile("cin_img")) {
+            $filePathTwo  = request('cin_img')->store('studentimgs', 'public');
         }
 
         auth()->user()->students()->create(
@@ -293,6 +297,7 @@ class AdminController extends Controller
                 "fname" => $data["fname"],
                 "lname" => $data["lname"],
                 "image" => $filePath,
+                "cin_img" => $filePathTwo,
                 "cin" => $data["cin"],
                 "phone" => $data["phone"],
                 "berthday" => $data["dberth"],
@@ -301,6 +306,7 @@ class AdminController extends Controller
                 "center" => null,
                 "formation_id" => $data["formation"],
                 "user_id" => auth()->user()->id,
+
             )
         );
 
