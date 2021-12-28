@@ -472,7 +472,7 @@ class AdminController extends Controller
         $payedmonths =  PayedMonth::where('formation', $formation)
                         ->whereMonth('created_at','=', $month)
                         ->whereYear('created_at','=', $year)->get();
-        return view("admin.pages.resultsearchtotalformation", compact('payedmonths'));
+        return view("admin.pages.resultsearchtotalformation", compact('payedmonths','year','month','formation'));
     }
 
     /**
