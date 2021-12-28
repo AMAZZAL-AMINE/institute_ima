@@ -106,8 +106,11 @@ class AdminController extends Controller
         $month->create(
             array(
                 "student_id" => $student->id,
+                "students_name" => $student->fname." ".$student->lname,
+                "student_cin" => $student->cin,
                 "name" => $data['month'],
                 "prix" => $data["prix_firstmonth"],
+                "formation" => $student->formations->name,
             ),
         );
 
@@ -341,8 +344,11 @@ class AdminController extends Controller
         $month->create(
             array(
                 "student_id" => $student->id,
+                "students_name" => $student->fname." ".$student->lname,
+                "student_cin" => $student->cin,
                 "name" => $data['month_name'],
                 "prix" => $data['prix'],
+                "formation" => $student->formations->name,
             )
         );
 

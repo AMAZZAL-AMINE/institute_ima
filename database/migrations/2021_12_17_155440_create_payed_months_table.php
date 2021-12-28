@@ -16,8 +16,11 @@ class CreatePayedMonthsTable extends Migration
         Schema::create('payed_months', function (Blueprint $table) {
             $table->id();
             $table->bigInteger("student_id")->unsigned();
+            $table->string("students_name")->nullable();
+            $table->string("student_cin")->nullable();
             $table->string("name");
             $table->decimal("prix");
+            $table->string("formation");
             $table->timestamps();
         });
     }
