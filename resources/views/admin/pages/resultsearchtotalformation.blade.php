@@ -5,9 +5,10 @@
          {{-- {{ $payedmonths }} --}}
               <h4 class="text-center text-primary">To Les Bénéfices De Mois <span class="text-danger">{{ $month }}/{{ $year }}</span> En <span class="text-danger">{{ $formation }}</span> </h5> 
                 <hr>
-        <table class="table mt-5">
+        <table class="table mt-5 table-responsive">
         <thead>
             <tr>
+            <th scope="col">Cin</th>
             <th scope="col">Mois</th>
             <th scope="col">Formation</th>
             <th scope="col">Prix</th>
@@ -17,10 +18,14 @@
         <tbody>
         @foreach ($payedmonths as $payment)
             <tr>
-                <th scope="row">{{ $payment->name }}</th>
+                <th scope="row">{{ $payment->student_cin }}</th>
+                <td >{{ $payment->name }}</td>
                 <td>{{ $payment->formation }}</td>
                 <td>{{ $payment->prix }} DH</td>
                 <td>{{ $payment->created_at->format('Y-m') }}</td>
+                @if($payment->name === "Premier Mois")
+                    <th> <div class="badge badge-danger">New Student</div> </th>  
+                @endif
             </tr>
            
         @endforeach
