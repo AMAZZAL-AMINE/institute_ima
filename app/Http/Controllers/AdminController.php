@@ -44,10 +44,14 @@ class AdminController extends Controller
                 "dberth" => ["required", "date"],
                 "nschole" => "required",
                 "formation" => "required",
+                "cin_img" => "required",
             )
         );
         if ($request->hasFile("img")) {
             $filePath  = request('img')->store('studentimgs', 'public');
+        }
+        if ($request->hasFile("cin_img")) {
+            $filePathTwo  = request('cin_img')->store('studentimgs', 'public');
         }
 
         auth()->user()->students()->create(
@@ -55,6 +59,7 @@ class AdminController extends Controller
                 "fname" => $data["fname"],
                 "lname" => $data["lname"],
                 "image" => $filePath,
+                "cin_img" => $filePathTwo,
                 "cin" => $data["cin"],
                 "phone" => $data["phone"],
                 "berthday" => $data["dberth"],
