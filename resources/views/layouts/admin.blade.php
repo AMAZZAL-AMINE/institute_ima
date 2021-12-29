@@ -80,13 +80,13 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
           <i class="fas fa-fw fa-wrench"></i>
-          <span>Manage Payments </span>
+          <span>Gestion De Paiements</span>
         </a>
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Gestion des paiements:</h6>
             <a class="collapse-item" href="{{ route("admin.allpayments") }}">Tous les paiements</a>
-            <hr>
+            
             <a class="collapse-item" href="{{ route("admin.search.foration.pay.total") }}">Recherche Par Mois</a>
             <hr>
             <a class="collapse-item" href="{{ route("admin.all.payments.students") }}">Gérer les mois payés<br> et non payés</a>
@@ -99,20 +99,21 @@
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Addons
+        Gestion Des Emplois
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
           <i class="fas fa-fw fa-folder"></i>
-          <span>Users</span>
+          <span>Des Emplois</span>
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Cusom Users</h6>
-            <a class="collapse-item" href="#">All Users</a>
-            <a class="collapse-item" href="#">Blok Users</a>
+            <h6 class="collapse-header">Cusom Emplois</h6>
+            <a class="collapse-item" href="#">Gestion Emplois Des <br>Professeurs</a>
+            
+            <!-- <a class="collapse-item" href="#">Blok Users</a> -->
           </div>
         </div>
       </li>
@@ -121,7 +122,7 @@
       <li class="nav-item">
         <a class="nav-link" href="#">
           <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
+          <span>Créer un diplôme</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
