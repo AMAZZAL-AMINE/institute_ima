@@ -304,3 +304,20 @@
         width: 100%;
     }
 }
+.adminhideorshowwinclickpay {
+    display: none;
+}
+
+.clocktoshowbtundchg {
+    background-color: orange;
+    padding: 15px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 60px;
+    border-radius:5px ;
+    -webkit-border-radius:5px ;
+    -moz-border-radius:5px ;
+    -ms-border-radius:5px ;
+    -o-border-radius:5px ;
+}

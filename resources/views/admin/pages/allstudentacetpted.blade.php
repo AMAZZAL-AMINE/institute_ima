@@ -23,9 +23,7 @@
                         <table class="table" id="dataTable" width="100%" cellspacing="0">
                             <thead >
                                 <tr>
-                                    <th class="text-primary">Id</th>
                                     <th class="text-primary">Nom</th>
-                                    <th class="text-primary">Prénom</th>
                                     <th class="text-primary">Cin</th>
                                     <th class="text-primary">Phone</th>
                                     <th class="text-primary">Formation</th>
@@ -35,9 +33,7 @@
                             </thead>
                             <tfoot >
                                 <tr>
-                                <th class="text-primary">Id</th>
                                     <th class="text-primary">Nom</th>
-                                    <th class="text-primary">Prénom</th>
                                     <th class="text-primary">Cin</th>
                                     <th class="text-primary">Phone</th>
                                     <th class="text-primary">Formation</th>
@@ -49,14 +45,12 @@
                             <tbody>
                                 @foreach ($students as $student)
                                 <tr>
-                                    <td>{{ $student->id }}</td>
-                                    <td>{{ $student->fname }}</td>
-                                    <td>{{ $student->lname }}</td>
+                                    <td>{{ $student->fname }} {{ $student->lname }}</td>
                                     <td>{{ $student->cin }}</td>
                                     <td>{{ $student->phone }}</td>
                                     <td>{{ $student->formations->name ?? 'none' }}</td>
                                     <td>{{ $student->created_at->format('Y-m-d') }}</td>
-                                    <td><a class="btn btn-primary" href="{{ route("student.profile",$student->id) }}"><i class="fa fa-eye" aria-hidden="true"></i> Details</a></td>
+                                    <td><a class="btn btn-primary" href="{{ route("student.profile",$student->id) }}"><i class="fa fa-eye" aria-hidden="true"></i> </a></td>
                                 </tr>
                                 @endforeach
 

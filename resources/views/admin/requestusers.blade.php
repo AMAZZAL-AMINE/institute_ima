@@ -26,29 +26,23 @@
                         <table class="table table-bordered  table-hover" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Id</th>
                                     <th>Nom</th>
-                                    <th>Prénom</th>
                                     <th>Cin</th>
                                     <th>Phone</th>
                                     <th>Formation</th>
                                     <th>D.D’inscription</th>
                                     <th>Accept</th>
-                                    <th>Show</th>
                                     <th>Delete</th>
                                 </tr>
                             </thead>
                             <tfoot>
                                 <tr>
-                                    <th> Id</th>
                                     <th>Nom</th>
-                                    <th>Prénom</th>
                                     <th>Cin</th>
                                     <th>Phone</th>
                                     <th>Formation</th>
                                     <th>D.D’inscription</th>
                                     <th>Accept</th>
-                                    <th>Show</th>
                                     <th>Delete</th>
        
                                 </tr>
@@ -56,15 +50,12 @@
                             <tbody>
                                 @foreach ($students as $student)
                                 <tr>
-                                    <td>{{ $student->id }}</td>
-                                    <td>{{ $student->fname }}</td>
-                                    <td>{{ $student->lname }}</td>
+                                    <td>{{ $student->fname }} {{ $student->lname }}</td>
                                     <td>{{ $student->cin }}</td>
                                     <td>{{ $student->phone }}</td>
                                     <td>{{ $student->formations->name ?? 'none' }}</td>
                                     <td>{{ $student->created_at->format('Y-m-d') }}</td>
                                     <td><a class="btn btn-success" href="{{ route("admin.acceptstudent",$student->id) }}"><i class="fa fa-check" aria-hidden="true"></i></a></td>
-                                    <td><a class="btn btn-primary" href=""> <i class="fa fa-eye" aria-hidden="true"></i> </a></td>
                                     <td><form action="{{ route("student.delete",$student->id) }}" method="post">
                                         @csrf
                                         @method("DELETE")

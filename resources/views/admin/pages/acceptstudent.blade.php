@@ -57,7 +57,7 @@
                             <label for="my-select">Chose Center</label>
                             <select  class="form-control" name="isiphicorima">
                                 <option value="">...</option>
-                                <option value=">Institute-Ima">Institute-Ima</option>
+                                <option value="Institute-Ima">Institute-Ima</option>
                                 <option value="Institute-Iphec">Institute-Iphec</option>
                             </select>
                             @error('isiphicorima')
