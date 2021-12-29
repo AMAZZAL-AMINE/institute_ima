@@ -3,7 +3,7 @@
 @section("content")
     <div class="container">
         <div class="kjgjgjdgjkdgqioghqkjgbqdkjg">
-            <h1>This is Page Of Search Students</h1>
+            <h2>Statistiques  des formations</h2>
         </div>
 
         <div class="searchfrmationusingmonth">

@@ -285,3 +285,22 @@
     margin-right: 15px;
     border: 1px solid blue;
 }
+
+@media only screen and (max-width: 669px) {
+    .searchfrmationusingmonth form .allinputs {
+        display: block;
+    }
+    .searchfrmationusingmonth form button  {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .searchfrmationusingmonth form .selectformation select {
+        width: 100%;
+    }
+    .searchfrmationusingmonth form .selectmonth select {
+        width: 100%;
+    }
+    .searchfrmationusingmonth form .selectmonth input {
+        width: 100%;
+    }
+}
