@@ -19,9 +19,9 @@
                     <h6 class="m-0 font-weight-bold text-primary">Touts Les étudiants ({{ $students->count() }})</h6>
                 </div>
                 <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table  table-hover " id="dataTable" width="100%" cellspacing="0">
-                            <thead class="bg-warning">
+                    <div class="table-responsive table-bordered">
+                        <table class="table" id="dataTable" width="100%" cellspacing="0">
+                            <thead >
                                 <tr>
                                     <th class="text-primary">Id</th>
                                     <th class="text-primary">Nom</th>
@@ -33,7 +33,7 @@
                                     <th class="text-primary">Profile</th>
                                 </tr>
                             </thead>
-                            <tfoot class="bg-warning">
+                            <tfoot >
                                 <tr>
                                 <th class="text-primary">Id</th>
                                     <th class="text-primary">Nom</th>
