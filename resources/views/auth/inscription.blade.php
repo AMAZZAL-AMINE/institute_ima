@@ -1,12 +1,12 @@
 @extends("layouts.app")
 
 @section('content')
-<div class="inscriptiontoptitle">
-    <h1>Inscription</h1>
-</div>
 <div class="container">
 
     @if(auth()->user()->students()->count() === 0)
+    <div class="inscriptiontoptitle">
+        <h1>Inscription</h1>
+    </div>
     <div class="inscriptionformsall">
         <form action="{{ route('admin.insertdatauser') }}" method="post" enctype="multipart/form-data">
             @csrf
@@ -108,7 +108,63 @@
                 </div>
         @endif
         @if(auth()->user()->students->firstPayed)
-            You Account Has Been Activited
+                {{-- <div class="mt-5 mb-5">
+                    <h1> Bienvenue {{ auth()->user()->students->fname }} {{ auth()->user()->students->lname }}  dans Ima</h1>
+                </div> --}}
+                <div class="bgtop">Page personnelle de l'étudiant</div>
+            <div class="profileimg">
+                <img src="{{ asset("/storage/".auth()->user()->students->image) }}" alt="">
+            </div>
+            <div class="studentsname">
+                <h1>{{ ucfirst(trans(auth()->user()->students->fname)) }} {{ ucfirst(trans(auth()->user()->students->lname)) }}</h1><br>
+            </div>
+            <div class="joinedat">
+                <p>date de l'inscription {{ auth()->user()->students->created_at->format('Y-m-d') }}</p>
+            </div>
+            <hr>
+     
+            <div class="formsupdatingdatastudents">
+               
+                <div class="leftimg">
+                    {{-- <img src="/images/details.svg" alt=""> --}}
+                </div>
+                <div class="infpstudentsss">
+                    <div class="datauser">
+                        <div class="stdtitle">
+                            <div>Cart Nationale :</div>
+                            <div><span> {{ auth()->user()->students->cin }}</span></div>
+                        </div>
+                        <hr>
+                        <div class="stdtitle">
+                            <div>Phone Number: </div>
+                            <span> {{ auth()->user()->students->phone }}</span>
+                        </div>
+                        <hr>
+                        <div class="stdtitle">
+                            <div>Date De Naissance: </div>
+                            <span> {{ auth()->user()->students->berthday }}</span>
+                        </div>
+                        <hr>
+                        <div class="stdtitle">
+                            <div>Niveau School:</div>
+                            <span> {{ auth()->user()->students->nvschole }}</span>
+                        </div>
+                        <hr>
+                        <div class="stdtitle">
+                            <div>Formation: </div>
+                            <span> {{ auth()->user()->students->formations->name }}</span>
+                        </div>
+                        <hr>
+                        <div class="stdtitle">
+                            <div>Prix Dinscription: </div>
+                            <span> {{ auth()->user()->students->firstPayed }} DH</span>
+                        </div>
+                         
+                    </div>
+                </div>
+            </div>
+           
+ 
             @else
             <div class="messageauipatrlee">
                 <h1>

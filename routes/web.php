@@ -39,7 +39,7 @@ Route::get("/Ima-Blog", [HomeController::class, 'blog'])->name('blog');
 //inscription page
 Route::get("/Student-Inscription", [InstriptionController::class, 'studentInscription'])->name("student.inscription");
 //profiel student
-Route::get("/Profile/{id}", [HomeController::class, 'studentProfile'])->name("student.profile");
+ 
 
 
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use App\Models\Month;
 use App\Models\Student;
 use App\Models\Formation;
@@ -46,7 +47,7 @@ class AdminController extends Controller
                 "formation" => "required",
                 "cin_img" => ["required","image"],
             )
-    );
+        );
         if ($request->hasFile("img")) {
             $filePath  = request('img')->store('studentimgs', 'public');
         }
@@ -164,15 +165,7 @@ class AdminController extends Controller
         return view("admin.pages.allstudentacetpted", compact("students"));
     }
 
-    //student profile functiona
-    public function studentProfile($id) {
-        $student = Student::findOrFail($id);
-        $mounths = PayedMonth::where("student_id", $id)->get();
-        $institute = IsImaOrIphec::where("student_id", $id)->first();
-        return view("admin.pages.profilestudent", compact("student","mounths","institute"));
-    }
-
-
+ 
     //add formatioin page
     public function addFormation() {
         return view("admin.pages.addFormation");
