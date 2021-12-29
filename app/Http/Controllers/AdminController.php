@@ -46,7 +46,7 @@ class AdminController extends Controller
                 "formation" => "required",
                 "cin_img" => ["required","image"],
             )
-        );
+    );
         if ($request->hasFile("img")) {
             $filePath  = request('img')->store('studentimgs', 'public');
         }
