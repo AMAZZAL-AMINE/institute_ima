@@ -13,7 +13,6 @@ use App\Models\AllStudentPayments;
 
 class AdminController extends Controller
 {
-    //htest commit
     //requered login admin
     public function __construct()
     {
@@ -77,6 +76,14 @@ class AdminController extends Controller
                 "message" => "Done, Your data Has Been Send To Echole, We Will Call Your Soon, Be Ready"
             )
         );
+    }
+
+    //student profile
+    public function studentProfile($id) {
+        $student = Student::findOrFail($id);
+        $mounths = PayedMonth::where("student_id", $id)->get();
+        $institute = IsImaOrIphec::where("student_id", $id)->first();
+        return  view("admin.pages.profilestudent", compact("student","mounths","institute"));
     }
 
     //accepted user to be student
