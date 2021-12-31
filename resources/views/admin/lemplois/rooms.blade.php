@@ -26,25 +26,25 @@
                     IMA
                 </th>
             </tr>
-            <tr style="height: 100px;">               
+            <tr class="tirashrashjdfg">               
              <th>S1</th>
-                <td class="p-3"></td>
-                <td class="p-3"></td>
-                <td class="p-3"></td>
-                <td class="p-3"></td>
-                <td class="p-3"></td>
-                <td class="p-3"></td>
-                <td class="p-3"></td>
-                <td class="p-3"></td>
-                <td class="p-3"></td>
-                <td class="p-3"></td>
-                <td class="p-3"></td>
-                <td class="p-3"></td>
-                <td class="p-3"></td>
-                <td class="p-3"></td>
-                <td class="p-3"></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
+                <td ></td>
             </tr>
-            <tr style="height: 100px;">               
+            <tr class="tirashrashjdfg">               
                 <th>S2</th>
                    <td></td>
                    <td></td>
@@ -63,7 +63,7 @@
                    <td></td>
                </tr>
 
-               <tr style="height: 100px;">               
+               <tr class="tirashrashjdfg">               
                 <th>S3</th>
                    <td></td>
                    <td></td>
@@ -81,7 +81,7 @@
                    <td></td>
                    <td></td>
                </tr>
-               <tr style="height: 100px;">               
+               <tr class="tirashrashjdfg">               
                 <th>S4</th>
                    <td></td>
                    <td></td>
