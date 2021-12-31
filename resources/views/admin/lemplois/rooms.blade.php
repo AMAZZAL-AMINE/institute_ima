@@ -2,7 +2,9 @@
 
 @section("content")
     <div class="">
+        
         <div class="tableima">
+            <h1 class="text-center">Gestion Des Salles en l`instotute Ima</h1>
             <table  class="table-bordered  text-center bg-white tableroomss">
                 <tr>
                     <td colspan="2"></td>  

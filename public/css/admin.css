@@ -325,8 +325,12 @@
 
 .tableroomss {
     width: 1100px;
+}
+.tableima {
     margin-top: 60px;
-    
+}
+.tableima h1 {
+    color: orange;
 }
 @media only screen and (max-width: 1440px) {
     .tableima {
