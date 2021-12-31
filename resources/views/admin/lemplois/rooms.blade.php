@@ -210,28 +210,10 @@
                        <td></td>
                    </tr>
                    <tr class="tirashrashjdfg">               
-                    <th style="color: blue;">R4</th>
-                       <td></td>
-                       <td></td>
-                       <td>ENG</td>
+                    <th style="color: blue;">R5</th>
                        <td></td>
                        <td></td>
                        <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                   </tr>
-                   <tr class="tirashrashjdfg">               
-                    <th style="color: blue;">R4</th>
-                       <td></td>
-                       <td></td>
-                       <td>ENG</td>
                        <td></td>
                        <td></td>
                        <td></td>
@@ -246,28 +228,10 @@
                        <td></td>
                    </tr>
                    <tr class="tirashrashjdfg">               
-                    <th style="color: blue;">R4</th>
-                       <td></td>
-                       <td></td>
-                       <td>ENG</td>
+                    <th style="color: blue;">R6</th>
                        <td></td>
                        <td></td>
                        <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                   </tr>
-                   <tr class="tirashrashjdfg">               
-                    <th style="color: blue;">R4</th>
-                       <td></td>
-                       <td></td>
-                       <td>ENG</td>
                        <td></td>
                        <td></td>
                        <td></td>
@@ -282,10 +246,46 @@
                        <td></td>
                    </tr>
                    <tr class="tirashrashjdfg">               
-                    <th style="color: blue;">R4</th>
+                    <th style="color: blue;">R7</th>
                        <td></td>
                        <td></td>
-                       <td>ENG</td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                   </tr>
+                   <tr class="tirashrashjdfg">               
+                    <th style="color: blue;">R8</th>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                       <td></td>
+                   </tr>
+                   <tr class="tirashrashjdfg">               
+                    <th style="color: blue;">R9</th>
+                       <td></td>
+                       <td></td>
+                       <td></td>
                        <td></td>
                        <td></td>
                        <td></td>
