@@ -100,6 +100,10 @@ Route::get("/Admin/All-Payments-Students", [AdminController::class, "allPayments
 Route::get("/Admin/Formation-Search", [AdminController::class, "searchFormationPaymernts"])->name("admin.search.foration.pay.total");
 //page result of searching the formation using the month number
 Route::get("/Admin/Formation-Search-Result", [AdminController::class, "searchFormationPaymerntsResult"])->name("formation.search.pay.result");
+// Rooms lenplois
+// ===========================================================================
+Route::get("/Admin/Manager-Rooms", [AdminController::class, "managerRoomes"])->name("admin.manager.rooms");
+//============================================================================
 //invoice testing to ge listElement
 Route::get("/Admin/invoice", function() {
     return view("admin.newfac");

@@ -110,8 +110,8 @@
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Cusom Emplois</h6>
-            <a class="collapse-item" href="#">Gestion Emplois Des <br>Professeurs</a>
+            <h6 class="collapse-header">Emplois</h6>
+            <a class="collapse-item" href="{{ route("admin.manager.rooms") }}">Gestion des salles</a>
             
             <!-- <a class="collapse-item" href="#">Blok Users</a> -->
           </div>

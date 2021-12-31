@@ -1,0 +1,106 @@
+@extends("layouts.admin")
+
+@section("content")
+    <div class="container">
+        <table class="table-bordered">
+            <tr>
+                <td></td>
+                <td></td>
+                <td>8-9</td>
+                <td>9-10</td>
+                <td>10-11</td>
+                <td>11-12</td>
+                <td>12-1</td>
+                <td>1-2</td>
+                <td>2-3</td>
+                <td>3-8</td>
+                <td>4-5</td>
+                <td>5-6</td>
+                <td>6-7</td>
+                <td>7-8</td>
+                <td>8-9</td>
+                <td>9-10</td>
+                <td>10-11</td>
+            </tr>
+            <tr>
+                <th rowspan="5">
+                    Ima
+                </th>
+            </tr>
+            <tr>               
+             <th>S1</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>               
+                <th>S1</th>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+               </tr>
+
+               <tr>               
+                <th>S1</th>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+               </tr>
+               <tr>               
+                <th>S1</th>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+                   <td></td>
+               </tr>
+            
+        </table>
+    </div>
+@endsection

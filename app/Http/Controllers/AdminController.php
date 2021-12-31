@@ -491,10 +491,11 @@ class AdminController extends Controller
         return view("admin.pages.resultsearchtotalformation", compact('payedmonths','year','month','formation','newstudents'));
     }
 
-    /**
-     * ti do list for on 23/12/2021 => inshallah
-     * create update formation 
-     * creat update styudent info
-     */
+
+    // =================================================================================================\
+    // manager rooms
+    public function managerRoomes() {
+        return view("admin.lemplois.rooms");
+    }
 }
   
