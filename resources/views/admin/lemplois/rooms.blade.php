@@ -106,12 +106,18 @@
             </table>
         </div>
 
+        <div class="text-center mt-3">
+            <a class="btn btn-warning " href="">
+                <i class="fa fa-edit" aria-hidden="true"></i> Edit Lemploi Ima
+            </a>
+        </div>
+
 <hr>
 
         {{-- institute iphec manageents Rooms --}}
 
         <div class="tableiphec">
-            <h1 class="text-center">Gestion Des Salles en l`instotute Iphec</h1>
+            <h1 class="text-center">Gestion Des Salles en l`institute Iphec</h1>
             <table  class="table-bordered  text-center bg-white tableroomss">
                 <tr>
                     <td colspan="2"></td>  
@@ -301,7 +307,13 @@
                    </tr>
                    
                 
-            </table>
+            </table>        
         </div>
+        <div class="text-center mt-3 mb-4">
+            <a class="btn btn-primary " href="">
+                <i class="fa fa-edit" aria-hidden="true"></i> Edit Lemploi Iphec
+            </a>
+        </div>
+
     </div>
 @endsection
