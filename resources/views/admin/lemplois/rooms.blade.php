@@ -58,8 +58,6 @@
                 
             </table>
         </div>
-
-
 <hr>
 
         {{-- institute iphec manageents Rooms --}}
@@ -93,56 +91,56 @@
                 <tr class="tirashrashjdfg">               
                  <th style="color: blue;">R1</th>
                  @foreach ($iphecs as $iphec)
-                    <td >{{ $iphec->room_1 }}</td>
+                    <td >{{ $iphec->room_1 }} <a class="editroow" href="{{ route("admin.edit.iphec.table",$iphec->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
                  @endforeach
                 </tr>
                 <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R2</th>
                     @foreach ($iphecs as $iphec)
-                       <td >{{ $iphec->room_2 }}</td>
+                       <td >{{ $iphec->room_2 }} <a class="editroow" href="{{ route("admin.edit.iphec.table",$iphec->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
                     @endforeach
                    </tr>
     
                    <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R3</th>
                     @foreach ($iphecs as $iphec)
-                    <td >{{ $iphec->room_3 }}</td>
+                    <td >{{ $iphec->room_3 }} <a class="editroow" href="{{ route("admin.edit.iphec.table",$iphec->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
                     @endforeach
                    </tr>
                    <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R4</th>
                     @foreach ($iphecs as $iphec)
-                    <td >{{ $iphec->room_4 }}</td>
+                    <td >{{ $iphec->room_4 }} <a class="editroow" href="{{ route("admin.edit.iphec.table",$iphec->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
                     @endforeach
                    </tr>
                    <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R5</th>
                     @foreach ($iphecs as $iphec)
-                    <td >{{ $iphec->room_4 }}</td>
+                    <td >{{ $iphec->room_4 }} <a class="editroow" href="{{ route("admin.edit.ima.table",$iphec->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
                     @endforeach
                    </tr>
                    <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R6</th>
                     @foreach ($iphecs as $iphec)
-                    <td >{{ $iphec->room_6 }}</td>
+                    <td >{{ $iphec->room_6 }} <a class="editroow" href="{{ route("admin.edit.iphec.table",$iphec->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
                     @endforeach
                    </tr>
                    <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R7</th>
                     @foreach ($iphecs as $iphec)
-                    <td >{{ $iphec->room_7 }}</td>
+                    <td >{{ $iphec->room_7 }} <a class="editroow" href="{{ route("admin.edit.iphec.table",$iphec->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
                     @endforeach
                    </tr>
                    <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R8</th>
                     @foreach ($iphecs as $iphec)
-                    <td >{{ $iphec->room_8 }}</td>
+                    <td >{{ $iphec->room_8 }} <a class="editroow" href="{{ route("admin.edit.iphec.table",$iphec->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
                      @endforeach
                    </tr>
                    <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R9</th>
                     @foreach ($iphecs as $iphec)
-                    <td >{{ $iphec->room_9 }}</td>
+                    <td >{{ $iphec->room_9 }} <a class="editroow" href="{{ route("admin.edit.iphec.table",$iphec->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
                     @endforeach
                    </tr>
                    

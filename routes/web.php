@@ -107,6 +107,10 @@ Route::get("/Admin/Manager-Rooms", [AdminController::class, "managerRoomes"])->n
 Route::get("/Admin/Ima/Lemlpoi/{id}", [AdminController::class, 'editowIma'])->name("admin.edit.ima.table");
 //save updated lemploi ima
 Route::put("/Admin/Update/Lemlpoi/{id}", [AdminController::class, 'updateLemploiIma'])->name("admin.lemploi.save.ima");
+//iphec lemploi edit table 
+Route::get("/Admin/Iphec/Lemlpoi/{id}", [AdminController::class, 'editowIphec'])->name("admin.edit.iphec.table");
+//save updated lemploi ima
+Route::put("/Admin/Iphec/Update/Lemlpoi/{id}", [AdminController::class, 'updateLemploiiphec'])->name("admin.lemploi.save.iphec");
 //============================================================================
 //invoice testing to ge listElement
 Route::get("/Admin/invoice", function() {

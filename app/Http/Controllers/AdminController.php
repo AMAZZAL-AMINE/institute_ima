@@ -528,5 +528,35 @@ class AdminController extends Controller
         );
 
     }
+
+    //edite table iphec lemploi
+    public function editowIphec($id) {
+        $iphec = LemploiIphec::where("id", $id)->first(); 
+        return  view("admin.lemplois.editiphrec", compact("iphec"));
+    }
+
+    //save edite table lemploi iphec 
+    public function updateLemploiiphec($id, Request $request) {
+        $iphec = LemploiIphec::where("id", $id);
+        $iphec->update(
+            array(
+                "room_1" => $request->room_1,
+                "room_2" => $request->room_2,
+                "room_3" => $request->room_3,
+                "room_4" => $request->room_4,
+                "room_5" => $request->room_5,
+                "room_6" => $request->room_6,
+                "room_7" => $request->room_7,
+                "room_8" => $request->room_8,
+                "room_9" => $request->room_9,
+            )
+        );
+
+        return redirect()->route("admin.manager.rooms")->with(
+            array(
+                "message1" => "Tableau mis à jour avec succès",
+            )
+        );
+    }
 }
   
