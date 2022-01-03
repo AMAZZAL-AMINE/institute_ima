@@ -2,9 +2,20 @@
 
 @section("content")
     <div class="">
-        
+        @if (session()->has("message"))
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <strong>{{ session("message") }}</strong> 
+            </div>
+            
+            <script>
+              $(".alert").alert();
+            </script>
+        @endif
         <div class="tableima">
-            <h1 class="text-center">Gestion Des Salles en l`instotute Ima</h1>
+            <h1 class="text-center">Gestion Des Salles en l`institute Ima</h1>
             <table  class="table-bordered  text-center bg-white tableroomss">
                 <tr>
                     <td colspan="2"></td>  
@@ -63,6 +74,18 @@
         {{-- institute iphec manageents Rooms --}}
 
         <div class="tableiphec">
+            @if (session()->has("message1"))
+            <div class="alert alert-primary alert-dismissible fade show" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <strong>{{ session("message1") }}</strong> 
+            </div>
+            
+            <script>
+              $(".alert").alert();
+            </script>
+        @endif
             <h1 class="text-center">Gestion Des Salles en l`institute Iphec</h1>
             <table  class="table-bordered  text-center bg-white tableroomss">
                 <tr>
