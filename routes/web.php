@@ -103,6 +103,10 @@ Route::get("/Admin/Formation-Search-Result", [AdminController::class, "searchFor
 // Rooms lenplois
 // ===========================================================================
 Route::get("/Admin/Manager-Rooms", [AdminController::class, "managerRoomes"])->name("admin.manager.rooms");
+//edit lemploi ima
+Route::get("/Admin/Ima/Lemlpoi/{id}", [AdminController::class, 'editowIma'])->name("admin.edit.ima.table");
+//save updated lemploi ima
+Route::put("/Admin/Update/Lemlpoi/{id}", [AdminController::class, 'updateLemploiIma'])->name("admin.lemploi.save.ima");
 //============================================================================
 //invoice testing to ge listElement
 Route::get("/Admin/invoice", function() {

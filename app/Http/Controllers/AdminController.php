@@ -6,10 +6,12 @@ use App\Models\User;
 use App\Models\Month;
 use App\Models\Student;
 use App\Models\Formation;
+use App\Models\LemploiIma;
 use App\Models\PayedMonth;
 use App\Models\IsImaOrIphec;
 use Illuminate\Http\Request;
 use App\Models\AllStudentPayments;
+use App\Models\LemploiIphec;
 
 class AdminController extends Controller
 {
@@ -495,7 +497,36 @@ class AdminController extends Controller
     // =================================================================================================\
     // manager rooms
     public function managerRoomes() {
-        return view("admin.lemplois.rooms");
+        $imas = LemploiIma::all();
+        $iphecs = LemploiIphec::all();
+        return view("admin.lemplois.rooms", compact('imas','iphecs'));
+    }
+   
+    //edit ima table lemploi
+    public function editowIma($id) {
+        $ima = LemploiIma::where("id", $id)->first(); 
+        return  view("admin.lemplois.editima", compact("ima"));
+    }
+   
+   
+    //update table lemploi ima 
+    public function updateLemploiIma($id, Request $request) {
+        $ima = LemploiIma::where("id", $id);
+        $ima->update(
+            array(
+                "room_1" => $request->room_1,
+                "room_2" => $request->room_2,
+                "room_3" => $request->room_3,
+                "room_4" => $request->room_4,
+            )
+        );
+
+        return redirect()->route("admin.manager.rooms")->with(
+            array(
+                "message" => "Tableau mis à jour avec succès",
+            )
+        );
+
     }
 }
   

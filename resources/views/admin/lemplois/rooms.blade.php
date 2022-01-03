@@ -31,86 +31,34 @@
                 </tr>
                 <tr class="tirashrashjdfg">               
                  <th style="color: orange;">R1</th>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td >INFO</td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
+                    @foreach ($imas as $ima)
+                        <td >{{ $ima->room_1 }}  <a class="editroow" href="{{ route("admin.edit.ima.table",$ima->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
+                    @endforeach
+                   
                 </tr>
                 <tr class="tirashrashjdfg">               
                     <th style="color: orange;">R2</th>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td>ENG</td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td>AR</td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                    @foreach ($imas as $ima)
+                        <td >{{ $ima->room_2 }} <a class="editroow" href="{{ route("admin.edit.ima.table",$ima->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a> </td>
+                    @endforeach
                    </tr>
     
                    <tr class="tirashrashjdfg">               
                     <th style="color: orange;">R3</th>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td>FR</td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                    @foreach ($imas as $ima)
+                        <td >{{ $ima->room_3 }} <a class="editroow" href="{{ route("admin.edit.ima.table",$ima->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a> </td>
+                    @endforeach
                    </tr>
                    <tr class="tirashrashjdfg">               
                     <th style="color: orange;">R4</th>
-                       <td></td>
-                       <td></td>
-                       <td>ENG</td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                    @foreach ($imas as $ima)
+                        <td >{{ $ima->room_4 }} <a class="editroow" href="{{ route("admin.edit.ima.table",$ima->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
+                    @endforeach
                    </tr>
                 
             </table>
         </div>
 
-        <div class="text-center mt-3">
-            <a class="btn btn-warning " href="">
-                <i class="fa fa-edit" aria-hidden="true"></i> Edit Lemploi Ima
-            </a>
-        </div>
 
 <hr>
 
@@ -144,166 +92,58 @@
                 </tr>
                 <tr class="tirashrashjdfg">               
                  <th style="color: blue;">R1</th>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td >INFO</td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
-                    <td ></td>
+                 @foreach ($iphecs as $iphec)
+                    <td >{{ $iphec->room_1 }}</td>
+                 @endforeach
                 </tr>
                 <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R2</th>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td>ENG</td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td>AR</td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                    @foreach ($iphecs as $iphec)
+                       <td >{{ $iphec->room_2 }}</td>
+                    @endforeach
                    </tr>
     
                    <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R3</th>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td>FR</td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                    @foreach ($iphecs as $iphec)
+                    <td >{{ $iphec->room_3 }}</td>
+                    @endforeach
                    </tr>
                    <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R4</th>
-                       <td></td>
-                       <td></td>
-                       <td>ENG</td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                    @foreach ($iphecs as $iphec)
+                    <td >{{ $iphec->room_4 }}</td>
+                    @endforeach
                    </tr>
                    <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R5</th>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                    @foreach ($iphecs as $iphec)
+                    <td >{{ $iphec->room_4 }}</td>
+                    @endforeach
                    </tr>
                    <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R6</th>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                    @foreach ($iphecs as $iphec)
+                    <td >{{ $iphec->room_6 }}</td>
+                    @endforeach
                    </tr>
                    <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R7</th>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                    @foreach ($iphecs as $iphec)
+                    <td >{{ $iphec->room_7 }}</td>
+                    @endforeach
                    </tr>
                    <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R8</th>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                    @foreach ($iphecs as $iphec)
+                    <td >{{ $iphec->room_8 }}</td>
+                     @endforeach
                    </tr>
                    <tr class="tirashrashjdfg">               
                     <th style="color: blue;">R9</th>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
-                       <td></td>
+                    @foreach ($iphecs as $iphec)
+                    <td >{{ $iphec->room_9 }}</td>
+                    @endforeach
                    </tr>
                    
                 

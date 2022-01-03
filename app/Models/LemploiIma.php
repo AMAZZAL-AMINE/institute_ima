@@ -8,4 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class LemploiIma extends Model
 {
     use HasFactory;
+
+    public function run() {
+            User::factory()
+                ->count(50)
+                ->create();
+    }
 }

@@ -2,7 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\LemploiIma;
 use Illuminate\Database\Seeder;
+use Database\Seeders\LemploiImaSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -13,6 +15,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        // LemploiIma::factory(10)->create();
+        $this->call([
+            LemploiImaSeeder::class,
+        ]);
+       
     }
 }
