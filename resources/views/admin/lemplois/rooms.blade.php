@@ -170,11 +170,11 @@
                 
             </table>        
         </div>
-        <div class="text-center mt-3 mb-4">
+        {{-- <div class="text-center mt-3 mb-4">
             <a class="btn btn-primary " href="">
                 <i class="fa fa-edit" aria-hidden="true"></i> Edit Lemploi Iphec
             </a>
-        </div>
+        </div> --}}
 
     </div>
 @endsection

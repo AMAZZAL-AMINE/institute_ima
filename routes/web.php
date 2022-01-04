@@ -1,10 +1,12 @@
 <?php
 
+use Carbon\Carbon;
 use App\Models\Month;
 use App\Models\Student;
 use App\Models\Formation;
 use App\Models\PayedMonth;
 use App\Models\IsImaOrIphec;
+use App\Models\AllStudentPayments;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -101,6 +103,8 @@ Route::get("/Admin/Formation-Search", [AdminController::class, "searchFormationP
 //page result of searching the formation using the month number
 Route::get("/Admin/Formation-Search-Result", [AdminController::class, "searchFormationPaymerntsResult"])->name("formation.search.pay.result");
 // Rooms lenplois
+////////////////moj=ht pauments
+Route::get("/Admin/Months/Payments", [AdminController::class, "monthPay"])->name("admin.moth.pay");
 // ===========================================================================
 Route::get("/Admin/Manager-Rooms", [AdminController::class, "managerRoomes"])->name("admin.manager.rooms");
 //edit lemploi ima
@@ -220,4 +224,14 @@ Route::get("/s/{id}", function($id) {
     $student = IsImaOrIphec::find($id);
     // $inst = IsImaOrIphec::where("student_id", $id)->first();
     echo $student->students->fname;
+});
+
+//test date pay
+Route::get("/he", function() {
+        $payedmonths = AllStudentPayments::all();
+    foreach ($payedmonths as $pay) {
+        $myDate = $pay->updated_at;
+        $result = Carbon::createFromFormat('m/d/Y', $myDate)->isPast(); 
+        return $result;
+    }
 });
