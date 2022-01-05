@@ -39,4 +39,9 @@ class Student extends Model
     public function instituts() {
         return $this->hasMany(IsImaOrIphec::class);
     }
+
+    //relationship students payments
+    public function allpayments() {
+        return $this->hasMany(AllStudentPayments::class, 'student_id');
+    }
 }

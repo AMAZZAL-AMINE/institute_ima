@@ -12,7 +12,7 @@
             <div class="card shadow mb-4">
               
                 <div class="card-header py-3">
-                    <h6 class="m-0 font-weight-bold text-primary">Alerte de paiement</h6>
+                    <h6 class="m-0 font-weight-bold text-primary">Alerte de paiement Le Moi</h6>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive table-bordered">
@@ -22,9 +22,9 @@
                                     <th class="text-primary">Nom</th>
                                     <th class="text-primary">Cin</th>
                                     <th class="text-primary">Phone</th>
-                                    <th class="text-primary">Formation</th>
-                                    <th class="text-primary">D.D’inscription</th>
-                                    <th class="text-primary">Profile</th>
+                                    <th class="text-primary">Action</th>
+                                    <th class="text-primary">Message</th>
+                                    <th class="text-primary">Payer Facture</th>
                                 </tr>
                             </thead>
                             <tfoot >
@@ -32,21 +32,22 @@
                                     <th class="text-primary">Nom</th>
                                     <th class="text-primary">Cin</th>
                                     <th class="text-primary">Phone</th>
-                                    <th class="text-primary">Formation</th>
-                                    <th class="text-primary">D.D’inscription</th>
-                                    <th class="text-primary">Profile</th>
-       
+                                    <th class="text-primary">Action</th>
+                                    <th class="text-primary">Message</th>
+                                    <th class="text-primary">Payer Facture</th>
                                 </tr>
                             </tfoot>
                             <tbody>
+                                @foreach ($payedmonths as $student)
                                 <tr>
-                                    <td>h</td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>{{ $student->students->fname }} {{ $student->students->lname }}</td>
+                                    <td>{{ $student->cin }}</td>
+                                    <td>{{ $student->students->phone }}</td>
+                                    <td> <b><span class="badge badge-danger p3">il doit payer</span></b> </td>
+                                    <td><a class="btn btn-success"href=""> Envoyer SMS</a></td>
+                                    <td><a class="btn btn-primary"href="">Payer Facture</a></td> 
                                 </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

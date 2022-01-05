@@ -228,10 +228,11 @@ Route::get("/s/{id}", function($id) {
 
 //test date pay
 Route::get("/he", function() {
-        $payedmonths = AllStudentPayments::all();
+    $payedmonths = AllStudentPayments::all();
     foreach ($payedmonths as $pay) {
-        $myDate = $pay->updated_at;
-        $result = Carbon::createFromFormat('m/d/Y', $myDate)->isPast(); 
-        return $result;
+       
+        if($pay->updated_at->diffForHumans() == "1 month ago") {
+            echo $pay->students->id." There Is A uder Chold Pasy <br>";
+        }
     }
 });

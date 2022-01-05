@@ -9,4 +9,9 @@ class AllStudentPayments extends Model
 {
     use HasFactory;
     protected $guarded = array();
+
+    public function students() {
+        
+        return $this->belongsTo(Student::class, 'student_id');
+    }
 }

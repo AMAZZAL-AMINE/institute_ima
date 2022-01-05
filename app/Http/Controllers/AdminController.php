@@ -561,7 +561,8 @@ class AdminController extends Controller
 
     //get the only payments whoe will pay the months 
     public function monthPay() {
-        return view("admin.payments.month");
+        $payedmonths = AllStudentPayments::all();
+        return view("admin.payments.month", compact('payedmonths'));
     }
 
 }

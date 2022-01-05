@@ -86,11 +86,11 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Gestion des paiements:</h6>
-            <a class="collapse-item" href="{{ route("admin.allpayments") }}">Tous les paiements</a>
-            <a class="collapse-item" href="{{ route("admin.moth.pay") }}">Alerte de paiement</a>
-            <a class="collapse-item" href="{{ route("admin.search.foration.pay.total") }}">Recherche Par Mois</a>
+            <a class="collapse-item" href="{{ route("admin.allpayments") }}"><i class="fas fa-arrow-alt-circle-right"></i> Tous les paiements</a>
+            <a class="collapse-item" href="{{ route("admin.moth.pay") }}"><i class="fas fa-exclamation-triangle"></i> Alerte de paiement</a>
+            <a class="collapse-item" href="{{ route("admin.search.foration.pay.total") }}"><i class="fas fa-search"></i> Recherche Par Mois</a>
             <hr>
-            <a class="collapse-item" href="{{ route("admin.all.payments.students") }}">Gérer les mois payés<br> et non payés</a>
+            <a class="collapse-item" href="{{ route("admin.all.payments.students") }}"><i class="fas fa-tasks"></i> Gérer les mois payés<br> et non payés</a>
           </div>
         </div>
       </li>
