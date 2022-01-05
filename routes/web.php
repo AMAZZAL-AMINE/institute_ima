@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\InstriptionController;
+use App\Http\Controllers\SmsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -115,6 +116,7 @@ Route::put("/Admin/Update/Lemlpoi/{id}", [AdminController::class, 'updateLemploi
 Route::get("/Admin/Iphec/Lemlpoi/{id}", [AdminController::class, 'editowIphec'])->name("admin.edit.iphec.table");
 //save updated lemploi ima
 Route::put("/Admin/Iphec/Update/Lemlpoi/{id}", [AdminController::class, 'updateLemploiiphec'])->name("admin.lemploi.save.iphec");
+Route::get("/Admin/Send-Sms/{id}", [SmsController::class, 'index']);
 //============================================================================
 //invoice testing to ge listElement
 Route::get("/Admin/invoice", function() {
@@ -227,12 +229,11 @@ Route::get("/s/{id}", function($id) {
 });
 
 //test date pay
-Route::get("/he", function() {
-    $payedmonths = AllStudentPayments::all();
-    foreach ($payedmonths as $pay) {
-       
-        if($pay->updated_at->diffForHumans() == "1 month ago") {
-            echo $pay->students->id." There Is A uder Chold Pasy <br>";
-        }
-    }
-});
+// Route::get("/he", function() {
+//     $payedmonths = AllStudentPayments::all();
+//     foreach ($payedmonths as $pay) {
+
+//             echo $pay->students->id." There Is A uder Chold Pasy <br>";
+//         }
+//     }
+// });
