@@ -76,7 +76,7 @@
 
             <div class="form-group">
                 <label for="my-input">Phone</label>
-                <input id="phone" class="form-control" type="number" name="phone">
+                <input id="phone" class="form-control" type="number" name="phone" value="212">
                 @error('phone')
                     <div class="alert alert-warning alert-dismissible fade show" role="alert">
                       <button type="button" class="close" data-dismiss="alert" aria-label="Close">

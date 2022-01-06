@@ -50,7 +50,7 @@
                 @enderror
             </div>
             <div class="ninsctelephone">
-                <input type="number" name="phone" placeholder="N° De Téléphone" value="{{ old("phone") }}">
+                <input type="number" name="phone" placeholder="N° De Téléphone" value="212">
                 @error("phone")
                 <div class="alert alert-danger" role="alert">
                     {{ $message }}
