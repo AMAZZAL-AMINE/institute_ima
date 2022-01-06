@@ -38,14 +38,16 @@
                                 </tr>
                             </tfoot>
                             <tbody>
+
                                 @foreach ($payedmonths as $student)
-                                @if($student->updated_at->diffForHumans() == "1 month ago" OR $student->updated_at->diffForHumans() == "1 month ago")
+                                <?php $message = "Bonjour $student->name , j'espère que vous allez bien, le moment du paiement est arrivé.*Institute Ima pour les formations Privé*." ?>
+                                @if($student->updated_at->diffForHumans() == "1 month ago" OR $student->updated_at->diffForHumans() == "2 months ago" OR $student->updated_at->diffForHumans() == "4 weeks ago")
                                 <tr>
                                     <td>{{ $student->students->fname }} {{ $student->students->lname }}</td>
                                     <td>{{ $student->cin }}</td>
                                     <td>{{ $student->students->phone }}</td>
-                                    <td> <b><span class="badge badge-danger p3">il doit payer</span></b> </td>
-                                    <td><a class="btn btn-success"href=""><i class="far fa-envelope"></i> Envoyer SMS</a></td>
+                                    <td> <b><span class="btn btn-danger"><i class="fas fa-exclamation-triangle"></i> il doit payer</span></b> </td>
+                                    <td><a class="btn btn-success" href="https://wa.me/{{ $student->students->phone }}?text={{ $message }}" target="_blank"><i class="fab fa-whatsapp"></i> Message Via WhatsApp </a></td>
                                     <td><a class="btn btn-primary"href="{{ route("payment-store.data.new.month",$student->student_id) }}"><i class="fas fa-money-check-alt"></i> Payer Facture</a></td> 
                                 </tr>
                                 @endif
