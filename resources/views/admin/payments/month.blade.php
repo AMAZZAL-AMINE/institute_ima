@@ -22,7 +22,7 @@
                                     <th class="text-primary">Nom</th>
                                     <th class="text-primary">Cin</th>
                                     <th class="text-primary">Phone</th>
-                                    <th class="text-primary">Action</th>
+                                    <th class="text-primary">Alert</th>
                                     <th class="text-primary">Message</th>
                                     <th class="text-primary">Payer Facture</th>
                                 </tr>
@@ -32,7 +32,7 @@
                                     <th class="text-primary">Nom</th>
                                     <th class="text-primary">Cin</th>
                                     <th class="text-primary">Phone</th>
-                                    <th class="text-primary">Action</th>
+                                    <th class="text-primary">Alert</th>
                                     <th class="text-primary">Message</th>
                                     <th class="text-primary">Payer Facture</th>
                                 </tr>

@@ -116,7 +116,7 @@ Route::put("/Admin/Update/Lemlpoi/{id}", [AdminController::class, 'updateLemploi
 Route::get("/Admin/Iphec/Lemlpoi/{id}", [AdminController::class, 'editowIphec'])->name("admin.edit.iphec.table");
 //save updated lemploi ima
 Route::put("/Admin/Iphec/Update/Lemlpoi/{id}", [AdminController::class, 'updateLemploiiphec'])->name("admin.lemploi.save.iphec");
-Route::get("/Admin/Send-Sms/{id}", [SmsController::class, 'index']);
+Route::get("/Admin/Send-Sms", [SmsController::class, 'index']);
 //============================================================================
 //invoice testing to ge listElement
 Route::get("/Admin/invoice", function() {

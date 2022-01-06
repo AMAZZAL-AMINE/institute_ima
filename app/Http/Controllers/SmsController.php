@@ -2,22 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use SMSFactor\Message;
 use App\Models\student;
 use Illuminate\Http\Request;
-use Nexmo\Laravel\Facade\Nexmo;
+use Symfony\Component\HttpKernel\Exception\HttpException;
+
 
 class SmsController extends Controller
 {
     //
-    public function index($id) {
-        
-        // $student = student::findOrFail($id);
-        // Nexmo::message()->send([
-        //     'to' => $student->phone,
-        //     'from' => 'IMA',
-        //     'text' => 'message push',
-        // ]);
-
-        // echo "message sent";
+    public function index(Request $request) {
+        echo "<h1 style='text-align: center'>this function is for sending message to student in phone sms or whatssap</h1>";
+       
     }
 }

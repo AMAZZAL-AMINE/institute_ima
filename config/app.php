@@ -161,7 +161,6 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
         /*
          * Package Service Providers...
          */
@@ -229,6 +228,12 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'SMSFactor' => SMSFactor\Laravel\Facade\Account::class,
+        'SMSFactor' => SMSFactor\Laravel\Facade\Campaign::class,
+        'SMSFactor' => SMSFactor\Laravel\Facade\ContactList::class,
+        'SMSFactor' => SMSFactor\Laravel\Facade\Message::class,
+        'SMSFactor' => SMSFactor\Laravel\Facade\Webhook::class,
+        'SMSFactor' => SMSFactor\Laravel\Facade\Token::class,
 
     ],
 

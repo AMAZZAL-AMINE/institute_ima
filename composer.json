@@ -13,7 +13,8 @@
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
-        "nexmo/client": "^2.4"
+        "nexmo/client": "^2.4",
+        "smsfactor/smsfactor-laravel": "^1.1"
     },
     "require-dev": {
         "facade/ignition": "^2.5",
