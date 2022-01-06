@@ -11,9 +11,14 @@
                     <div class="text">
                         <h1>{{ strtoupper($student->fname) }} {{  strtoupper($student->lname) }}</h1>
                         <p>{{ $student->users->email }}</p>
+
                     </div>
+                    
              </div>
         </div>
+        <div class="mt-3">
+            <img src="{{ asset("/storage/".$student->cin_img) }}" alt="">
+           </div>
         <hr>
         <div class="allbodiessbobys">
             <div class="userdetailbody">
@@ -95,10 +100,15 @@
                         <td>{{ $stud->created_at->format('Y-m-d') }}</td>
                     </tr>
                     @endforeach
+                    <tr>
+                        <td>Totale :</td>
+                        <td></td>
+                        <td>{{ $mounths->sum('prix') + $student->firstPayed}} DH</td>
+                    </tr>
                 </tbody>
               </table>
               <div class="text-center">
-                <a class="btn btn-primary"  href=""><i class="fa fa-plus" aria-hidden="true"></i> Add Anouther Payed Mounth</a>
+                <a class="btn btn-primary"  href="{{ route("payment-store.data.new.month",$student->id) }}"><i class="fa fa-plus" aria-hidden="true"></i> Add Anouther Payed Mounth</a>
               </div>
         </div>
     </div>
