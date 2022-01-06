@@ -110,6 +110,9 @@
               <div class="text-center">
                 <a class="btn btn-primary"  href="{{ route("payment-store.data.new.month",$student->id) }}"><i class="fa fa-plus" aria-hidden="true"></i> Add Anouther Payed Mounth</a>
               </div>
+              <div class="text-center mt-3">
+                <a class="btn btn-success"  href=""><i class="fa fa-print" aria-hidden="true"></i> Print A Deplome</a>
+              </div>
         </div>
     </div>
 @endsection
