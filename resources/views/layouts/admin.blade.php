@@ -121,7 +121,7 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route("admin.deplom") }}">
           <i class="fas fa-fw fa-chart-area"></i>
           <span>Créer un diplôme</span></a>
       </li>
@@ -130,7 +130,7 @@
       <li class="nav-item">
         <a class="nav-link" href="#">
           <i class="fas fa-fw fa-table"></i>
-          <span>Tables</span></a>
+          <span>Create Certificate</span></a>
       </li>
 
       <!-- Divider -->

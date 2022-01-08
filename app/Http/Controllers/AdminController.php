@@ -565,5 +565,10 @@ class AdminController extends Controller
         return view("admin.payments.month", compact('payedmonths'));
     }
 
+    //function deplome
+    public function deplom() {
+        return view("admin.deplom.deplom");
+    }
+
 }
   
