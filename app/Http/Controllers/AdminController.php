@@ -570,5 +570,9 @@ class AdminController extends Controller
         return view("admin.deplom.deplom");
     }
 
+    //create cirtificate function
+    public function createCertificate() {
+        return view("admin.deplom.certificate");
+    }
 }
   

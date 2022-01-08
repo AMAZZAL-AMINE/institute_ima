@@ -119,6 +119,7 @@ Route::put("/Admin/Iphec/Update/Lemlpoi/{id}", [AdminController::class, 'updateL
 Route::get("/Admin/Send-Sms", [SmsController::class, 'index']);
 ///////////////Deplome////////////////////////////////
 Route::get("/Admin/Create-Deplom", [AdminController::class, 'deplom'])->name("admin.deplom");
+Route::get("/Admin/Create-Certificate", [AdminController::class, 'createCertificate'])->name("admin.createCertificate");
 //============================================================================
 //invoice testing to ge listElement
 Route::get("/Admin/invoice", function() {
