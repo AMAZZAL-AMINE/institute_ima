@@ -2,7 +2,7 @@
 
 @section("content")
     <div class="container">
-        <h1>Saisir les informations sur l'étudiant</h1>
+        <b>Saisir les informations sur l'étudiant</b>
 
         <form action="" method="post">
             @csrf
@@ -26,7 +26,7 @@
             </div>
              <div class="deplom_mois">
                  <div class="deplom_moi_fr"><input type="text" name="moi_fr" placeholder="Nombre de mois" required></div>
-                 <div class="deplom_moi_fr"><input type="text" name="moi_ar" placeholder="عدد الأشهر" required></div>
+                 <div class="deplom_moi_ar"><input type="text" name="moi_ar" placeholder="عدد الأشهر" required></div>
              </div>
              <div class="deplom_itablesment">
                  <div class="deplom_etablisnebt_fr"><input type="text" name="etabliesmant_fr" placeholder="Etablisemont" required></div>
@@ -35,7 +35,7 @@
              <div class="deplom_fait">
                  <input type="text" name="fiat_a" placeholder="Fit A Agadir Le">
              </div>
-             <button class=" mt-5"type="submit">Submit </button>
+             <button class="deplom_hada_button" type="submit">Submit </button>
         </form>
     </div>
 @endsection

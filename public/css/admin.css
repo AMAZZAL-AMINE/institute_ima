@@ -386,3 +386,154 @@
 .tirashrashjdfg td:hover .editroow {
     display: flex;
 }
+
+
+.deplom_name {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.deplom_name input {
+    padding: 15px;
+    border: 1px solid blue;
+    outline: none;
+    width: 100%;
+    
+}
+.deplom_name .deplom_fr_name {
+    margin-right: 5px;
+    flex: 1;
+}
+.deplom_name .deplom_ar_name {
+    flex: 1;
+}
+.deplom_name .deplom_ar_name input{
+    text-align: right;
+}
+
+
+.deplom_date_naisans  {
+    margin-top: 20px;
+}
+.deplom_date_naisans input{
+    padding: 15px;
+    border: 1px solid blue;
+    outline: none;
+    width: 100%;
+
+}
+.deplom_cin {
+    margin-top: 20px;
+}
+.deplom_cin input {
+    padding: 15px;
+    border: 1px solid blue;
+    outline: none;
+    width: 100%;
+}
+
+
+.deplom_formation input {
+    padding: 15px;
+    border: 1px solid blue;
+    outline: none;
+    width: 100%;
+}
+.deplom_formation {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.deplom_formation .deplom_form_fr {
+    margin-right: 5px;
+    flex: 1;
+}
+
+.deplom_formation .deplom_form_ar  {
+    flex: 1;
+}
+.deplom_formation .deplom_form_ar input {
+    text-align: right;
+}
+
+.deplom_promotion {
+    margin-top: 20px;
+}
+.deplom_promotion input {
+    padding: 15px;
+    border: 1px solid blue;
+    outline: none;
+    width: 100%;
+}
+
+.deplom_mois {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.deplom_mois input {
+    padding: 15px;
+    border: 1px solid blue;
+    outline: none;
+    width: 100%;
+}
+
+.deplom_mois .deplom_moi_fr {
+    margin-right: 5px;
+    flex: 1;
+}
+
+.deplom_mois .deplom_moi_ar {
+    flex: 1;
+}
+
+.deplom_mois  .deplom_moi_ar input {
+    text-align: right;
+}
+
+.deplom_itablesment {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+.deplom_itablesment input {
+    padding: 15px;
+    border: 1px solid blue;
+    outline: none;
+    width: 100%;
+}
+
+.deplom_etablisnebt_fr {
+    flex: 1;
+    margin-right: 5px;
+}
+.deplom_etablisnebt_ar input {
+    text-align: right;
+}
+.deplom_etablisnebt_ar {
+    flex: 1;
+}
+
+.deplom_fait {
+    margin-top: 20px;
+}
+.deplom_fait input {
+    padding: 15px;
+    border: 1px solid blue;
+    outline: none;
+    width: 100%;
+}
+
+.deplom_hada_button {
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 15px;
+    background-color: blue;
+    color: #fff;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
