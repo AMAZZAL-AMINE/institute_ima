@@ -121,6 +121,8 @@ Route::get("/Admin/Send-Sms", [SmsController::class, 'index']);
 Route::get("/Admin/Create-Deplom", [AdminController::class, 'deplom'])->name("admin.deplom");
 Route::get("/Admin/Create-Certificate", [AdminController::class, 'createCertificate'])->name("admin.createCertificate");
 //============================================================================
+//update student Info 
+Route::put("/Admin/Student/{id}/Edit", [AdminController::class, 'updateStudent'])->name("admin.update.student");
 //invoice testing to ge listElement
 Route::get("/Admin/invoice", function() {
     return view("admin.newfac");

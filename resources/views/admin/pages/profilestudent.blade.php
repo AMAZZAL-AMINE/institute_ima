@@ -11,7 +11,6 @@
             <div class="text">
                 <h1>{{ strtoupper($student->fname) }} {{ strtoupper($student->lname) }}</h1>
                 <p>{{ $student->users->email }}</p>
-
             </div>
             <div>
                 <button type="button" class="btn btn-success mt-3 ml-5" data-toggle="modal" data-target="#exampleModalCenter">
@@ -20,7 +19,9 @@
                 <div class="modal fade " id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                         <div class="modal-content">
-                        <form>
+                        <form action="{{ route("admin.update.student",$student->id) }}" method="post" enctype="multipart/form-data">
+                            @csrf
+                            @method('PUT')
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLongTitle">Update Profile</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -56,15 +57,15 @@
                                     <div class="input-group-append ">
                                         <span class="input-group-text" id="my-addon" >Date de naissance</span>
                                     </div>
-                                    <input class="form-control " type="date" name="nerthday" placeholder="Date de naissance" aria-label="Recipient's " aria-describedby="my-addon">
+                                    <input class="form-control " type="date" name="berthday" placeholder="Date de naissance" aria-label="Recipient's " aria-describedby="my-addon">
                                 </div>
                                 <div class="form-group mt-3">
                                     <label for="my-select">Formation</label>
-                                    <select id="my-select" class="form-control" name="">
-                                        <option>Text</option>
-                                        <option>Text</option>
-                                        <option>Text</option>
-                                        <option>Text</option>
+                                    <select id="my-select" class="form-control" name="formation">
+                                        <option value="1">Text</option>
+                                        <option value="1">Text</option>
+                                        <option value="1">Text</option>
+                                        <option value="1">Text</option>
                                     </select>
                                 </div>
 
@@ -81,7 +82,7 @@
                                     <div class="input-group-append ">
                                         <span class="input-group-text" id="my-addon" >Image Cin De Etudiant</span>
                                     </div>
-                                    <input class="form-control p-1" type="file" name="profile"  aria-label="Recipient's " aria-describedby="my-addon">
+                                    <input class="form-control p-1" type="file" name="cin_img"  aria-label="Recipient's " aria-describedby="my-addon">
                                 </div>
                                 <div  style="margin-top: 120px;">
                                     <img style=" border-radius: 10px;" src="{{ asset("storage/".$student->cin_img) }}" alt="">
@@ -90,7 +91,7 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
                             </div>
                         </form>
                         </div>
@@ -99,6 +100,18 @@
             </div>
         </div>
     </div>
+    @if (session()->has('message'))
+        <div class="alert alert-primary alert-dismissible fade show mt-3" role="alert">
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <strong>{{ session("message") }}</strong> 
+        </div>
+        
+        <script>
+          $(".alert").alert();
+        </script>
+    @endif
     <div class="mt-3">
         <img style="max-width: 100%;" src="{{ asset("/storage/".$student->cin_img) }}" alt="">
     </div>

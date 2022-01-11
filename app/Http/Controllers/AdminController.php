@@ -574,5 +574,48 @@ class AdminController extends Controller
     public function createCertificate() {
         return view("admin.deplom.certificate");
     }
+
+    //update student information
+    public function updateStudent($id, Request $request) {
+        $student = Student::findOrFail($id);
+        $data = $request->validate(
+            array(
+                "f_name" => "required",
+                "l_name" => "required",
+                "phone" => "required",
+                "cin" => "required",
+                "berthday" => "required|date",
+                "formation" => "required",
+                "profile" => "image",
+                "cin_img" => "image"
+            )
+        );
+
+        if($request->hasFile('profile')) {
+            $imagePathProfile = request('profile')->store('studentimgs', 'public');
+        }
+        if($request->hasFile('cin_img')) {
+            $imagePathCin = request('cin_img')->store('studentimgs', 'public');
+        }
+
+        $student->update(
+            [
+                "fname" => $data['f_name'],
+                "lname" => $data['l_name'],
+                "image" => $imagePathProfile ?? $student->image,
+                "cin_img" => $imagePathCin ?? $student->cin_img,
+                "cin" => $data['cin'],
+                "phone" => $data['phone'],
+                "berthday" => $data['berthday'],
+                "formation_id" => $data['formation'],
+            ]
+        );
+
+        return back()->with(
+            [
+                "message" => "Success, Les Information De Cet étudiant A Ete Updated Avec Success"
+            ]
+        );
+    }
 }
   
