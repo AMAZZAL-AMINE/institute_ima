@@ -619,6 +619,12 @@ class AdminController extends Controller
         );
     }
 
+
+    //manager abcenses
+    public function manageAbsences() {
+        return view('admin.lemplois.absences');
+    }
+
     //insert the data of deplom to database and return with data to print deplom page
     public function  createDeplom(Request $request) {
 

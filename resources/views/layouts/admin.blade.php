@@ -113,6 +113,7 @@
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Emplois</h6>
             <a class="collapse-item" href="{{ route("admin.manager.rooms") }}">Gestion des salles</a>
+            <a class="collapse-item" href="{{ route("admin.manager.absences") }}">Gestion Absences des <br> étudiants</a>
             
             <!-- <a class="collapse-item" href="#">Blok Users</a> -->
           </div>
