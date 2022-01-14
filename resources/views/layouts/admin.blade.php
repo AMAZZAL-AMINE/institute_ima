@@ -234,6 +234,12 @@
             <div class="container">
                 @yield('content')
             </div>
+            <div class="deplom_container">
+                @yield('deplom')
+            </div>
+            <div class="deplom_container_print">
+                @yield('deplom_print')
+            </div>
       <!-- End of Main Content -->
 
  

@@ -536,3 +536,95 @@
     margin-top: 10px;
     margin-bottom: 20px;
 }
+
+
+
+/* deplom stylesheet */
+.ersrsdfgrewt {
+    overflow-x: scroll;
+}
+.deplom {
+    padding: 45px;
+    background-color: white;
+    width: 1000px;
+    max-width: 2700px;
+    min-width: 1700px;
+    background-image: url(/deplom/deplom_bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+   
+     
+}
+
+.deplom .deplom-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.deplom .deplom-header .deplom_royaum_logo img{
+    width: 190px;
+}
+
+.deplom .deplom-header .deplom_ima_logo img{
+    width: 190px;
+}
+
+.deplom .deplom-header .deplom_text_title h1 {
+    text-align: center;
+    font-weight: 900;
+    color: black;
+
+}
+.deplom .deplom_body {
+    margin-top: 60px;
+}
+.deplom .deplom_body .deplom_derector {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 35px;
+    
+}
+.deplom .deplom_body .deplom_derector b {
+    color: black;
+    font-size: 22px;
+    font-weight: 800;
+}
+.deplom .deplom_body .deplom_derector .deplom_derector_name {
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    list-style: underline;    
+    font-size: 25px;
+}
+
+.deplom .deplom_footer {
+    display: flex;
+    justify-content: center;
+}
+.deplom .deplom_footer .deplom_footer_right {
+    display: flex;
+}
+.deplom .deplom_footer .deplom_footer_right .deplom_footer_right_desc {
+    text-align: center;
+    color: blue;
+    font-weight: 700;
+    margin-left: 195px;
+}
+
+.deplom .deplom_footer .deplom_footer_right .deplom_footer_left_name  {
+    position: relative;
+    right: 0;
+    margin-left: 155px;
+    text-align: center;
+    font-weight: 900;
+    color: black;
+    font-size: 24px;
+}
+
+.deplom_container {
+    padding: 150px;
+    display: flex;
+    justify-content: center;
+}

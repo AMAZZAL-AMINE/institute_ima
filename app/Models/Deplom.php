@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Deplom extends Model
 {
     use HasFactory;
+
+    //protected the database
+    protected $guarded = [];
 }

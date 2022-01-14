@@ -4,14 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Month;
+use App\Models\Deplom;
 use App\Models\Student;
 use App\Models\Formation;
 use App\Models\LemploiIma;
 use App\Models\PayedMonth;
 use App\Models\IsImaOrIphec;
+use App\Models\LemploiIphec;
 use Illuminate\Http\Request;
 use App\Models\AllStudentPayments;
-use App\Models\LemploiIphec;
 
 class AdminController extends Controller
 {
@@ -635,6 +636,24 @@ class AdminController extends Controller
         $etablis_ar = $request->etabliesmant_ar;
         $fit_at = $request->fiat_a;
 
+        $deplom = new Deplom;
+
+        // $deplom->create(
+        //     [
+        //         "name_fr" => "",
+        //         "namr_ar" => "",
+        //         "berth" => "",
+        //         "cin" => "",
+        //         "formation_fr" => "",
+        //         "formation_ar" => "",
+        //         "promotion" => "",
+        //         "moi_fr" => "",
+        //         "moi_ar" => "",
+        //         "etabl_fr" => "",
+        //         "etabl_ar" => "",
+        //         "fit_a" => "",
+        //     ]
+        // );
 
         return view('admin.deplom.print');
     }
