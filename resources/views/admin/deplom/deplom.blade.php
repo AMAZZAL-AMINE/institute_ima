@@ -4,7 +4,7 @@
     <div class="container">
         <b>Saisir les informations sur l'étudiant</b>
 
-        <form action="" method="post">
+        <form action="{{ route("admin.print.deplom.data") }}" method="post">
             @csrf
             <div class="deplom_name">
                 <div class="deplom_fr_name"><input type="text" name="name_fr" placeholder="Entrez le nom en français" required></div>

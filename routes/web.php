@@ -120,9 +120,14 @@ Route::get("/Admin/Send-Sms", [SmsController::class, 'index']);
 ///////////////Deplome////////////////////////////////
 Route::get("/Admin/Create-Deplom", [AdminController::class, 'deplom'])->name("admin.deplom");
 Route::get("/Admin/Create-Certificate", [AdminController::class, 'createCertificate'])->name("admin.createCertificate");
+//rout inser data of deplom and return to page print deplom 
+Route::get("/Admin/Print-Deplom", [AdminController::class, 'createDeplom'])->name("admin.print.deplom");
+Route::post("/Admin/Deplom", [AdminController::class, 'createDeplom'])->name("admin.print.deplom.data");
+
 //============================================================================
 //update student Info 
 Route::put("/Admin/Student/{id}/Edit", [AdminController::class, 'updateStudent'])->name("admin.update.student");
+
 //invoice testing to ge listElement
 Route::get("/Admin/invoice", function() {
     return view("admin.newfac");

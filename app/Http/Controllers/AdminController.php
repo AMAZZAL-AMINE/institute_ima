@@ -617,5 +617,26 @@ class AdminController extends Controller
             ]
         );
     }
+
+    //insert the data of deplom to database and return with data to print deplom page
+    public function  createDeplom(Request $request) {
+
+        //data request from inputs
+        $name_fr = $request->name_fr;
+        $name_ar = $request->name_ar;
+        $berth = $request->deplom_berth;
+        $cin = $request->deplom_cin;
+        $formation_fr = $request->formation_fr;
+        $formation_ar = $request->formation_ar;
+        $promotion = $request->promotion;
+        $moi_fr = $request->moi_fr;
+        $moi_ar = $request->moi_ar;
+        $etablis_fr = $request->etabliesmant_fr;
+        $etablis_ar = $request->etabliesmant_ar;
+        $fit_at = $request->fiat_a;
+
+
+        return view('admin.deplom.print');
+    }
 }
   
