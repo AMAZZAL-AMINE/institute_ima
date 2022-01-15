@@ -541,8 +541,8 @@
 
 /* deplom stylesheet */
 .ersrsdfgrewt {
-    overflow-x: scroll;
-}
+    /*  overflow-x: scroll; */
+} 
 .deplom {
     padding: 45px;
     background-color: white;
@@ -624,8 +624,26 @@
 }
 
 .deplom_container {
-    padding: 50px;
+   
     display: flex;
     justify-content: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

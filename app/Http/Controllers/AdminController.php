@@ -644,24 +644,27 @@ class AdminController extends Controller
 
         $deplom = new Deplom;
 
-        // $deplom->create(
-        //     [
-        //         "name_fr" => "",
-        //         "namr_ar" => "",
-        //         "berth" => "",
-        //         "cin" => "",
-        //         "formation_fr" => "",
-        //         "formation_ar" => "",
-        //         "promotion" => "",
-        //         "moi_fr" => "",
-        //         "moi_ar" => "",
-        //         "etabl_fr" => "",
-        //         "etabl_ar" => "",
-        //         "fit_a" => "",
-        //     ]
-        // );
+        $deplom->create(
+            [
+                "name_fr" => $name_fr,
+                "namr_ar" => $name_ar,
+                "berth" => $berth,
+                "cin" => $cin,
+                "formation_fr" => $formation_fr,
+                "formation_ar" => $formation_ar,
+                "promotion" => $promotion,
+                "moi_fr" => $moi_fr,
+                "moi_ar" => $moi_ar,
+                "etabl_fr" => $etablis_fr,
+                "etabl_ar" => $etablis_ar,
+                "fit_a" => $fit_at,
+            ]
+        );
+        return view('admin.deplom.print', compact(
+            'name_fr','name_ar','berth','cin','formation_fr','formation_ar','promotion','moi_fr','moi_ar','etablis_fr','etablis_ar',
+            'fit_at',
 
-        return view('admin.deplom.print');
+        ));
     }
 }
   
