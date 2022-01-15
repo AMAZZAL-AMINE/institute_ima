@@ -557,7 +557,7 @@
 @section("deplom_print")
 <div class="container mt-5">
     <center>
-        <input class="btn btn-primary mb-5  p-4" type='button' id='btn-print' value='Print Le Deplom' onclick="printDiv('#print_deplom');" />
+        <button class="btn btn-primary mb-5  p-3" type='button' id='btn-print'   onclick="printDiv('#print_deplom');"><i class="fa fa-print" aria-hidden="true"></i> Print Le Deplom</button>
     </center>
 </div>
 
