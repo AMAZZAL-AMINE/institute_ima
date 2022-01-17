@@ -16,6 +16,8 @@ class CreateAbsencesTable extends Migration
         Schema::create('absences', function (Blueprint $table) {
             $table->id();
             $table->bigInteger("student_id");
+            $table->string("month")->nullable();
+            $table->string("seance")->nullable();
             $table->string("apsence")->nullable();
             $table->string("precent")->nullable();
             $table->date("date");

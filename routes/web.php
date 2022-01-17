@@ -114,6 +114,8 @@ Route::get("/Admin/Ima/Lemlpoi/{id}", [AdminController::class, 'editowIma'])->na
 Route::put("/Admin/Update/Lemlpoi/{id}", [AdminController::class, 'updateLemploiIma'])->name("admin.lemploi.save.ima");
 //manager studend absence
 Route::get("/Admin/Manage-Absences", [AdminController::class, 'manageAbsences'])->name("admin.manager.absences");
+//create apsence 
+Route::get("/Admin/{id}/Create-Absence", [AdminController::class, 'createAbsence'])->name("admin.createAbsence");
 //iphec lemploi edit table 
 Route::get("/Admin/Iphec/Lemlpoi/{id}", [AdminController::class, 'editowIphec'])->name("admin.edit.iphec.table");
 //save updated lemploi ima

@@ -626,6 +626,15 @@ class AdminController extends Controller
         return view('admin.lemplois.absences', compact('students'));
     }
 
+
+    //create absences 
+    public function createAbsence($id) {
+        $student = Student::findOrFail($id);    
+        return view("admin.lemplois.creat_absence",
+                compact("student")
+        );   
+    }
+
     //insert the data of deplom to database and return with data to print deplom page
     public function  createDeplom(Request $request) {
 

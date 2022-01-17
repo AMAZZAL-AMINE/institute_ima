@@ -41,7 +41,7 @@
                                     <td>{{ $student->fname }} {{ $student->lname }}</td>
                                     <td>{{ $student->cin }}</td>
                                     <td>{{ $student->formations->name ?? 'none' }}</td>
-                                    <td><a href="" class="btn btn-outline-primary">Créer</a></td>
+                                    <td><a href="{{ route("admin.createAbsence",$student->id) }}" class="btn btn-outline-primary">Créer</a></td>
                                     <td><a class="btn btn-success" href=""><i class="fa fa-eye" aria-hidden="true"></i> Vue </a></td>
                                 </tr>
                                 @endforeach
