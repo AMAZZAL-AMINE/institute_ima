@@ -663,8 +663,9 @@ class AdminController extends Controller
         return view('admin.deplom.print', compact(
             'name_fr','name_ar','berth','cin','formation_fr','formation_ar','promotion','moi_fr','moi_ar','etablis_fr','etablis_ar',
             'fit_at',
-
         ));
+
     }
+    
 }
   

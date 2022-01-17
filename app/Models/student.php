@@ -44,4 +44,12 @@ class Student extends Model
     public function allpayments() {
         return $this->hasMany(AllStudentPayments::class, 'student_id');
     }
+
+
+    //belog to absence table
+    public function apcens() {
+        return $this->hasMany(Absence::class, 'student_id');
+    }
+
+    
 }
