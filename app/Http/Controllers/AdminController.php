@@ -87,7 +87,8 @@ class AdminController extends Controller
         $student = Student::findOrFail($id);
         $mounths = PayedMonth::where("student_id", $id)->get();
         $institute = IsImaOrIphec::where("student_id", $id)->first();
-        return  view("admin.pages.profilestudent", compact("student","mounths","institute"));
+        $absences = Absence::where("student_id", $student->id)->orderBy('month', 'asc')->get(); 
+        return  view("admin.pages.profilestudent", compact("student","mounths","institute","absences"));
     }
 
     //accepted user to be student
@@ -681,12 +682,21 @@ class AdminController extends Controller
             );
         }
 
-        return back()->with(
+        return redirect()->route("admin.student.absence",$student->id)->with(
             [
                 "message" => "Suucess",
             ]
         );
     }
+
+
+    //get student id and get student data of apsent where id = this.id
+    public function studentProfileApsence($id) {
+        $student = Student::findOrFail($id);
+        $absences = Absence::where("student_id", $student->id)->orderBy('month', 'asc')->get(); 
+        return view("admin.lemplois.profile_apsence", compact('absences','student'));
+    }
+
 
     //insert the data of deplom to database and return with data to print deplom page
     public function  createDeplom(Request $request) {

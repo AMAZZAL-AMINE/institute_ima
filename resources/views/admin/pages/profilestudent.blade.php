@@ -309,8 +309,45 @@
             <a class="btn btn-primary" href="{{ route("payment-store.data.new.month",$student->id) }}"><i class="fa fa-plus" aria-hidden="true"></i> Add Anouther Payed Mounth</a>
         </div>
         <div class="text-center mt-3">
-            <a class="btn btn-success" href=""><i class="fa fa-print" aria-hidden="true"></i> Print A Deplome</a>
+            <!-- <a class="btn btn-success" href=""><i class="fa fa-print" aria-hidden="true"></i> Print A Deplome</a> -->
         </div>
     </div>
+    <hr>
+    <h1 class=" font-weight-bold text-dark mb-2">Informations De Labsence</h1>
+    <table border   class="table border text-center mt-5 border bg-white  ">
+        <thead>
+            <tr>
+            <th scope="col">Le Mois</th>
+            <th scope="col">Nomber Séance</th>
+            <th scope="col">Présent </th>
+            <th scope="col">Absent </th>
+            <th scope="col">La Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($absences as $absencet)
+            <tr>
+                <th scope="row">{{ $absencet->month }}</th>
+                <td>{{ $absencet->seance }}</td>
+                <td>
+                    @if($absencet->apsence === null && $absencet->precent === "yes")
+                        <span class="text-success"> <i class="fa fa-check" aria-hidden="true"></i> </span>
+                        @else
+                        {{ null }}
+                    @endif
+                </td>
+                <td>
+                    @if($absencet->precent === null && $absencet->apsence === "yes")
+                        <span class="text-success"> <i class="fa fa-check" aria-hidden="true"></i> </span>
+                        @else
+                        {{ null }}
+                    @endif
+                </td>
+                <td>{{ $absencet->date }}</td>
+            </tr> 
+            @endforeach
+        </tbody>
+    </table>
+</div>
 </div>
 @endsection

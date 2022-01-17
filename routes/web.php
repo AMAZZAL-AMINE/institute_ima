@@ -117,6 +117,8 @@ Route::get("/Admin/Manage-Absences", [AdminController::class, 'manageAbsences'])
 //create apsence 
 Route::get("/Admin/{id}/Create-Absence", [AdminController::class, 'createAbsence'])->name("admin.createAbsence");
 Route::post("/Admin/{id}/Create-Lemploi/Store", [AdminController::class, 'stroAbsence'])->name("admin.store.absence");
+Route::get("/Admin/{id}/Student-Apsence", [AdminController::class, 'studentProfileApsence'])->name("admin.student.absence");
+
 
 //iphec lemploi edit table 
 Route::get("/Admin/Iphec/Lemlpoi/{id}", [AdminController::class, 'editowIphec'])->name("admin.edit.iphec.table");

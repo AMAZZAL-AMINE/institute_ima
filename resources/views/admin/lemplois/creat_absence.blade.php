@@ -126,7 +126,7 @@
                     </td>
                   </tr>
                 </tbody>
-              </table>
+            </table>
         </form>
     </div>
 @endsection
