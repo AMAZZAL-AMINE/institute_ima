@@ -622,7 +622,8 @@ class AdminController extends Controller
 
     //manager abcenses
     public function manageAbsences() {
-        return view('admin.lemplois.absences');
+        $students = Student::whereNotNull('firstPayed')->latest('id')->get();
+        return view('admin.lemplois.absences', compact('students'));
     }
 
     //insert the data of deplom to database and return with data to print deplom page
