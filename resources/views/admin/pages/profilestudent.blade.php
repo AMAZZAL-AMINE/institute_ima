@@ -346,8 +346,13 @@
                 <td>{{ $absencet->date }}</td>
             </tr> 
             @endforeach
+
         </tbody>
+        
     </table>
+    <div class="text-center mb-5">
+        <a class="btn btn-success" href="{{ route("admin.createAbsence",$student->id) }}"><i class="fa fa-plus" aria-hidden="true"></i> Créer Absence</a>
+    </div>
 </div>
 </div>
 @endsection
