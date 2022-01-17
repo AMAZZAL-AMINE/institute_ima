@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Month;
 use App\Models\Deplom;
+use App\Models\Absence;
 use App\Models\Student;
 use App\Models\Formation;
 use App\Models\LemploiIma;
@@ -635,6 +636,58 @@ class AdminController extends Controller
         );   
     }
 
+
+
+
+    // store apcense of student in daatabase
+    public function stroAbsence($id, Request $request) {
+        $student = Student::findOrFail($id);
+        
+        $data = $request->validate(
+            [
+                "month" => "required",
+                "seance" => "required",
+                "absence" => "required",
+                "date" => "required",
+            ]
+        );
+
+        $absent = new Absence;
+
+        if($data["absence"] == "Absent") {
+
+            $absent->create(
+                [
+                    "student_id" => $student->id,
+                    "month" => $data['month'],
+                    "seance" => $data['seance'],
+                    "apsence" => "yes",
+                    "precent" => null,
+                    "date" => $data['date'],
+                ]    
+            );
+
+        } else {
+
+            $absent->create(
+                [
+                    "student_id" => $student->id,
+                    "month" => $data['month'],
+                    "seance" => $data['seance'],
+                    "apsence" => null,
+                    "precent" => "yes",
+                    "date" => $data['date'],
+                ]    
+            );
+        }
+
+        return back()->with(
+            [
+                "message" => "Suucess",
+            ]
+        );
+    }
+
     //insert the data of deplom to database and return with data to print deplom page
     public function  createDeplom(Request $request) {
 
@@ -676,6 +729,9 @@ class AdminController extends Controller
         ));
 
     }
+
+
+
     
 }
   

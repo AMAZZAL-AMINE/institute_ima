@@ -2,11 +2,24 @@
 
 @section("content")
     <div  class="container mt-5">
+        @if(session()->has("message"))
+        <div class="alert alert-primary alert-dismissible fade show" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <strong>{{ session("message") }}</strong> 
+          </div>
+          
+          <script>
+            $(".alert").alert();
+          </script>
+        @endif
         <div class="mt-5">
             <h3 class="text-dark text-center font-weight-bold">Créer Absence De <span class="text-primary"> {{ $student->fname }} {{ $student->lname }}</span></h3>
         </div>
         
-        <form action="" style="margin-top:100px">
+        <form action="{{ route("admin.store.absence",$student->id) }}" style="margin-top:100px" method="post">
+            @csrf
             <table border="1"  class="table border">
                 <thead>
                   <tr>
@@ -37,11 +50,36 @@
                                 <option value="12eme">12eme Mois</option>
                             </select>
                         </div>
+                        @error('month')
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                              <strong>{{ $message }}</strong> 
+                            </div>
+                            
+                            <script>
+                              $(".alert").alert();
+                            </script>
+                        @enderror
                     </th>
                     <td>
                         <div class="form-group mt-4">
                             <input type="text" class="form-control w-100" placeholder="Number De Séance" name="seance">
                         </div>
+
+                        @error('seance')
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                          <strong>{{ $message }}</strong> 
+                        </div>
+                        
+                        <script>
+                          $(".alert").alert();
+                        </script>
+                    @enderror
                     </td>
                     <td>
                         <label for=""></label>
@@ -51,12 +89,36 @@
                               <option value="Présent">Présent</option>
                           </select>
                       </div>
+                      @error('absence')
+                      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <strong>{{ $message }}</strong> 
+                      </div>
+                      
+                      <script>
+                        $(".alert").alert();
+                      </script>
+                    @enderror
                     </td>
                     <td>
                         <div class="form-group mt-4">
                             <input type="date" class="form-control w-100"  name="date" value="<?php echo date('Y-m-d'); ?>">
                         </div>
                     </td>
+                    @error('date')
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                      <strong>{{ $message }}</strong> 
+                    </div>
+                    
+                    <script>
+                      $(".alert").alert();
+                    </script>
+                  @enderror
                   </tr>
                   <tr>
                     <td colspan="4" class=" text-center ">

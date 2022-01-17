@@ -9,6 +9,12 @@ class Absence extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        "student_id","month",
+        "seance","apsence","precent",
+        "date"
+    ];
+
     //relation to studetn table 
     public function students() {
         return $this->belongsTo(Student::class, "student_id");
