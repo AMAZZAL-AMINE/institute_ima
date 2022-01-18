@@ -2,7 +2,7 @@
 
 @section("content")
     <div class="container">
-        <h1>Add New Formation</h1>
+        <h1>Edit La Formation</h1>
         @if(session()->has('message'))
             <div class="alert alert-primary alert-dismissible fade show" role="alert">
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
