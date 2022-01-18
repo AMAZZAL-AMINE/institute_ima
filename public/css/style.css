@@ -4,11 +4,13 @@
     box-sizing: border-box;
     font-family: 'Noto Sans Display', sans-serif;
     list-style: none;
-   
+
 }
 
 body {
     background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    width: 100%;
 }
 #app {
     margin-top: 100px;
@@ -1447,4 +1449,15 @@ body {
 .formsupdatingdatastudents .infpstudentsss  .stdtitle {
     display: flex;
     justify-content: space-between;
+}
+
+
+@media only screen and (max-width: 542px) {
+    .formsupdatingdatastudents {
+        padding: 10px;
+    }
+    .bgtop {
+        padding: 50px;
+        padding-bottom: 100px;
+    }
 }

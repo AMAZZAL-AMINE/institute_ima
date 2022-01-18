@@ -103,11 +103,11 @@
         <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-white">
           <!-- Content -->
           <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company name
+            <i class="fas fa-gem me-3"></i>INSTITUTE IMA
           </h6>
           <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
+            INSTITUT IMA STF de L'education et de formation professionnelle de 
+            renommée est fondé en 2016 par des lauréats de l’université
           </p>
         </div>
         <!-- Grid column -->
@@ -119,16 +119,16 @@
             Pages
           </h6>
           <p>
-            <a href="/" class="text-white">Home</a>
+            <a href="/" class="text-white">Accueil</a>
           </p>
           <p>
             <a href="{{ route('about.us') }}" class=" text-white">A propos De Nous</a>
           </p>
           <p>
-            <a href="#!" class=" text-white">Vue</a>
+            <a href="#!" class=" text-white">Lise Des Formation</a>
           </p>
           <p>
-            <a href="#!" class=" text-white">Laravel</a>
+            <a href="#!" class=" text-white">Contact-Nous</a>
           </p>
         </div>
         <!-- Grid column -->

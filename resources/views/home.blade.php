@@ -17,7 +17,7 @@
                 </p>
             </div>
             <div class="buttongotoabout">
-                <a href="">Propos De Nous <i class="bi bi-arrow-right"></i></a>
+                <a href="{{ route('about.us') }}">Propos De Nous <i class="bi bi-arrow-right"></i></a>
             </div>
         </div>
         <div class="img-top-home">
@@ -44,7 +44,7 @@
                 </p>
             </div>
             <div class="ima-mess-button">
-                <a href="#">Lire la suite <i class="bi bi-arrow-right"></i></a>
+                <a href="{{ route('about.us') }}">Lire la suite <i class="bi bi-arrow-right"></i></a>
             </div>
         </div>
     </div>
