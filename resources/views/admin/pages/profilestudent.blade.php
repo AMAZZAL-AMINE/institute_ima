@@ -345,7 +345,7 @@
                 </td>
                 <td>{{ $absencet->date }}</td>
             </tr> 
-            @endforeach
+            @endforeach 
 
         </tbody>
         
