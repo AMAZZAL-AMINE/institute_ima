@@ -33,39 +33,41 @@
                                     <div class="input-group-append">
                                         <span class="input-group-text" id="my-addon" >Nom De Etudiant </span>
                                     </div>
-                                    <input class="form-control" type="text" name="f_name" placeholder="Nom De Etudiant" aria-label="Recipient's " aria-describedby="my-addon">
+                                    <input class="form-control" type="text" name="f_name" placeholder="Nom De Etudiant" aria-label="Recipient's " value="{{ $student->lname }}" aria-describedby="my-addon">
                                 </div>
                                 <div class="input-group mt-3">
                                     <div class="input-group-append">
                                         <span class="input-group-text" id="my-addon" >Prenom De Etudiant </span>
                                     </div>
-                                    <input class="form-control " type="text" name="l_name" placeholder="Prenom De Etudiant" aria-label="Recipient's " aria-describedby="my-addon">
+                                    <input class="form-control " type="text" name="l_name" placeholder="Prenom De Etudiant" aria-label="Recipient's " value="{{ $student->fname }}" aria-describedby="my-addon">
                                 </div>
                                 <div class="input-group mt-3">
                                     <div class="input-group-append">
                                         <span class="input-group-text" id="my-addon" >Phone De Etudiant </span>
                                     </div>
-                                    <input class="form-control " type="number" name="phone" placeholder="Phone De Etudiant" aria-label="Recipient's " aria-describedby="my-addon">
+                                    <input class="form-control " type="number" name="phone" placeholder="Phone De Etudiant" aria-label="Recipient's " value="{{ $student->phone }}" aria-describedby="my-addon">
                                 </div>
                                 <div class="input-group mt-3">
                                     <div class="input-group-append ">
                                         <span class="input-group-text" id="my-addon" >Cin De Etudiant </span>
                                     </div>
-                                    <input class="form-control " type="text" name="cin" placeholder="Cin De Etudiant" aria-label="Recipient's " aria-describedby="my-addon">
+                                    <input class="form-control " type="text" name="cin" placeholder="Cin De Etudiant" aria-label="Recipient's " value="{{ $student->cin }}" aria-describedby="my-addon">
                                 </div>
                                 <div class="input-group mt-3">
                                     <div class="input-group-append ">
                                         <span class="input-group-text" id="my-addon" >Date de naissance</span>
                                     </div>
-                                    <input class="form-control " type="date" name="berthday" placeholder="Date de naissance" aria-label="Recipient's " aria-describedby="my-addon">
+                                    <input class="form-control " type="date" name="berthday" placeholder="Date de naissance" aria-label="Recipient's " value="{{ $student->berthday }}" aria-describedby="my-addon">
                                 </div>
                                 <div class="form-group mt-3">
                                     <label for="my-select">Formation</label>
                                     <select id="my-select" class="form-control" name="formation">
-                                        <option value="1">Text</option>
-                                        <option value="1">Text</option>
-                                        <option value="1">Text</option>
-                                        <option value="1">Text</option>
+                                        <option value="{{ $student->formation_id }}">{{ $student->formations->name }}</option>
+                                       <option value="" disabled class="bg-danger"></option>
+                                        @foreach ($formations as $formation)
+                                        <option value="{{ $formation->id }}">{{ $formation->name }}</option>
+                                       @endforeach
+                                       
                                     </select>
                                 </div>
 

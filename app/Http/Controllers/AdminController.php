@@ -88,7 +88,8 @@ class AdminController extends Controller
         $mounths = PayedMonth::where("student_id", $id)->get();
         $institute = IsImaOrIphec::where("student_id", $id)->first();
         $absences = Absence::where("student_id", $student->id)->orderBy('month', 'asc')->get(); 
-        return  view("admin.pages.profilestudent", compact("student","mounths","institute","absences"));
+        $formations = Formation::all();
+        return  view("admin.pages.profilestudent", compact("student","mounths","institute","absences","formations"));
     }
 
     //accepted user to be student
