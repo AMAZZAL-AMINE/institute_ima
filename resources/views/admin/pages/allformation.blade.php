@@ -29,7 +29,7 @@
                                 <th>Created On</th>
                                 <th>Edit</th>
                                 <th>Show</th>
-                                <th>Delet</th>
+                                
                             </tr>
                         </thead>
                         <tfoot>
@@ -40,7 +40,7 @@
                                 <th>Created On</th>
                                 <th>Edit</th>
                                 <th>Show</th>
-                                <th>Delet</th>
+                            
 
                             </tr>
                         </tfoot>
@@ -53,11 +53,6 @@
                                 <td>{{ $formation->created_at->format('Y-m-d') }}</td>
                                 <td><a class="btn btn-success" href="{{ route("admin.pageeditforma",$formation->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a></td>
                                 <td><a class="btn btn-primary" href="{{ route("student.formation",$formation->id) }}"> <i class="fa fa-eye" aria-hidden="true"></i> </a></td>
-                                <td><form action="{{ route("formation.delete",$formation->id) }}" method="post">
-                                    @csrf
-                                    @method("DELETE")
-                                    <button class="btn btn-danger" type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
-                                </form></td>
                             </tr>
                             @endforeach
                         </tbody>

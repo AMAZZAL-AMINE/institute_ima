@@ -1,3 +1,4 @@
+@if (auth()->user()->is_admin_pro === "yes")
 
 <!DOCTYPE html>
 <html lang="en">
@@ -296,5 +297,9 @@
 </body>
 
 </html>
- 
- 
+@else
+  @php
+    header("Location: " . URL::to('/'), true, 302);
+    exit();
+  @endphp
+@endif
