@@ -62,12 +62,16 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Gestion des étudiants :</h6>
-            <a class="collapse-item" href="{{ route("student.whoaccepted") }}">Tous les étudiants</a>
-            <a class="collapse-item" href="{{ route("admin.requestusers") }}">Demandes d'inscription </a>
+            <a class="collapse-item" href="{{ route("student.whoaccepted") }}"><i class="fa fa-users" aria-hidden="true"></i> Tous les étudiants</a>
+            <a class="collapse-item" href="{{ route("admin.requestusers") }}"><i class="fa fa-user-plus" aria-hidden="true"></i> Demandes d'inscription </a>
+            <hr>
+             <h6 class="collapse-header">Les List D`Atente:</h6>
+             <a class="collapse-item" href="{{ route("student.whoaccepted") }}"><i class="fa fa-edit" aria-hidden="true"></i> Créer List D`Atente</a>
+            <a class="collapse-item" href="{{ route("admin.requestusers") }}"><i class="fa fa-eye" aria-hidden="true"></i> Vue List D`Atente </a>
             <hr>
             <h6 class="collapse-header">inscriptions & facturation:</h6>
-            <a class="collapse-item" href="{{ route("admin.inscrirestudent") }}">Inscrire un nouvel étudiant</a>
-            <a class="collapse-item" href="{{ route("admin.search.student") }}">Payer une nouvelle facture </a>
+            <a class="collapse-item" href="{{ route("admin.inscrirestudent") }}">  Inscrire un nouvel étudiant</a>
+            <a class="collapse-item" href="{{ route("admin.search.student") }}">  Payer une nouvelle facture </a>
             <hr>
 
             <h6 class="collapse-header">Gestion des Formation</h6>
@@ -75,7 +79,6 @@
             <a class="collapse-item" href="{{ route("formation.add") }}">Ajouter une  Formations</a>
           </div>
         </div>
-      </li>
 
       <!-- Nav Item - Utilities Collapse Menu -->
       <li class="nav-item">

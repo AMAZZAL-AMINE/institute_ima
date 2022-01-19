@@ -26,7 +26,13 @@ class AdminController extends Controller
     //admin dahsboard
     public function adminDashboard()
     {
-        return view("admin.dashboard");
+        $invitations =  Student::where('firstPayed', null)->get();
+        $students = Student::whereNotNull('firstPayed')->get();
+        $formations = Formation::all();
+        
+        return view("admin.dashboard", 
+                compact('invitations','students','formations')
+        );
     }
 
     //return to page get all request user
