@@ -17,4 +17,9 @@ class Formation extends Model
     public function students() {
         return $this->hasMany(Student::class);
     }
+
+    //relationship to studnet in list dattente
+    public function listDattente() {
+        return $this->hasMany(ListDattente::class);
+    }
 }
