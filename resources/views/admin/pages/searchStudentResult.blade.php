@@ -12,6 +12,7 @@
            
             @if(!empty($search))
             @foreach ($students as $student)
+            @if($student->firstPayed != null)
             <div class="cartcontentofresult">
                 <div class="img"><img src="/images/logo.png" alt=""></div>
                 <div class="cartcontentbody">
@@ -27,7 +28,8 @@
                         <a  href="{{ route("admin.payment.newmonth",$student->id) }}">Select </a>
                     </div>
                 </div>
-            </div>
+            </div>          
+            @endif
            
           @endforeach
           @else
