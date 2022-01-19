@@ -131,7 +131,8 @@ Route::get("/Admin/Create-Certificate", [AdminController::class, 'createCertific
 //rout inser data of deplom and return to page print deplom 
 Route::get("/Admin/Print-Deplom", [AdminController::class, 'createDeplom'])->name("admin.print.deplom");
 Route::post("/Admin/Deplom", [AdminController::class, 'createDeplom'])->name("admin.print.deplom.data");
-
+//List Dattent
+// Route::get("/Admin/Add-Student-To-List-Dattent", [AdminController::class, 'addStudentToListDattent'])->name("admin.add.nes.listdaatent");
 //============================================================================
 //update student Info 
 Route::put("/Admin/Student/{id}/Edit", [AdminController::class, 'updateStudent'])->name("admin.update.student");

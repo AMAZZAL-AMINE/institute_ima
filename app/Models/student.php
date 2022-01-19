@@ -16,7 +16,7 @@ class Student extends Model
         "phone","berthday",
         "nvschole","firstPayed","formation_id",
         "user_id",
-        "cin_img",
+        "cin_img","is_in_list_dattente",
     );
  
 

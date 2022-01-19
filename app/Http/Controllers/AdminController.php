@@ -748,6 +748,10 @@ class AdminController extends Controller
     }
 
 
+    //add nes stodent to list dattente
+    // public function addStudentToListDattent() {
+    //     return view("admin.pages.list_attente");
+    // }
 
     
 }

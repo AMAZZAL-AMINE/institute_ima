@@ -64,10 +64,7 @@
             <h6 class="collapse-header">Gestion des étudiants :</h6>
             <a class="collapse-item" href="{{ route("student.whoaccepted") }}"><i class="fa fa-users" aria-hidden="true"></i> Tous les étudiants</a>
             <a class="collapse-item" href="{{ route("admin.requestusers") }}"><i class="fa fa-user-plus" aria-hidden="true"></i> Demandes d'inscription </a>
-            <hr>
-             <h6 class="collapse-header">Les List D`Atente:</h6>
-             <a class="collapse-item" href="{{ route("student.whoaccepted") }}"><i class="fa fa-edit" aria-hidden="true"></i> Créer List D`Atente</a>
-            <a class="collapse-item" href="{{ route("admin.requestusers") }}"><i class="fa fa-eye" aria-hidden="true"></i> Vue List D`Atente </a>
+            
             <hr>
             <h6 class="collapse-header">inscriptions & facturation:</h6>
             <a class="collapse-item" href="{{ route("admin.inscrirestudent") }}">  Inscrire un nouvel étudiant</a>
