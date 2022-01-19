@@ -24,7 +24,7 @@ class CreateListDattentsTable extends Migration
             $table->date("berthday");
             $table->string("nvschole");
             $table->bigInteger("formation_id")->unsigned(); //create relation ship between  formation table and this one
-            $table->strign("is_account_active")->nullable();
+            $table->string("is_account_active")->nullable();
             $table->timestamps();
         });
     }
