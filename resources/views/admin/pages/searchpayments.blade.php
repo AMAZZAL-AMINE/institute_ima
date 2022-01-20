@@ -17,7 +17,7 @@
                             @foreach ($formations as $formation)
                                 <option value="{{ $formation->name }}">{{ $formation->name }}</option>
                             @endforeach
-                           
+                            <option class="bg-light" value="allformation">Touts Les Formation</option>                           
                         </select>
                     </div>
                     <div class="selectmonth">

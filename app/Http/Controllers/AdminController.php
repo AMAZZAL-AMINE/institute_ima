@@ -493,13 +493,27 @@ class AdminController extends Controller
         $formation = $request->formation;
         $month = $request->month;
         $year = $request->year;
-        $payedmonths =  PayedMonth::where('formation', $formation)
+
+        if ($formation == "allformation") {
+            $payedmonths =  PayedMonth::whereMonth('created_at','=', $month)
+                                ->whereYear('created_at','=', $year)->get();
+
+            $newstudents =  PayedMonth::whereMonth('created_at','=', $month)
+                                ->whereYear('created_at','=', $year)
+                                ->where('name','=', "Premier Mois")->get();
+
+        }
+        
+        else {
+            $payedmonths =  PayedMonth::where('formation', $formation)
                         ->whereMonth('created_at','=', $month)
                         ->whereYear('created_at','=', $year)->get();
-        $newstudents =  PayedMonth::where('formation', $formation)
+            $newstudents =  PayedMonth::where('formation', $formation)
                         ->whereMonth('created_at','=', $month)
                         ->whereYear('created_at','=', $year)
                         ->where('name','=', "Premier Mois")->get();
+        }
+        
         return view("admin.pages.resultsearchtotalformation", compact('payedmonths','year','month','formation','newstudents'));
     }
 
