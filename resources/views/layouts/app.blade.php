@@ -105,22 +105,22 @@
 
     <!-- Right -->
     <div>
-      <a href="" class="me-4 text-reset text-white">
-        <i class="fab fa-facebook-f"></i>
+      <a href="" class="me-4   text-white text-decoration-none">
+        <i class="bi bi-facebook"></i>
       </a>
-      <a href="" class="me-4 text-reset text-white">
-        <i class="fab fa-twitter"></i>
+      <a href="" class="me-4 text-white text-decoration-none">
+        <i class="bi bi-twitter"></i>
       </a>
-      <a href="" class="me-4 text-reset text-white">
-        <i class="fab fa-google"></i>
+      <a href="" class="me-4 text-white text-decoration-none">
+        <i class="bi bi-instagram"></i>
       </a>
-      <a href="" class="me-4 text-reset text-white">
-        <i class="fab fa-instagram"></i>
+      <a href="" class="me-4 text-white text-decoration-none">
+        <i class="bi bi-linkedin"></i>
       </a>
-      <a href="" class="me-4 text-reset text-white">
+      <a href="" class="me-4 text-white text-decoration-none">
         <i class="fab fa-linkedin"></i>
       </a>
-      <a href="" class="me-4 text-reset text-white">
+      <a href="" class="me-4 text-white text-decoration-none">
         <i class="fab fa-github"></i>
       </a>
     </div>
