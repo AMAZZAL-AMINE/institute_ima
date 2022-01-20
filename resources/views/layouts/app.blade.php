@@ -52,8 +52,42 @@
 
         <main class="py-4">
             @yield('content')
+
         </main>
     </div>
+
+    <style>
+      .whatssapiconbottom {
+       position: fixed;
+        bottom: 50px;
+        left: 50px;
+        z-index: 999;
+        font-size: 30px;
+        text-decoration: none;
+        background-color: white;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      }
+      .whatssapiconbottom span {
+        color: black;
+        font-weight: bold;
+        font-size: 25px;
+      }
+      .whatssapiconbottom .bi {
+        color: #61d60e;
+        border-radius: 50%;
+        min-width: 200px !important;
+ 
+        
+      }
+    </style>
+
+    <a class="whatssapiconbottom" target="_blank" href="https://web.whatsapp.com/send?phone=212661-586669&text=hello">
+      <i class="bi bi-whatsapp"></i> <span>Avez-vous besoin d'aide?</span>
+    </a>
+
+
 
 
 

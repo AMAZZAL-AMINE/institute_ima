@@ -104,7 +104,7 @@
                 </p>
             </div>
             <div class="registerbutin">
-                <a href=""><i class="bi bi-textarea-t"></i> Enregistrez-vous maintenant</a>
+                <a href="{{ route("student.inscription") }}"><i class="bi bi-textarea-t"></i> Enregistrez-vous maintenant</a>
             </div>
         </div>
     </div>

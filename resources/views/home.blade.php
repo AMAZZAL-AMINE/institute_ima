@@ -78,7 +78,7 @@
                     </p>
                 </div>
                 <div class="actbtn">
-                    <a href="">Actualités</a>
+                    <a href="{{ route("student.inscription") }}">Actualités</a>
                 </div>
             </div>
             <div class="actualimg">
