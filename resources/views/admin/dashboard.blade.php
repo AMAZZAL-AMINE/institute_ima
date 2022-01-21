@@ -29,11 +29,11 @@
                 <div class="col-xl-3 col-md-6 mb-4">
                     <div class="card border-left-success shadow h-100 py-2">
                         <div class="card-body">
-                            <a href="">
+                            <a href="{{ route("admin.all.payments.students") }}">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
                                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                       List D`Atente De Les étudiants</div>
+                                       Checking Les Paiement</div>
                               
                                     </div>
                                     <div class="col-auto">
@@ -52,7 +52,7 @@
                             <a href="{{ route("admin.allformations") }}">
                                 <div class="row no-gutters align-items-center">
                                     <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tou Les Formations
+                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Toutes Les Formations
                                         </div>
                                         <div class="row no-gutters align-items-center">
                                             <div class="col-auto">
@@ -104,13 +104,13 @@
 
                     <!-- Project Card Example -->
                     <div class="card shadow mb-4 p-5">
-                         <a class="btn "  rel="nofollow" href="#"> <i class="fa fa-table" aria-hidden="true"></i> Créer un Deplom &rarr;</a>
+                         <a class="btn "  rel="nofollow" href="{{ route("admin.manager.rooms") }}"> <i class="fa fa-table" aria-hidden="true"></i> Gestion Des Emplois &rarr;</a>
                     </div>
 
                     <!-- Color System -->
           
                             <div class="card shadow mb-4 p-5 w-100">
-                                <a class="btn text-primary "  rel="nofollow" href="#"> <i class="fa fa-table" aria-hidden="true"></i> Gérez Les employees Des Etudiants &rarr;</a>
+                                <a class="btn text-primary "  rel="nofollow" href="{{ route("admin.manager.absences") }}"> <i class="fa fa-table" aria-hidden="true"></i> Gestion  Des Sabsences Des Etudiants &rarr;</a>
                             </div>
                     
 
@@ -128,8 +128,8 @@
                                 <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
                                     src="https://cdni.iconscout.com/illustration/premium/thumb/website-programming-2496188-2107745.png" alt="...">
                             </div>
-                            <p>Gérez facilement les salles en un seul endroit</p>
-                            <a class="btn btn-primary"  rel="nofollow" href="#"> <i class="fa fa-table" aria-hidden="true"></i> Gérez les salles &rarr;</a>
+                            <p>Créer Un Deplom Pour Etudiant</p>
+                            <a class="btn btn-primary"  rel="nofollow" href="{{ route("admin.deplom") }}"> <i class="fa fa-table" aria-hidden="true"></i> Gérez les salles &rarr;</a>
                         </div>
                     </div>
 
