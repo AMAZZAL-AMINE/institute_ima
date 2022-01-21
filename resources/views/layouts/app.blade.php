@@ -173,7 +173,7 @@ $formation = Formation::where("id", 1)->first();
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4 text-white">
+            <!-- <h6 class="text-uppercase fw-bold mb-4 text-white">
               Useful links
             </h6>
             <p>
@@ -187,7 +187,7 @@ $formation = Formation::where("id", 1)->first();
             </p>
             <p>
               <a href="#!" class="text-white">Help</a>
-            </p>
+            </p> -->
           </div>
           <!-- Grid column -->
 
@@ -197,13 +197,13 @@ $formation = Formation::where("id", 1)->first();
             <h6 class="text-uppercase fw-bold mb-4 text-white">
               Contact
             </h6>
-            <p><i class="fas fa-home me-3 "></i> New York, NY 10012, US</p>
+            <p><i class="fas fa-home me-3 "></i> Av. Abdellah Guenoun, Agadir 80000</p>
             <p>
               <i class="fas fa-envelope me-3 text-white"></i>
-              info@example.com
+                iphecinstitut@gmail.com
             </p>
-            <p><i class="fas fa-phone me-3 text-white"></i> + 01 234 567 88</p>
-            <p><i class="fas fa-print me-3 text-white"></i> + 01 234 567 89</p>
+            <p><i class="fas fa-phone me-3 text-white"></i> +212 626-400022</p>
+            <p><i class="fas fa-print me-3 text-white"></i> 05282-39873</p>
           </div>
           <!-- Grid column -->
         </div>
