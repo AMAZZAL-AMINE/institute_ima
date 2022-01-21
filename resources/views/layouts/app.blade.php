@@ -43,11 +43,15 @@ $formation = Formation::where("id", 1)->first();
           <li><a class="@yield('isactivephor')" href="{{ route("contact.us") }}">Contact-Nous</a></li>
           {{-- <li><a class="@yield('isactivefive')" href="{{ route("blog") }}">Blog</a></li> --}}
           @if(Auth::Check())
-          <!-- <li><a class="@yield('isactivesix')" href="#">Profile</a></li> -->
+          <!--  -->
           @else
           <li><a class="@yield('isactiveseven')" href="{{ route("login") }}">Login</a></li>
           @endif
-          <li class="buttonSinscrire"><a href="{{ route("student.inscription") }}"><i class="bi bi-card-heading"></i> Inscription</a></li>
+         @if (Auth::check() && auth()->user()->is_admin_lite === "yes")
+           <li class="buttonSinscrire"><a href="{{ route("admin.dashboard") }}"><i class="bi bi-card-heading"></i> Admin</a></li> 
+         @else
+         <li class="buttonSinscrire"><a href="{{ route("student.inscription") }}"><i class="bi bi-card-heading"></i> Inscription</a></li>
+         @endif
         </ul>
       </div>
       <div class="navshowresposivelist"> <i class="bi bi-list"></i> </div>
@@ -172,22 +176,6 @@ $formation = Formation::where("id", 1)->first();
 
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <!-- <h6 class="text-uppercase fw-bold mb-4 text-white">
-              Useful links
-            </h6>
-            <p>
-              <a href="#!" class="text-white">Pricing</a>
-            </p>
-            <p>
-              <a href="#!" class=" text-white">Settings</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Orders</a>
-            </p>
-            <p>
-              <a href="#!" class="text-white">Help</a>
-            </p> -->
           </div>
           <!-- Grid column -->
 

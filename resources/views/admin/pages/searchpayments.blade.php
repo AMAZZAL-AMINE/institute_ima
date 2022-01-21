@@ -1,6 +1,7 @@
 @extends("layouts.admin")
 
 @section("content")
+@if (auth()->user()->is_admin_pro === "yes")
 <div class="container">
     <div class="kjgjgjdgjkdgqioghqkjgbqdkjg">
         <h2>Statistiques des formations</h2>
@@ -39,4 +40,11 @@
         </form>
     </div>
 </div>
+@else
+<div class="text-center mt-5">
+    <h1>لست مسموح بالدخول إلى هده الصفحة .</h1>
+    <br>
+    <h1>المرجو العودة و شكرا</h1>
+</div>
+@endif
 @endsection

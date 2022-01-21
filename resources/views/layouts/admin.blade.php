@@ -1,4 +1,4 @@
-@if (auth()->user()->is_admin_pro === "yes")
+@if (auth()->user()->is_admin_lite === "yes")
 
 <!DOCTYPE html>
 <html lang="en">
@@ -87,9 +87,17 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Gestion des paiements:</h6>
-            <a class="collapse-item" href="{{ route("admin.allpayments") }}"><i class="fas fa-arrow-alt-circle-right"></i> Tous les paiements</a>
+            @if (auth()->user()->is_admin_pro === "yes")
+              <a class="collapse-item" href="{{ route("admin.allpayments") }}"><i class="fas fa-arrow-alt-circle-right"></i> Tous les paiements</a>
+            @else
+              
+            @endif
             <a class="collapse-item" href="{{ route("admin.moth.pay") }}"><i class="fas fa-exclamation-triangle"></i> Alerte de paiement</a>
+            @if (auth()->user()->is_admin_pro === "yes")
             <a class="collapse-item" href="{{ route("admin.search.foration.pay.total") }}"><i class="fas fa-search"></i> Recherche Par Mois</a>
+            @else
+              
+            @endif
             <hr>
             <a class="collapse-item" href="{{ route("admin.all.payments.students") }}"><i class="fas fa-tasks"></i> Gérer les mois payés<br> et non payés</a>
           </div>
@@ -113,7 +121,11 @@
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Emplois</h6>
+            @if (auth()->user()->is_admin_pro === "yes")
             <a class="collapse-item" href="{{ route("admin.manager.rooms") }}">Gestion des salles</a>
+            @else
+            
+            @endif
             <a class="collapse-item" href="{{ route("admin.manager.absences") }}">Gestion Absences des <br> étudiants</a>
             
             <!-- <a class="collapse-item" href="#">Blok Users</a> -->

@@ -1,6 +1,7 @@
 @extends("layouts.admin")
 
 @section("content")
+    @if (auth()->user()->is_admin_pro === "yes")
     <div class="container">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
@@ -24,6 +25,8 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
+                                <th>Nom</th>
+                                <th>Cin</th>
                                 <th>Prix</th>
                                 <th>Date</th>
                             </tr>
@@ -31,6 +34,8 @@
                         <tfoot>
                             <tr>
                                 <th>Id</th>
+                                <th>Nom</th>
+                                <th>Cin</th>
                                 <th>Prix</th>
                                 <th>Date</th>
                             </tr>
@@ -39,6 +44,8 @@
                             @foreach ($payments as $payment)
                             <tr>
                                 <td>{{ $payment->id }}</td>
+                                <td>{{ $payment->students_name }}</td>
+                                <td>{{ $payment->student_cin }}</td>
                                 <td>{{ $payment->prix }} DH</td>
                                 <td>{{ $payment->created_at->format('Y-m-d') }}</td>
                             </tr>
@@ -74,4 +81,11 @@
 
 <!-- Page level custom scripts -->
 <script src="{{ asset("/js/demo/datatables-demo.js") }}"></script>
+@else
+    <div class="text-center mt-5">
+         <h1>لست مسموح بالدخول إلى هده الصفحة .</h1>
+         <br>
+         <h1>المرجو العودة و شكرا</h1>
+    </div>
+@endif
 @endsection

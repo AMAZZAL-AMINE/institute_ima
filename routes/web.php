@@ -138,9 +138,6 @@ Route::post("/Admin/Deplom", [AdminController::class, 'createDeplom'])->name("ad
 Route::put("/Admin/Student/{id}/Edit", [AdminController::class, 'updateStudent'])->name("admin.update.student");
 
 //invoice testing to ge listElement
-Route::get("/Admin/invoice", function() {
-    return view("admin.newfac");
-});
 // ==========================END ROUTE ADMIN  ==============================
 
 // creat months
@@ -209,50 +206,4 @@ Route::get("/m", function() {
     echo "done";
 });
 
-//testing user payment methhod
-Route::get("/h/{id}", function($id) {
-    // $month = PayedMonth::where("student_id", $id)->get();
-    // $student = Student::where("id", $id)->get();
-    // foreach ($student as $stude) {
-    //     echo $stude->fname."<br>";
-    // }
-    // if( $student->count() === 0 ) {
-    //     echo "<h1>Not Found</h1>";
-    // }
-    // foreach($month as $stud) {
-        
-    //     echo $stud->name."<br>";
 
-    // }
-    $month = PayedMonth::where("student_id", $id)->get();
-    foreach($month as $stud) {
-        echo $stud->students->fname;
-        
-    }
-
-});
-
-//formation studnets
-Route::get("/f/{id}", function($id) {
-    $formation = Formation::find($id);
-    foreach ($formation->students as $std) {
-       echo $std->fname."<br>";
-    }
-});
-
-//find student institute
-Route::get("/s/{id}", function($id) {
-    $student = IsImaOrIphec::find($id);
-    // $inst = IsImaOrIphec::where("student_id", $id)->first();
-    echo $student->students->fname;
-});
-
-//test date pay
-// Route::get("/he", function() {
-//     $payedmonths = AllStudentPayments::all();
-//     foreach ($payedmonths as $pay) {
-
-//             echo $pay->students->id." There Is A uder Chold Pasy <br>";
-//         }
-//     }
-// });
