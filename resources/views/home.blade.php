@@ -10,7 +10,7 @@
 <div class="container">
     <div class="intitut-descrition-top-home">
         <div class="text-top-home">
-            <div class="hedtit"><h1>INSTITUTE IMA AGADIR</h1></div>
+            <div class="hedtit"><h1>INSTITUT IMA AGADIR</h1></div>
             <div class="heddesc">
                 <p>
                     INSTITUT IMA STF de L'education et de formation professionnelle de renommée est fondé en 2016 par des lauréats de l’université
@@ -60,12 +60,12 @@
 
     <div class="actualisezhome">
         <div class="actualizertitle">
-            <h2><i class="bi bi-flower3"></i> INSTITUTE IMA BLOG</h2>
+            <h2><i class="bi bi-flower3"></i> INSTITUT IMA </h2>
         </div>
         <div class="actualiserstextimg">
             <div class="actutext">
                 <div class="actitle">
-                    <h2>ACTUALITÉS INSTITUTE IMA </h2>
+                    <h2>ACTUALITÉS INSTITUT IMA </h2>
                 </div>
                 <div class="actdesc">
                     <p>

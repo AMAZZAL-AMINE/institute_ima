@@ -140,6 +140,18 @@ class AdminController extends Controller
             ),
         );
 
+
+        $month->create(
+            array(
+                "student_id" => $student->id,
+                "students_name" => $student->fname." ".$student->lname,
+                "student_cin" => $student->cin,
+                "name" => "Prrix Dinscription",
+                "prix" => $data['prix_iscription'],
+                "formation" => $student->formations->name,
+            ),
+        );
+
         $student->update(
             array(
                 // "isimaoriphec" => $request->isiphicorima,
@@ -188,7 +200,7 @@ class AdminController extends Controller
  
     //add formatioin page
     public function addFormation() {
-        return view("admin.pages.addFormation");
+        return view("admin.pages.addformation");
     }
 
     //store formatio in database 

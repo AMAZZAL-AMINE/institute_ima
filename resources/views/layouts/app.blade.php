@@ -38,10 +38,9 @@ $formation = Formation::where("id", 1)->first();
         <div class="closenavbar"><i class="bi bi-x"></i></div>
         <ul>
           <li><a class="@yield('isactiveone')" href="/">Accueil</a></li>
-          <li><a class="@yield('isactivetwo')" href="{{ route('about.us') }}">Qui Nous Sommes</a></li>
-          <li><a class="@yield('isactivetree')" href="{{ route('list.formations',$formation->slug ?? "")  }}">Lise Des Formation</a></li>
-          <li><a class="@yield('isactivephor')" href="{{ route("contact.us") }}">Contact-Nous</a></li>
-          {{-- <li><a class="@yield('isactivefive')" href="{{ route("blog") }}">Blog</a></li> --}}
+          <li><a class="@yield('isactivetwo')" href="{{ route('about.us') }}">Qui Sommes-Nous</a></li>
+          <li><a class="@yield('isactivetree')" href="{{ route('list.formations',$formation->slug ?? "")  }}">Liste De Formations</a></li>
+          <li><a class="@yield('isactivephor')" href="{{ route("contact.us") }}">Contactez-Nous</a></li>
           @if(Auth::Check())
           <!--  -->
           @else
@@ -72,7 +71,7 @@ $formation = Formation::where("id", 1)->first();
       font-size: 30px;
       text-decoration: none;
       background-color: white;
-      padding: 10px;
+      padding: 7px;
       border-radius: 5px;
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
@@ -80,13 +79,13 @@ $formation = Formation::where("id", 1)->first();
     .whatssapiconbottom span {
       color: black;
       font-weight: bold;
-      font-size: 25px;
+      font-size: 15px;
     }
 
     .whatssapiconbottom .bi {
       color: #61d60e;
       border-radius: 50%;
-      min-width: 200px !important;
+      font-size: 15px;
 
 
     }
@@ -106,7 +105,7 @@ $formation = Formation::where("id", 1)->first();
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
       <!-- Left -->
       <div class="me-5 d-none d-lg-block text-white">
-        <span>Get connected with us on social networks:</span>
+        <span>Rejoignez-nous sur les réseaux sociaux :</span>
       </div>
       <!-- Left -->
 
@@ -144,7 +143,7 @@ $formation = Formation::where("id", 1)->first();
           <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 text-white">
             <!-- Content -->
             <h6 class="text-uppercase fw-bold mb-4">
-              <i class="fas fa-gem me-3"></i>INSTITUTE IMA
+              INSTITUTE IMA
             </h6>
             <p>
               INSTITUT IMA STF de L'education et de formation professionnelle de
@@ -166,10 +165,10 @@ $formation = Formation::where("id", 1)->first();
               <a href="{{ route('about.us') }}" class=" text-white">A propos De Nous</a>
             </p>
             <p>
-              <a href="#!" class=" text-white">Lise Des Formation</a>
+              <a href="{{ route('list.formations',$formation->slug ?? "")  }}" class=" text-white">Liste De Formations</a>
             </p>
             <p>
-              <a href="#!" class=" text-white">Contact-Nous</a>
+              <a href="{{ route("contact.us") }}" class=" text-white">Contactez-Nous</a>
             </p>
           </div>
           <!-- Grid column -->
@@ -185,13 +184,14 @@ $formation = Formation::where("id", 1)->first();
             <h6 class="text-uppercase fw-bold mb-4 text-white">
               Contact
             </h6>
-            <p><i class="fas fa-home me-3 "></i> Av. Abdellah Guenoun, Agadir 80000</p>
-            <p>
-              <i class="fas fa-envelope me-3 text-white"></i>
-                iphecinstitut@gmail.com
-            </p>
-            <p><i class="fas fa-phone me-3 text-white"></i> +212 626-400022</p>
-            <p><i class="fas fa-print me-3 text-white"></i> 05282-39873</p>
+            <p><i class="bi bi-pin-map-fill"></i> Av. Abdellah Guenoun, Agadir 80000</p>
+            <p><i class="bi bi-envelope-plus"></i> iphecinstitut@gmail.com </p>
+            <p><i class="bi bi-envelope-plus"></i> institutimastf@gmail.com </p>
+            <p><i class="bi bi-phone"></i> +212 626-400022</p>
+            <p><i class="bi bi-phone"></i> +212 629-732615</p>
+            <p><i class="bi bi-phone"></i> +212 661-586669</p>
+            <p><i class="bi bi-telephone"></i> 05282-39873</p>
+            <p><i class="bi bi-telephone"></i> 0528238703</p>
           </div>
           <!-- Grid column -->
         </div>
@@ -203,7 +203,7 @@ $formation = Formation::where("id", 1)->first();
     <!-- Copyright -->
     <div class="text-center text-white p-4" style="background-color: rgba(0, 0, 0, 0.05);">
       © <?php echo date("Y");  ?> Copyright:
-      <a class="text-white " href="/">institute-ima.ma</a>
+      <a class="text-white " href="/">institute-ima.com</a>
     </div>
     <!-- Copyright -->
   </footer>

@@ -112,8 +112,6 @@
                             <div class="card shadow mb-4 p-5 w-100">
                                 <a class="btn text-primary "  rel="nofollow" href="{{ route("admin.manager.absences") }}"> <i class="fa fa-table" aria-hidden="true"></i> Gestion  Des Sabsences Des Etudiants &rarr;</a>
                             </div>
-                    
-
                 </div>
 
                 <div class="col-lg-6 mb-4">

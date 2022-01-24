@@ -37,6 +37,7 @@
                     <th scope="col">Présent </th>
                     <th scope="col">Absent </th>
                     <th scope="col">La Date</th>
+                    <th scope="col">Edite</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -59,9 +60,16 @@
                             @endif
                         </td>
                         <td>{{ $absencet->date }}</td>
+                        
+                        <td ><a href="{{ route("admin.createAbsence",$student->id) }}"  class="btn btn-outline-primary text-center"><i class="fas fa-tools"></i>  </a></td>
                     </tr> 
                     @endforeach
                 </tbody>
+
+               
             </table>
-</div>
+            
+           <div class="text-center">
+                <a href="{{ route("admin.createAbsence",$student->id) }}" class="btn btn-success text-center"><i class="fa fa-edit" aria-hidden="true"></i> Créer nouvel</a>
+           </div>
 @endsection

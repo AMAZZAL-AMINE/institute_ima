@@ -112,7 +112,8 @@
 
                 </div>
                 <div class="card-footer text-muted text-center">
-                    <b>Totale : </b> <b> {{ $newstudents->sum('prix') }} DH</b>
+                    <b>Totale : </b> <b> {{ $newstudents->sum('prix') }} DH </b>
+                    
                 </div>
             </div>
 
