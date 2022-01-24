@@ -7,6 +7,35 @@
             <div class="card-header py-3">
                 <h6 class="m-0 font-weight-bold text-primary">Tous les prix payés</h6>
             </div>
+            <div class="filtersearchpay ">
+                    <div> <b>Custom Filter Search</b> </div>
+                    <div>
+                        <form action="" method="get"> 
+                            <select name="day" id="day">
+                                <option value="">Jour</option>
+                                <?php
+                                for ($i = 1; $i < 32; $i++) {
+                                    echo "<option value=\"$i\">$i</option>";
+                                }
+                                ?>
+                            </select>
+
+                            <select name="month" id="month" >
+                                <option value="" >Mois</option>
+                                <?php
+                                    for ($i = 1; $i < 13; $i++) {
+                                        echo "<option value=\"$i\">$i</option>";
+                                    }
+                                ?>
+                            </select>
+
+                            <input type="number" name="year" id="year" value="{{ date("Y") }}">
+                            <button type="submit"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+                        </form>
+                    </div>
+            </div>
+            <hr>
+            
             @if(session()->has('message'))
                 <div class="alert alert-warning alert-dismissible fade show" role="alert">
                   <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -27,6 +56,7 @@
                                 <th>Id</th>
                                 <th>Nom</th>
                                 <th>Cin</th>
+                                <th>Mois</th>
                                 <th>Prix</th>
                                 <th>Date</th>
                             </tr>
@@ -36,6 +66,7 @@
                                 <th>Id</th>
                                 <th>Nom</th>
                                 <th>Cin</th>
+                                <th>Mois</th>
                                 <th>Prix</th>
                                 <th>Date</th>
                             </tr>
@@ -46,6 +77,7 @@
                                 <td>{{ $payment->id }}</td>
                                 <td>{{ $payment->students_name }}</td>
                                 <td>{{ $payment->student_cin }}</td>
+                                <td>{{ $payment->name }}</td>
                                 <td>{{ $payment->prix }} DH</td>
                                 <td>{{ $payment->created_at->format('Y-m-d') }}</td>
                             </tr>

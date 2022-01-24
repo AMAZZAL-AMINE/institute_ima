@@ -647,3 +647,58 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+/* version top */
+.filtersearchpay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.filtersearchpay form select {
+    height: 45px;
+    width: 100px;
+    outline: none;
+    border: none;
+    background-color: #fbf0f0;
+    border-radius: 3px;
+    padding: 5px;
+}
+.filtersearchpay form {
+    margin-top: 20px;
+}
+
+.filtersearchpay form select option:first-child
+{
+   background-color: #ccc;
+}
+
+.filtersearchpay form input[type="number"] {
+    height: 45px;
+    width: 100px;
+    outline: none;
+    border: none;
+    background-color: #fbf0f0;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+.filtersearchpay form button {
+    height: 45px;
+    width: 50px;
+    outline: none;
+    border: none;
+    background-color: #bbb7fb;
+    border-radius: 3px;
+    padding: 5px
+}
