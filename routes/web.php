@@ -141,8 +141,11 @@ Route::put("/Admin/Student/{id}/Edit", [AdminController::class, 'updateStudent']
 //searching by day and month and year in payments
 Route::get("/Admin/Search/Payments", [AdminController::class, 'searchWithDateInPayments'])->name("search.with.paymnets");
 
+//edir the absence
+Route::get("/Admin/{id}/Edit-Absence", [AdminController::class, 'pageToEditApcens'])->name("admin.edit.absence");
 
-
+//set The New Data In Databases
+Route::put("/Admin/{id}'Update/Absence", [AdminController::class, 'updateStudentAbsence'])->name("admin.set.update.absence");
 
 //invoice testing to ge listElement
 // ==========================END ROUTE ADMIN  ==============================

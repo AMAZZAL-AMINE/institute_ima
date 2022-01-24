@@ -45,7 +45,7 @@
             <div class="container-fluid input-group d-block align-items-center mb-3">
                 <div> <span>Image De Cart Nationale : </span> </div> 
                 <div>
-                    <img style="width: 400px;<" src="{{ asset("/storage/".$student->cin_img) }}" alt="">
+                    <img style="width: 400px"  src="{{ asset("/storage/".$student->cin_img) }}" alt="">
                 </div>
             </div>
             <hr>

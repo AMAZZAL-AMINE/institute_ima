@@ -804,6 +804,58 @@ class AdminController extends Controller
     }
     
 
+
+
+
+    public function pageToEditApcens($id) {
+        $abcent = Absence::findOrFail($id);
+        return view("admin.lemplois.edit_labsence", compact("abcent"));
+    }
+
+
+    //update the apsence of student 
+    public function updateStudentAbsence(Request $request,$id) {
+        $data = $request->validate(
+            [
+                "month" => "required",
+                "seance" => "required",
+                "absence" => "required",
+                "date" => "required",
+            ]
+        );
+
+
+        $absences = Absence::findOrFail($id);
+        if ($data["absence"] == "Absent") {
+            $absences->update(
+                [
+                    "month" => $data['month'],
+                    "seance" => $data['seance'],
+                    "apsence" => "yes",
+                    "precent" => null,
+                    "date" => $data['date'],
+                ]
+            );
+        } else {
+            $absences->update(
+                [
+                    "month" => $data['month'],
+                    "seance" => $data['seance'],
+                    "apsence" => null,
+                    "precent" => "yes",
+                    "date" => $data['date'],
+                ]
+            );
+        }
+
+        return redirect()->route("admin.student.absence", $absences->student_id)->with(
+            [
+                "message" => "Les informations ont été mises à jour avec succès"
+            ]
+        );
+    
+    }
+
     
 }
   

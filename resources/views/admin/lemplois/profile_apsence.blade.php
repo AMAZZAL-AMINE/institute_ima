@@ -61,7 +61,7 @@
                         </td>
                         <td>{{ $absencet->date }}</td>
                         
-                        <td ><a href="{{ route("admin.createAbsence",$student->id) }}"  class="btn btn-outline-primary text-center"><i class="fas fa-tools"></i>  </a></td>
+                        <td ><a href="{{ route("admin.edit.absence",$absencet->id) }}"  class="btn btn-outline-primary text-center"><i class="fas fa-tools"></i>  </a></td>
                     </tr> 
                     @endforeach
                 </tbody>
