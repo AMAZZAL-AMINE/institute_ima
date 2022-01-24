@@ -288,11 +288,6 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Prix De Inscription</td>
-                    <td>{{ $student->firstPayed }} DH</td>
-                    <td>{{ $student->updated_at->format("Y-m-d") }}</td>
-                </tr>
                 @foreach ($mounths as $stud)
                 <tr>
                     <td>{{ $stud->name }}</td>
@@ -303,7 +298,7 @@
                 <tr>
                     <td>Totale :</td>
                     <td></td>
-                    <td>{{ $mounths->sum('prix') + $student->firstPayed}} DH</td>
+                    <td>{{ $mounths->sum('prix')}} DH</td>
                 </tr>
             </tbody>
         </table>

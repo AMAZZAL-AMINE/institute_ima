@@ -50,7 +50,7 @@
                                         {{-- <td>{{ $payment->formation }}</td> --}}
                                         <td>{{ $payment->prix }} DH</td>
                                         <td>{{ $payment->created_at->format('Y-m') }}</td>
-                                        @if ($payment->name === 'Premier Mois')
+                                        @if ($payment->name === 'Premier Mois' || $payment->name === 'Prix Dinscription')
                                             <th>
                                                 <div class="badge badge-danger">nouvel élève</div>
                                             </th>

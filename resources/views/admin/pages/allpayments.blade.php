@@ -5,12 +5,17 @@
     <div class="container">
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Tous les prix payés</h6>
+                @if(isset($year))
+                   <h6 class="m-0 font-weight-bold text-primary">Tous les prix payés De La Date : <span class="text-danger">{{ $day }}/{{ $month }}/{{ $year }}</span> </h6>
+                   @else
+                   <h6 class="m-0 font-weight-bold text-primary">Tous les prix payés  </h6>                      
+                @endif
+               
             </div>
             <div class="filtersearchpay ">
                     <div> <b>Custom Filter Search</b> </div>
                     <div>
-                        <form action="" method="get"> 
+                        <form action="{{ route("search.with.paymnets") }}" method="get"> 
                             <select name="day" id="day">
                                 <option value="">Jour</option>
                                 <?php
@@ -50,6 +55,7 @@
             @endif
             <div class="card-body">
                 <div class="table-responsive">
+                    @if(isset($year))
                     <table class="table table-bordered  table-hover" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
@@ -71,6 +77,7 @@
                                 <th>Date</th>
                             </tr>
                         </tfoot>
+                       
                         <tbody>
                             @foreach ($payments as $payment)
                             <tr>
@@ -83,16 +90,26 @@
                             </tr>
                             @endforeach
                         </tbody>
+
                     </table>
+                    @endif
                 </div>
+
             </div>
-            <a class="btn btn-success w-100 p-3" href="{{ route("admin.search.foration.pay.total") }}"><i class="fa fa-search" aria-hidden="true">
-                </i> Recherche Par Mois
-            </a>
+            @if(isset($year))
+            <div class="card-footer text-muted text-center">
+                <b>Totale : </b> <b> {{ $payments->sum('prix') }} DH</b>
+            </div>
+            @endif
+            {{-- <a class="btn btn-success w-100 p-3" href="{{ route("admin.search.foration.pay.total") }}"><i class="fa fa-search" aria-hidden="true">
+                </i> Recherche Par Formation
+            </a> --}}
         </div>
         {{-- <h1>Total : {{ $payments->sum('prix'); }}</h1> --}}
 
+        @if(isset($year))
         <button class="btn btn-primary" onclick="printTable();"><span class="glyphicon glyphicon-print"></span> Print</button>
+        @endif
     </div>
 
 @endsection

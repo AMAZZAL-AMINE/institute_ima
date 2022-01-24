@@ -512,7 +512,11 @@ class AdminController extends Controller
 
             $newstudents =  PayedMonth::whereMonth('created_at','=', $month)
                                 ->whereYear('created_at','=', $year)
+                                ->where('name','=', "Prix Dinscription")
+                                ->orWhereMonth('created_at','=', $month)
+                                ->whereYear('created_at','=', $year)
                                 ->where('name','=', "Premier Mois")->get();
+                                
 
         }
         
@@ -523,7 +527,13 @@ class AdminController extends Controller
             $newstudents =  PayedMonth::where('formation', $formation)
                         ->whereMonth('created_at','=', $month)
                         ->whereYear('created_at','=', $year)
+                        ->where('name','=', "Prix Dinscription")
+                        ->orWhere('formation', $formation)
+                        ->whereMonth('created_at','=', $month)
+                        ->whereYear('created_at','=', $year)
                         ->where('name','=', "Premier Mois")->get();
+                        
+                        
         }
         
         return view("admin.pages.resultsearchtotalformation", compact('payedmonths','year','month','formation','newstudents'));
@@ -774,10 +784,25 @@ class AdminController extends Controller
     }
 
 
-    //add nes stodent to list dattente
-    // public function addStudentToListDattent() {
-    //     return view("admin.pages.list_attente");
-    // }
+
+    //search by the day from table pyment  month
+    public function searchWithDateInPayments(Request $request) {
+         $day = $request->day;
+         $month = $request->month;
+         $year = $request->year;
+
+         $payments =  PayedMonth::whereMonth('created_at','=', $month)
+                    ->whereDay('created_at','=', $day)
+                    ->whereYear('created_at','=', $year)->get();
+
+        return view("admin.pages.allpayments", compact('payments',"day","month","year"))->with(
+                        [
+                            "thealert" => "active"
+                        ]
+                    );
+            
+    }
+    
 
     
 }
