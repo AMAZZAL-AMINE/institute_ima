@@ -147,6 +147,14 @@ Route::get("/Admin/{id}/Edit-Absence", [AdminController::class, 'pageToEditApcen
 //set The New Data In Databases
 Route::put("/Admin/{id}'Update/Absence", [AdminController::class, 'updateStudentAbsence'])->name("admin.set.update.absence");
 
+
+// page to update student payment
+Route::get("/Admin/{id}/Update-Payment", [AdminController::class, 'updateStudentPyamntPage'])->name("admin.update.payment.page");
+
+//set update in database of payment monht
+Route::put("/Admin/{id}/Update-Payment-Save", [AdminController::class, 'updateStudentPayment'])->name("studnet.update.payment");
+
+
 //invoice testing to ge listElement
 // ==========================END ROUTE ADMIN  ==============================
 

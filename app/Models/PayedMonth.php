@@ -10,7 +10,7 @@ class PayedMonth extends Model
     use HasFactory;
 
     protected $fillable   = [
-        "student_id","prix","name","formation","students_name","student_cin"
+        "student_id","prix","name","formation","students_name","student_cin","created_at","updated_at"
     ];
 
     //rltionship to table users  model

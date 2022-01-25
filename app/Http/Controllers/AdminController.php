@@ -859,6 +859,40 @@ class AdminController extends Controller
     
     }
 
+    //page update the payment
+    public function updateStudentPyamntPage($id) {
+        $payment = PayedMonth::findOrFail($id);
+        return view("admin.payments.update_student_payment", compact("payment"));
+    }
+
+
+    //update student paymnet
+    public function updateStudentPayment($id, Request $request) {
+        $payment = PayedMonth::findOrFail($id);
+
+        $data = $request->validate(
+            [
+                "month" => "required",
+                "prix" => "required",
+                "date" => "required",
+            ]
+        );
+
+
+        $payment->update(
+            [
+                "prix" => $data['prix'],
+                "name" => $data['month'],
+                "created_at" => $data['date'],
+            ]
+        );
+
+        return redirect()->route("student.profile", $payment->student_id)->with(
+            [
+                "message" => "Les informations ont été mises à jour avec succès"
+            ]
+        );
+    }
     
 }
   

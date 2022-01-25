@@ -307,6 +307,7 @@
                     <th scope="col">Month</th>
                     <th scope="col">Prix</th>
                     <th scope="col">Date De Payment</th>
+                    <th scope="col" >Edit</th>
                 </tr>
             </thead>
             <tbody>
@@ -315,6 +316,9 @@
                     <td>{{ $stud->name }}</td>
                     <td>{{ $stud->prix  }} DH</td>
                     <td>{{ $stud->created_at->format('Y-m-d') }}</td>
+                    @if (Auth::check() && auth()->user()->is_admin_pro === "yes")
+                        <td> <a class="btn btn-outline-primary" href="{{ route("admin.update.payment.page",$stud->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a> </td>                        
+                    @endif
                 </tr>
                 @endforeach
                 <tr>
