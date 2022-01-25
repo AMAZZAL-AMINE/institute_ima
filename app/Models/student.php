@@ -16,9 +16,8 @@ class Student extends Model
         "phone","berthday",
         "nvschole","firstPayed","formation_id",
         "user_id",
-        "cin_img","is_in_list_dattente",
+        "cin_img","is_in_list_dattente",'created_at'
     );
- 
 
     //relationship to user table model
     public function users() {

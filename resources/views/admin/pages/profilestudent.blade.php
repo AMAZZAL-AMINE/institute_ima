@@ -28,7 +28,25 @@
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
+
+
+
+   
+
+
+
+
                             <div class="modal-body">
+
+
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="my-addon" >Date D`inscription </span>
+                                    </div>
+                                    <input class="form-control" type="date" name="d_inscrire" placeholder="Date D`inscription" aria-label="Recipient's " value="{{ $student->created_at->format('Y-m-d') }}" aria-describedby="my-addon">
+                                </div>
+
                                 <div class="input-group">
                                     <div class="input-group-append">
                                         <span class="input-group-text" id="my-addon" >Nom De Etudiant </span>
@@ -41,6 +59,10 @@
                                     </div>
                                     <input class="form-control " type="text" name="l_name" placeholder="Prenom De Etudiant" aria-label="Recipient's " value="{{ $student->fname }}" aria-describedby="my-addon">
                                 </div>
+                                
+
+
+
                                 <div class="input-group mt-3">
                                     <div class="input-group-append">
                                         <span class="input-group-text" id="my-addon" >Phone De Etudiant </span>

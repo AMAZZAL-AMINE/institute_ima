@@ -633,7 +633,8 @@ class AdminController extends Controller
                 "berthday" => "required|date",
                 "formation" => "required",
                 "profile" => "image",
-                "cin_img" => "image"
+                "cin_img" => "image",
+                "d_inscrire" => "required"
             )
         );
 
@@ -654,6 +655,7 @@ class AdminController extends Controller
                 "phone" => $data['phone'],
                 "berthday" => $data['berthday'],
                 "formation_id" => $data['formation'],
+                "created_at" =>  $data['d_inscrire'],
             ]
         );
 

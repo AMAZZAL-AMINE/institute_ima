@@ -41,16 +41,18 @@
                             </tfoot>
                             <tbody>
                                 @foreach ($formation->students as $student)
-                                <tr>
-                                    <td>{{ $student->id }}</td>
-                                    <td>{{ $student->fname }}</td>
-                                    <td>{{ $student->lname }}</td>
-                                    <td>{{ $student->cin }}</td>
-                                    <td>{{ $student->phone }}</td>
-                                    <td>{{ $student->formations->name ?? 'none' }}</td>
-                                    <td>{{ $student->created_at->format('Y-m-d') }}</td>
-                                    <td><a class="btn btn-primary" href="{{ route("student.profile",$student->id) }}"><i class="fa fa-eye" aria-hidden="true"></i> </a></td>
-                                </tr>
+                                    @if ($student->firstPayed != null)
+                                    <tr>
+                                        <td>{{ $student->id }}</td>
+                                        <td>{{ $student->fname }}</td>
+                                        <td>{{ $student->lname }}</td>
+                                        <td>{{ $student->cin }}</td>
+                                        <td>{{ $student->phone }}</td>
+                                        <td>{{ $student->formations->name ?? 'none' }}</td>
+                                        <td>{{ $student->created_at->format('Y-m-d') }}</td>
+                                        <td><a class="btn btn-primary" href="{{ route("student.profile",$student->id) }}"><i class="fa fa-eye" aria-hidden="true"></i> </a></td>
+                                    </tr>
+                                    @endif
                                 @endforeach
 
                             </tbody>
