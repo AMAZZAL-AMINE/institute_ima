@@ -16,11 +16,12 @@
                 <h5>Mois payés  : </h5> 
                 <h5 class="text-primary ml-3"> 
                     @foreach ($months as $month)
-                        <span style="font-size: 25px">{{ $month->name }}</span>,
+                        <span style="font-size: 20px">{{ $month->name }}</span>,
                     @endforeach 
             </h5>
             </div>
             <hr>
+          
             <form action="" method="post">
                 @csrf
                 <div class="form-group">
