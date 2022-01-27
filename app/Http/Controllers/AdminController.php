@@ -29,9 +29,10 @@ class AdminController extends Controller
         $invitations =  Student::where('firstPayed', null)->get();
         $students = Student::whereNotNull('firstPayed')->get();
         $formations = Formation::all();
-        
-        return view("admin.dashboard", 
-                compact('invitations','students','formations')
+
+        return view(
+            "admin.dashboard",
+            compact('invitations', 'students', 'formations')
         );
     }
 
@@ -55,7 +56,7 @@ class AdminController extends Controller
                 "dberth" => ["required", "date"],
                 "nschole" => "required",
                 "formation" => "required",
-                "cin_img" => ["required","image"],
+                "cin_img" => ["required", "image"],
             )
         );
         if ($request->hasFile("img")) {
@@ -89,25 +90,28 @@ class AdminController extends Controller
     }
 
     //student profile
-    public function studentProfile($id) {
+    public function studentProfile($id)
+    {
         $student = Student::findOrFail($id);
         $mounths = PayedMonth::where("student_id", $id)->get();
         $institute = IsImaOrIphec::where("student_id", $id)->first();
-        $absences = Absence::where("student_id", $student->id)->orderBy('month', 'asc')->get(); 
+        $absences = Absence::where("student_id", $student->id)->orderBy('month', 'asc')->get();
         $formations = Formation::all();
-        return  view("admin.pages.profilestudent", compact("student","mounths","institute","absences","formations"));
+        return  view("admin.pages.profilestudent", compact("student", "mounths", "institute", "absences", "formations"));
     }
 
     //accepted user to be student
-    public function acceptStudnet($id) {
+    public function acceptStudnet($id)
+    {
         $student = Student::find($id);
         $months = Month::all();
-        return view("admin.pages.acceptstudent", compact("student","months"));
+        return view("admin.pages.acceptstudent", compact("student", "months"));
     }
 
     //update the student price and acctive his accounting
-    public function studentActiveAccount(Request $request, $id) {
-     
+    public function studentActiveAccount(Request $request, $id)
+    {
+
         $data = $request->validate(
             array(
                 "prix_iscription" => "required",
@@ -123,16 +127,16 @@ class AdminController extends Controller
             array(
                 "student_id" => $student->id,
                 "cin" => $student->cin,
-                "name" => $student->fname." ".$student->lname,
+                "name" => $student->fname . " " . $student->lname,
                 "PrixDinscription" => "yes",
                 "fisrtMois" => "yes",
             )
         );
- 
+
         $month->create(
             array(
                 "student_id" => $student->id,
-                "students_name" => $student->fname." ".$student->lname,
+                "students_name" => $student->fname . " " . $student->lname,
                 "student_cin" => $student->cin,
                 "name" => $data['month'],
                 "prix" => $data["prix_firstmonth"],
@@ -144,7 +148,7 @@ class AdminController extends Controller
         $month->create(
             array(
                 "student_id" => $student->id,
-                "students_name" => $student->fname." ".$student->lname,
+                "students_name" => $student->fname . " " . $student->lname,
                 "student_cin" => $student->cin,
                 "name" => "Prix Dinscription",
                 "prix" => $data['prix_iscription'],
@@ -155,11 +159,11 @@ class AdminController extends Controller
         $student->update(
             array(
                 // "isimaoriphec" => $request->isiphicorima,
-                "firstPayed" => $data['prix_iscription'],   
+                "firstPayed" => $data['prix_iscription'],
             )
         );
 
-        $chosecenter = New IsImaOrIphec;
+        $chosecenter = new IsImaOrIphec;
         $chosecenter->create(
             array(
                 "student_id" => $student->id,
@@ -169,12 +173,13 @@ class AdminController extends Controller
 
         return back()->with(
             array(
-                "message" =>"Student Has Been Add To Echole"
+                "message" => "Student Has Been Add To Echole"
             )
         );
     }
     //deleteinh user
-    public function studentDeleting($id) {
+    public function studentDeleting($id)
+    {
         $student = Student::find($id);
         $student->delete();
         return back()->with(
@@ -185,26 +190,30 @@ class AdminController extends Controller
     }
 
     //print invoice page
-    public function studentPrintInvoice($id) {
+    public function studentPrintInvoice($id)
+    {
         $invoice = PayedMonth::where("student_id", $id)->first();
         $student = Student::where("id", $id)->first();
         return view("admin.pages.printvoice", compact('invoice', 'student'));
-    } 
-    
+    }
+
     //get all student wgo get hes invoisement
-    public function allStudentAccepted() {
+    public function allStudentAccepted()
+    {
         $students = Student::whereNotNull('firstPayed')->get();
         return view("admin.pages.allstudentacetpted", compact("students"));
     }
 
- 
+
     //add formatioin page
-    public function addFormation() {
+    public function addFormation()
+    {
         return view("admin.pages.addformation");
     }
 
     //store formatio in database 
-    public function storeFormation(Request $request) {
+    public function storeFormation(Request $request)
+    {
         $data = $request->validate(
             array(
                 "name" => "required",
@@ -230,31 +239,36 @@ class AdminController extends Controller
     }
 
     //get all formations 
-    public function allFormations() {
+    public function allFormations()
+    {
         $formations = Formation::all();
         return view("admin.pages.allformation", compact("formations"));
     }
-     
 
-    public function allpayments() {
+
+    public function allpayments()
+    {
         $students = Student::all();
         $payments = PayedMonth::all();
-        return view("admin.pages.allpayments", compact("payments","students"));
+        return view("admin.pages.allpayments", compact("payments", "students"));
     }
 
     //get all studnet who have a same formation 
-    public function studentdFormation($id) {
-       $formation = Formation::find($id);
+    public function studentdFormation($id)
+    {
+        $formation = Formation::find($id);
         return view("admin.pages.studentswithsingleformation", compact("formation"));
     }
 
     //page edit formation 
-    public function pageEditdFormation($id) {
+    public function pageEditdFormation($id)
+    {
         $formation = Formation::find($id);
         return view("admin.pages.updateformation", compact("formation"));
     }
     //stoe update of formation in database
-    public function updateFormationAndStore($id, Request $request) {
+    public function updateFormationAndStore($id, Request $request)
+    {
         $formation = Formation::find($id);
         $data = $request->validate(array(
             "name" => "required",
@@ -275,11 +289,11 @@ class AdminController extends Controller
                 "message" => "Done, Formation Has Been Updated Success!",
             )
         );
-
     }
 
     //delete formation
-    public function deleteFormation($id) {
+    public function deleteFormation($id)
+    {
         $formation = Formation::find($id);
         $formation->delete();
         return back()->with(
@@ -287,26 +301,27 @@ class AdminController extends Controller
                 "message" => "Done, Formation Has Been Deleted With Success!",
             )
         );
-
     }
 
     //inscrire user by adminpage
-    public function inscrireUserByAdmin() {
+    public function inscrireUserByAdmin()
+    {
         $formations = Formation::all();
         return view("admin.pages.isncrirenewstudent", compact('formations'));
     }
     //inscrire user store data
-    public function inscrireUserByAdminStore(Request $request) {
+    public function inscrireUserByAdminStore(Request $request)
+    {
         $data = $request->validate(
             array(
-                    "fname" => "required",
-                    "lname" => "required",
-                    "cin" => "required",
-                    "phone" => "required",
-                    "dberth" => ["required", "date"],
-                    "nschole" => "required",
-                    "formation" => "required",
-                    "cin_img" => ["required","image"],
+                "fname" => "required",
+                "lname" => "required",
+                "cin" => "required",
+                "phone" => "required",
+                "dberth" => ["required", "date"],
+                "nschole" => "required",
+                "formation" => "required",
+                "cin_img" => ["required", "image"],
             ),
         );
 
@@ -343,33 +358,36 @@ class AdminController extends Controller
     }
 
     //function for searech student to pay
-    public function searchStudentToPay() {
+    public function searchStudentToPay()
+    {
         return view("admin.pages.searchstudnttopayfac");
     }
 
     //return to admin search result of student
-    public function searchStudentResult(Request $request) {
+    public function searchStudentResult(Request $request)
+    {
         $search = $request->input("search");
         $students = Student::query()
-                    ->where("cin", "LIKE", "%{$search}%")
-                    ->orWhere('phone', 'LIKE', "%{$search}%")
-                    ->get();
-        return view("admin.pages.searchStudentResult", compact('students',"search"));
+            ->where("cin", "LIKE", "%{$search}%")
+            ->orWhere('phone', 'LIKE', "%{$search}%")
+            ->get();
+        return view("admin.pages.searchStudentResult", compact('students', "search"));
     }
 
     //function for pay new month
-    public function payMonthStdent($id) {
+    public function payMonthStdent($id)
+    {
         $student = Student::findOrFail($id);
-        $allpayment = AllStudentPayments::where("student_id",$student->id)->get();
+        $allpayment = AllStudentPayments::where("student_id", $student->id)->get();
         $allmonth = Month::all();
         $months = PayedMonth::where("student_id", $id)->get();
         $institute = IsImaOrIphec::where("student_id", $id)->first();
-        return view("admin.pages.newpayfacturmonth", compact('student','months','institute','allmonth',"allpayment"));
-        
+        return view("admin.pages.newpayfacturmonth", compact('student', 'months', 'institute', 'allmonth', "allpayment"));
     }
 
     //insert all data of payment of user to database
-    public function paymentStoreNewMonth($id, Request $request) {
+    public function paymentStoreNewMonth($id, Request $request)
+    {
         $data = $request->validate(
             array(
                 "month_name" => "required",
@@ -381,7 +399,7 @@ class AdminController extends Controller
         $month->create(
             array(
                 "student_id" => $student->id,
-                "students_name" => $student->fname." ".$student->lname,
+                "students_name" => $student->fname . " " . $student->lname,
                 "student_cin" => $student->cin,
                 "name" => $data['month_name'],
                 "prix" => $data['prix'],
@@ -390,98 +408,99 @@ class AdminController extends Controller
         );
 
         $studentAllPay = AllStudentPayments::where("student_id", $student->id);
-        if($data["month_name"] == "2eme Mois") {
+        if ($data["month_name"] == "2eme Mois") {
             $studentAllPay->update(
                 array(
                     "twoemeMois" => "yes",
                 )
             );
         }
-        if($data["month_name"] == "3eme Mois") {
+        if ($data["month_name"] == "3eme Mois") {
             $studentAllPay->update(
                 array(
                     "treeMois" => "yes",
                 )
             );
         }
-        if($data["month_name"] == "4eme Mois") {
+        if ($data["month_name"] == "4eme Mois") {
             $studentAllPay->update(
                 array(
                     "phorMois" => "yes",
                 )
             );
         }
-        if($data["month_name"] == "5eme Mois") {
+        if ($data["month_name"] == "5eme Mois") {
             $studentAllPay->update(
                 array(
                     "fiveMois" => "yes",
                 )
             );
         }
-        if($data["month_name"] == "6eme Mois") {
+        if ($data["month_name"] == "6eme Mois") {
             $studentAllPay->update(
                 array(
                     "sixMois" => "yes",
                 )
             );
         }
-        if($data["month_name"] == "7eme Mois") {
+        if ($data["month_name"] == "7eme Mois") {
             $studentAllPay->update(
                 array(
                     "sivenMois" => "yes",
                 )
             );
         }
-        if($data["month_name"] == "8eme Mois") {
+        if ($data["month_name"] == "8eme Mois") {
             $studentAllPay->update(
                 array(
                     "eightMois" => "yes",
                 )
             );
         }
-        if($data["month_name"] == "9eme Mois") {
+        if ($data["month_name"] == "9eme Mois") {
             $studentAllPay->update(
                 array(
                     "nineMois" => "yes",
                 )
             );
         }
-        if($data["month_name"] == "10eme Mois") {
+        if ($data["month_name"] == "10eme Mois") {
             $studentAllPay->update(
                 array(
                     "teenMois" => "yes",
                 )
             );
         }
-        if($data["month_name"] == "11eme Mois") {
+        if ($data["month_name"] == "11eme Mois") {
             $studentAllPay->update(
                 array(
                     "elevMois" => "yes",
                 )
             );
         }
-        if($data["month_name"] == "12eme Mois") {
+        if ($data["month_name"] == "12eme Mois") {
             $studentAllPay->update(
                 array(
                     "twilvMois" => "yes",
                 )
             );
         }
-        return redirect()->route('admin.facture.ready',$student->id)->with(
+        return redirect()->route('admin.facture.ready', $student->id)->with(
             array(
                 "message" => "Done"
             )
         );
-
     }
 
     //if facture ready to print when click the button
-    public function functutreReady($id) {
+    public function functutreReady($id)
+    {
         $student = Student::findOrFail($id);
         return view("admin.pages.getisecendinvoice", compact("student"));
-    } 
+    }
     //print facture 
-    public function facturePrint($id) {
+    public function facturePrint($id)
+    {
         $student = Student::findOrFail($id);
         $month = PayedMonth::where("student_id", $id)->orderBy('id', 'DESC')->first();
 
@@ -490,74 +509,92 @@ class AdminController extends Controller
     }
 
     //get all payments of students in one table
-    public function allPaymentsStudents() {
+    public function allPaymentsStudents()
+    {
         $payments = AllStudentPayments::all();
         return view("admin.pages.studentspayments", compact("payments"));
     }
 
     //search for formation to get the total price using the months
-    public function searchFormationPaymernts() {
+    public function searchFormationPaymernts()
+    {
         $formations = Formation::all();
         return view("admin.pages.searchpayments", compact("formations"));
     }
 
     //find the result of searchi,g the formation and the month using the months number
-    public function searchFormationPaymerntsResult(Request $request) {
+    public function searchFormationPaymerntsResult(Request $request)
+    {
         $formation = $request->formation;
         $month = $request->month;
         $year = $request->year;
 
         if ($formation == "allformation") {
-            $payedmonths =  PayedMonth::whereMonth('created_at','=', $month)
-                                ->whereYear('created_at','=', $year)->get();
+            $payedmonths =  PayedMonth::whereMonth('created_at', '=', $month)
+                ->whereYear('created_at', '=', $year)->get();
 
-            $newstudents =  PayedMonth::whereMonth('created_at','=', $month)
-                                ->whereYear('created_at','=', $year)
-                                ->where('name','=', "Prix Dinscription")
-                                ->orWhereMonth('created_at','=', $month)
-                                ->whereYear('created_at','=', $year)
-                                ->where('name','=', "Premier Mois")->get();
-                                
-
-        }
-        
-        else {
+            $newstudents =  PayedMonth::whereMonth('created_at', '=', $month)
+                ->whereYear('created_at', '=', $year)
+                ->where('name', '=', "Prix Dinscription")
+                ->orWhereMonth('created_at', '=', $month)
+                ->whereYear('created_at', '=', $year)
+                ->where('name', '=', "Premier Mois")->get();
+        } else {
             $payedmonths =  PayedMonth::where('formation', $formation)
-                        ->whereMonth('created_at','=', $month)
-                        ->whereYear('created_at','=', $year)->get();
+                ->whereMonth('created_at', '=', $month)
+                ->whereYear('created_at', '=', $year)->get();
             $newstudents =  PayedMonth::where('formation', $formation)
-                        ->whereMonth('created_at','=', $month)
-                        ->whereYear('created_at','=', $year)
-                        ->where('name','=', "Prix Dinscription")
-                        ->orWhere('formation', $formation)
-                        ->whereMonth('created_at','=', $month)
-                        ->whereYear('created_at','=', $year)
-                        ->where('name','=', "Premier Mois")->get();
-                        
-                        
+                ->whereMonth('created_at', '=', $month)
+                ->whereYear('created_at', '=', $year)
+                ->where('name', '=', "Prix Dinscription")
+                ->orWhere('formation', $formation)
+                ->whereMonth('created_at', '=', $month)
+                ->whereYear('created_at', '=', $year)
+                ->where('name', '=', "Premier Mois")->get();
         }
-        
-        return view("admin.pages.resultsearchtotalformation", compact('payedmonths','year','month','formation','newstudents'));
+
+        return view("admin.pages.resultsearchtotalformation", compact('payedmonths', 'year', 'month', 'formation', 'newstudents'));
     }
 
 
     // =================================================================================================\
     // manager rooms
-    public function managerRoomes() {
-        $imas = LemploiIma::all();
-        $iphecs = LemploiIphec::all();
-        return view("admin.lemplois.rooms", compact('imas','iphecs'));
+    public function managerRoomes()
+    {
+        //get data of tablke ima on all days 
+        $lundi = LemploiIma::where("day", "lundi")->get();
+        $mardi = LemploiIma::where("day", "mardi")->get();
+        $mercredi = LemploiIma::where("day", "mercredi")->get();
+        $jedi = LemploiIma::where("day", "jedi")->get();
+        $vendredi = LemploiIma::where("day", "vendredi")->get();
+        $samedi = LemploiIma::where("day", "samedi")->get();
+        $dimanch = LemploiIma::where("day", "dimanch")->get();
+
+
+        //get data of tablke Iphec on all days 
+        $lundt = LemploiIphec::where("day", "lundi")->get();
+        $mardit = LemploiIphec::where("day", "mardi")->get();
+        $mercredit = LemploiIphec::where("day", "mercredi")->get();
+        $jedit = LemploiIphec::where("day", "jedi")->get();
+        $vendredit = LemploiIphec::where("day", "vendredi")->get();
+        $samedit = LemploiIphec::where("day", "samedi")->get();
+        $dimancht = LemploiIphec::where("day", "dimanch")->get();
+
+
+        return view("admin.lemplois.rooms", compact('lundi','mardi','mercredi','jedi','vendredi','samedi','dimanch','samedit','dimancht', 'jedit','vendredit','lundt','mardit','mercredit'));
     }
-   
+
     //edit ima table lemploi
-    public function editowIma($id) {
-        $ima = LemploiIma::where("id", $id)->first(); 
+    public function editowIma($id)
+    {
+        $ima = LemploiIma::where("id", $id)->first();
         return  view("admin.lemplois.editima", compact("ima"));
     }
-   
-   
+
+
     //update table lemploi ima 
-    public function updateLemploiIma($id, Request $request) {
+    public function updateLemploiIma($id, Request $request)
+    {
         $ima = LemploiIma::where("id", $id);
         $ima->update(
             array(
@@ -573,17 +610,18 @@ class AdminController extends Controller
                 "message" => "Tableau mis à jour avec succès",
             )
         );
-
     }
 
     //edite table iphec lemploi
-    public function editowIphec($id) {
-        $iphec = LemploiIphec::where("id", $id)->first(); 
+    public function editowIphec($id)
+    {
+        $iphec = LemploiIphec::where("id", $id)->first();
         return  view("admin.lemplois.editiphrec", compact("iphec"));
     }
 
     //save edite table lemploi iphec 
-    public function updateLemploiiphec($id, Request $request) {
+    public function updateLemploiiphec($id, Request $request)
+    {
         $iphec = LemploiIphec::where("id", $id);
         $iphec->update(
             array(
@@ -607,23 +645,17 @@ class AdminController extends Controller
     }
 
     //get the only payments whoe will pay the months 
-    public function monthPay() {
+    public function monthPay()
+    {
         $payedmonths = AllStudentPayments::all();
         return view("admin.payments.month", compact('payedmonths'));
     }
 
-    //function deplome
-    public function deplom() {
-        return view("admin.deplom.deplom");
-    }
 
-    //create cirtificate function
-    public function createCertificate() {
-        return view("admin.deplom.certificate");
-    }
 
     //update student information
-    public function updateStudent($id, Request $request) {
+    public function updateStudent($id, Request $request)
+    {
         $student = Student::findOrFail($id);
         $data = $request->validate(
             array(
@@ -639,10 +671,10 @@ class AdminController extends Controller
             )
         );
 
-        if($request->hasFile('profile')) {
+        if ($request->hasFile('profile')) {
             $imagePathProfile = request('profile')->store('studentimgs', 'public');
         }
-        if($request->hasFile('cin_img')) {
+        if ($request->hasFile('cin_img')) {
             $imagePathCin = request('cin_img')->store('studentimgs', 'public');
         }
 
@@ -669,27 +701,31 @@ class AdminController extends Controller
 
 
     //manager abcenses
-    public function manageAbsences() {
+    public function manageAbsences()
+    {
         $students = Student::whereNotNull('firstPayed')->latest('id')->get();
         return view('admin.lemplois.absences', compact('students'));
     }
 
 
     //create absences 
-    public function createAbsence($id) {
-        $student = Student::findOrFail($id);    
-        return view("admin.lemplois.creat_absence",
-                compact("student")
-        );   
+    public function createAbsence($id)
+    {
+        $student = Student::findOrFail($id);
+        return view(
+            "admin.lemplois.creat_absence",
+            compact("student")
+        );
     }
 
 
 
 
     // store apcense of student in daatabase
-    public function stroAbsence($id, Request $request) {
+    public function stroAbsence($id, Request $request)
+    {
         $student = Student::findOrFail($id);
-        
+
         $data = $request->validate(
             [
                 "month" => "required",
@@ -701,7 +737,7 @@ class AdminController extends Controller
 
         $absent = new Absence;
 
-        if($data["absence"] == "Absent") {
+        if ($data["absence"] == "Absent") {
 
             $absent->create(
                 [
@@ -711,9 +747,8 @@ class AdminController extends Controller
                     "apsence" => "yes",
                     "precent" => null,
                     "date" => $data['date'],
-                ]    
+                ]
             );
-
         } else {
 
             $absent->create(
@@ -724,11 +759,11 @@ class AdminController extends Controller
                     "apsence" => null,
                     "precent" => "yes",
                     "date" => $data['date'],
-                ]    
+                ]
             );
         }
 
-        return redirect()->route("admin.student.absence",$student->id)->with(
+        return redirect()->route("admin.student.absence", $student->id)->with(
             [
                 "message" => "Suucess",
             ]
@@ -737,15 +772,17 @@ class AdminController extends Controller
 
 
     //get student id and get student data of apsent where id = this.id
-    public function studentProfileApsence($id) {
+    public function studentProfileApsence($id)
+    {
         $student = Student::findOrFail($id);
-        $absences = Absence::where("student_id", $student->id)->orderBy('month', 'asc')->get(); 
-        return view("admin.lemplois.profile_apsence", compact('absences','student'));
+        $absences = Absence::where("student_id", $student->id)->orderBy('month', 'asc')->get();
+        return view("admin.lemplois.profile_apsence", compact('absences', 'student'));
     }
 
 
     //insert the data of deplom to database and return with data to print deplom page
-    public function  createDeplom(Request $request) {
+    public function  createDeplom(Request $request)
+    {
 
         //data request from inputs
         $name_fr = $request->name_fr;
@@ -780,44 +817,55 @@ class AdminController extends Controller
             ]
         );
         return view('admin.deplom.print', compact(
-            'name_fr','name_ar','berth','cin','formation_fr','formation_ar','promotion','moi_fr','moi_ar','etablis_fr','etablis_ar',
+            'name_fr',
+            'name_ar',
+            'berth',
+            'cin',
+            'formation_fr',
+            'formation_ar',
+            'promotion',
+            'moi_fr',
+            'moi_ar',
+            'etablis_fr',
+            'etablis_ar',
             'fit_at',
         ));
-
     }
 
 
 
     //search by the day from table pyment  month
-    public function searchWithDateInPayments(Request $request) {
-         $day = $request->day;
-         $month = $request->month;
-         $year = $request->year;
+    public function searchWithDateInPayments(Request $request)
+    {
+        $day = $request->day;
+        $month = $request->month;
+        $year = $request->year;
 
-         $payments =  PayedMonth::whereMonth('created_at','=', $month)
-                    ->whereDay('created_at','=', $day)
-                    ->whereYear('created_at','=', $year)->get();
+        $payments =  PayedMonth::whereMonth('created_at', '=', $month)
+            ->whereDay('created_at', '=', $day)
+            ->whereYear('created_at', '=', $year)->get();
 
-        return view("admin.pages.allpayments", compact('payments',"day","month","year"))->with(
-                        [
-                            "thealert" => "active"
-                        ]
-                    );
-            
+        return view("admin.pages.allpayments", compact('payments', "day", "month", "year"))->with(
+            [
+                "thealert" => "active"
+            ]
+        );
     }
-    
 
 
 
 
-    public function pageToEditApcens($id) {
+
+    public function pageToEditApcens($id)
+    {
         $abcent = Absence::findOrFail($id);
         return view("admin.lemplois.edit_labsence", compact("abcent"));
     }
 
 
     //update the apsence of student 
-    public function updateStudentAbsence(Request $request,$id) {
+    public function updateStudentAbsence(Request $request, $id)
+    {
         $data = $request->validate(
             [
                 "month" => "required",
@@ -856,18 +904,19 @@ class AdminController extends Controller
                 "message" => "Les informations ont été mises à jour avec succès"
             ]
         );
-    
     }
 
     //page update the payment
-    public function updateStudentPyamntPage($id) {
+    public function updateStudentPyamntPage($id)
+    {
         $payment = PayedMonth::findOrFail($id);
         return view("admin.payments.update_student_payment", compact("payment"));
     }
 
 
     //update student paymnet
-    public function updateStudentPayment($id, Request $request) {
+    public function updateStudentPayment($id, Request $request)
+    {
         $payment = PayedMonth::findOrFail($id);
 
         $data = $request->validate(
@@ -893,6 +942,31 @@ class AdminController extends Controller
             ]
         );
     }
-    
+
+    //function deplome
+    public function deplom()
+    {
+        return view("admin.deplom.deplom");
+    }
+
+
+    //return to page enter formation en fr
+    public function certificateFormation($id)
+    {
+        $student = Student::findOrFail($id);
+        return view("admin.deplom.certificate_formationfr", compact("student"));
+    }
+
+
+    //print sertification
+    public function createCertificate($id, Request $request)
+    {
+
+        //find the student by id
+        $student = Student::findOrFail($id);
+        $formation = $request->forma_fr;
+
+        //return to page print certificate with data of student;
+        return view("admin.deplom.certificate", compact('student', 'formation'));
+    }
 }
-  

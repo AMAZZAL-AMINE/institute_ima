@@ -127,7 +127,7 @@ Route::put("/Admin/Iphec/Update/Lemlpoi/{id}", [AdminController::class, 'updateL
 Route::get("/Admin/Send-Sms", [SmsController::class, 'index']);
 ///////////////Deplome////////////////////////////////
 Route::get("/Admin/Create-Deplom", [AdminController::class, 'deplom'])->name("admin.deplom");
-Route::get("/Admin/Create-Certificate", [AdminController::class, 'createCertificate'])->name("admin.createCertificate");
+Route::get("/Admin/{id}/Create-Certificate", [AdminController::class, 'createCertificate'])->name("admin.createCertificate");
 //rout inser data of deplom and return to page print deplom 
 Route::get("/Admin/Print-Deplom", [AdminController::class, 'createDeplom'])->name("admin.print.deplom");
 Route::post("/Admin/Deplom", [AdminController::class, 'createDeplom'])->name("admin.print.deplom.data");
@@ -155,8 +155,12 @@ Route::get("/Admin/{id}/Update-Payment", [AdminController::class, 'updateStudent
 Route::put("/Admin/{id}/Update-Payment-Save", [AdminController::class, 'updateStudentPayment'])->name("studnet.update.payment");
 
 
+Route::get("/Admin/{id}/Certificate/Entrer-Formation", [AdminController::class, 'certificateFormation'])->name("admin.student-certificate.formationfr");
+
 //invoice testing to ge listElement
 // ==========================END ROUTE ADMIN  ==============================
+
+
 
 // creat months
 // Route::get("/m", function() {
@@ -223,5 +227,4 @@ Route::put("/Admin/{id}/Update-Payment-Save", [AdminController::class, 'updateSt
 //     );
 //     echo "done";
 // });
-
 

@@ -42,7 +42,12 @@ $formation = Formation::where("id", 1)->first();
           <li><a class="@yield('isactivetree')" href="{{ route('list.formations',$formation->slug ?? "")  }}">Liste De Formations</a></li>
           <li><a class="@yield('isactivephor')" href="{{ route("contact.us") }}">Contactez-Nous</a></li>
           @if(Auth::Check())
-          <!--  -->
+            <li>
+              <form action="{{ route("logout") }}"  method="post">
+                @csrf
+                  <button style="margin-top: -6px" type="submit" class="btn btn-outline-info">Deconnect</button>
+              </form>
+            </li>
           @else
           <li><a class="@yield('isactiveseven')" href="{{ route("login") }}">Login</a></li>
           @endif

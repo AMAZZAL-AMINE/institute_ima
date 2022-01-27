@@ -19,6 +19,7 @@ class CreateLemploiImasTable extends Migration
             $table->string("room_2")->nullable();
             $table->string("room_3")->nullable();
             $table->string("room_4")->nullable();
+            $table->string("day");
             $table->timestamps();
         });
     }

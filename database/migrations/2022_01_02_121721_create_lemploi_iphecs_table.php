@@ -24,6 +24,7 @@ class CreateLemploiIphecsTable extends Migration
             $table->string("room_7")->nullable();
             $table->string("room_8")->nullable();
             $table->string("room_9")->nullable();
+            $table->string("day");
             $table->timestamps();
         });
     }
