@@ -1,9 +1,9 @@
 @extends("layouts.admin")
 @section("titles")
     <style>
-        table {
+    table {
         display: none;
-        width: 100%;
+        background-color: white;
         text-align: center;
     }
     table.active {
