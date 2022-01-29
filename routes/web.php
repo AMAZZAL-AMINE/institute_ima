@@ -228,3 +228,18 @@ Route::get("/Admin/{id}/Certificate/Entrer-Formation", [AdminController::class, 
 //     echo "done";
 // });
 
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get("/How-two", function() {
+    return view("home-two");
+});

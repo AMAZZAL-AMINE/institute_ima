@@ -7,6 +7,12 @@
 
 }
 
+footer {
+    background-image: linear-gradient(0deg, rgba(89, 0, 255, 0.466), rgba(23, 1, 82, 0.637)), url('/images/snt.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 body {
     background-color: rgb(255, 255, 255);
     overflow-x: hidden;

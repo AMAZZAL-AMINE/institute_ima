@@ -28,6 +28,7 @@ $formation = Formation::where("id", 1)->first();
   <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
   <!-- Styles -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  @yield("styles")
 </head>
 
 <body>
@@ -96,9 +97,9 @@ $formation = Formation::where("id", 1)->first();
     }
   </style>
 
-  <a class="whatssapiconbottom" target="_blank" href="https://web.whatsapp.com/send?phone=212661-586669&text=hello">
+  <!-- <a class="whatssapiconbottom" target="_blank" href="https://web.whatsapp.com/send?phone=212661-586669&text=hello">
     <i class="bi bi-whatsapp"></i> <span>Avez-vous besoin d'aide?</span>
-  </a>
+  </a> -->
 
 
 
@@ -216,7 +217,7 @@ $formation = Formation::where("id", 1)->first();
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   <script src="{{ asset('/js/script.js') }}"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
+    @yield("scripts")
 </body>
 
 </html>
