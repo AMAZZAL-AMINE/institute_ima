@@ -726,3 +726,158 @@
     border-radius: 3px;
     padding: 5px
 }
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Seymour+One&display=swap');
+
+.certificate {
+    background-color: white;
+    padding: 15px;
+}
+
+
+.certificate .line {
+    border: 5px solid rgb(79, 79, 206);
+}
+.certificate .logo {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.certificate .logo span {
+    font-size: 55px;
+    text-align: center;
+    color: rgba(40, 40, 214, 0.787);
+    font-weight: 900;
+    font-family: 'Seymour One', sans-serif;
+}
+
+.certificate .body_one .title_one p{
+    text-align: center;
+    font-size: 22px;
+    color: rgba(79, 79, 206, 0.787);
+    font-family: 'Seymour One', sans-serif;
+    
+}
+
+.certificate .body_one  .title_bold {
+    font-weight: 700;
+    color: black;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Seymour One', sans-serif;
+}
+
+
+.certificate .body_one .title_formation {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 900;
+    color: rgba(105, 105, 206, 0.787);
+    font-family: 'Seymour One', sans-serif;
+}
+.certificate .body_one .title_description span {
+    color: rgba(15, 15, 187, 0.787);
+    font-weight: 900;
+}
+
+.certificate .body_one .title_description {
+    text-align: center;
+    color: black;
+    font-family: 'Seymour One', sans-serif;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.student-name-and-cin {
+    text-align: center;
+    margin-top: 30px;
+}
+
+
+.student-name-and-cin .studen-name {
+    margin-top: 18px;
+    color: black;
+    font-weight: 900;
+}
+.student-name-and-cin .studen-cin {
+    margin-bottom: 18px;
+    color: black;
+    font-weight: 900;
+    margin-top: 9px;
+}
+
+.student-name-and-cin .linett{
+    border: 1px solid black;
+    width: 50%;
+    text-align: center;
+    margin: auto;
+}
+
+.certifi-bottom  {
+    margin-top: 20px;
+}
+
+ .certifi-bottom .etet {
+    color: rgb(0, 0, 0);
+    margin-top: 15px;
+    font-size: 25px;
+    font-family: 'Seymour One', sans-serif;
+     
+}
+
+.certifi-bottom .etet b {
+    color: rgba(15, 15, 187, 0.787);
+}
+
+.certifi-bottom .tdtd {
+    color: rgb(0, 0, 0);
+    margin-top: 15px;
+    font-size: 25px;
+    font-family: 'Seymour One', sans-serif;
+}
+
+
+.thederectories {
+    position: relative;
+    color: black;
+    text-align: center;
+     margin-left: 50%;
+     margin-top: -30px;
+     
+
+}
+.thederectories h2 {
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Seymour One', sans-serif;
+}
+
+.desc-footer {
+    text-align: center;
+    margin-top: 35px; 
+    line-height: 1rem;
+    color: black;
+    font-family: 'Seymour One', sans-serif;
+}
+
+.desc-footer .sholdbeboldbr {
+    font-weight: bold;
+}
+
+
+.certificate-footer {
+    text-align: center;
+    font-size: 12px;
+    color: #7d75eb;
+}

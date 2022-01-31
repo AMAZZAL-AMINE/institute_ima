@@ -308,6 +308,7 @@
                     <th scope="col">Prix</th>
                     <th scope="col">Date De Payment</th>
                     <th scope="col" >Edit</th>
+                    <th scope="col" >Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -318,6 +319,15 @@
                     <td>{{ $stud->created_at->format('Y-m-d') }}</td>
                     @if (Auth::check() && auth()->user()->is_admin_pro === "yes")
                         <td> <a class="btn btn-outline-primary" href="{{ route("admin.update.payment.page",$stud->id) }}"><i class="fa fa-edit" aria-hidden="true"></i></a> </td>                        
+                    @endif
+                    @if (Auth::check() && auth()->user()->is_admin_pro === "yes")
+                        <td> 
+                            <form method="post" action="{{ Route("admin.delete.payment",$stud->id) }}">
+                                @csrf
+                                @method("DELETE")
+                                <button class="btn btn-danger type="submit"><i class="fa fa-trash" aria-hidden="true"></i></button>
+                            </form>    
+                        </td>                        
                     @endif
                 </tr>
                 @endforeach

@@ -12,17 +12,17 @@
             <div class="body_one">
                 <div class="title_one"><p>INSTITUT PRATIQUE DES HAUTES ETUDES COMMERCIALE</p></div>
                 <div class="title_bold">CERTIFICAT DE FORMATION</div>
-                <div class="title_formation">{{ $formation }}</div>
+                <div class="title_formation">LANGUE FRANCAISE ET ANGLAISE</div>
                 <div class="title_description">Mr. le directeur de l’institut <span>IPHEC</span> de formation professionnelle Atteste par la présente</div>
             </div>
             <div class="student-name-and-cin">
                 <div class="linett"></div>
-                    <div class="studen-name">Mr (Mlle, Mme) : <span> {{ $student->fname }} {{ $student->lname }}</span></div>
-                    <div class="studen-cin">CIN :<span> {{ $student->cin }}</span></div>
+                    <div class="studen-name">Mr (Mlle, Mme) : <span> SIHAM ELGMOUDI</span></div>
+                    <div class="studen-cin">CIN <span>JK28309</span></div>
                 <div class="linett"></div>
             </div>
             <div class="certifi-bottom">
-                <span class="etet">A terminé une formation en <b>{{ $formation }}</b></span>
+                <span class="etet">A terminé une formation en <b> LANGUE FRANCAISE ET ANGLAISE</b></span>
                 <div class="tdtd">Dans le cadre de la formation continue et ce pour une période de six mois de l’année scolaire <b>2002/2001</b></div>
             </div>
 
@@ -46,5 +46,21 @@
       </div>
     </div>
 
+    <script>
+        function printDiv(data) {
+            var printContents = document.getElementById(data).innerHTML;
+            var mywindow = window.open('', 'new div', 'height=400,width=600');
+            mywindow.document.write('<html><head><title></title>');
+            mywindow.document.write('<link rel="stylesheet" href="css/midday_receipt.css" type="text/css" />');
+            mywindow.document.write('</head><body >');
+            mywindow.document.write(printContents);
+            mywindow.document.write('</body></html>');
+            mywindow.document.close();
+            mywindow.focus();
+            setTimeout(function(){mywindow.print();},5000);
+            mywindow.close();
 
+            return true;
+        }
+    </script>
 @endsection

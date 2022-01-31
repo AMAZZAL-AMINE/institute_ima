@@ -151,11 +151,18 @@ Route::put("/Admin/{id}'Update/Absence", [AdminController::class, 'updateStudent
 // page to update student payment
 Route::get("/Admin/{id}/Update-Payment", [AdminController::class, 'updateStudentPyamntPage'])->name("admin.update.payment.page");
 
+
+//delete payment 
+Route::delete("/Admin/{id}/Delete/Pyamnet", [AdminController::class, 'deleteStudentPyamnt'])->name("admin.delete.payment");
+
+
 //set update in database of payment monht
 Route::put("/Admin/{id}/Update-Payment-Save", [AdminController::class, 'updateStudentPayment'])->name("studnet.update.payment");
 
 
 Route::get("/Admin/{id}/Certificate/Entrer-Formation", [AdminController::class, 'certificateFormation'])->name("admin.student-certificate.formationfr");
+
+
 
 //invoice testing to ge listElement
 // ==========================END ROUTE ADMIN  ==============================
@@ -240,6 +247,8 @@ Route::get("/Admin/{id}/Certificate/Entrer-Formation", [AdminController::class, 
 
 
 
-Route::get("/How-two", function() {
-    return view("home-two");
+Route::get("/Home-Xertificate", function() {
+    return view("admin.ijaz.certificate");
 });
+
+

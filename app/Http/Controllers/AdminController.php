@@ -969,4 +969,24 @@ class AdminController extends Controller
         //return to page print certificate with data of student;
         return view("admin.deplom.certificate", compact('student', 'formation'));
     }
+
+
+
+
+
+
+
+
+    //deleting the payment 
+    public function deleteStudentPyamnt($id) {
+        $payment = PayedMonth::findOrFail($id);
+        $payment->delete();
+        return back()->with([
+            'message' => 'Paiement Deleted Successfuly',
+        ]);
+    }
+
+
+
+
 }
