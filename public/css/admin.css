@@ -742,19 +742,19 @@
 
 .certificate {
     background-color: white;
-    padding: 15px;
+    padding: 55px;
 }
 
 
-.certificate .line {
+.line {
     border: 5px solid rgb(79, 79, 206);
 }
-.certificate .logo {
+.logo {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.certificate .logo span {
+ .logo span {
     font-size: 55px;
     text-align: center;
     color: rgba(40, 40, 214, 0.787);
@@ -762,7 +762,7 @@
     font-family: 'Seymour One', sans-serif;
 }
 
-.certificate .body_one .title_one p{
+ .body_one .title_one p{
     text-align: center;
     font-size: 22px;
     color: rgba(79, 79, 206, 0.787);
@@ -770,7 +770,7 @@
     
 }
 
-.certificate .body_one  .title_bold {
+ .body_one  .title_bold {
     font-weight: 700;
     color: black;
     text-align: center;
@@ -779,19 +779,19 @@
 }
 
 
-.certificate .body_one .title_formation {
+ .body_one .title_formation {
     text-align: center;
     font-size: 35px;
     font-weight: 900;
     color: rgba(105, 105, 206, 0.787);
     font-family: 'Seymour One', sans-serif;
 }
-.certificate .body_one .title_description span {
+ .body_one .title_description span {
     color: rgba(15, 15, 187, 0.787);
     font-weight: 900;
 }
 
-.certificate .body_one .title_description {
+ .body_one .title_description {
     text-align: center;
     color: black;
     font-family: 'Seymour One', sans-serif;

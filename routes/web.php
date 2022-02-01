@@ -247,8 +247,8 @@ Route::get("/Admin/{id}/Certificate/Entrer-Formation", [AdminController::class, 
 
 
 
-Route::get("/Home-Xertificate", function() {
-    return view("admin.ijaz.certificate");
-});
+// Route::get("/Home-Xertificate", function() {
+//     return view("admin.ijaz.certificate");
+// });
 
 
