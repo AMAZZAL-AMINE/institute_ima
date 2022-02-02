@@ -394,6 +394,9 @@
         <a class="btn btn-outline-success w-100 mt-1" href=""> <i class="fa fa-print" aria-hidden="true"></i> Print Deplom </a>
    </div>
 
+   @if($student->apcens->count() === 0)
+        <h2>No Absence for this brother</h2>      
+   @endif
 </div>
 </div>
 @endsection

@@ -69,8 +69,9 @@
             WindowObject.focus();
             setTimeout(() => {
                 WindowObject.print();
+                window.close();
             }, 500);
-         
+           
         }
     </script>
 @endsection
