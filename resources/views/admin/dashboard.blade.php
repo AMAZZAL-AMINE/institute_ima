@@ -127,7 +127,7 @@
                                     src="https://cdni.iconscout.com/illustration/premium/thumb/website-programming-2496188-2107745.png" alt="...">
                             </div>
                             <p>Créer Un Deplom Pour Etudiant</p>
-                            <a class="btn btn-primary"  rel="nofollow" href="{{ route("admin.deplom") }}"> <i class="fa fa-table" aria-hidden="true"></i> Gérez les salles &rarr;</a>
+                          
                         </div>
                     </div>
 

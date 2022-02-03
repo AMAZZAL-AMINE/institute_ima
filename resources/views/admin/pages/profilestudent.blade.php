@@ -391,7 +391,7 @@
     <h1 class=" font-weight-bold text-dark mb-2">Deplom & Certificate</h1>
    <div class="mb-5 mt-5">
         <a class="btn btn-outline-primary w-100" href="{{ route("admin.student-certificate.formationfr", $student->id) }}"> <i class="fa fa-print" aria-hidden="true"></i> Print Certificate</a>
-        <a class="btn btn-outline-success w-100 mt-1" href=""> <i class="fa fa-print" aria-hidden="true"></i> Print Deplom </a>
+        <a class="btn btn-outline-success w-100 mt-1" href="{{ Route("admin.deplom", $student->id) }}"> <i class="fa fa-print" aria-hidden="true"></i> Print Deplom </a>
    </div>
 
    @if($student->apcens->count() === 0)

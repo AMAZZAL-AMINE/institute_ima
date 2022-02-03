@@ -126,11 +126,11 @@ Route::get("/Admin/Iphec/Lemlpoi/{id}", [AdminController::class, 'editowIphec'])
 Route::put("/Admin/Iphec/Update/Lemlpoi/{id}", [AdminController::class, 'updateLemploiiphec'])->name("admin.lemploi.save.iphec");
 Route::get("/Admin/Send-Sms", [SmsController::class, 'index']);
 ///////////////Deplome////////////////////////////////
-Route::get("/Admin/Create-Deplom", [AdminController::class, 'deplom'])->name("admin.deplom");
+Route::get("/Admin/{id}/Create-Deplom", [AdminController::class, 'deplom'])->name("admin.deplom");
 Route::get("/Admin/{id}/Create-Certificate", [AdminController::class, 'createCertificate'])->name("admin.createCertificate");
 //rout inser data of deplom and return to page print deplom 
-Route::get("/Admin/Print-Deplom", [AdminController::class, 'createDeplom'])->name("admin.print.deplom");
-Route::post("/Admin/Deplom", [AdminController::class, 'createDeplom'])->name("admin.print.deplom.data");
+Route::get("/Admin/{id}/Print-Deplom", [AdminController::class, 'createDeplom'])->name("admin.print.deplom");
+Route::post("/Admin/{id}/Deplom", [AdminController::class, 'createDeplom'])->name("admin.print.deplom.data");
 //List Dattent
 // Route::get("/Admin/Add-Student-To-List-Dattent", [AdminController::class, 'addStudentToListDattent'])->name("admin.add.nes.listdaatent");
 //============================================================================

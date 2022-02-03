@@ -881,3 +881,155 @@
     font-size: 12px;
     color: #7d75eb;
 }
+/* 
+
+
+
+
+
+
+
+
+.deplome {
+    background-color: #fff;
+}
+
+.deplome .deplom-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+.deplome .deplom-header img {
+    width: 150px;
+}
+
+.deplome .deplom-header  .the-titelee {
+    color: black;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+.deplome .deplom-body .first-txt {
+    display: flex;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-between;
+    margin-top: 20px;
+
+    
+}
+.deplome .deplom-body .first-txt .xtxt-fr {
+     
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.deplome .deplom-body .first-txt .xtxt-ar {
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+.deplome .deplom-body  .deplom-atteste {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+}
+
+.deplome .deplom-body  .deplom-atteste .attesnt-fr {
+    font-size: 22px;
+    color: black;
+}
+
+.deplome .deplom-body  .deplom-atteste .attesnt-ar {
+    font-size: 22px;
+    color: black;
+}
+
+.deplome .deplom-body  .deplom-atteste .attesnt-ar .attest-title {
+    font-weight: 600;
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+
+.deplome .deplom-body  .deplom-atteste .attesnt-fr .attest-title {
+    font-weight: 600;
+}
+
+.deplome .deplom-body  .deplom-atteste .attesnt-fr .attest-desc {
+    font-weight: 900;
+    margin-left: 90px;
+    margin-top: 20px;
+}
+
+
+.deplome .deplom-body  .deplom-atteste .attesnt-ar .attest-desc {
+    font-weight: bold;
+    margin-right: 90px;
+    margin-top: 30px;
+  
+}
+
+.aness {
+    display: flex;
+    justify-content: space-between;
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    margin-top: 10px;
+    color: black;
+}
+
+.aness .aness-fr {
+    font-weight: 900;
+    display: flex;
+}
+.aness .aness-fr b {
+    margin-left:40px;
+}
+.aness .aness-ar {
+    font-weight: 900;
+    display: flex;
+    text-align: right;
+}
+.aness .aness-ar b {
+    margin-right:40px;
+}
+
+.kopnhngnhikiurplkkjinjguhin {
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.deplome .deplom-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.deplome .deplom-footer .center-descriptoinf p {
+    text-align: center;
+    color: rgb(146, 166, 255);
+    font-size: 15px;
+    font-weight: 900;
+    margin-left: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.deplome .deplom-footer .center-descriptoinf p span {
+    font-size: 23px;
+}
+
+.deplome .deplom-footer .derectedsdh {
+    margin-left: 150px;
+    text-align: center;
+    color: black;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+} */

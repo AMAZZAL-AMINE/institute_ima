@@ -781,56 +781,7 @@ class AdminController extends Controller
 
 
     //insert the data of deplom to database and return with data to print deplom page
-    public function  createDeplom(Request $request)
-    {
 
-        //data request from inputs
-        $name_fr = $request->name_fr;
-        $name_ar = $request->name_ar;
-        $berth = $request->deplom_berth;
-        $cin = $request->deplom_cin;
-        $formation_fr = $request->formation_fr;
-        $formation_ar = $request->formation_ar;
-        $promotion = $request->promotion;
-        $moi_fr = $request->moi_fr;
-        $moi_ar = $request->moi_ar;
-        $etablis_fr = $request->etabliesmant_fr;
-        $etablis_ar = $request->etabliesmant_ar;
-        $fit_at = $request->fiat_a;
-
-        $deplom = new Deplom;
-
-        $deplom->create(
-            [
-                "name_fr" => $name_fr,
-                "namr_ar" => $name_ar,
-                "berth" => $berth,
-                "cin" => $cin,
-                "formation_fr" => $formation_fr,
-                "formation_ar" => $formation_ar,
-                "promotion" => $promotion,
-                "moi_fr" => $moi_fr,
-                "moi_ar" => $moi_ar,
-                "etabl_fr" => $etablis_fr,
-                "etabl_ar" => $etablis_ar,
-                "fit_a" => $fit_at,
-            ]
-        );
-        return view('admin.deplom.print', compact(
-            'name_fr',
-            'name_ar',
-            'berth',
-            'cin',
-            'formation_fr',
-            'formation_ar',
-            'promotion',
-            'moi_fr',
-            'moi_ar',
-            'etablis_fr',
-            'etablis_ar',
-            'fit_at',
-        ));
-    }
 
 
 
@@ -944,9 +895,10 @@ class AdminController extends Controller
     }
 
     //function deplome
-    public function deplom()
+    public function deplom($id)
     {
-        return view("admin.deplom.deplom");
+        $student = Student::findOrFail($id);
+        return view("admin.deplom.deplom", compact('student'));
     }
 
 
@@ -987,6 +939,42 @@ class AdminController extends Controller
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public function  createDeplom(Request $request, $id) {
+
+        $student = Student::findOrFail($id);
+
+        //data request from inputs
+        $name_ar = $request->name_ar;
+        $formation_fr = $request->formation_fr;
+        $formation_ar = $request->formation_ar;
+        $deplom = new Deplom;
+
+
+        return view('admin.deplom.print', compact(
+            'name_ar',
+            'formation_fr',
+            'formation_ar',
+            'student',
+        ));
+    }
 
 
 }
