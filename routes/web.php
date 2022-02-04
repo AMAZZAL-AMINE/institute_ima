@@ -163,6 +163,9 @@ Route::put("/Admin/{id}/Update-Payment-Save", [AdminController::class, 'updateSt
 Route::get("/Admin/{id}/Certificate/Entrer-Formation", [AdminController::class, 'certificateFormation'])->name("admin.student-certificate.formationfr");
 
 
+//fin de fomation
+Route::post("/Admin/Student/{id}/Fin-Fomration", [AdminController::class, 'finFormation'])->name("admin.fin.formation");
+
 
 //invoice testing to ge listElement
 // ==========================END ROUTE ADMIN  ==============================
@@ -241,14 +244,15 @@ Route::get("/Admin/{id}/Certificate/Entrer-Formation", [AdminController::class, 
 
 
 
-
-
-
-
-
+Route::get("/F/{if}", function($id) {
+    $student = Student::find($id);
+    foreach($student->payedmounth as $f) {
+        if(!$student->finformation) {
+            echo $f->prix;
+        }
+    }
+});
 
 // Route::get("/Home-Xertificate", function() {
 //     return view("admin.ijaz.certificate");
-// });
-
-
+// });   echo $f->prix."DH <br> ";

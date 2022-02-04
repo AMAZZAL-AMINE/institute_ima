@@ -41,7 +41,7 @@ class Student extends Model
 
     //relationship students payments
     public function allpayments() {
-        return $this->hasMany(AllStudentPayments::class, 'student_id');
+        return $this->hasMany(AllStudentPayments::class);
     }
 
 
@@ -50,5 +50,8 @@ class Student extends Model
         return $this->hasMany(Absence::class, 'student_id');
     }
 
+    public function finformation() {
+        return $this->hasOne(FinFormation::class);
+    }
     
 }

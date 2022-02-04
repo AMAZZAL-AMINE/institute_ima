@@ -10,6 +10,7 @@ use App\Models\Student;
 use App\Models\Formation;
 use App\Models\LemploiIma;
 use App\Models\PayedMonth;
+use App\Models\FinFormation;
 use App\Models\IsImaOrIphec;
 use App\Models\LemploiIphec;
 use Illuminate\Http\Request;
@@ -976,5 +977,25 @@ class AdminController extends Controller
         ));
     }
 
+
+
+
+    
+
+
+    //fin formation contr
+    public function finFormation($id) {
+        $student = Student::findOrFail($id);
+        $finformation = new FinFormation;
+        $finformation->create([
+           "student_id"=> $student->id, 
+        ]);
+
+        return back()->with(
+            [
+                "message" => "Done! Cet étudiant a terminé sa formation"            
+            ]
+        );
+    }       
 
 }
