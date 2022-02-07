@@ -1,3 +1,9 @@
+<?php 
+    use App\Models\Formation;
+    $formations = Formation::all();
+
+?>
+
 @extends("layouts.admin")
 
 @section("content")
@@ -16,6 +22,16 @@
                     <div> <b>Custom Filter Search</b> </div>
                     <div>
                         <form action="{{ route("search.with.paymnets") }}" method="get"> 
+
+                            <select name="formation" class="w-50"  id="day">
+                                <option value="allfromations">Touts Les Fromations</option>
+                                @foreach ($formations as $froma)
+                                 <option value="{{ $froma->name }}">{{ $froma->name }}</option>
+                                @endforeach     
+                               
+                            </select>    
+
+                        
                             <select name="day" id="day">
                                 <option value="">Jour</option>
                                 <?php

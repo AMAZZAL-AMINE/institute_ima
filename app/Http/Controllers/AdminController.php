@@ -787,21 +787,36 @@ class AdminController extends Controller
 
 
     //search by the day from table pyment  month
-    public function searchWithDateInPayments(Request $request)
-    {
+    public function searchWithDateInPayments(Request $request) {
         $day = $request->day;
         $month = $request->month;
         $year = $request->year;
-
-        $payments =  PayedMonth::whereMonth('created_at', '=', $month)
+        $formation = $request->formation;
+        
+        if($formation === "allfromations") {
+            $payments =  PayedMonth::whereMonth('created_at', '=', $month)
             ->whereDay('created_at', '=', $day)
             ->whereYear('created_at', '=', $year)->get();
 
-        return view("admin.pages.allpayments", compact('payments', "day", "month", "year"))->with(
-            [
-                "thealert" => "active"
-            ]
-        );
+            return view("admin.pages.allpayments", compact('payments', "day", "month", "year"))->with(
+                [
+                    "thealert" => "active"
+                ]
+            );
+        }else {
+            $payments =  PayedMonth::whereMonth('created_at', '=', $month)
+            ->where("formation", '=', $formation)
+            ->whereDay('created_at', '=', $day)
+            ->whereYear('created_at', '=', $year)->get();
+
+            return view("admin.pages.allpayments", compact('payments', "day", "month", "year"))->with(
+                [
+                    "thealert" => "active"
+                ]
+            );
+        }
+
+
     }
 
 
