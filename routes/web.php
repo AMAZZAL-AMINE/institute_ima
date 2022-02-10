@@ -167,6 +167,9 @@ Route::get("/Admin/{id}/Certificate/Entrer-Formation", [AdminController::class, 
 Route::post("/Admin/Student/{id}/Fin-Fomration", [AdminController::class, 'finFormation'])->name("admin.fin.formation");
 
 
+//deleting students
+Route::delete("/Admin/Student/{id}/Delete/", [AdminController::class, 'deleteStudent'])->name("admin.delete.student");
+
 //invoice testing to ge listElement
 // ==========================END ROUTE ADMIN  ==============================
 

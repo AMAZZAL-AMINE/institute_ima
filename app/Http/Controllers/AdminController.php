@@ -1013,4 +1013,23 @@ class AdminController extends Controller
         );
     }       
 
+
+
+
+
+    //deleting students
+    public function deleteStudent($id) {
+        $student = Student::findOrFail($id);
+        PayedMonth::where("student_id", $student->id)->delete();
+        AllStudentPayments::where("student_id", $student->id)->delete();
+        $student->delete();
+
+        return back()->with(
+            [
+                "message" => "L'élève a été supprimé avec succès"
+            ]
+        );
+    }
+
+
 }
