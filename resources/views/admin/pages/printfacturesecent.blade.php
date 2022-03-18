@@ -68,10 +68,10 @@
             </div>
 
             <div class="invoicefooter">
-                <div><h2>Copyright<?php echo date("Y") ?><i class="fa fa-copyright"></i> Institute-Ima.ma</h2></div>
+                <div><h2>Copyright<?php echo date("Y") ?><i class="fa fa-copyright"></i> iot-Formations.com</h2></div>
                 <div><b><i class="fab fa-whatsapp"></i> : +212 626-400022 | <i class="fas fa-phone-alt"></i> : 05282-39873</b></div>
                 <div><b><i class="fab fa-whatsapp"></i> : +212 661586669 / 0629732615 | <i class="fas fa-phone-alt"></i> : 0528238703</b></div>
-                <div><b>Institute-Ima@gmail.com</b></div>
+                <div><b>iot.formationsIma@gmail.com</b></div>
             </div>
         </div> 
    </div>

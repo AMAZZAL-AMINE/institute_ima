@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('isactiveseven', 'active')
 @section('content')
-
+<link rel="stylesheet"  href="{{ asset("/css/style.css") }}">
 <div class="container">
     <style>
         .ima_navbar .navList .active {
@@ -12,7 +12,7 @@
 
     <div class="loginformforstudent">
         <div class="loginformimg">
-            <img src="/images/login.jpg" alt="">
+            <img src="/images/homa.jpg"  >
         </div>
         <div class="loginformrealform">
             <form action="{{ route("login") }}" method="post">

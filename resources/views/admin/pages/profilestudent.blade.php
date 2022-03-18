@@ -4,7 +4,8 @@
 <div class="container">
     <div class="topheaderprofile">
         <div class="addbackgroungdark" style="text-align: center; font-size: 25px;color: white;">
-            {{ strtoupper($institute->institute) }}</div>
+            IOT-FORMATIONS
+        </div>
         <div class="studentprofileimg">
             <div class="img">
                 <img src="{{ asset("/storage/".$student->image) }}" alt="">

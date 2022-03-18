@@ -95,10 +95,9 @@ class AdminController extends Controller
     {
         $student = Student::findOrFail($id);
         $mounths = PayedMonth::where("student_id", $id)->get();
-        $institute = IsImaOrIphec::where("student_id", $id)->first();
         $absences = Absence::where("student_id", $student->id)->orderBy('month', 'asc')->get();
         $formations = Formation::all();
-        return  view("admin.pages.profilestudent", compact("student", "mounths", "institute", "absences", "formations"));
+        return  view("admin.pages.profilestudent", compact("student", "mounths","absences", "formations"));
     }
 
     //accepted user to be student
@@ -118,7 +117,6 @@ class AdminController extends Controller
                 "prix_iscription" => "required",
                 "prix_firstmonth" => "required",
                 "month" => "required",
-                "isiphicorima" => "required",
             )
         );
         $student = Student::find($id);
@@ -164,13 +162,6 @@ class AdminController extends Controller
             )
         );
 
-        $chosecenter = new IsImaOrIphec;
-        $chosecenter->create(
-            array(
-                "student_id" => $student->id,
-                "institute" => $data['isiphicorima'],
-            )
-        );
 
         return back()->with(
             array(
@@ -382,8 +373,7 @@ class AdminController extends Controller
         $allpayment = AllStudentPayments::where("student_id", $student->id)->get();
         $allmonth = Month::all();
         $months = PayedMonth::where("student_id", $id)->get();
-        $institute = IsImaOrIphec::where("student_id", $id)->first();
-        return view("admin.pages.newpayfacturmonth", compact('student', 'months', 'institute', 'allmonth', "allpayment"));
+        return view("admin.pages.newpayfacturmonth", compact('student', 'months','allmonth', "allpayment"));
     }
 
     //insert all data of payment of user to database
@@ -505,8 +495,8 @@ class AdminController extends Controller
         $student = Student::findOrFail($id);
         $month = PayedMonth::where("student_id", $id)->orderBy('id', 'DESC')->first();
 
-        $institute = IsImaOrIphec::where("student_id", $id)->first();
-        return view("admin.pages.printfacturesecent", compact("student", "month", "institute"));
+        
+        return view("admin.pages.printfacturesecent", compact("student", "month"));
     }
 
     //get all payments of students in one table
@@ -953,20 +943,6 @@ class AdminController extends Controller
             'message' => 'Paiement Deleted Successfuly',
         ]);
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

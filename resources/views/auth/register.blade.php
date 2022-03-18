@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('isactiveseven', 'active')
 @section('content')
+<link rel="stylesheet"  href="{{ asset("/css/style.css") }}">
 <style>
     .ima_navbar .navList .active {
         color: orange;
@@ -9,7 +10,7 @@
 <div class="container">
     <div class="registeruseraccont">
         <div class="registerleftimg">
-            <img src="/images/register.png" alt="ima register">
+            <img src="/images/homa.jpg" alt=" register">
         </div>
         <div class="registerformssss">
             <form method="POST" action="{{ route('register') }}">

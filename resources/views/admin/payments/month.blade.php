@@ -42,7 +42,7 @@
                                 @foreach ($payedmonths as $student)
                                 <?php $message = "Bonjour $student->name , j'espère que vous allez bien, le moment du paiement est arrivé.*Institute Ima pour les formations Privé*." ?>
                                 @if($student->updated_at->diffForHumans() == "1 month ago" OR $student->updated_at->diffForHumans() == "2 months ago" OR $student->updated_at->diffForHumans() == "4 weeks ago")
-                                    @if(!$student->students->finformation)
+                                    <!-- @if(!$student->students->finformation)
                                         <tr>
                                             <td>{{ $student->students->fname }} {{ $student->students->lname }}</td>
                                             <td>{{ $student->cin }}</td>
@@ -51,7 +51,7 @@
                                             <td><a class="btn btn-success" href="https://wa.me/{{ $student->students->phone }}?text={{ $message }}" target="_blank"><i class="fab fa-whatsapp"></i> Message Via WhatsApp </a></td>
                                             <td><a class="btn btn-primary"href="{{ route("payment-store.data.new.month",$student->student_id) }}"><i class="fas fa-money-check-alt"></i> Payer Facture</a></td> 
                                         </tr>
-                                    @endif
+                                    @endif -->
                                 @endif
                                 @endforeach
                             </tbody>

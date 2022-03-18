@@ -8,11 +8,12 @@ use App\Models\PayedMonth;
 use App\Models\IsImaOrIphec;
 use App\Models\AllStudentPayments;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\EditProfile;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SmsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\InstriptionController;
-use App\Http\Controllers\SmsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,7 +39,7 @@ Route::get("/List-Des-Formations/{slug}", [HomeController::class, 'listFormation
 //contact page
 Route::get("/Contact-Nous", [HomeController::class, 'contactUs'])->name('contact.us');
 //blog page
-Route::get("/Ima-Blog", [HomeController::class, 'blog'])->name('blog');
+
 //inscription page
 Route::get("/Student-Inscription", [InstriptionController::class, 'studentInscription'])->name("student.inscription");
 //profiel student
@@ -169,6 +170,15 @@ Route::post("/Admin/Student/{id}/Fin-Fomration", [AdminController::class, 'finFo
 
 //deleting students
 Route::delete("/Admin/Student/{id}/Delete/", [AdminController::class, 'deleteStudent'])->name("admin.delete.student");
+
+
+//get admins users;
+Route::get("/Admin/Admin-users", [EditProfile::class, 'getUsers'])->name("admin.users");
+//edit user admin data 
+Route::get("/Admin/{id}/Edit-User-Data", [EditProfile::class, 'EditUserAdmin'])->name("admin.edit_profile");
+//store admin data 
+Route::put("/Admin/{id}/Store-Data", [EditProfile::class, 'storeUserProfile'])->name("admin.edit.data.store");
+
 
 //invoice testing to ge listElement
 // ==========================END ROUTE ADMIN  ==============================

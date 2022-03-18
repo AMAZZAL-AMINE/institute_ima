@@ -33,7 +33,7 @@
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-        <div class="sidebar-brand-text mx-3">Ima Admin </div>
+        <div class="sidebar-brand-text mx-3">IOT-Admin </div>
       </a>
 
       <!-- Divider -->
@@ -217,6 +217,11 @@
               </a>
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+              @if (auth()->user()->is_admin_pro === "yes")
+                <a class="dropdown-item" href="{{ route("admin.users") }}">
+                  <button class="btn btn-default"type="submit">All Users Admin Profiles</button> 
+                </a>
+              @endif
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                     <form action="{{ route("logout") }}" method="post">

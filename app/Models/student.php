@@ -31,7 +31,7 @@ class Student extends Model
 
     //relationship to payedmounth table model
     public function payedmounth() {
-        return $this->hasMany(PayedMonth::class);
+        return $this->hasMany(PayedMonth::class, 'student_id');
     }
 
     //relation ship to what is unstitute

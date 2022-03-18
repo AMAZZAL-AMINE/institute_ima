@@ -1,12 +1,9 @@
 @extends("layouts.app")
 
 @section('content')
+<link rel="stylesheet"  href="{{ asset("/css/style.css") }}">
 <div class="container">
-
     @if(auth()->user()->students()->count() === 0)
-    <div class="inscriptiontoptitle">
-        <h1>Inscription</h1>
-    </div>
     <div class="inscriptionformsall">
         <form action="{{ route('admin.insertdatauser') }}" method="post" enctype="multipart/form-data">
             @csrf

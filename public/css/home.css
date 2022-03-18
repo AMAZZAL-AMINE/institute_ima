@@ -1,0 +1,552 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+#app {
+    margin-top: 0;
+}
+.navbar_ {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    z-index: 9999;
+}
+
+.navbar_ .nva__logo img {
+    width: 150px;
+}
+.navbar_ .nav__list ul li {
+    float: left;
+    list-style: none;
+    margin-left: 20px;
+}
+.navbar_ .nav__list ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.navbar_ .register__ .register_button {
+    text-decoration: none;
+    background: rgb(255, 171, 171);
+    background: linear-gradient(
+        351deg,
+        rgba(255, 171, 171, 1) 0%,
+        rgba(255, 47, 47, 1) 100%
+    );
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    text-align: center;
+    transition: 0.5 s;
+}
+
+.navbar_ .register__ .register_button:hover {
+    background: rgb(252, 87, 87);
+    background: linear-gradient(
+        351deg,
+        rgba(252, 87, 87, 1) 0%,
+        rgba(255, 47, 47, 1) 100%
+    );
+}
+
+.banner_section {
+    height: 80vh;
+    width: 100%;
+
+    display: flex;
+    background: #c04848; /* fallback for old browsers */
+    background: linear-gradient(rgb(72, 0, 72, 0.8), rgb(192, 72, 72, 0.8)),
+        url("/images/bg1.png");
+    background: linear-gradient(rgb(72, 0, 72, 0.8), rgb(192, 72, 72, 0.8)),
+        url("/images/bg1.png");
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+}
+
+.banner_section .sextion_banner_text {
+    max-width: 590px;
+    margin-left: 100px;
+}
+.banner_section .sextion_banner_text p {
+    color: white;
+    font-size: 40px;
+}
+.banner_section .sextion_banner_text h1 {
+    font-weight: 900;
+    font-size: 70px;
+    color: rgb(255, 0, 0);
+    border-left: 1px solid white;
+    border-top: 1px solid white;
+    padding-left: 10px;
+}
+
+.banner_section .sextion_banner_text button {
+    text-decoration: none;
+    background: rgb(255, 171, 171);
+    background: linear-gradient(
+        351deg,
+        rgba(255, 171, 171, 1) 0%,
+        rgba(255, 47, 47, 1) 100%
+    );
+    color: white;
+    padding: 10px;
+    border-radius: 50px;
+    text-align: center;
+    transition: 0.5 s;
+    border: none;
+    width: 300px;
+}
+
+.aboutus_section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.aboutus_section .about_img img {
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    width: 100%;
+}
+
+.aboutus_section .about_desc {
+    max-width: 500px;
+}
+
+.aboutus_section .about_desc h2 {
+    color: red;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.aboutus_section .about_desc p {
+    font-size: 19px;
+    text-align: justify;
+    color: #2c2626;
+}
+
+.aboutus_title {
+    text-align: center;
+    margin-top: 30px;
+    color: blue;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.aboutus_title::before {
+    content: "About";
+
+    background: red;
+    width: 100%;
+    padding: 10px;
+    color: white;
+}
+.aboutus_title::after {
+    content: "Us";
+    background: rgb(244, 244, 253);
+
+    width: 100%;
+    padding: 10px;
+    color: rgb(255, 0, 0);
+}
+
+.services_title {
+    text-align: center;
+    margin-top: 30px;
+    color: blue;
+    font-size: 38px;
+    font-weight: bold;
+}
+
+.services_title::before {
+    content: "Nous";
+
+    background: red;
+    width: 100%;
+    padding: 10px;
+    color: white;
+}
+.services_title::after {
+    content: "Services";
+    background: rgb(244, 244, 253);
+
+    width: 100%;
+    padding: 10px;
+    color: rgb(255, 0, 0);
+}
+
+.allservices {
+    margin-top: 14px;
+}
+
+.timeline {
+    position: relative;
+    max-width: 1200px; /* Restrict the width on large screens */
+    margin: 0 auto; /* Center the content */
+    padding: 30px;
+}
+
+.timeline::after {
+    content: "";
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.containnner {
+    position: relative;
+    width: 50%;
+}
+.container-left {
+    left: 0;
+}
+.container-right {
+    left: 50%;
+}
+
+.content {
+    padding: 30px;
+    background-color: white;
+    position: relative;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.containnner .content::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 40px;
+    width: 0;
+    z-index: 1;
+    border: medium solid white;
+    right: -10px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.containnner .content::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 20px;
+    width: 0;
+    z-index: 1;
+    border: medium solid white;
+}
+.container-left .content::before {
+    right: -10px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+.container-right .content::before {
+    left: -10px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.container-left {
+    /* Existing styles here */
+    padding-right: 70px;
+}
+.container-right {
+    /* Existing styles here */
+    padding-left: 70px;
+}
+
+.image {
+    width: 90px;
+    height: 90px;
+    background-size: cover;
+    background-position: center;
+    border: solid 5px #ffffff;
+    border-radius: 50px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+    position: absolute;
+}
+.container-left .image {
+    right: 0;
+    margin-right: -45px;
+}
+.container-right .image {
+    left: 0;
+    margin-left: -45px;
+}
+
+.image {
+    /* Existing styles here */
+    z-index: 2;
+}
+
+.containnner {
+    /* Existing styles here */
+    min-height: 120px;
+}
+
+.container-left {
+    /* Existing styles here */
+    text-align: right;
+}
+.container-right {
+    /* Existing styles here */
+    text-align: left;
+}
+
+.content span {
+    color: #2c7a7b;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+.content h2 {
+    font-size: 1.8em;
+    padding-top: 5px;
+}
+.content p {
+    line-height: 1.6;
+    padding-top: 5px;
+}
+
+.containnner {
+    /* Existing styles here */
+    z-index: 3;
+}
+
+@media screen and (max-width: 767px) {
+    .containnner {
+        width: 100%;
+        padding-left: 100px;
+        padding-right: 0px;
+    }
+    .container-right {
+        left: 0%;
+    }
+    .container-left {
+        text-align: left;
+    }
+    .containnner {
+        /* Existing styles here */
+        margin-top: 30px;
+    }
+    .container:first-of-type {
+        margin-top: 0px;
+    }
+
+    .containnner .image {
+        left: -10px;
+        top: 0px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .container-left .content::before {
+        left: -10px;
+        right: auto;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+}
+
+/* All Css Responsive Styles */
+
+.navbar_ .nav__list ul li a:hover {
+    color: red;
+}
+
+.closebutton .bi {
+    position: absolute;
+    color: black;
+    font-size: 45px;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    display: none;
+}
+@media only screen and (max-width: 614px) {
+    .navbar_ .nav__list ul:before {
+        content: "";
+        /* border-left: 1px solid lightgray;
+      border-right: 1px solid lightgray; */
+        width: 100%;
+        height: 20px;
+        background: rgb(255, 108, 108);
+    }
+
+    .closebutton .bi {
+        display: flex;
+    }
+
+    .navbar_ .nav__list ul:after {
+        content: "";
+        /* border-left: 1px solid lightgray;
+      border-right: 1px solid lightgray; */
+        width: 100%;
+        height: 20px;
+        background: rgb(255, 85, 85);
+    }
+    .navbar_ .nav__list {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        z-index: 9999;
+        left: 100000px;
+    }
+
+    .navbar_ .nav__list ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .navbar_ .nav__list ul li {
+        font-size: 42px;
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .containnner {
+        padding-left: 0px;
+        padding-top: 105px;
+    }
+    .containnner .content::before {
+        left: 25px;
+        top: -10px;
+        border: medium solid white;
+        border-width: 0 10px 10px 10px;
+        border-color: transparent transparent white transparent;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .banner_section .sextion_banner_text {
+        margin-left: 20px;
+    }
+
+    .aboutus_section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .aboutus_section .about_desc p {
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 536px) {
+    .banner_section .sextion_banner_text h1 {
+        font-size: 40px;
+    }
+
+    .aboutus_section .about_desc p {
+        text-align: center;
+    }
+    .aboutus_section .about_desc h2 {
+        font-size: 30px;
+    }
+}
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 400px;
+}
+/* Animation */
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+    .content {
+        height: 30vh;
+    }
+}
+
+/*Other*/
+
+.unique-color-dark {
+    background-color: #7289da !important;
+}
+
+.bg-light {
+    background-color: #7289da !important;
+}
+
+.navbar-brand {
+    color: white;
+}
+
+.custom-color {
+    background-color: #7289da !important;
+}
