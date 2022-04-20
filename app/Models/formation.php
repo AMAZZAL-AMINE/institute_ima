@@ -10,7 +10,7 @@ class Formation extends Model
     use HasFactory;
 
     protected $fillable = array(
-        "name", "slug", "description"
+        "name", "slug", "description","pdf"
     );
 
     //relation ship to student table model

@@ -215,11 +215,15 @@ class AdminController extends Controller
         );
 
         $formation = new Formation;
+        if ($request->hasFile("pdf")) {
+            $filePath  = request('pdf')->store('pdf', 'public');
+        }
         $formation->create(
             array(
                 "name" => $data['name'],
                 "slug" => $data['slug'],
-                "description" => $data["desc"]
+                "description" => $data["desc"],
+                "pdf" => $filePath ?? null,
             ),
         );
 

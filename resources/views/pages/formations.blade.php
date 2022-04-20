@@ -174,7 +174,12 @@
         <div class="formationinlistwithdetails">
             
             <div class="fomationdetailssss">
-                <h1>{{ $formation->name }}</h1>
+                <h1>{{ $formation->name }} </h1> 
+                <a href="/storage/{{ $formation->pdf }}" class="btn btn-primary p-2 w-100" download="iot-formations" >
+                    <i class="bi bi-file-earmark-pdf"></i> Dowload Pdf
+                </a>
+
+
                 <p>
                     <?php echo $formation->description; ?>
                 </p>
